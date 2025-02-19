@@ -17,6 +17,10 @@
         #dialogTranslation {
             color: blue;
         }
+
+        .btitle {
+            text-align: left;
+        }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 relative">
@@ -27,7 +31,7 @@
     <button id="backButton" class="absolute left-2 top-2 text-blue-500">⬅</button>
     <h2 id="dialogText" class="text-2xl font-bold mb-4"></h2>
     <p id="dialogTranslation" class="text-3xl mb-4"></p>
-    <audio id="audioPlayer" controls class="w-full" muted></audio>
+    <audio id="audioPlayer" controls class="w-full"></audio>
 </div>
 
 <!-- Bottom control panel -->
@@ -46,16 +50,15 @@
         <input type="number" id="duration" placeholder="Duration" value="1" class="border p-1 w-24">
     </div>
     <label class="flex items-center gap-2">
-        <input type="checkbox" id="mute" checked class="form-checkbox">
+        <input type="checkbox" id="mute" class="form-checkbox">
         <span>Mute</span>
     </label>
 </div>
 
-
 <script>
     const config = {
         dialog1: {
-            title: 'Dialog 1',
+            title: 'Dialog 1: Patricia, Daniel, Gabi, Giovanni',
             parts: [
                 {
                     text: '- Hej! Jag heter Patricia.',
@@ -66,9 +69,424 @@
                     text: '- Hej! Daniel heter jag.',
                     translation: 'Hello! My name is Daniel.',
                     audio: './audio/dialog-1/2.mp3'
+                },
+                {
+                    text: '- Varifran kommer du, Daniel?',
+                    translation: 'Where are you from, Daniel?',
+                    audio: './audio/dialog-1/3.mp3'
+                },
+                {
+                    text: '- Frän Australien. Och du? Kommer du fran Spanien?',
+                    translation: 'From Australia. And you? Are you from Spain?',
+                    audio: './audio/dialog-1/4.mp3'
+                },
+                {
+                    text: '- Nej, jag kommer frän Argentina.',
+                    translation: 'No, I am from Argentina.',
+                    audio: './audio/dialog-1/5.mp3'
+                },
+                {
+                    text: '- Jaha. Vad talar du för spräk?',
+                    translation: 'I see. What languages do you speak?',
+                    audio: './audio/dialog-1/6.mp3'
+                },
+                {
+                    text: '- Engelska och lite svenska. Och spanska saklart.',
+                    translation: 'English and a little Swedish. And Spanish, of course.',
+                    audio: './audio/dialog-1/7.mp3'
+                },
+                {
+                    text: '- Jaha, vad bra!',
+                    translation: 'I see, that\'s great!',
+                    audio: './audio/dialog-1/8.mp3'
+                },
+                {
+                    text: '- Hej! Gabi heter jag. Vad heter du?',
+                    translation: 'Hi! My name is Gabi. What is your name?',
+                    audio: './audio/dialog-1/9.mp3'
+                },
+                {
+                    text: '- Giovanni. Varifrän kommer du?',
+                    translation: 'Giovanni. Where are you from?',
+                    audio: './audio/dialog-1/10.mp3'
+                },
+                {
+                    text: '- Jag är frän Tyskland. Och du?',
+                    translation: 'I am from Germany. And you?',
+                    audio: './audio/dialog-1/11.mp3'
+                },
+                {
+                    text: '- Jag kommer från Italien, fran Trieste.',
+                    translation: 'I come from Italy, from Trieste.',
+                    audio: './audio/dialog-1/12.mp3'
+                },
+                {
+                    text: '- Trieste, var ligger det?',
+                    translation: 'Trieste, where is it?',
+                    audio: './audio/dialog-1/13.mp3'
+                },
+                {
+                    text: '- I norra Italien.',
+                    translation: 'In northern Italy.',
+                    audio: './audio/dialog-1/14.mp3'
+                },
+                {
+                    text: '- Jaha. Jag pratar pyttelite italienska.',
+                    translation: 'I see. I speak a little Italian.',
+                    audio: './audio/dialog-1/15.mp3'
+                },
+                {
+                    text: '- Vad kul!',
+                    translation: 'How fun!',
+                    audio: './audio/dialog-1/16.mp3'
+                }
+            ]
+        },
+        dialog2: {
+            title: 'Dialog 2: Hej och tjena!',
+            parts: [
+                {
+                    text: '- Hej, hur mär du?',
+                    translation: 'Hi, how are you?',
+                    audio: './audio/dialog-2/1.mp3'
+                },
+                {
+                    text: '- Bara bra, tack! Och du?',
+                    translation: 'Just fine, thanks! And you?',
+                    audio: './audio/dialog-2/2.mp3'
+                },
+                {
+                    text: '- Jo tack, det är bra!',
+                    translation: 'Yes, thanks, it\'s good!',
+                    audio: './audio/dialog-2/3.mp3'
+                },
+                {
+                    text: '- Tjena, hur är läget?',
+                    translation: 'Hey, how\'s it going?',
+                    audio: './audio/dialog-2/4.mp3'
+                },
+                {
+                    text: '- Det är lugnt! Själv?',
+                    translation: 'It\'s calm! Yourself?',
+                    audio: './audio/dialog-2/5.mp3'
+                },
+                {
+                    text: '- Det är kanonbra!',
+                    translation: 'It\'s great!',
+                    audio: './audio/dialog-2/6.mp3'
+                },
+                {
+                    text: '- Hejsan, hur är det?',
+                    translation: 'Hello, how is it?',
+                    audio: './audio/dialog-2/7.mp3'
+                },
+                {
+                    text: '- Fint! Du?',
+                    translation: 'Fine! You?',
+                    audio: './audio/dialog-2/8.mp3'
+                },
+                {
+                    text: '- Bara bra!',
+                    translation: 'Just fine!',
+                    audio: './audio/dialog-2/9.mp3'
+                },
+                {
+                    text: '- Allt väl?',
+                    translation: 'All well?',
+                    audio: './audio/dialog-2/10.mp3'
+                },
+                {
+                    text: '- Ja, tack! Och själv?',
+                    translation: 'Yes, thanks! And yourself?',
+                    audio: './audio/dialog-2/11.mp3'
+                },
+                {
+                    text: '- Hej, hur mår du?',
+                    translation: 'Hi, how are you?',
+                    audio: './audio/dialog-2/12.mp3'
+                },
+                {
+                    text: '- Helt okej. Jag jobbar för mycket. Själv då ?',
+                    translation: 'Completely okay. I work too much. Yourself?',
+                    audio: './audio/dialog-2/13.mp3'
+                },
+                {
+                    text: '- Joda... Som vanligt.',
+                    translation: 'Yeah... As usual.',
+                    audio: './audio/dialog-2/14.mp3'
+                },
+                {
+                    text: '- Tja! Hur är det?',
+                    translation: 'Hey! How is it?',
+                    audio: './audio/dialog-2/15.mp3'
+                },
+                {
+                    text: '- Det är så där. Hur är det med dig?',
+                    translation: 'It\'s so-so. How is it with you?',
+                    audio: './audio/dialog-2/16.mp3'
+                },
+                {
+                    text: '- Nja, så där.',
+                    translation: 'Well, so-so.',
+                    audio: './audio/dialog-2/17.mp3'
+                },
+                {
+                    text: '- Hur stär det till?',
+                    translation: 'How\'s it going?',
+                    audio: './audio/dialog-2/18.mp3'
+                },
+                {
+                    text: '- Ganska däligt faktiskt. Jag är förkyld. Hur mar du själv?',
+                    translation: 'Quite bad actually. I have a cold. How are you yourself?',
+                    audio: './audio/dialog-2/19.mp3'
+                },
+                {
+                    text: '- Inte så bra. Jag är så trött.',
+                    translation: 'Not so good. I am so tired.',
+                    audio: './audio/dialog-2/20.mp3'
+                },
+                {
+                    text: '- God morgon! Hur är det?',
+                    translation: 'Good morning! How is it?',
+                    audio: './audio/dialog-2/21.mp3'
+                },
+                {
+                    text: '- Så där. Jag är jättetrött.',
+                    translation: 'So-so. I am very tired.',
+                    audio: './audio/dialog-2/22.mp3'
+                },
+                {
+                    text: '- Oj då. Drick lite kaffe!',
+                    translation: 'Oh dear. Drink some coffee!',
+                    audio: './audio/dialog-2/23.mp3'
+                }
+            ]
+        },
+        dialog3: {
+            title: 'Dialog 3: Vad gör du i Sverige?',
+            parts: [
+                {
+                    text: 'Noi kommer frän Thailand och pluggar i Uppsala nu.',
+                    translation: 'Noi comes from Thailand and is now studying in Uppsala.',
+                    audio: './audio/dialog-3/1.mp3'
+                },
+                {
+                    text: 'Hon läser svenska för hon är intresserad av Sverige.',
+                    translation: 'She is studying Swedish because she is interested in Sweden.',
+                    audio: './audio/dialog-3/2.mp3'
+                },
+                {
+                    text: 'Hon jobbar också som journalist och skriver för en thailändsk tidning pa nätet.',
+                    translation: 'She also works as a journalist and writes for a Thai newspaper online.',
+                    audio: './audio/dialog-3/3.mp3'
+                },
+                {
+                    text: 'Hon skriver om Sverige och Norden.',
+                    translation: 'She writes about Sweden and the Nordic countries.',
+                    audio: './audio/dialog-3/4.mp3'
+                },
+                {
+                    text: 'Noi trivs i Sverige, men hon längtar efter familj och vänner i Thailand.',
+                    translation: 'Noi enjoys living in Sweden, but she misses her family and friends in Thailand.',
+                    audio: './audio/dialog-3/5.mp3'
+                },
+                {
+                    text: 'De pratar ofta pa Skype och i telefon.',
+                    translation: 'They often talk on Skype and on the phone.',
+                    audio: './audio/dialog-3/6.mp3'
+                },
+                {
+                    text: 'Alberto är IT-ingenjör och kommer från Spanien.',
+                    translation: 'Alberto is an IT engineer and comes from Spain.',
+                    audio: './audio/dialog-3/7.mp3'
+                },
+                {
+                    text: 'Han jobbar pa ett spelföretag i stan.',
+                    translation: 'He works at a gaming company in the city.',
+                    audio: './audio/dialog-3/8.mp3'
+                },
+                {
+                    text: 'Pa jobbet talar han engelska, spanska och lite svenska.',
+                    translation: 'At work, he speaks English, Spanish, and a little Swedish.',
+                    audio: './audio/dialog-3/9.mp3'
+                },
+                {
+                    text: 'Han är singel och har en katt, Frasse.',
+                    translation: 'He is single and has a cat, Frasse.',
+                    audio: './audio/dialog-3/10.mp3'
+                },
+                {
+                    text: 'Han pluggar svenska med Noi.',
+                    translation: 'He studies Swedish with Noi.',
+                    audio: './audio/dialog-3/11.mp3'
+                },
+                {
+                    text: 'Alberto trivs ganska bra i Sverige men han längtar efter sol ibland.',
+                    translation: 'Alberto enjoys living in Sweden quite well, but he sometimes misses the sun.',
+                    audio: './audio/dialog-3/12.mp3'
+                },
+                {
+                    text: 'Albertos mamma och pappa kommer till Sverige en vecka i sommar.',
+                    translation: 'Alberto\'s mom and dad are coming to Sweden for a week this summer.',
+                    audio: './audio/dialog-3/13.mp3'
+                },
+                {
+                    text: 'Det blir roligt.',
+                    translation: 'It will be fun.',
+                    audio: './audio/dialog-3/14.mp3'
+                },
+                {
+                    text: 'Renate kommer frän Berlin, men hon bor i Sverige nu.',
+                    translation: 'Renate comes from Berlin, but she now lives in Sweden.',
+                    audio: './audio/dialog-3/15.mp3'
+                },
+                {
+                    text: 'Renate är pensionär.',
+                    translation: 'Renate is a pensioner.',
+                    audio: './audio/dialog-3/16.mp3'
+                },
+                {
+                    text: 'Hon är intresserad av svenska deckare och svensk jazz.',
+                    translation: 'She is interested in Swedish crime novels and Swedish jazz.',
+                    audio: './audio/dialog-3/17.mp3'
+                },
+                {
+                    text: 'Renates barn kommer till Sverige ibland.',
+                    translation: 'Renate\'s children come to Sweden sometimes.',
+                    audio: './audio/dialog-3/18.mp3'
+                },
+                {
+                    text: 'De studerar svenska hemma i Berlin.',
+                    translation: 'They study Swedish at home in Berlin.',
+                    audio: './audio/dialog-3/19.mp3'
+                }]
+        },
+        dialog4: {
+            title: 'Dialog 4: En fest',
+            parts: [
+                {
+                    text: 'Noi har en fest för vänner och klasskompisar.',
+                    translation: 'Noi is having a party for friends and classmates.',
+                    audio: './audio/dialog-4/1.mp3'
+                },
+                {
+                    text: 'Välkomna!',
+                    translation: 'Welcome!',
+                    audio: './audio/dialog-4/2.mp3'
+                },
+                {
+                    text: 'Hej! Hur är läget? Det här är min flickvän Pernilla.',
+                    translation: 'Hi! How are you? This is my girlfriend Pernilla.',
+                    audio: './audio/dialog-4/3.mp3'
+                },
+                {
+                    text: 'Hej Pernilla, vad trevligt! Jag heter Noi.',
+                    translation: 'Hi Pernilla, nice to meet you! My name is Noi.',
+                    audio: './audio/dialog-4/4.mp3'
+                },
+                {
+                    text: 'Hej Noi, trevligt att träffas. Fin lägenhet!',
+                    translation: 'Hi Noi, nice to meet you. Nice apartment!',
+                    audio: './audio/dialog-4/5.mp3'
+                },
+                {
+                    text: 'Tack! Jag trivs bra här. Kom in! Det här är Alberto.',
+                    translation: 'Thanks! I like it here. Come in! This is Alberto.',
+                    audio: './audio/dialog-4/6.mp3'
+                },
+                {
+                    text: 'Hej Alberto. Läser du svenska med Noi och Daniel?',
+                    translation: 'Hi Alberto. Do you study Swedish with Noi and Daniel?',
+                    audio: './audio/dialog-4/7.mp3'
+                },
+                {
+                    text: 'Ja, precis.',
+                    translation: 'Yes, exactly.',
+                    audio: './audio/dialog-4/8.mp3'
+                },
+                {
+                    text: 'Noi, vad har du för yrke?',
+                    translation: 'Noi, what is your profession?',
+                    audio: './audio/dialog-4/9.mp3'
+                },
+                {
+                    text: 'Förlåt, jag förstår inte "yrke".',
+                    translation: 'Sorry, I don\'t understand "yrke".',
+                    audio: './audio/dialog-4/10.mp3'
+                },
+                {
+                    text: '"Jobb", vad har du för jobb?',
+                    translation: '"Jobb", what job do you have?',
+                    audio: './audio/dialog-4/11.mp3'
+                },
+                {
+                    text: 'Jag är journalist. Jag skriver för en webbtidning.',
+                    translation: 'I am a journalist. I write for an online newspaper.',
+                    audio: './audio/dialog-4/12.mp3'
+                },
+                {
+                    text: 'Jaha, skriver du på engelska?',
+                    translation: 'Oh, do you write in English?',
+                    audio: './audio/dialog-4/13.mp3'
+                },
+                {
+                    text: 'Nej, på thai. Vad heter "article" på svenska?',
+                    translation: 'No, in Thai. What is "article" in Swedish?',
+                    audio: './audio/dialog-4/14.mp3'
+                },
+                {
+                    text: 'Artikel.',
+                    translation: 'Article.',
+                    audio: './audio/dialog-4/15.mp3'
+                },
+                {
+                    text: 'Okej, jag skriver en artikel om svensk mat nu.',
+                    translation: 'Okay, I am writing an article about Swedish food now.',
+                    audio: './audio/dialog-4/16.mp3'
+                },
+                {
+                    text: 'Jaha, vad kul!',
+                    translation: 'Oh, how fun!',
+                    audio: './audio/dialog-4/17.mp3'
+                },
+                {
+                    text: 'Tack, Noi! Vi ska gå nu.',
+                    translation: 'Thanks, Noi! We have to go now.',
+                    audio: './audio/dialog-4/18.mp3'
+                },
+                {
+                    text: 'Det var roligt att träffas, Pernilla!',
+                    translation: 'It was nice to meet you, Pernilla!',
+                    audio: './audio/dialog-4/19.mp3'
+                },
+                {
+                    text: 'Ja, tack detsamma.',
+                    translation: 'Yes, thank you, same to you.',
+                    audio: './audio/dialog-4/20.mp3'
+                },
+                {
+                    text: 'Vi ses på kursen på måndag, Noi!',
+                    translation: 'See you in class on Monday, Noi!',
+                    audio: './audio/dialog-4/21.mp3'
+                },
+                {
+                    text: 'Just det. Ha det så bra!',
+                    translation: 'Exactly. Take care!',
+                    audio: './audio/dialog-4/22.mp3'
+                },
+                {
+                    text: 'Du med! Hej då!',
+                    translation: 'You too! Goodbye!',
+                    audio: './audio/dialog-4/23.mp3'
+                },
+                {
+                    text: 'Hej hej!',
+                    translation: 'Bye bye!',
+                    audio: './audio/dialog-4/24.mp3'
                 }
             ]
         }
+
     };
 
     // Elements
@@ -101,7 +519,7 @@
     // Display the list of dialogs
     function showDialogs() {
         dialogList.innerHTML = Object.keys(config).map(key =>
-            `<button class="w-full bg-blue-500 text-white p-2 rounded mb-2" onclick="startDialog('${key}')">
+            `<button class="btitle w-full bg-blue-500 text-white p-2 rounded mb-2" onclick="startDialog('${key}')">
           ${config[key].title}
          </button>`
         ).join('');
