@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Swedish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #dialogText {
+            font-size: 2.5rem;
+            line-height: normal;
+        }
+        #audioPlayer {
+            display: none;
+        }
+
+        #dialogTranslation {
+            color: blue;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 relative">
+<div id="dialogList" class="w-full max-w-md bg-white shadow-lg rounded-lg p-4 mb-16">
+    <!-- Dialog buttons will be inserted here -->
+</div>
+<div id="dialogView" class="hidden w-full bg-white shadow-lg rounded-lg p-4 text-center relative mb-16">
+    <button id="backButton" class="absolute left-2 top-2 text-blue-500">⬅</button>
+    <h2 id="dialogText" class="text-2xl font-bold mb-4"></h2>
+    <p id="dialogTranslation" class="text-3xl mb-4"></p>
+    <audio id="audioPlayer" controls class="w-full" muted></audio>
+</div>
+
+<!-- Bottom control panel -->
+<div class="fixed bottom-0 left-0 w-full bg-white shadow p-4 flex flex-row items-center justify-center gap-4">
+    <label class="flex items-center gap-2">
+        <input type="checkbox" id="showTranslations" class="form-checkbox">
+        <span>Show Translations</span>
+    </label>
+    <label class="flex items-center gap-2">
+        <input type="checkbox" id="autoplay" class="form-checkbox">
+        <span>Autoplay</span>
+    </label>
+    <!-- This input will be shown when "Autoplay" is checked -->
+    <div id="durationInputContainer" class="hidden">
+        <input type="number" id="duration" placeholder="Duration" value="1" class="border p-1 w-24">
+    </div>
+    <label class="flex items-center gap-2">
+        <input type="checkbox" id="mute" checked class="form-checkbox">
+        <span>Mute</span>
+    </label>
+</div>
+
+
+<script>
+    const config = {
+        dialog1: {
+            title: 'Dialog 1',
+            parts: [
+                {
+                    text: '- Hej! Jag heter Patricia.',
+                    translation: 'Hello! My name is Patricia.',
+                    audio: '/audio/dialog-1/1.mp3'
+                },
+                {
+                    text: '- Hej! Daniel heter jag.',
+                    translation: 'Hello! My name is Daniel.',
+                    audio: '/audio/dialog-1/2.mp3'
+                }
+            ]
+        }
+    };
+
+    // Elements
+    const dialogList = document.getElementById('dialogList');
+    const dialogView = document.getElementById('dialogView');
+    const dialogText = document.getElementById('dialogText');
+    const dialogTranslation = document.getElementById('dialogTranslation');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const backButton = document.getElementById('backButton');
+    const showTranslationsCheckbox = document.getElementById('showTranslations');
+    const autoplayCheckbox = document.getElementById('autoplay');
+    const durationInputContainer = document.getElementById('durationInputContainer');
+    const durationInput = document.getElementById('duration');
+    const muteCheckbox = document.getElementById('mute');
+
+    // Mute/unmute audio when the checkbox is toggled
+    muteCheckbox.addEventListener('change', function() {
+        audioPlayer.muted = this.checked;
+    });
+
+
+    // Mute/unmute audio when the checkbox is toggled
+    dialogText.addEventListener('click', function() {
+        audioPlayer.play();
+    });
+
+    let currentDialog = null;
+    let currentIndex = 0;
+
+    // Display the list of dialogs
+    function showDialogs() {
+        dialogList.innerHTML = Object.keys(config).map(key =>
+            `<button class="w-full bg-blue-500 text-white p-2 rounded mb-2" onclick="startDialog('${key}')">
+          ${config[key].title}
+         </button>`
+        ).join('');
+        dialogList.classList.remove('hidden');
+        dialogView.classList.add('hidden');
+    }
+
+    // Start the selected dialog
+    function startDialog(dialogKey) {
+        currentDialog = config[dialogKey];
+        currentIndex = 0;
+        loadPart();
+        dialogList.classList.add('hidden');
+        dialogView.classList.remove('hidden');
+    }
+
+    // Load and display the current part of the dialog
+    function loadPart() {
+        const part = currentDialog.parts[currentIndex];
+        dialogText.innerText = part.text;
+        // Show or hide translation based on the checkbox
+        if (showTranslationsCheckbox.checked) {
+            dialogTranslation.innerText = part.translation;
+            dialogTranslation.classList.remove('hidden');
+        } else {
+            dialogTranslation.innerText = '';
+            dialogTranslation.classList.add('hidden');
+        }
+        audioPlayer.src = part.audio;
+        audioPlayer.play();
+    }
+
+    // Back button returns to the list of dialogs
+    backButton.addEventListener('click', showDialogs);
+
+    // Swipe navigation (mobile)
+    let touchStartX = 0;
+    document.addEventListener("touchstart", e => touchStartX = e.touches[0].clientX);
+    document.addEventListener("touchend", e => {
+        let touchEndX = e.changedTouches[0].clientX;
+        if (touchEndX < touchStartX - 50 && currentIndex < currentDialog.parts.length - 1) {
+            currentIndex++;
+            loadPart();
+        } else if (touchEndX > touchStartX + 50 && currentIndex > 0) {
+            currentIndex--;
+            loadPart();
+        }
+    });
+
+    // Autoplay: when the audio ends, if enabled, wait for the specified duration then go to the next part
+    audioPlayer.addEventListener('ended', () => {
+        if (autoplayCheckbox.checked && currentIndex < currentDialog.parts.length - 1) {
+            const delay = parseInt(durationInput.value) || 0;
+            setTimeout(() => {
+                currentIndex++;
+                loadPart();
+            }, delay * 1000);
+        }
+    });
+
+    // Toggle duration input visibility when Autoplay is checked/unchecked
+    autoplayCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            durationInputContainer.classList.remove('hidden');
+        } else {
+            durationInputContainer.classList.add('hidden');
+        }
+    });
+
+    // Optionally reload the current part when toggling the "Show Translations" checkbox
+    showTranslationsCheckbox.addEventListener('change', loadPart);
+
+    // Initialize dialog list
+    showDialogs();
+
+    // Expose startDialog to the global scope for inline onclick usage
+    window.startDialog = startDialog;
+</script>
+</body>
+</html>
