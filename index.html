@@ -21,6 +21,17 @@
         .btitle {
             text-align: left;
         }
+
+        #backButton {
+            position: fixed;
+            left: 30px;
+            top: 80px;
+            font-size: 30px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 relative">
@@ -28,10 +39,11 @@
     <!-- Dialog buttons will be inserted here -->
 </div>
 <div id="dialogView" class="hidden w-full bg-white shadow-lg rounded-lg p-4 text-center relative mb-16">
-    <button id="backButton" class="absolute left-2 top-2 text-blue-500">⬅</button>
+    <button id="backButton" class="absolute left-2 top-2 text-blue-500">menu</button>
     <h2 id="dialogText" class="text-2xl font-bold mb-4"></h2>
     <p id="dialogTranslation" class="text-3xl mb-4"></p>
     <audio id="audioPlayer" controls class="w-full"></audio>
+    <audio id="translationPlayer" controls style="display: none"></audio>
 </div>
 
 <!-- Bottom control panel -->
@@ -485,16 +497,581 @@
                     audio: './audio/dialog-4/24.mp3'
                 }
             ]
+        },
+        words1: {
+            title: 'Phrases',
+            parts: [
+                {
+                    "text": "Eleven läser en bok.",
+                    "translation": "The student is reading a book.",
+                    "audio": "./audio/phrase/5154ec03-4aba-4ec1-8dec-ab3b9ad3ff24.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Eleven_läser_en_bok.mp3"
+                },
+                {
+                    "text": "Läraren skriver på tavlan.",
+                    "translation": "The teacher is writing on the board.",
+                    "audio": "./audio/phrase/8eb1c6b9-27b2-4964-920c-da53a00a51e2.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Läraren_skriver_på_tavlan.mp3"
+                },
+                {
+                    "text": "Ursäkta, kan du hjälpa mig?",
+                    "translation": "Excuse me, can you help me?",
+                    "audio": "./audio/phrase/0ef857aa-e002-413a-a9c8-76a8993f28a3.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Ursäkta_kan_du_hjälpa_mig.mp3"
+                },
+                {
+                    "text": "Ursäkta, var ligger toaletten?",
+                    "translation": "Excuse me, where is the restroom?",
+                    "audio": "./audio/phrase/ac2a347a-634f-4cbd-a670-f3b7100408bb.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Ursäkta_var_ligger_toaletten.mp3"
+                },
+                {
+                    "text": "Ursäkta, jag är sen.",
+                    "translation": "Excuse me, I am late.",
+                    "audio": "./audio/phrase/4ba0f60d-30f4-410f-8f6c-fca013ec6958.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Ursäkta_jag_är_sen.mp3"
+                },
+                {
+                    "text": "Jag har en fråga",
+                    "translation": "I have a question",
+                    "audio": "./audio/phrase/0c92cf54-ec0d-455f-a2e0-bfd2635fb26d.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_har_en_fråga.mp3"
+                },
+                {
+                    "text": "Vad betyder det?",
+                    "translation": "What does that mean?",
+                    "audio": "./audio/phrase/5421d148-6a00-49a0-8ed3-e382ddaba989.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vad_betyder_det.mp3"
+                },
+                {
+                    "text": "Hur säger man something på svenska?",
+                    "translation": "How do you say ... in Swedish?",
+                    "audio": "./audio/phrase/40b2d547-7460-4e51-a931-36bd5dce40dd.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hur_säger_man_something_på_svenska.mp3"
+                },
+                {
+                    "text": "Vad heter ... på svenska?",
+                    "translation": "What is ... called in Swedish?",
+                    "audio": "./audio/phrase/fa01c083-fe98-456f-bc4c-18599a5b367c.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vad_heter__på_svenska.mp3"
+                },
+                {
+                    "text": "Hur uttalar man ... ?",
+                    "translation": "How do you pronounce ... ?",
+                    "audio": "./audio/phrase/77506003-1a6f-4a28-8a55-21310e35cbc6.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hur_uttalar_man__.mp3"
+                },
+                {
+                    "text": "Hur skriver man ... ?",
+                    "translation": "How do you write ... ?",
+                    "audio": "./audio/phrase/d5196872-a921-4b1d-be4f-2347bc76f60a.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hur_skriver_man__.mp3"
+                },
+                {
+                    "text": "Kan du säga det en gång till?",
+                    "translation": "Could you repeat that?",
+                    "audio": "./audio/phrase/2107db10-470b-433a-bb05-cd59080d2560.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_säga_det_en_gång_till.mp3"
+                },
+                {
+                    "text": "Jag förstår inte.",
+                    "translation": "I don’t understand.",
+                    "audio": "./audio/phrase/29d09eaf-017c-4a10-8c44-5e62a48a112d.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_förstår_inte.mp3"
+                },
+                {
+                    "text": "Jaha! Nu förstår jag!",
+                    "translation": "Ah! Now I understand!",
+                    "audio": "./audio/phrase/faab3d91-d2e3-47cd-881e-f15b11df0a68.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jaha!_Nu_förstår_jag!.mp3"
+                },
+                {
+                    "text": "Förstår du?",
+                    "translation": "Do you understand?",
+                    "audio": "./audio/phrase/4a886116-12c5-4cbc-82f0-ab5b517abd8a.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Förstår_du.mp3"
+                },
+                {
+                    "text": "Har ni några frågor?",
+                    "translation": "Do you have any questions?",
+                    "audio": "./audio/phrase/48a08178-e0bc-4b76-88c7-07a67fb4b8fd.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Har_ni_några_frågor.mp3"
+                },
+                {
+                    "text": "Titta på sidan 1 i textboken.",
+                    "translation": "Look at page 1 in the textbook.",
+                    "audio": "./audio/phrase/a05155b0-5427-4dbb-9e3c-3c18ab210272.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Titta_på_sidan_1_i_textboken.mp3"
+                },
+                {
+                    "text": "Läs texten på sidan 2.",
+                    "translation": "Read the text on page 2.",
+                    "audio": "./audio/phrase/cb32acb2-5dba-4e7c-8562-d66f7278e9fb.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Läs_texten_på_sidan_2.mp3"
+                },
+                {
+                    "text": "Stäng boken.",
+                    "translation": "Close the book.",
+                    "audio": "./audio/phrase/1a8cab6c-677c-48d6-9776-5213d8bc43d4.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Stäng_boken.mp3"
+                },
+                {
+                    "text": "Lyssna noga.",
+                    "translation": "Listen carefully.",
+                    "audio": "./audio/phrase/c9c10da1-4119-47b7-97c2-02924956e8d0.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Lyssna_noga.mp3"
+                },
+                {
+                    "text": "Lyssna på musiken.",
+                    "translation": "Listen to the music.",
+                    "audio": "./audio/phrase/c7cc3998-8846-4ad8-ba88-ec6f2fc2a53e.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Lyssna_på_musiken.mp3"
+                },
+                {
+                    "text": "Säg efter mig.",
+                    "translation": "Repeat after me.",
+                    "audio": "./audio/phrase/b836ec02-c44e-4d12-97cc-2c683569f20c.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Säg_efter_mig.mp3"
+                },
+                {
+                    "text": "Skriv ner vad du hör.",
+                    "translation": "Write down what you hear.",
+                    "audio": "./audio/phrase/fdb78600-a6d8-49be-b050-12d029585b61.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Skriv_ner_vad_du_hör.mp3"
+                },
+                {
+                    "text": "Skriv en rapport.",
+                    "translation": "Write a report.",
+                    "audio": "./audio/phrase/bc5c22ee-370d-4714-bc39-3bbec4529294.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Skriv_en_rapport.mp3"
+                },
+                {
+                    "text": "Arbeta i par.",
+                    "translation": "Work in pairs.",
+                    "audio": "./audio/phrase/faedcb47-165f-40e2-9a6b-8fa76032e01a.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Arbeta_i_par.mp3"
+                },
+                {
+                    "text": "Prata svenska!",
+                    "translation": "Speak Swedish.",
+                    "audio": "./audio/phrase/8597d3cb-bb82-4dd6-8a4b-e9fd1ecdbe28.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Prata_svenska!.mp3"
+                },
+                {
+                    "text": "Kapitel tre är väldigt intressant.",
+                    "translation": "Chapter three is very interesting.",
+                    "audio": "./audio/phrase/f036c871-a9ab-4b9b-a212-2267f2b227d0.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kapitel_tre_är_väldigt_intressant.mp3"
+                },
+                {
+                    "text": "Läs kapitel ett.",
+                    "translation": "Read chapter one.",
+                    "audio": "./audio/phrase/c172bd61-c2fa-4e99-9fe8-25f9bfcf6eb5.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Läs_kapitel_ett.mp3"
+                },
+                {
+                    "text": "Vi gick till andra sidan av gatan.",
+                    "translation": "We went to the other side of the street.",
+                    "audio": "./audio/phrase/eccbe681-71a1-46c3-ba19-c32837f67559.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vi_gick_till_andra_sidan_av_gatan.mp3"
+                },
+                {
+                    "text": "Jag kan prata svenska.",
+                    "translation": "I can speak Swedish.",
+                    "audio": "./audio/phrase/d30c7585-b5fb-4772-a828-cd8888560839.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_kan_prata_svenska.mp3"
+                },
+                {
+                    "text": "Vi kan gå dit imorgon.",
+                    "translation": "We can go there tomorrow.",
+                    "audio": "./audio/phrase/385e6e00-c2b5-4eda-97ba-d18458ca3abb.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vi_kan_gå_dit_imorgon.mp3"
+                },
+                {
+                    "text": "Kan du kombinera de här färgerna?",
+                    "translation": "Can you combine these colors?",
+                    "audio": "./audio/phrase/53f575e5-ebae-457f-9be7-de4f6343304b.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_kombinera_de_här_färgerna.mp3"
+                },
+                {
+                    "text": "Det här är ett gammalt foto.",
+                    "translation": "This is an old photo.",
+                    "audio": "./audio/phrase/47ed3bba-2028-4ed1-ab8b-6536e151837d.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Det_här_är_ett_gammalt_foto.mp3"
+                },
+                {
+                    "text": "Kan du skicka fotot till mig?",
+                    "translation": "Can you send the photo to me?",
+                    "audio": "./audio/phrase/fbf84704-fab9-43c4-832f-c9f715bd39ba.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_skicka_fotot_till_mig.mp3"
+                },
+                {
+                    "text": "Det är ett svårt ord.",
+                    "translation": "It is a difficult word.",
+                    "audio": "./audio/phrase/1718467a-2490-49e7-8260-6d0ec13b20f8.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Det_är_ett_svårt_ord.mp3"
+                },
+                {
+                    "text": "Kan du stava det ordet?",
+                    "translation": "Can you spell that word?",
+                    "audio": "./audio/phrase/4d7da9b9-eede-4d20-aabe-c695ed31d543.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_stava_det_ordet.mp3"
+                },
+                {
+                    "text": "Vi åt hamburgare till middag.",
+                    "translation": "We had hamburgers for dinner.",
+                    "audio": "./audio/phrase/1effe68b-bc23-482a-a80e-e180c16b8e07.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vi_åt_hamburgare_till_middag.mp3"
+                },
+                {
+                    "text": "Kan jag få en hamburgare utan lök?",
+                    "translation": "Can I have a hamburger without onions?",
+                    "audio": "./audio/phrase/81f0c3ce-9b7e-41ce-9de7-7093c4159368.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_jag_få_en_hamburgare_utan_lök.mp3"
+                },
+                {
+                    "text": "Han är en advokat.",
+                    "translation": "He is a lawyer.",
+                    "audio": "./audio/phrase/0524ac5a-690c-46fc-971b-30db8128f22b.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Han_är_en_advokat.mp3"
+                },
+                {
+                    "text": "Hon arbetar som advokat.",
+                    "translation": "She works as a lawyer.",
+                    "audio": "./audio/phrase/9511d454-696b-4fa2-8054-0cdccec56318.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hon_arbetar_som_advokat.mp3"
+                },
+                {
+                    "text": "Kan du skala potatisen?",
+                    "translation": "Can you peel the potatoes?",
+                    "audio": "./audio/phrase/369fada1-8327-42db-941e-9f172825e2c2.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_skala_potatisen.mp3"
+                },
+                {
+                    "text": "Vi ska äta potatis till middag.",
+                    "translation": "We will eat potatoes for dinner.",
+                    "audio": "./audio/phrase/2e949086-423d-42f0-87b7-8db736b4f70d.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vi_ska_äta_potatis_till_middag.mp3"
+                },
+                {
+                    "text": "Jag glömde min mobil hemma.",
+                    "translation": "I forgot my cell phone at home.",
+                    "audio": "./audio/phrase/8322b80c-234c-4dad-b789-e8ded31d8dd2.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_glömde_min_mobil_hemma.mp3"
+                },
+                {
+                    "text": "Hon köpte en ny mobil.",
+                    "translation": "She bought a new cell phone.",
+                    "audio": "./audio/phrase/f07c640d-9dc7-43dd-9fbd-c3591ec4b2fc.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hon_köpte_en_ny_mobil.mp3"
+                },
+                {
+                    "text": "Jag skrev på pappret.",
+                    "translation": "I wrote on the paper.",
+                    "audio": "./audio/phrase/a4cc55c6-47d5-4f84-b75f-a2b30db72767.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_skrev_på_pappret.mp3"
+                },
+                {
+                    "text": "Kan du ge mig ett papper?",
+                    "translation": "Can you give me a paper?",
+                    "audio": "./audio/phrase/01ab8f96-afe8-426e-b13b-4591b39f0915.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_ge_mig_ett_papper.mp3"
+                },
+                {
+                    "text": "Kaffet är varmt.",
+                    "translation": "The coffee is hot.",
+                    "audio": "./audio/phrase/bc0a7ba4-d1c3-4e20-9e9a-8b829c2eb94e.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kaffet_är_varmt.mp3"
+                },
+                {
+                    "text": "Jag dricker kaffe varje morgon.",
+                    "translation": "I drink coffee every morning.",
+                    "audio": "./audio/phrase/8068cffa-2777-4aa1-8491-700f73c0eb08.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_dricker_kaffe_varje_morgon.mp3"
+                },
+                {
+                    "text": "Boken ligger på bordet.",
+                    "translation": "The book is on the table.",
+                    "audio": "./audio/phrase/deb83943-724a-4d13-a7c1-e8b2f4fdced9.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Boken_ligger_på_bordet.mp3"
+                },
+                {
+                    "text": "Har du läst den här boken?",
+                    "translation": "Have you read this book?",
+                    "audio": "./audio/phrase/d24e716b-9a64-45ec-a315-f9056efc8823.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Har_du_läst_den_här_boken.mp3"
+                },
+                {
+                    "text": "Jag läser en bok.",
+                    "translation": "I am reading a book.",
+                    "audio": "./audio/phrase/cce4433e-90a5-4be9-800b-7bb47d2a7aa5.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_läser_en_bok.mp3"
+                },
+                {
+                    "text": "Jag älskar kanelbullar.",
+                    "translation": "I love cinnamon buns.",
+                    "audio": "./audio/phrase/fc0ec7c1-cd33-4e17-bec7-8334f9a0d744.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_älskar_kanelbullar.mp3"
+                },
+                {
+                    "text": "Hon köpte en kanelbulle på bageriet.",
+                    "translation": "She bought a cinnamon bun at the bakery.",
+                    "audio": "./audio/phrase/d3165c13-f35d-4c1e-8a4b-14bd2f609865.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hon_köpte_en_kanelbulle_på_bageriet.mp3"
+                },
+                {
+                    "text": "Kan jag låna din penna?",
+                    "translation": "Can I borrow your pen?",
+                    "audio": "./audio/phrase/70755043-a898-4be6-82e0-90f10b87a405.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_jag_låna_din_penna.mp3"
+                },
+                {
+                    "text": "Jag tappade min penna.",
+                    "translation": "I lost my pen.",
+                    "audio": "./audio/phrase/b517c392-fe8a-4fa7-93e2-e74a05c11f61.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_tappade_min_penna.mp3"
+                },
+                {
+                    "text": "Jag dricker vatten varje dag.",
+                    "translation": "I drink water every day.",
+                    "audio": "./audio/phrase/a1578e0b-d3f0-4eb4-b2d5-f6446a4a6809.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_dricker_vatten_varje_dag.mp3"
+                },
+                {
+                    "text": "Hon fyllde flaskan med vatten.",
+                    "translation": "She filled the bottle with water.",
+                    "audio": "./audio/phrase/f47ec632-f78a-4299-977e-d074f78d5d02.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hon_fyllde_flaskan_med_vatten.mp3"
+                },
+                {
+                    "text": "Hon har långt hår.",
+                    "translation": "She has long hair.",
+                    "audio": "./audio/phrase/795c7e72-12a8-4ec6-83e4-37bf49c80d62.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hon_har_långt_hår.mp3"
+                },
+                {
+                    "text": "Det var en lång dag.",
+                    "translation": "It was a long day.",
+                    "audio": "./audio/phrase/41b5faf5-a086-4580-9b50-bb45c4d120f6.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Det_var_en_lång_dag.mp3"
+                },
+                {
+                    "text": "Kan du ge mig ett exempel?",
+                    "translation": "Can you give me an example?",
+                    "audio": "./audio/phrase/24dc5a7c-88fd-49ff-88b4-43ea71e3ec9f.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_ge_mig_ett_exempel.mp3"
+                },
+                {
+                    "text": "Jag behöver fler exempel.",
+                    "translation": "I need more examples.",
+                    "audio": "./audio/phrase/478ddfd9-09a4-4654-8915-bc35694343e3.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_behöver_fler_exempel.mp3"
+                },
+                {
+                    "text": "Jag går en kurs i svenska.",
+                    "translation": "I am taking a course in Swedish.",
+                    "audio": "./audio/phrase/1813e1f0-a03d-4ee6-84a2-c3cc966ee23d.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_går_en_kurs_i_svenska.mp3"
+                },
+                {
+                    "text": "Vad heter det på svenska?",
+                    "translation": "What is it called in Swedish?",
+                    "audio": "./audio/phrase/7b0704e6-fb11-43cf-a599-e0412490238e.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vad_heter_det_på_svenska.mp3"
+                },
+                {
+                    "text": "Vad heter du?",
+                    "translation": "What is your name?",
+                    "audio": "./audio/phrase/02b7fc97-ef19-495d-b943-7af345070e03.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vad_heter_du.mp3"
+                },
+                {
+                    "text": "Varifrån kommer du?",
+                    "translation": "Where are you from?",
+                    "audio": "./audio/phrase/48cc1505-29d4-43d7-9914-0a2724b051ce.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Varifrån_kommer_du.mp3"
+                },
+                {
+                    "text": "Varifrån känner du henne?",
+                    "translation": "Where do you know her from?",
+                    "audio": "./audio/phrase/69914208-4cfd-450c-8a23-20f25ef7922b.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Varifrån_känner_du_henne.mp3"
+                },
+                {
+                    "text": "Varifrån kommer det här ljudet?",
+                    "translation": "Where is this sound coming from?",
+                    "audio": "./audio/phrase/c6330626-9d16-401f-8f0e-9711b6098698.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Varifrån_kommer_det_här_ljudet.mp3"
+                },
+                {
+                    "text": "vad bra",
+                    "translation": "that’s great",
+                    "audio": "./audio/phrase/5611f811-40d9-4167-aaf3-a70b259808d7.mp3",
+                    "audioTranslation": "./audio/phrase/translation_vad_bra.mp3"
+                },
+                {
+                    "text": "Vad talar du för språk?",
+                    "translation": "What languages do you speak?",
+                    "audio": "./audio/phrase/9eeb87b0-281f-42ea-9ee0-1863cdc0f0bf.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vad_talar_du_för_språk.mp3"
+                },
+                {
+                    "text": "Kan du tala långsammare?",
+                    "translation": "Can you speak slower?",
+                    "audio": "./audio/phrase/0795d075-0f7c-4883-9cb2-913f0fb2bf42.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_tala_långsammare.mp3"
+                },
+                {
+                    "text": "Han talar alltid sanning.",
+                    "translation": "He always tells the truth.",
+                    "audio": "./audio/phrase/8a72424e-8be2-4be3-8696-d0ce123ffcf7.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Han_talar_alltid_sanning.mp3"
+                },
+                {
+                    "text": "Hon talar flera språk.",
+                    "translation": "She speaks several languages.",
+                    "audio": "./audio/phrase/9addfcfb-000c-4b99-83a7-acb62b7ab868.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hon_talar_flera_språk.mp3"
+                },
+                {
+                    "text": "Vilka språk talar du?",
+                    "translation": "What languages do you speak?",
+                    "audio": "./audio/phrase/0f83127d-9b36-460f-8b9c-5f01a7ea59a3.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vilka_språk_talar_du.mp3"
+                },
+                {
+                    "text": "Jag talar lite spanska.",
+                    "translation": "I speak a little Spanish.",
+                    "audio": "./audio/phrase/e5daad53-7b37-44d6-9113-3f1488a067e6.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Jag_talar_lite_spanska.mp3"
+                },
+                {
+                    "text": "Kan du ge mig lite vatten?",
+                    "translation": "Can you give me some water?",
+                    "audio": "./audio/phrase/46638766-b46c-430d-98dc-46a76c687713.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Kan_du_ge_mig_lite_vatten.mp3"
+                },
+                {
+                    "text": "Så klart att jag kommer.",
+                    "translation": "Of course, I will come.",
+                    "audio": "./audio/phrase/2a464871-3789-4723-b2c8-84b1a8fb1fdc.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Så_klart_att_jag_kommer.mp3"
+                },
+                {
+                    "text": "Så klart att vi kan hjälpa dig.",
+                    "translation": "Of course, we can help you.",
+                    "audio": "./audio/phrase/fe4485ca-4437-4640-960c-ed50d67f1b43.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Så_klart_att_vi_kan_hjälpa_dig.mp3"
+                },
+                {
+                    "text": "Vad heter du?",
+                    "translation": "What is your name?",
+                    "audio": "./audio/phrase/ac429949-9ee6-4b53-9858-f587299e27af.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vad_heter_du.mp3"
+                },
+                {
+                    "text": "Och du?",
+                    "translation": "And you?",
+                    "audio": "./audio/phrase/572be7b3-5220-4d41-9882-5ad954fbf76e.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Och_du.mp3"
+                },
+                {
+                    "text": "Var är du?",
+                    "translation": "Where are you?",
+                    "audio": "./audio/phrase/2729fe84-c1ca-45d3-91c9-16e9d27c35b1.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Var_är_du.mp3"
+                },
+                {
+                    "text": "Var bor du?",
+                    "translation": "Where do you live?",
+                    "audio": "./audio/phrase/710ee0df-2010-4dde-af10-279ea6e3883b.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Var_bor_du.mp3"
+                },
+                {
+                    "text": "Var jobbar du?",
+                    "translation": "Where do you work?",
+                    "audio": "./audio/phrase/0721cc5b-b14e-47aa-adab-f2a866daa77c.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Var_jobbar_du.mp3"
+                },
+                {
+                    "text": "Var ligger skolan?",
+                    "translation": "Where is the school located?",
+                    "audio": "./audio/phrase/3bf613d7-239f-4a6c-a89e-eacb6f52bccd.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Var_ligger_skolan.mp3"
+                },
+                {
+                    "text": "Var ligger närmaste sjukhus?",
+                    "translation": "Where is the nearest hospital?",
+                    "audio": "./audio/phrase/f6889865-3fa0-40be-9c5a-34783125c689.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Var_ligger_närmaste_sjukhus.mp3"
+                },
+                {
+                    "text": "Norra Sverige är vackert.",
+                    "translation": "Northern Sweden is beautiful.",
+                    "audio": "./audio/phrase/df364383-07cc-4771-ac26-fcc2e9fa5ef2.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Norra_Sverige_är_vackert.mp3"
+                },
+                {
+                    "text": "Vi planerar en resa till Italien.",
+                    "translation": "We are planning a trip to Italy.",
+                    "audio": "./audio/phrase/432a7ccf-9ab8-4cfb-b2a8-6be031e35eb9.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vi_planerar_en_resa_till_Italien.mp3"
+                },
+                {
+                    "text": "Vi kan prata senare.",
+                    "translation": "We can talk later.",
+                    "audio": "./audio/phrase/4ce28eea-e12e-4afa-a8c8-feeb47c4f320.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vi_kan_prata_senare.mp3"
+                },
+                {
+                    "text": "Han talar pyttelite svenska.",
+                    "translation": "He speaks a tiny bit of Swedish.",
+                    "audio": "./audio/phrase/fdef0480-93ef-4a75-97b5-4d302e17fa0e.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Han_talar_pyttelite_svenska.mp3"
+                },
+                {
+                    "text": "Vad kul!",
+                    "translation": "Great!/How fun!",
+                    "audio": "./audio/phrase/94749ade-d2b1-40d4-aabc-505005e662c6.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vad_kul!.mp3"
+                },
+                {
+                    "text": "Lyssna på musiken.",
+                    "translation": "Listen to the music.",
+                    "audio": "./audio/phrase/b78279eb-e20a-4980-8d60-ba5d6e78abd4.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Lyssna_på_musiken.mp3"
+                },
+                {
+                    "text": "Dialogen i filmen var välskriven.",
+                    "translation": "The dialogue in the movie was well-written.",
+                    "audio": "./audio/phrase/c3e38fb6-0cb2-44e2-b85b-7a91d569e2b9.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Dialogen_i_filmen_var_välskriven.mp3"
+                },
+                {
+                    "text": "Vilken färg gillar du?",
+                    "translation": "Which color do you like?",
+                    "audio": "./audio/phrase/dbb29bc8-73d3-474c-a594-111a0cf0ae87.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Vilken_färg_gillar_du.mp3"
+                },
+                {
+                    "text": "Hon har en katt.",
+                    "translation": "She has a cat.",
+                    "audio": "./audio/phrase/8426ed5c-1192-4035-bff5-a4faaadf5979.mp3",
+                    "audioTranslation": "./audio/phrase/translation_Hon_har_en_katt.mp3"
+                }
+            ]
         }
 
     };
 
     // Elements
+    let hasTranslationAudio = false;
     const dialogList = document.getElementById('dialogList');
     const dialogView = document.getElementById('dialogView');
     const dialogText = document.getElementById('dialogText');
     const dialogTranslation = document.getElementById('dialogTranslation');
     const audioPlayer = document.getElementById('audioPlayer');
+    const translationPlayer = document.getElementById('translationPlayer');
     const backButton = document.getElementById('backButton');
     const showTranslationsCheckbox = document.getElementById('showTranslations');
     const autoplayCheckbox = document.getElementById('autoplay');
@@ -505,6 +1082,7 @@
     // Mute/unmute audio when the checkbox is toggled
     muteCheckbox.addEventListener('change', function() {
         audioPlayer.muted = this.checked;
+        translationPlayer.muted = this.checked;
     });
 
 
@@ -536,20 +1114,49 @@
         dialogView.classList.remove('hidden');
     }
 
+    function loadNextPart() {
+        if (currentIndex >= currentDialog.parts.length) {
+            return;
+        }
+        const delay = parseInt(durationInput.value) || 0;
+        setTimeout(() => {
+            currentIndex++;
+            loadPart();
+        }, delay * 1000);
+    }
+
     // Load and display the current part of the dialog
     function loadPart() {
-        const part = currentDialog.parts[currentIndex];
-        dialogText.innerText = part.text;
-        // Show or hide translation based on the checkbox
-        if (showTranslationsCheckbox.checked) {
-            dialogTranslation.innerText = part.translation;
-            dialogTranslation.classList.remove('hidden');
-        } else {
-            dialogTranslation.innerText = '';
-            dialogTranslation.classList.add('hidden');
+        try {
+            hasTranslationAudio = false;
+            const part = currentDialog.parts[currentIndex];
+
+            dialogText.innerText = part.text;
+            // Show or hide translation based on the checkbox
+            if (showTranslationsCheckbox.checked) {
+                dialogTranslation.innerText = part.translation;
+                dialogTranslation.classList.remove('hidden');
+                if (part.audioTranslation) {
+                    translationPlayer.src = part.audioTranslation;
+                    hasTranslationAudio = true;
+                }
+            } else {
+                dialogTranslation.innerText = '';
+                dialogTranslation.classList.add('hidden');
+            }
+
+            if ((!part.audio || part.audio.includes('xxx')) && autoplayCheckbox.checked) {
+                loadNextPart();
+                return;
+            }
+
+            audioPlayer.src = part.audio;
+
+            audioPlayer.play();
+        } catch (err) {
+            console.log(`Failed to load audio: ${currentDialog.parts[currentIndex].audio}`, err);
         }
-        audioPlayer.src = part.audio;
-        audioPlayer.play();
+
     }
 
     // Back button returns to the list of dialogs
@@ -571,12 +1178,19 @@
 
     // Autoplay: when the audio ends, if enabled, wait for the specified duration then go to the next part
     audioPlayer.addEventListener('ended', () => {
-        if (autoplayCheckbox.checked && currentIndex < currentDialog.parts.length - 1) {
-            const delay = parseInt(durationInput.value) || 0;
-            setTimeout(() => {
-                currentIndex++;
-                loadPart();
-            }, delay * 1000);
+        if (hasTranslationAudio) {
+            translationPlayer.play();
+            return;
+        }
+
+        if (autoplayCheckbox.checked) {
+           loadNextPart()
+        }
+    });
+
+    translationPlayer.addEventListener('ended', () => {
+        if (autoplayCheckbox.checked) {
+            loadNextPart()
         }
     });
 
@@ -590,7 +1204,7 @@
     });
 
     // Optionally reload the current part when toggling the "Show Translations" checkbox
-    showTranslationsCheckbox.addEventListener('change', loadPart);
+    // showTranslationsCheckbox.addEventListener('change', loadPart);
 
     // Initialize dialog list
     showDialogs();

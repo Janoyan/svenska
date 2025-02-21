@@ -1,0 +1,314 @@
+
+
+betoning (-en, -ar, -arna)
+emphasis
+ringa in
+circle
+igen
+again
+markera (-r, -de, -t)
+mark
+uttala (-ar, -de, -t)
+pronounce
+inte
+not
+titta (-r, -de, -t)
+look
+ruta (-n, -or, -orna)
+box
+här
+here
+nedanför
+below
+se (ser, såg, sett)
+see
+ett
+a/an
+system (-et, –, -en)
+system
+för
+for
+verb (-et, –, en)
+verb/verbs
+position (-en, -er, -erna)
+position
+läsa (-er, -te, -t)
+read
+sätta ett kryss
+make an x, tick
+sätta (-er, satte, satt)
+put, place
+alla
+all/everyone
+fråga (-r, -de, -t)
+ask
+svara (-r, -de, -t)
+answer
+frågeord ( -et, –, -en)
+question words
+mingla (-r, -de, -t)
+mingle (խառնվել)
+grupp (-en, -er, -erna)
+group
+skriva (skriver, skrev, skrivit)
+write
+namn (-et, –, -en)
+name
+land (-et, länder, länderna)
+country
+Colombia
+Colombia
+Irland
+Ireland
+franska
+French
+presentera (-r, -de, -t)
+introduce
+varandra
+each other
+hon
+she
+han
+he
+den
+it
+det
+it
+vi
+we
+ni
+you
+de
+they
+subjektspronomen
+subject pronoun
+pronomen (-et, –, -en)
+pronoun
+säga (säger, sa/sade, sagt)
+say
+klass (-en, -er, -erna)
+class
+om
+about
+arbeta (-r, -de, -t)
+work
+ingenjör (-en, -er, -erna)
+engineer
+läkare (-n, –, läkarna)
+doctor, physician
+tandläkare (-n, –, tandläkarna)
+dentist
+sjuksköterska (-n, -or, -orna)
+nurse
+busschauﬀör (-en, -er, -erna)
+bus driver
+frisör (-en, -er, -erna)
+hairdresser
+webbdesigner (-n, webbdesigner, webbdesignerna)
+web designer
+fotograf (-en, -er, -erna)
+photographer
+lärare (-n, –, lärarna)
+teacher
+servitör (-en, -er, -erna)
+waiter, waitress
+kock (-en, -ar, -arna)
+chef
+nähä (ugs)
+I see
+göra (gör, gjorde, gjort)
+do, make
+då
+then
+plugga (-r, -de, -t)
+study
+studera (-r, -de, -t)
+study
+design (-en)
+design
+pensionär (-en, -er, -erna)
+retiree, pensioner
+jobba (-r, -de, -t)
+work
+ja
+yes
+med
+with
+barn (-et, –, -en)
+children
+förskola (-n, -or, -orna)
+preschool
+nu
+now
+söka (-er, -te, -t)
+seek, look for
+jobb (-et, –, -en)
+job
+restaurang (-en, -er, -erna)
+restaurant
+lycka till
+good luck
+negation (-en, -er, -erna)
+negation
+mening (-en, -ar, -arna)
+sentence
+Ukraina
+Ukraine
+portugisiska
+Portuguese
+filosofi (-n)
+philosophy
+psykologi (-n)
+psychology
+yrke (-t, -n, -na)
+profession
+IT-företag (-et, –, -en)
+IT company
+bank (-en, -er, -erna)
+bank
+ekonomi (-n)
+accounts, economics
+programmerare (-n, –, programmerarna)
+programmer
+ekonom (-en, -er, -erna)
+accountant
+förskolelärare (-n, –, -förskolelärarna)
+preschool teacher
+programmering (-en, -ar, -arna)
+programming
+läsa (-er, -te, -t)
+study
+studera till
+study to be
+till
+to
+höra (hör, hörde, hört)
+hear
+kryssa(-r, -de, -t) för
+tick, cross
+rätt
+alternativ correct answer, correct option
+rätt (-a)
+correct, right
+alternativ (-et, –, -en)
+option, answer
+polis (-en, -er, -erna)
+policeman/woman
+biolog (-en, -er, -erna)
+biologist
+kemist (-en, -en, -erna)
+chemist
+gift (–, -a)
+married
+sambo (-n, -r, -rna)
+live-in partner
+singel
+single
+min (mitt, mina)
+my
+man (-nen, män, männen)
+husband
+schweizare (-n, –, schweizarna)
+Swiss
+men
+but
+två
+two
+en
+one
+son (-en, söner, sönerna)
+son
+dotter (-n, döttrar, döttrarna)
+daughter
+svensk (-t, -a)
+Swedish
+också
+also, too
+flickvän (-nen, -ner, -nerna)
+girlfriend
+bo (-r, bodde, bott)
+live
+bo ihop
+live together
+toppen
+super, great
+par (-et, –, -en)
+couple
+Sverige
+Sweden
+skilja (-er, skilde, skilt)
+divorce
+samma
+same
+år (-et, –, -en)
+year
+man (-nen, män, männen)
+man
+kvinna (-n, -or, -orna)
+woman
+sedan
+since
+källa (-n, -or, -orna)
+source
+skild (skilt, skilda)
+divorced
+separerad (separerat, separerade)
+separated
+tjej (-en, -er, -erna)
+girlfriend
+pojkvän (-nen, -ner, -nerna)
+boyfriend
+kille (-n, -ar, -arna)
+boyfriend
+fru (-n, -ar, -arna)
+wife
+pojke (-n, -ar, -arna)
+boy
+flicka (-n, -or, orna)
+girl
+Ja, det är jag.
+Yes, I am.
+bonusbarn (-et, –, -en)
+stepchild
+tre
+three
+person (-en, -er, -erna)
+person
+text (-en, -er, -erna)
+text
+generell (-t, -a)
+general
+stryka (stryker, strök, strukit)
+under underline
+universitet (-et, –, -en)
+university
+nära near,
+close to
+sortera (-r, -de, -t)
+sort, organize
+matematik (-en)
+mathematics
+lätt (-a)
+easy
+form (-en, -er, -erna)
+form, conjugation
+alfabet (-et, –,-en)
+alphabet
+efternamn (-et, –, -en)
+last name, surname, family name
+stava (-r, -de, -t)
+spell
+annan (annat, andra)
+another
+om
+about
+använda (-er, använde, använt)
+use
+som
+as
+tyska
+German
+forska (-r, -de, -t)
+do research
+institut (-et, –, -en)
+institute
