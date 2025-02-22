@@ -25,7 +25,7 @@
         #backButton {
             position: fixed;
             left: 30px;
-            top: 80px;
+            top: 5px;
             font-size: 30px;
             background-color: black;
             color: white;
@@ -43,7 +43,7 @@
     <h2 id="dialogText" class="text-2xl font-bold mb-4"></h2>
     <p id="dialogTranslation" class="text-3xl mb-4"></p>
     <audio id="audioPlayer" controls class="w-full"></audio>
-    <audio id="translationPlayer" controls style="display: none"></audio>
+    <audio id="translationPlayer" controls style="display: none" muted></audio>
 </div>
 
 <!-- Bottom control panel -->
@@ -64,6 +64,10 @@
     <label class="flex items-center gap-2">
         <input type="checkbox" id="mute" class="form-checkbox">
         <span>Mute</span>
+    </label>
+    <label class="flex items-center gap-2">
+        <input type="checkbox" id="muteT" class="form-checkbox" checked>
+        <span>Mute T</span>
     </label>
 </div>
 
@@ -504,560 +508,3104 @@
                 {
                     "text": "Eleven läser en bok.",
                     "translation": "The student is reading a book.",
-                    "audio": "./audio/phrase/5154ec03-4aba-4ec1-8dec-ab3b9ad3ff24.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Eleven_läser_en_bok.mp3"
+                    "audio": "./audio/phrases/Eleven_läser_en_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Eleven_läser_en_bok.mp3"
                 },
                 {
                     "text": "Läraren skriver på tavlan.",
                     "translation": "The teacher is writing on the board.",
-                    "audio": "./audio/phrase/8eb1c6b9-27b2-4964-920c-da53a00a51e2.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Läraren_skriver_på_tavlan.mp3"
+                    "audio": "./audio/phrases/Läraren_skriver_på_tavlan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Läraren_skriver_på_tavlan.mp3"
                 },
                 {
                     "text": "Ursäkta, kan du hjälpa mig?",
                     "translation": "Excuse me, can you help me?",
-                    "audio": "./audio/phrase/0ef857aa-e002-413a-a9c8-76a8993f28a3.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Ursäkta_kan_du_hjälpa_mig.mp3"
+                    "audio": "./audio/phrases/Ursäkta_kan_du_hjälpa_mig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ursäkta_kan_du_hjälpa_mig.mp3"
                 },
                 {
                     "text": "Ursäkta, var ligger toaletten?",
                     "translation": "Excuse me, where is the restroom?",
-                    "audio": "./audio/phrase/ac2a347a-634f-4cbd-a670-f3b7100408bb.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Ursäkta_var_ligger_toaletten.mp3"
+                    "audio": "./audio/phrases/Ursäkta_var_ligger_toaletten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ursäkta_var_ligger_toaletten.mp3"
                 },
                 {
                     "text": "Ursäkta, jag är sen.",
                     "translation": "Excuse me, I am late.",
-                    "audio": "./audio/phrase/4ba0f60d-30f4-410f-8f6c-fca013ec6958.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Ursäkta_jag_är_sen.mp3"
+                    "audio": "./audio/phrases/Ursäkta_jag_är_sen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ursäkta_jag_är_sen.mp3"
                 },
                 {
                     "text": "Jag har en fråga",
                     "translation": "I have a question",
-                    "audio": "./audio/phrase/0c92cf54-ec0d-455f-a2e0-bfd2635fb26d.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_har_en_fråga.mp3"
+                    "audio": "./audio/phrases/Jag_har_en_fråga.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_en_fråga.mp3"
                 },
                 {
                     "text": "Vad betyder det?",
                     "translation": "What does that mean?",
-                    "audio": "./audio/phrase/5421d148-6a00-49a0-8ed3-e382ddaba989.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vad_betyder_det.mp3"
+                    "audio": "./audio/phrases/Vad_betyder_det.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_betyder_det.mp3"
                 },
                 {
                     "text": "Hur säger man something på svenska?",
                     "translation": "How do you say ... in Swedish?",
-                    "audio": "./audio/phrase/40b2d547-7460-4e51-a931-36bd5dce40dd.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hur_säger_man_something_på_svenska.mp3"
+                    "audio": "./audio/phrases/Hur_säger_man_something_på_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hur_säger_man_something_på_svenska.mp3"
                 },
                 {
                     "text": "Vad heter ... på svenska?",
                     "translation": "What is ... called in Swedish?",
-                    "audio": "./audio/phrase/fa01c083-fe98-456f-bc4c-18599a5b367c.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vad_heter__på_svenska.mp3"
+                    "audio": "./audio/phrases/Vad_heter__på_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_heter__på_svenska.mp3"
                 },
                 {
                     "text": "Hur uttalar man ... ?",
                     "translation": "How do you pronounce ... ?",
-                    "audio": "./audio/phrase/77506003-1a6f-4a28-8a55-21310e35cbc6.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hur_uttalar_man__.mp3"
+                    "audio": "./audio/phrases/Hur_uttalar_man__.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hur_uttalar_man__.mp3"
                 },
                 {
                     "text": "Hur skriver man ... ?",
                     "translation": "How do you write ... ?",
-                    "audio": "./audio/phrase/d5196872-a921-4b1d-be4f-2347bc76f60a.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hur_skriver_man__.mp3"
+                    "audio": "./audio/phrases/Hur_skriver_man__.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hur_skriver_man__.mp3"
                 },
                 {
                     "text": "Kan du säga det en gång till?",
                     "translation": "Could you repeat that?",
-                    "audio": "./audio/phrase/2107db10-470b-433a-bb05-cd59080d2560.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_säga_det_en_gång_till.mp3"
+                    "audio": "./audio/phrases/Kan_du_säga_det_en_gång_till.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_säga_det_en_gång_till.mp3"
                 },
                 {
                     "text": "Jag förstår inte.",
                     "translation": "I don’t understand.",
-                    "audio": "./audio/phrase/29d09eaf-017c-4a10-8c44-5e62a48a112d.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_förstår_inte.mp3"
+                    "audio": "./audio/phrases/Jag_förstår_inte.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_förstår_inte.mp3"
                 },
                 {
                     "text": "Jaha! Nu förstår jag!",
                     "translation": "Ah! Now I understand!",
-                    "audio": "./audio/phrase/faab3d91-d2e3-47cd-881e-f15b11df0a68.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jaha!_Nu_förstår_jag!.mp3"
+                    "audio": "./audio/phrases/Jaha!_Nu_förstår_jag!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jaha!_Nu_förstår_jag!.mp3"
                 },
                 {
                     "text": "Förstår du?",
                     "translation": "Do you understand?",
-                    "audio": "./audio/phrase/4a886116-12c5-4cbc-82f0-ab5b517abd8a.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Förstår_du.mp3"
+                    "audio": "./audio/phrases/Förstår_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Förstår_du.mp3"
                 },
                 {
                     "text": "Har ni några frågor?",
                     "translation": "Do you have any questions?",
-                    "audio": "./audio/phrase/48a08178-e0bc-4b76-88c7-07a67fb4b8fd.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Har_ni_några_frågor.mp3"
+                    "audio": "./audio/phrases/Har_ni_några_frågor.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Har_ni_några_frågor.mp3"
                 },
                 {
                     "text": "Titta på sidan 1 i textboken.",
                     "translation": "Look at page 1 in the textbook.",
-                    "audio": "./audio/phrase/a05155b0-5427-4dbb-9e3c-3c18ab210272.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Titta_på_sidan_1_i_textboken.mp3"
+                    "audio": "./audio/phrases/Titta_på_sidan_1_i_textboken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Titta_på_sidan_1_i_textboken.mp3"
                 },
                 {
                     "text": "Läs texten på sidan 2.",
                     "translation": "Read the text on page 2.",
-                    "audio": "./audio/phrase/cb32acb2-5dba-4e7c-8562-d66f7278e9fb.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Läs_texten_på_sidan_2.mp3"
+                    "audio": "./audio/phrases/Läs_texten_på_sidan_2.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Läs_texten_på_sidan_2.mp3"
                 },
                 {
                     "text": "Stäng boken.",
                     "translation": "Close the book.",
-                    "audio": "./audio/phrase/1a8cab6c-677c-48d6-9776-5213d8bc43d4.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Stäng_boken.mp3"
+                    "audio": "./audio/phrases/Stäng_boken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Stäng_boken.mp3"
                 },
                 {
                     "text": "Lyssna noga.",
                     "translation": "Listen carefully.",
-                    "audio": "./audio/phrase/c9c10da1-4119-47b7-97c2-02924956e8d0.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Lyssna_noga.mp3"
+                    "audio": "./audio/phrases/Lyssna_noga.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Lyssna_noga.mp3"
                 },
                 {
                     "text": "Lyssna på musiken.",
                     "translation": "Listen to the music.",
-                    "audio": "./audio/phrase/c7cc3998-8846-4ad8-ba88-ec6f2fc2a53e.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Lyssna_på_musiken.mp3"
+                    "audio": "./audio/phrases/Lyssna_på_musiken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Lyssna_på_musiken.mp3"
                 },
                 {
                     "text": "Säg efter mig.",
                     "translation": "Repeat after me.",
-                    "audio": "./audio/phrase/b836ec02-c44e-4d12-97cc-2c683569f20c.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Säg_efter_mig.mp3"
+                    "audio": "./audio/phrases/Säg_efter_mig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Säg_efter_mig.mp3"
                 },
                 {
                     "text": "Skriv ner vad du hör.",
                     "translation": "Write down what you hear.",
-                    "audio": "./audio/phrase/fdb78600-a6d8-49be-b050-12d029585b61.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Skriv_ner_vad_du_hör.mp3"
+                    "audio": "./audio/phrases/Skriv_ner_vad_du_hör.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Skriv_ner_vad_du_hör.mp3"
                 },
                 {
                     "text": "Skriv en rapport.",
                     "translation": "Write a report.",
-                    "audio": "./audio/phrase/bc5c22ee-370d-4714-bc39-3bbec4529294.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Skriv_en_rapport.mp3"
+                    "audio": "./audio/phrases/Skriv_en_rapport.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Skriv_en_rapport.mp3"
                 },
                 {
                     "text": "Arbeta i par.",
                     "translation": "Work in pairs.",
-                    "audio": "./audio/phrase/faedcb47-165f-40e2-9a6b-8fa76032e01a.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Arbeta_i_par.mp3"
+                    "audio": "./audio/phrases/Arbeta_i_par.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Arbeta_i_par.mp3"
                 },
                 {
                     "text": "Prata svenska!",
                     "translation": "Speak Swedish.",
-                    "audio": "./audio/phrase/8597d3cb-bb82-4dd6-8a4b-e9fd1ecdbe28.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Prata_svenska!.mp3"
+                    "audio": "./audio/phrases/Prata_svenska!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Prata_svenska!.mp3"
                 },
                 {
                     "text": "Kapitel tre är väldigt intressant.",
                     "translation": "Chapter three is very interesting.",
-                    "audio": "./audio/phrase/f036c871-a9ab-4b9b-a212-2267f2b227d0.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kapitel_tre_är_väldigt_intressant.mp3"
+                    "audio": "./audio/phrases/Kapitel_tre_är_väldigt_intressant.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kapitel_tre_är_väldigt_intressant.mp3"
                 },
                 {
                     "text": "Läs kapitel ett.",
                     "translation": "Read chapter one.",
-                    "audio": "./audio/phrase/c172bd61-c2fa-4e99-9fe8-25f9bfcf6eb5.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Läs_kapitel_ett.mp3"
+                    "audio": "./audio/phrases/Läs_kapitel_ett.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Läs_kapitel_ett.mp3"
+                },
+                {
+                    "text": "Sidan var ganska lång.",
+                    "translation": "Hur många kapitel finns det i boken?",
+                    "audio": "./audio/phrases/Sidan_var_ganska_lång.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Sidan_var_ganska_lång.mp3"
+                },
+                {
+                    "text": "How many chapters are there in the book?",
+                    "translation": "The page was quite long.",
+                    "audio": "./audio/phrases/How_many_chapters_are_there_in_the_book.mp3",
+                    "audioTranslation": "./audio/phrases/translation_How_many_chapters_are_there_in_the_book.mp3"
                 },
                 {
                     "text": "Vi gick till andra sidan av gatan.",
                     "translation": "We went to the other side of the street.",
-                    "audio": "./audio/phrase/eccbe681-71a1-46c3-ba19-c32837f67559.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vi_gick_till_andra_sidan_av_gatan.mp3"
+                    "audio": "./audio/phrases/Vi_gick_till_andra_sidan_av_gatan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_gick_till_andra_sidan_av_gatan.mp3"
                 },
                 {
                     "text": "Jag kan prata svenska.",
                     "translation": "I can speak Swedish.",
-                    "audio": "./audio/phrase/d30c7585-b5fb-4772-a828-cd8888560839.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_kan_prata_svenska.mp3"
+                    "audio": "./audio/phrases/Jag_kan_prata_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_kan_prata_svenska.mp3"
                 },
                 {
                     "text": "Vi kan gå dit imorgon.",
                     "translation": "We can go there tomorrow.",
-                    "audio": "./audio/phrase/385e6e00-c2b5-4eda-97ba-d18458ca3abb.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vi_kan_gå_dit_imorgon.mp3"
+                    "audio": "./audio/phrases/Vi_kan_gå_dit_imorgon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_kan_gå_dit_imorgon.mp3"
                 },
                 {
                     "text": "Kan du kombinera de här färgerna?",
                     "translation": "Can you combine these colors?",
-                    "audio": "./audio/phrase/53f575e5-ebae-457f-9be7-de4f6343304b.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_kombinera_de_här_färgerna.mp3"
+                    "audio": "./audio/phrases/Kan_du_kombinera_de_här_färgerna.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_kombinera_de_här_färgerna.mp3"
                 },
                 {
                     "text": "Det här är ett gammalt foto.",
                     "translation": "This is an old photo.",
-                    "audio": "./audio/phrase/47ed3bba-2028-4ed1-ab8b-6536e151837d.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Det_här_är_ett_gammalt_foto.mp3"
+                    "audio": "./audio/phrases/Det_här_är_ett_gammalt_foto.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_här_är_ett_gammalt_foto.mp3"
                 },
                 {
                     "text": "Kan du skicka fotot till mig?",
                     "translation": "Can you send the photo to me?",
-                    "audio": "./audio/phrase/fbf84704-fab9-43c4-832f-c9f715bd39ba.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_skicka_fotot_till_mig.mp3"
+                    "audio": "./audio/phrases/Kan_du_skicka_fotot_till_mig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_skicka_fotot_till_mig.mp3"
                 },
                 {
                     "text": "Det är ett svårt ord.",
                     "translation": "It is a difficult word.",
-                    "audio": "./audio/phrase/1718467a-2490-49e7-8260-6d0ec13b20f8.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Det_är_ett_svårt_ord.mp3"
+                    "audio": "./audio/phrases/Det_är_ett_svårt_ord.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_ett_svårt_ord.mp3"
                 },
                 {
                     "text": "Kan du stava det ordet?",
                     "translation": "Can you spell that word?",
-                    "audio": "./audio/phrase/4d7da9b9-eede-4d20-aabe-c695ed31d543.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_stava_det_ordet.mp3"
+                    "audio": "./audio/phrases/Kan_du_stava_det_ordet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_stava_det_ordet.mp3"
                 },
                 {
                     "text": "Vi åt hamburgare till middag.",
                     "translation": "We had hamburgers for dinner.",
-                    "audio": "./audio/phrase/1effe68b-bc23-482a-a80e-e180c16b8e07.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vi_åt_hamburgare_till_middag.mp3"
+                    "audio": "./audio/phrases/Vi_åt_hamburgare_till_middag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_åt_hamburgare_till_middag.mp3"
                 },
                 {
                     "text": "Kan jag få en hamburgare utan lök?",
                     "translation": "Can I have a hamburger without onions?",
-                    "audio": "./audio/phrase/81f0c3ce-9b7e-41ce-9de7-7093c4159368.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_jag_få_en_hamburgare_utan_lök.mp3"
+                    "audio": "./audio/phrases/Kan_jag_få_en_hamburgare_utan_lök.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_jag_få_en_hamburgare_utan_lök.mp3"
                 },
                 {
                     "text": "Han är en advokat.",
                     "translation": "He is a lawyer.",
-                    "audio": "./audio/phrase/0524ac5a-690c-46fc-971b-30db8128f22b.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Han_är_en_advokat.mp3"
+                    "audio": "./audio/phrases/Han_är_en_advokat.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_en_advokat.mp3"
                 },
                 {
                     "text": "Hon arbetar som advokat.",
                     "translation": "She works as a lawyer.",
-                    "audio": "./audio/phrase/9511d454-696b-4fa2-8054-0cdccec56318.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hon_arbetar_som_advokat.mp3"
+                    "audio": "./audio/phrases/Hon_arbetar_som_advokat.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_arbetar_som_advokat.mp3"
                 },
                 {
                     "text": "Kan du skala potatisen?",
                     "translation": "Can you peel the potatoes?",
-                    "audio": "./audio/phrase/369fada1-8327-42db-941e-9f172825e2c2.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_skala_potatisen.mp3"
+                    "audio": "./audio/phrases/Kan_du_skala_potatisen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_skala_potatisen.mp3"
                 },
                 {
                     "text": "Vi ska äta potatis till middag.",
                     "translation": "We will eat potatoes for dinner.",
-                    "audio": "./audio/phrase/2e949086-423d-42f0-87b7-8db736b4f70d.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vi_ska_äta_potatis_till_middag.mp3"
+                    "audio": "./audio/phrases/Vi_ska_äta_potatis_till_middag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_ska_äta_potatis_till_middag.mp3"
                 },
                 {
                     "text": "Jag glömde min mobil hemma.",
                     "translation": "I forgot my cell phone at home.",
-                    "audio": "./audio/phrase/8322b80c-234c-4dad-b789-e8ded31d8dd2.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_glömde_min_mobil_hemma.mp3"
+                    "audio": "./audio/phrases/Jag_glömde_min_mobil_hemma.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_glömde_min_mobil_hemma.mp3"
                 },
                 {
                     "text": "Hon köpte en ny mobil.",
                     "translation": "She bought a new cell phone.",
-                    "audio": "./audio/phrase/f07c640d-9dc7-43dd-9fbd-c3591ec4b2fc.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hon_köpte_en_ny_mobil.mp3"
+                    "audio": "./audio/phrases/Hon_köpte_en_ny_mobil.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_köpte_en_ny_mobil.mp3"
                 },
                 {
                     "text": "Jag skrev på pappret.",
                     "translation": "I wrote on the paper.",
-                    "audio": "./audio/phrase/a4cc55c6-47d5-4f84-b75f-a2b30db72767.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_skrev_på_pappret.mp3"
+                    "audio": "./audio/phrases/Jag_skrev_på_pappret.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_skrev_på_pappret.mp3"
                 },
                 {
                     "text": "Kan du ge mig ett papper?",
                     "translation": "Can you give me a paper?",
-                    "audio": "./audio/phrase/01ab8f96-afe8-426e-b13b-4591b39f0915.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_ge_mig_ett_papper.mp3"
+                    "audio": "./audio/phrases/Kan_du_ge_mig_ett_papper.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_ge_mig_ett_papper.mp3"
                 },
                 {
                     "text": "Kaffet är varmt.",
                     "translation": "The coffee is hot.",
-                    "audio": "./audio/phrase/bc0a7ba4-d1c3-4e20-9e9a-8b829c2eb94e.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kaffet_är_varmt.mp3"
+                    "audio": "./audio/phrases/Kaffet_är_varmt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kaffet_är_varmt.mp3"
                 },
                 {
                     "text": "Jag dricker kaffe varje morgon.",
                     "translation": "I drink coffee every morning.",
-                    "audio": "./audio/phrase/8068cffa-2777-4aa1-8491-700f73c0eb08.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_dricker_kaffe_varje_morgon.mp3"
+                    "audio": "./audio/phrases/Jag_dricker_kaffe_varje_morgon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_dricker_kaffe_varje_morgon.mp3"
                 },
                 {
                     "text": "Boken ligger på bordet.",
                     "translation": "The book is on the table.",
-                    "audio": "./audio/phrase/deb83943-724a-4d13-a7c1-e8b2f4fdced9.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Boken_ligger_på_bordet.mp3"
+                    "audio": "./audio/phrases/Boken_ligger_på_bordet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Boken_ligger_på_bordet.mp3"
                 },
                 {
                     "text": "Har du läst den här boken?",
                     "translation": "Have you read this book?",
-                    "audio": "./audio/phrase/d24e716b-9a64-45ec-a315-f9056efc8823.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Har_du_läst_den_här_boken.mp3"
+                    "audio": "./audio/phrases/Har_du_läst_den_här_boken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Har_du_läst_den_här_boken.mp3"
                 },
                 {
                     "text": "Jag läser en bok.",
                     "translation": "I am reading a book.",
-                    "audio": "./audio/phrase/cce4433e-90a5-4be9-800b-7bb47d2a7aa5.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_läser_en_bok.mp3"
+                    "audio": "./audio/phrases/Jag_läser_en_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_läser_en_bok.mp3"
                 },
                 {
                     "text": "Jag älskar kanelbullar.",
                     "translation": "I love cinnamon buns.",
-                    "audio": "./audio/phrase/fc0ec7c1-cd33-4e17-bec7-8334f9a0d744.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_älskar_kanelbullar.mp3"
+                    "audio": "./audio/phrases/Jag_älskar_kanelbullar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_älskar_kanelbullar.mp3"
                 },
                 {
                     "text": "Hon köpte en kanelbulle på bageriet.",
                     "translation": "She bought a cinnamon bun at the bakery.",
-                    "audio": "./audio/phrase/d3165c13-f35d-4c1e-8a4b-14bd2f609865.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hon_köpte_en_kanelbulle_på_bageriet.mp3"
+                    "audio": "./audio/phrases/Hon_köpte_en_kanelbulle_på_bageriet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_köpte_en_kanelbulle_på_bageriet.mp3"
                 },
                 {
                     "text": "Kan jag låna din penna?",
                     "translation": "Can I borrow your pen?",
-                    "audio": "./audio/phrase/70755043-a898-4be6-82e0-90f10b87a405.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_jag_låna_din_penna.mp3"
+                    "audio": "./audio/phrases/Kan_jag_låna_din_penna.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_jag_låna_din_penna.mp3"
                 },
                 {
                     "text": "Jag tappade min penna.",
                     "translation": "I lost my pen.",
-                    "audio": "./audio/phrase/b517c392-fe8a-4fa7-93e2-e74a05c11f61.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_tappade_min_penna.mp3"
+                    "audio": "./audio/phrases/Jag_tappade_min_penna.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_tappade_min_penna.mp3"
                 },
                 {
                     "text": "Jag dricker vatten varje dag.",
                     "translation": "I drink water every day.",
-                    "audio": "./audio/phrase/a1578e0b-d3f0-4eb4-b2d5-f6446a4a6809.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_dricker_vatten_varje_dag.mp3"
+                    "audio": "./audio/phrases/Jag_dricker_vatten_varje_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_dricker_vatten_varje_dag.mp3"
                 },
                 {
                     "text": "Hon fyllde flaskan med vatten.",
                     "translation": "She filled the bottle with water.",
-                    "audio": "./audio/phrase/f47ec632-f78a-4299-977e-d074f78d5d02.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hon_fyllde_flaskan_med_vatten.mp3"
+                    "audio": "./audio/phrases/Hon_fyllde_flaskan_med_vatten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_fyllde_flaskan_med_vatten.mp3"
                 },
                 {
                     "text": "Hon har långt hår.",
                     "translation": "She has long hair.",
-                    "audio": "./audio/phrase/795c7e72-12a8-4ec6-83e4-37bf49c80d62.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hon_har_långt_hår.mp3"
+                    "audio": "./audio/phrases/Hon_har_långt_hår.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_har_långt_hår.mp3"
                 },
                 {
                     "text": "Det var en lång dag.",
                     "translation": "It was a long day.",
-                    "audio": "./audio/phrase/41b5faf5-a086-4580-9b50-bb45c4d120f6.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Det_var_en_lång_dag.mp3"
+                    "audio": "./audio/phrases/Det_var_en_lång_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_en_lång_dag.mp3"
                 },
                 {
                     "text": "Kan du ge mig ett exempel?",
                     "translation": "Can you give me an example?",
-                    "audio": "./audio/phrase/24dc5a7c-88fd-49ff-88b4-43ea71e3ec9f.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_ge_mig_ett_exempel.mp3"
+                    "audio": "./audio/phrases/Kan_du_ge_mig_ett_exempel.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_ge_mig_ett_exempel.mp3"
                 },
                 {
                     "text": "Jag behöver fler exempel.",
                     "translation": "I need more examples.",
-                    "audio": "./audio/phrase/478ddfd9-09a4-4654-8915-bc35694343e3.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_behöver_fler_exempel.mp3"
+                    "audio": "./audio/phrases/Jag_behöver_fler_exempel.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_behöver_fler_exempel.mp3"
                 },
                 {
                     "text": "Jag går en kurs i svenska.",
                     "translation": "I am taking a course in Swedish.",
-                    "audio": "./audio/phrase/1813e1f0-a03d-4ee6-84a2-c3cc966ee23d.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_går_en_kurs_i_svenska.mp3"
+                    "audio": "./audio/phrases/Jag_går_en_kurs_i_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_går_en_kurs_i_svenska.mp3"
                 },
                 {
                     "text": "Vad heter det på svenska?",
                     "translation": "What is it called in Swedish?",
-                    "audio": "./audio/phrase/7b0704e6-fb11-43cf-a599-e0412490238e.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vad_heter_det_på_svenska.mp3"
+                    "audio": "./audio/phrases/Vad_heter_det_på_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_heter_det_på_svenska.mp3"
                 },
                 {
                     "text": "Vad heter du?",
                     "translation": "What is your name?",
-                    "audio": "./audio/phrase/02b7fc97-ef19-495d-b943-7af345070e03.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vad_heter_du.mp3"
+                    "audio": "./audio/phrases/Vad_heter_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_heter_du.mp3"
                 },
                 {
                     "text": "Varifrån kommer du?",
                     "translation": "Where are you from?",
-                    "audio": "./audio/phrase/48cc1505-29d4-43d7-9914-0a2724b051ce.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Varifrån_kommer_du.mp3"
+                    "audio": "./audio/phrases/Varifrån_kommer_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Varifrån_kommer_du.mp3"
                 },
                 {
                     "text": "Varifrån känner du henne?",
                     "translation": "Where do you know her from?",
-                    "audio": "./audio/phrase/69914208-4cfd-450c-8a23-20f25ef7922b.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Varifrån_känner_du_henne.mp3"
+                    "audio": "./audio/phrases/Varifrån_känner_du_henne.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Varifrån_känner_du_henne.mp3"
                 },
                 {
                     "text": "Varifrån kommer det här ljudet?",
                     "translation": "Where is this sound coming from?",
-                    "audio": "./audio/phrase/c6330626-9d16-401f-8f0e-9711b6098698.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Varifrån_kommer_det_här_ljudet.mp3"
+                    "audio": "./audio/phrases/Varifrån_kommer_det_här_ljudet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Varifrån_kommer_det_här_ljudet.mp3"
                 },
                 {
                     "text": "vad bra",
                     "translation": "that’s great",
-                    "audio": "./audio/phrase/5611f811-40d9-4167-aaf3-a70b259808d7.mp3",
-                    "audioTranslation": "./audio/phrase/translation_vad_bra.mp3"
+                    "audio": "./audio/phrases/vad_bra.mp3",
+                    "audioTranslation": "./audio/phrases/translation_vad_bra.mp3"
                 },
                 {
                     "text": "Vad talar du för språk?",
                     "translation": "What languages do you speak?",
-                    "audio": "./audio/phrase/9eeb87b0-281f-42ea-9ee0-1863cdc0f0bf.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vad_talar_du_för_språk.mp3"
+                    "audio": "./audio/phrases/Vad_talar_du_för_språk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_talar_du_för_språk.mp3"
                 },
                 {
                     "text": "Kan du tala långsammare?",
                     "translation": "Can you speak slower?",
-                    "audio": "./audio/phrase/0795d075-0f7c-4883-9cb2-913f0fb2bf42.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_tala_långsammare.mp3"
+                    "audio": "./audio/phrases/Kan_du_tala_långsammare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_tala_långsammare.mp3"
                 },
                 {
                     "text": "Han talar alltid sanning.",
                     "translation": "He always tells the truth.",
-                    "audio": "./audio/phrase/8a72424e-8be2-4be3-8696-d0ce123ffcf7.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Han_talar_alltid_sanning.mp3"
+                    "audio": "./audio/phrases/Han_talar_alltid_sanning.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_talar_alltid_sanning.mp3"
                 },
                 {
                     "text": "Hon talar flera språk.",
                     "translation": "She speaks several languages.",
-                    "audio": "./audio/phrase/9addfcfb-000c-4b99-83a7-acb62b7ab868.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hon_talar_flera_språk.mp3"
+                    "audio": "./audio/phrases/Hon_talar_flera_språk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_talar_flera_språk.mp3"
                 },
                 {
                     "text": "Vilka språk talar du?",
                     "translation": "What languages do you speak?",
-                    "audio": "./audio/phrase/0f83127d-9b36-460f-8b9c-5f01a7ea59a3.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vilka_språk_talar_du.mp3"
+                    "audio": "./audio/phrases/Vilka_språk_talar_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vilka_språk_talar_du.mp3"
                 },
                 {
                     "text": "Jag talar lite spanska.",
                     "translation": "I speak a little Spanish.",
-                    "audio": "./audio/phrase/e5daad53-7b37-44d6-9113-3f1488a067e6.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Jag_talar_lite_spanska.mp3"
+                    "audio": "./audio/phrases/Jag_talar_lite_spanska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_talar_lite_spanska.mp3"
                 },
                 {
                     "text": "Kan du ge mig lite vatten?",
                     "translation": "Can you give me some water?",
-                    "audio": "./audio/phrase/46638766-b46c-430d-98dc-46a76c687713.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Kan_du_ge_mig_lite_vatten.mp3"
+                    "audio": "./audio/phrases/Kan_du_ge_mig_lite_vatten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_ge_mig_lite_vatten.mp3"
                 },
                 {
                     "text": "Så klart att jag kommer.",
                     "translation": "Of course, I will come.",
-                    "audio": "./audio/phrase/2a464871-3789-4723-b2c8-84b1a8fb1fdc.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Så_klart_att_jag_kommer.mp3"
+                    "audio": "./audio/phrases/Så_klart_att_jag_kommer.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Så_klart_att_jag_kommer.mp3"
                 },
                 {
                     "text": "Så klart att vi kan hjälpa dig.",
                     "translation": "Of course, we can help you.",
-                    "audio": "./audio/phrase/fe4485ca-4437-4640-960c-ed50d67f1b43.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Så_klart_att_vi_kan_hjälpa_dig.mp3"
+                    "audio": "./audio/phrases/Så_klart_att_vi_kan_hjälpa_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Så_klart_att_vi_kan_hjälpa_dig.mp3"
                 },
                 {
                     "text": "Vad heter du?",
                     "translation": "What is your name?",
-                    "audio": "./audio/phrase/ac429949-9ee6-4b53-9858-f587299e27af.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vad_heter_du.mp3"
+                    "audio": "./audio/phrases/Vad_heter_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_heter_du.mp3"
                 },
                 {
                     "text": "Och du?",
                     "translation": "And you?",
-                    "audio": "./audio/phrase/572be7b3-5220-4d41-9882-5ad954fbf76e.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Och_du.mp3"
+                    "audio": "./audio/phrases/Och_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Och_du.mp3"
                 },
                 {
                     "text": "Var är du?",
                     "translation": "Where are you?",
-                    "audio": "./audio/phrase/2729fe84-c1ca-45d3-91c9-16e9d27c35b1.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Var_är_du.mp3"
+                    "audio": "./audio/phrases/Var_är_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Var_är_du.mp3"
                 },
                 {
                     "text": "Var bor du?",
                     "translation": "Where do you live?",
-                    "audio": "./audio/phrase/710ee0df-2010-4dde-af10-279ea6e3883b.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Var_bor_du.mp3"
+                    "audio": "./audio/phrases/Var_bor_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Var_bor_du.mp3"
                 },
                 {
                     "text": "Var jobbar du?",
                     "translation": "Where do you work?",
-                    "audio": "./audio/phrase/0721cc5b-b14e-47aa-adab-f2a866daa77c.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Var_jobbar_du.mp3"
+                    "audio": "./audio/phrases/Var_jobbar_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Var_jobbar_du.mp3"
                 },
                 {
                     "text": "Var ligger skolan?",
                     "translation": "Where is the school located?",
-                    "audio": "./audio/phrase/3bf613d7-239f-4a6c-a89e-eacb6f52bccd.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Var_ligger_skolan.mp3"
+                    "audio": "./audio/phrases/Var_ligger_skolan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Var_ligger_skolan.mp3"
                 },
                 {
                     "text": "Var ligger närmaste sjukhus?",
                     "translation": "Where is the nearest hospital?",
-                    "audio": "./audio/phrase/f6889865-3fa0-40be-9c5a-34783125c689.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Var_ligger_närmaste_sjukhus.mp3"
+                    "audio": "./audio/phrases/Var_ligger_närmaste_sjukhus.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Var_ligger_närmaste_sjukhus.mp3"
                 },
                 {
                     "text": "Norra Sverige är vackert.",
                     "translation": "Northern Sweden is beautiful.",
-                    "audio": "./audio/phrase/df364383-07cc-4771-ac26-fcc2e9fa5ef2.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Norra_Sverige_är_vackert.mp3"
+                    "audio": "./audio/phrases/Norra_Sverige_är_vackert.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Norra_Sverige_är_vackert.mp3"
                 },
                 {
                     "text": "Vi planerar en resa till Italien.",
                     "translation": "We are planning a trip to Italy.",
-                    "audio": "./audio/phrase/432a7ccf-9ab8-4cfb-b2a8-6be031e35eb9.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vi_planerar_en_resa_till_Italien.mp3"
+                    "audio": "./audio/phrases/Vi_planerar_en_resa_till_Italien.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_planerar_en_resa_till_Italien.mp3"
                 },
                 {
                     "text": "Vi kan prata senare.",
                     "translation": "We can talk later.",
-                    "audio": "./audio/phrase/4ce28eea-e12e-4afa-a8c8-feeb47c4f320.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vi_kan_prata_senare.mp3"
+                    "audio": "./audio/phrases/Vi_kan_prata_senare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_kan_prata_senare.mp3"
                 },
                 {
                     "text": "Han talar pyttelite svenska.",
                     "translation": "He speaks a tiny bit of Swedish.",
-                    "audio": "./audio/phrase/fdef0480-93ef-4a75-97b5-4d302e17fa0e.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Han_talar_pyttelite_svenska.mp3"
+                    "audio": "./audio/phrases/Han_talar_pyttelite_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_talar_pyttelite_svenska.mp3"
                 },
                 {
                     "text": "Vad kul!",
                     "translation": "Great!/How fun!",
-                    "audio": "./audio/phrase/94749ade-d2b1-40d4-aabc-505005e662c6.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vad_kul!.mp3"
+                    "audio": "./audio/phrases/Vad_kul!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_kul!.mp3"
                 },
                 {
                     "text": "Lyssna på musiken.",
                     "translation": "Listen to the music.",
-                    "audio": "./audio/phrase/b78279eb-e20a-4980-8d60-ba5d6e78abd4.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Lyssna_på_musiken.mp3"
+                    "audio": "./audio/phrases/Lyssna_på_musiken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Lyssna_på_musiken.mp3"
                 },
                 {
                     "text": "Dialogen i filmen var välskriven.",
                     "translation": "The dialogue in the movie was well-written.",
-                    "audio": "./audio/phrase/c3e38fb6-0cb2-44e2-b85b-7a91d569e2b9.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Dialogen_i_filmen_var_välskriven.mp3"
+                    "audio": "./audio/phrases/Dialogen_i_filmen_var_välskriven.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Dialogen_i_filmen_var_välskriven.mp3"
                 },
                 {
                     "text": "Vilken färg gillar du?",
                     "translation": "Which color do you like?",
-                    "audio": "./audio/phrase/dbb29bc8-73d3-474c-a594-111a0cf0ae87.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Vilken_färg_gillar_du.mp3"
+                    "audio": "./audio/phrases/Vilken_färg_gillar_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vilken_färg_gillar_du.mp3"
                 },
                 {
                     "text": "Hon har en katt.",
                     "translation": "She has a cat.",
-                    "audio": "./audio/phrase/8426ed5c-1192-4035-bff5-a4faaadf5979.mp3",
-                    "audioTranslation": "./audio/phrase/translation_Hon_har_en_katt.mp3"
+                    "audio": "./audio/phrases/Hon_har_en_katt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_har_en_katt.mp3"
+                },
+                {
+                    "text": "Tjena! Hur mår du?",
+                    "translation": "Hi! How are you?",
+                    "audio": "./audio/phrases/Tjena!_Hur_mår_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tjena!_Hur_mår_du.mp3"
+                },
+                {
+                    "text": "Jag mår bra.",
+                    "translation": "I feel good.",
+                    "audio": "./audio/phrases/Jag_mår_bra.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_mår_bra.mp3"
+                },
+                {
+                    "text": "Han mår bättre nu.",
+                    "translation": "He feels better now.",
+                    "audio": "./audio/phrases/Han_mår_bättre_nu.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_mår_bättre_nu.mp3"
+                },
+                {
+                    "text": "Hur mår du? Bara bra.",
+                    "translation": "How are you? Just fine.",
+                    "audio": "./audio/phrases/Hur_mår_du_Bara_bra.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hur_mår_du_Bara_bra.mp3"
+                },
+                {
+                    "text": "Tack så mycket.",
+                    "translation": "Thank you very much.",
+                    "audio": "./audio/phrases/Tack_så_mycket.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tack_så_mycket.mp3"
+                },
+                {
+                    "text": "Jo tack, det går bra.",
+                    "translation": "Yes, thanks, it's going well.",
+                    "audio": "./audio/phrases/Jo_tack_det_går_bra.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jo_tack_det_går_bra.mp3"
+                },
+                {
+                    "text": "Jo tack, allt är under kontroll.",
+                    "translation": "Yes, thanks, everything is under control.",
+                    "audio": "./audio/phrases/Jo_tack_allt_är_under_kontroll.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jo_tack_allt_är_under_kontroll.mp3"
+                },
+                {
+                    "text": "Det är bra.",
+                    "translation": "I’m fine.",
+                    "audio": "./audio/phrases/Det_är_bra.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_bra.mp3"
+                },
+                {
+                    "text": "Hur är läget?",
+                    "translation": "How are things?",
+                    "audio": "./audio/phrases/Hur_är_läget.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hur_är_läget.mp3"
+                },
+                {
+                    "text": "Läget är under kontroll.",
+                    "translation": "The situation is under control.",
+                    "audio": "./audio/phrases/Läget_är_under_kontroll.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Läget_är_under_kontroll.mp3"
+                },
+                {
+                    "text": "Vad är läget med projektet?",
+                    "translation": "What is the status of the project?",
+                    "audio": "./audio/phrases/Vad_är_läget_med_projektet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_är_läget_med_projektet.mp3"
+                },
+                {
+                    "text": "Det är lugnt.",
+                    "translation": "Great, Okay",
+                    "audio": "./audio/phrases/Det_är_lugnt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_lugnt.mp3"
+                },
+                {
+                    "text": "Han är alltid lugn.",
+                    "translation": "He is always calm.",
+                    "audio": "./audio/phrases/Han_är_alltid_lugn.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_alltid_lugn.mp3"
+                },
+                {
+                    "text": "Du måste göra det själv.",
+                    "translation": "You have to do it yourself.",
+                    "audio": "./audio/phrases/Du_måste_göra_det_själv.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Du_måste_göra_det_själv.mp3"
+                },
+                {
+                    "text": "Vi hade en kanonbra tid på festen.",
+                    "translation": "We had a great time at the party.",
+                    "audio": "./audio/phrases/Vi_hade_en_kanonbra_tid_på_festen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hade_en_kanonbra_tid_på_festen.mp3"
+                },
+                {
+                    "text": "Det här är en kanonbra idé.",
+                    "translation": "This is a great idea.",
+                    "audio": "./audio/phrases/Det_här_är_en_kanonbra_idé.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_här_är_en_kanonbra_idé.mp3"
+                },
+                {
+                    "text": "Hejsan!",
+                    "translation": "Hi there!",
+                    "audio": "./audio/phrases/Hejsan!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hejsan!.mp3"
+                },
+                {
+                    "text": "Hur är det?",
+                    "translation": "How are things?",
+                    "audio": "./audio/phrases/Hur_är_det.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hur_är_det.mp3"
+                },
+                {
+                    "text": "Fint!",
+                    "translation": "Great!",
+                    "audio": "./audio/phrases/Fint!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Fint!.mp3"
+                },
+                {
+                    "text": "Allt väl?",
+                    "translation": "All well?",
+                    "audio": "./audio/phrases/Allt_väl.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Allt_väl.mp3"
+                },
+                {
+                    "text": "Han mår väl.",
+                    "translation": "He is doing well.",
+                    "audio": "./audio/phrases/Han_mår_väl.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_mår_väl.mp3"
+                },
+                {
+                    "text": "Det är helt sant.",
+                    "translation": "It is completely true.",
+                    "audio": "./audio/phrases/Det_är_helt_sant.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_helt_sant.mp3"
+                },
+                {
+                    "text": "Hon är helt fantastisk.",
+                    "translation": "She is completely amazing.",
+                    "audio": "./audio/phrases/Hon_är_helt_fantastisk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_helt_fantastisk.mp3"
+                },
+                {
+                    "text": "Det kostar för mycket pengar.",
+                    "translation": "It costs too much money.",
+                    "audio": "./audio/phrases/Det_kostar_för_mycket_pengar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_kostar_för_mycket_pengar.mp3"
+                },
+                {
+                    "text": "Jag har för mycket arbete.",
+                    "translation": "I have too much work.",
+                    "audio": "./audio/phrases/Jag_har_för_mycket_arbete.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_för_mycket_arbete.mp3"
+                },
+                {
+                    "text": "Jodå, allt är under kontroll.",
+                    "translation": "Allright, everything is under control.",
+                    "audio": "./audio/phrases/Jodå_allt_är_under_kontroll.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jodå_allt_är_under_kontroll.mp3"
+                },
+                {
+                    "text": "Jodå, vi kan hjälpa dig.",
+                    "translation": "Allright, we can help you.",
+                    "audio": "./audio/phrases/Jodå_vi_kan_hjälpa_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jodå_vi_kan_hjälpa_dig.mp3"
+                },
+                {
+                    "text": "Hon kom för sent som vanligt.",
+                    "translation": "She was late as usual.",
+                    "audio": "./audio/phrases/Hon_kom_för_sent_som_vanligt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_kom_för_sent_som_vanligt.mp3"
+                },
+                {
+                    "text": "Det är en vanlig dag.",
+                    "translation": "It is a usual day.",
+                    "audio": "./audio/phrases/Det_är_en_vanlig_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_en_vanlig_dag.mp3"
+                },
+                {
+                    "text": "Jag mår så där.",
+                    "translation": "I feel so-so.",
+                    "audio": "./audio/phrases/Jag_mår_så_där.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_mår_så_där.mp3"
+                },
+                {
+                    "text": "Hur var filmen? Den var så där.",
+                    "translation": "How was the movie? It was so-so.",
+                    "audio": "./audio/phrases/Hur_var_filmen_Den_var_så_där.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hur_var_filmen_Den_var_så_där.mp3"
+                },
+                {
+                    "text": "Nja, jag är inte säker.",
+                    "translation": "Well, I'm not sure.",
+                    "audio": "./audio/phrases/Nja_jag_är_inte_säker.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Nja_jag_är_inte_säker.mp3"
+                },
+                {
+                    "text": "Nja, jag tror inte det.",
+                    "translation": "Well, I don't think so.",
+                    "audio": "./audio/phrases/Nja_jag_tror_inte_det.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Nja_jag_tror_inte_det.mp3"
+                },
+                {
+                    "text": "Det är ganska kallt ute.",
+                    "translation": "It is quite cold outside.",
+                    "audio": "./audio/phrases/Det_är_ganska_kallt_ute.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_ganska_kallt_ute.mp3"
+                },
+                {
+                    "text": "Hon är ganska trött idag.",
+                    "translation": "She is fairly tired today.",
+                    "audio": "./audio/phrases/Hon_är_ganska_trött_idag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_ganska_trött_idag.mp3"
+                },
+                {
+                    "text": "Vädret är dåligt idag.",
+                    "translation": "The weather is bad today.",
+                    "audio": "./audio/phrases/Vädret_är_dåligt_idag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vädret_är_dåligt_idag.mp3"
+                },
+                {
+                    "text": "Hon mår dåligt.",
+                    "translation": "She feels ill.",
+                    "audio": "./audio/phrases/Hon_mår_dåligt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_mår_dåligt.mp3"
+                },
+                {
+                    "text": "Det var en dålig idé.",
+                    "translation": "It was a bad idea.",
+                    "audio": "./audio/phrases/Det_var_en_dålig_idé.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_en_dålig_idé.mp3"
+                },
+                {
+                    "text": "Det är faktiskt sant.",
+                    "translation": "It is actually true.",
+                    "audio": "./audio/phrases/Det_är_faktiskt_sant.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_faktiskt_sant.mp3"
+                },
+                {
+                    "text": "Det var faktiskt roligt.",
+                    "translation": "It was actually fun.",
+                    "audio": "./audio/phrases/Det_var_faktiskt_roligt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_faktiskt_roligt.mp3"
+                },
+                {
+                    "text": "Jag är förkyld.",
+                    "translation": "I have a cold.",
+                    "audio": "./audio/phrases/Jag_är_förkyld.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_är_förkyld.mp3"
+                },
+                {
+                    "text": "Jag är trött.",
+                    "translation": "I am tired.",
+                    "audio": "./audio/phrases/Jag_är_trött.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_är_trött.mp3"
+                },
+                {
+                    "text": "Barnen blev trötta efter att ha lekt hela dagen.",
+                    "translation": "The children got tired after playing all day.",
+                    "audio": "./audio/phrases/Barnen_blev_trötta_efter_att_ha_lekt_hela_dagen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Barnen_blev_trötta_efter_att_ha_lekt_hela_dagen.mp3"
+                },
+                {
+                    "text": "God morgon!",
+                    "translation": "Good morning!",
+                    "audio": "./audio/phrases/God_morgon!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_God_morgon!.mp3"
+                },
+                {
+                    "text": "Jag är jättetrött idag.",
+                    "translation": "I am really tired today.",
+                    "audio": "./audio/phrases/Jag_är_jättetrött_idag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_är_jättetrött_idag.mp3"
+                },
+                {
+                    "text": "Han kände sig jättetrött efter att ha jobbat hela natten.",
+                    "translation": "He felt really tired after working all night.",
+                    "audio": "./audio/phrases/Han_kände_sig_jättetrött_efter_att_ha_jobbat_hela_natten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_kände_sig_jättetrött_efter_att_ha_jobbat_hela_natten.mp3"
+                },
+                {
+                    "text": "Oj då!",
+                    "translation": "Oh!",
+                    "audio": "./audio/phrases/Oj_då!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Oj_då!.mp3"
+                },
+                {
+                    "text": "Jag vill dricka vatten.",
+                    "translation": "I want to drink water.",
+                    "audio": "./audio/phrases/Jag_vill_dricka_vatten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_vill_dricka_vatten.mp3"
+                },
+                {
+                    "text": "Han dricker kaffe varje morgon.",
+                    "translation": "He drinks coffee every morning.",
+                    "audio": "./audio/phrases/Han_dricker_kaffe_varje_morgon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_dricker_kaffe_varje_morgon.mp3"
+                },
+                {
+                    "text": "Kan du hälsa på din mamma från mig?",
+                    "translation": "Can you say hello to your mom from me?",
+                    "audio": "./audio/phrases/Kan_du_hälsa_på_din_mamma_från_mig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_hälsa_på_din_mamma_från_mig.mp3"
+                },
+                {
+                    "text": "Vi hälsade på varandra.",
+                    "translation": "We greeted each other.",
+                    "audio": "./audio/phrases/Vi_hälsade_på_varandra.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hälsade_på_varandra.mp3"
+                },
+                {
+                    "text": "God dag.",
+                    "translation": "Hello.",
+                    "audio": "./audio/phrases/God_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_God_dag.mp3"
+                },
+                {
+                    "text": "Han är en god vän.",
+                    "translation": "He is a good friend.",
+                    "audio": "./audio/phrases/Han_är_en_god_vän.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_en_god_vän.mp3"
+                },
+                {
+                    "text": "Jag behöver en retur biljett.",
+                    "translation": "I need a return ticket.",
+                    "audio": "./audio/phrases/Jag_behöver_en_retur_biljett.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_behöver_en_retur_biljett.mp3"
+                },
+                {
+                    "text": "Vi planerar en resa till västra Sverige.",
+                    "translation": "We are planning a trip to western Sweden.",
+                    "audio": "./audio/phrases/Vi_planerar_en_resa_till_västra_Sverige.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_planerar_en_resa_till_västra_Sverige.mp3"
+                },
+                {
+                    "text": "Det var ett informellt möte.",
+                    "translation": "It was an informal meeting.",
+                    "audio": "./audio/phrases/Det_var_ett_informellt_möte.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_ett_informellt_möte.mp3"
+                },
+                {
+                    "text": "Klädkoden är informell.",
+                    "translation": "The dress code is informal.",
+                    "audio": "./audio/phrases/Klädkoden_är_informell.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Klädkoden_är_informell.mp3"
+                },
+                {
+                    "text": "Vi hade en formell diskussion.",
+                    "translation": "We had a formal discussion.",
+                    "audio": "./audio/phrases/Vi_hade_en_formell_diskussion.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hade_en_formell_diskussion.mp3"
+                },
+                {
+                    "text": "De bor tillsammans.",
+                    "translation": "They live together.",
+                    "audio": "./audio/phrases/De_bor_tillsammans.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_bor_tillsammans.mp3"
+                },
+                {
+                    "text": "Vi arbetar tillsammans.",
+                    "translation": "We work together.",
+                    "audio": "./audio/phrases/Vi_arbetar_tillsammans.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_arbetar_tillsammans.mp3"
+                },
+                {
+                    "text": "Gör en markering på kartan.",
+                    "translation": "Make a mark on the map.",
+                    "audio": "./audio/phrases/Gör_en_markering_på_kartan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Gör_en_markering_på_kartan.mp3"
+                },
+                {
+                    "text": "Han gjorde en markering med pennan.",
+                    "translation": "He made a mark with the pen.",
+                    "audio": "./audio/phrases/Han_gjorde_en_markering_med_pennan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_gjorde_en_markering_med_pennan.mp3"
+                },
+                {
+                    "text": "Han betonade vikten av att vara i tid.",
+                    "translation": "He emphasized the importance of being on time.",
+                    "audio": "./audio/phrases/Han_betonade_vikten_av_att_vara_i_tid.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_betonade_vikten_av_att_vara_i_tid.mp3"
+                },
+                {
+                    "text": "Intonationen i hans röst var tydlig.",
+                    "translation": "The intonation in his voice was clear.",
+                    "audio": "./audio/phrases/Intonationen_i_hans_röst_var_tydlig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Intonationen_i_hans_röst_var_tydlig.mp3"
+                },
+                {
+                    "text": "Mötet är slut nu.",
+                    "translation": "The meeting is over now.",
+                    "audio": "./audio/phrases/Mötet_är_slut_nu.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Mötet_är_slut_nu.mp3"
+                },
+                {
+                    "text": "Filmen har ett lyckligt slut.",
+                    "translation": "The movie has a happy ending.",
+                    "audio": "./audio/phrases/Filmen_har_ett_lyckligt_slut.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Filmen_har_ett_lyckligt_slut.mp3"
+                },
+                {
+                    "text": "Jag lärde mig en ny fras idag.",
+                    "translation": "I learned a new phrase today.",
+                    "audio": "./audio/phrases/Jag_lärde_mig_en_ny_fras_idag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_lärde_mig_en_ny_fras_idag.mp3"
+                },
+                {
+                    "text": "Den här frasen är svår att förstå.",
+                    "translation": "This phrase is difficult to understand.",
+                    "audio": "./audio/phrases/Den_här_frasen_är_svår_att_förstå.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Den_här_frasen_är_svår_att_förstå.mp3"
+                },
+                {
+                    "text": "Vi ska gå till parken.",
+                    "translation": "We are going to the park.",
+                    "audio": "./audio/phrases/Vi_ska_gå_till_parken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_ska_gå_till_parken.mp3"
+                },
+                {
+                    "text": "Jag måste gå nu.",
+                    "translation": "I have to go now.",
+                    "audio": "./audio/phrases/Jag_måste_gå_nu.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_måste_gå_nu.mp3"
+                },
+                {
+                    "text": "Hans ton var mycket vänlig.",
+                    "translation": "His tone was very friendly.",
+                    "audio": "./audio/phrases/Hans_ton_var_mycket_vänlig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hans_ton_var_mycket_vänlig.mp3"
+                },
+                {
+                    "text": "Han gick upp för trappan.",
+                    "translation": "He went up the stairs.",
+                    "audio": "./audio/phrases/Han_gick_upp_för_trappan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_gick_upp_för_trappan.mp3"
+                },
+                {
+                    "text": "Vi måste gå ner till källaren.",
+                    "translation": "We need to go down to the basement.",
+                    "audio": "./audio/phrases/Vi_måste_gå_ner_till_källaren.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_måste_gå_ner_till_källaren.mp3"
+                },
+                {
+                    "text": "Kungen talade till folket.",
+                    "translation": "The king spoke to the people.",
+                    "audio": "./audio/phrases/Kungen_talade_till_folket.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kungen_talade_till_folket.mp3"
+                },
+                {
+                    "text": "Det var en gång en kung.",
+                    "translation": "Once upon a time, there was a king.",
+                    "audio": "./audio/phrases/Det_var_en_gång_en_kung.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_en_gång_en_kung.mp3"
+                },
+                {
+                    "text": "De är intresserade av konst.",
+                    "translation": "They are interested in art.",
+                    "audio": "./audio/phrases/De_är_intresserade_av_konst.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_är_intresserade_av_konst.mp3"
+                },
+                {
+                    "text": "Han är en journalist.",
+                    "translation": "He is a journalist.",
+                    "audio": "./audio/phrases/Han_är_en_journalist.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_en_journalist.mp3"
+                },
+                {
+                    "text": "Journalisten intervjuade politikern.",
+                    "translation": "The journalist interviewed the politician.",
+                    "audio": "./audio/phrases/Journalisten_intervjuade_politikern.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Journalisten_intervjuade_politikern.mp3"
+                },
+                {
+                    "text": "Hon har en thailändsk vän.",
+                    "translation": "She has a Thai friend.",
+                    "audio": "./audio/phrases/Hon_har_en_thailändsk_vän.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_har_en_thailändsk_vän.mp3"
+                },
+                {
+                    "text": "Tidningen innehåller många intressanta artiklar.",
+                    "translation": "The newspaper contains many interesting articles.",
+                    "audio": "./audio/phrases/Tidningen_innehåller_många_intressanta_artiklar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tidningen_innehåller_många_intressanta_artiklar.mp3"
+                },
+                {
+                    "text": "Vi har inget internetnät hemma.",
+                    "translation": "We have no internet network at home.",
+                    "audio": "./audio/phrases/Vi_har_inget_internetnät_hemma.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_har_inget_internetnät_hemma.mp3"
+                },
+                {
+                    "text": "Nätet var fullt av fisk.",
+                    "translation": "The net was full of fish.",
+                    "audio": "./audio/phrases/Nätet_var_fullt_av_fisk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Nätet_var_fullt_av_fisk.mp3"
+                },
+                {
+                    "text": "Norden har vacker natur.",
+                    "translation": "The Nordic countries have beautiful nature.",
+                    "audio": "./audio/phrases/Norden_har_vacker_natur.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Norden_har_vacker_natur.mp3"
+                },
+                {
+                    "text": "Barnen trivs i skolan.",
+                    "translation": "The children are happy at school.",
+                    "audio": "./audio/phrases/Barnen_trivs_i_skolan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Barnen_trivs_i_skolan.mp3"
+                },
+                {
+                    "text": "Jag trivs bra på mitt jobb.",
+                    "translation": "I thrive at my job.",
+                    "audio": "./audio/phrases/Jag_trivs_bra_på_mitt_jobb.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_trivs_bra_på_mitt_jobb.mp3"
+                },
+                {
+                    "text": "Hon längtar efter sin familj.",
+                    "translation": "She misses her family.",
+                    "audio": "./audio/phrases/Hon_längtar_efter_sin_familj.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_längtar_efter_sin_familj.mp3"
+                },
+                {
+                    "text": "Han längtar efter att resa.",
+                    "translation": "He longs to travel.",
+                    "audio": "./audio/phrases/Han_längtar_efter_att_resa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_längtar_efter_att_resa.mp3"
+                },
+                {
+                    "text": "Min familj bor i Sverige.",
+                    "translation": "My family lives in Sweden.",
+                    "audio": "./audio/phrases/Min_familj_bor_i_Sverige.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_familj_bor_i_Sverige.mp3"
+                },
+                {
+                    "text": "Vi har en stor familj.",
+                    "translation": "We have a large family.",
+                    "audio": "./audio/phrases/Vi_har_en_stor_familj.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_har_en_stor_familj.mp3"
+                },
+                {
+                    "text": "De är goda vänner.",
+                    "translation": "They are good friends.",
+                    "audio": "./audio/phrases/De_är_goda_vänner.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_är_goda_vänner.mp3"
+                },
+                {
+                    "text": "Jag går ofta till gymmet.",
+                    "translation": "I often go to the gym.",
+                    "audio": "./audio/phrases/Jag_går_ofta_till_gymmet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_går_ofta_till_gymmet.mp3"
+                },
+                {
+                    "text": "Hon besöker ofta sina föräldrar.",
+                    "translation": "She often visits her parents.",
+                    "audio": "./audio/phrases/Hon_besöker_ofta_sina_föräldrar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_besöker_ofta_sina_föräldrar.mp3"
+                },
+                {
+                    "text": "Kan jag låna din telefon?",
+                    "translation": "Can I borrow your phone?",
+                    "audio": "./audio/phrases/Kan_jag_låna_din_telefon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_jag_låna_din_telefon.mp3"
+                },
+                {
+                    "text": "Jag glömde min telefon hemma.",
+                    "translation": "I forgot my phone at home.",
+                    "audio": "./audio/phrases/Jag_glömde_min_telefon_hemma.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_glömde_min_telefon_hemma.mp3"
+                },
+                {
+                    "text": "Han är en IT-ingenjör.",
+                    "translation": "He is a computer engineer.",
+                    "audio": "./audio/phrases/Han_är_en_IT-ingenjör.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_en_IT-ingenjör.mp3"
+                },
+                {
+                    "text": "Han arbetar på ett spelföretag.",
+                    "translation": "He works at a gaming company.",
+                    "audio": "./audio/phrases/Han_arbetar_på_ett_spelföretag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_arbetar_på_ett_spelföretag.mp3"
+                },
+                {
+                    "text": "Vi spelade ett roligt spel igår.",
+                    "translation": "We played a fun game yesterday.",
+                    "audio": "./audio/phrases/Vi_spelade_ett_roligt_spel_igår.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_spelade_ett_roligt_spel_igår.mp3"
+                },
+                {
+                    "text": "Det här spelet är väldigt populärt.",
+                    "translation": "This game is very popular.",
+                    "audio": "./audio/phrases/Det_här_spelet_är_väldigt_populärt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_här_spelet_är_väldigt_populärt.mp3"
+                },
+                {
+                    "text": "Företaget växer snabbt.",
+                    "translation": "The company is growing rapidly.",
+                    "audio": "./audio/phrases/Företaget_växer_snabbt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Företaget_växer_snabbt.mp3"
+                },
+                {
+                    "text": "Min katt gillar att leka med bollar.",
+                    "translation": "My cat likes to play with balls.",
+                    "audio": "./audio/phrases/Min_katt_gillar_att_leka_med_bollar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_katt_gillar_att_leka_med_bollar.mp3"
+                },
+                {
+                    "text": "Jag har en katt.",
+                    "translation": "I have a cat.",
+                    "audio": "./audio/phrases/Jag_har_en_katt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_en_katt.mp3"
+                },
+                {
+                    "text": "Solen skiner idag.",
+                    "translation": "The sun is shining today.",
+                    "audio": "./audio/phrases/Solen_skiner_idag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Solen_skiner_idag.mp3"
+                },
+                {
+                    "text": "Vi njöt av solen på stranden.",
+                    "translation": "We enjoyed the sun at the beach.",
+                    "audio": "./audio/phrases/Vi_njöt_av_solen_på_stranden.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_njöt_av_solen_på_stranden.mp3"
+                },
+                {
+                    "text": "Han besöker ibland sina föräldrar.",
+                    "translation": "He sometimes visits his parents.",
+                    "audio": "./audio/phrases/Han_besöker_ibland_sina_föräldrar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_besöker_ibland_sina_föräldrar.mp3"
+                },
+                {
+                    "text": "Ibland känner jag mig trött.",
+                    "translation": "Sometimes I feel tired.",
+                    "audio": "./audio/phrases/Ibland_känner_jag_mig_trött.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ibland_känner_jag_mig_trött.mp3"
+                },
+                {
+                    "text": "Min mamma är väldigt snäll.",
+                    "translation": "My mom is very kind.",
+                    "audio": "./audio/phrases/Min_mamma_är_väldigt_snäll.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_mamma_är_väldigt_snäll.mp3"
+                },
+                {
+                    "text": "Jag ska besöka min pappa i helgen.",
+                    "translation": "I will visit my dad this weekend.",
+                    "audio": "./audio/phrases/Jag_ska_besöka_min_pappa_i_helgen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_ska_besöka_min_pappa_i_helgen.mp3"
+                },
+                {
+                    "text": "Jag jobbar fem dagar i veckan.",
+                    "translation": "I work five days a week.",
+                    "audio": "./audio/phrases/Jag_jobbar_fem_dagar_i_veckan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_jobbar_fem_dagar_i_veckan.mp3"
+                },
+                {
+                    "text": "Nästa vecka ska vi resa.",
+                    "translation": "Next week we will travel.",
+                    "audio": "./audio/phrases/Nästa_vecka_ska_vi_resa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Nästa_vecka_ska_vi_resa.mp3"
+                },
+                {
+                    "text": "I sommar kommer vi att renovera huset.",
+                    "translation": "This summer we will renovate the house.",
+                    "audio": "./audio/phrases/I_sommar_kommer_vi_att_renovera_huset.mp3",
+                    "audioTranslation": "./audio/phrases/translation_I_sommar_kommer_vi_att_renovera_huset.mp3"
+                },
+                {
+                    "text": "I sommar ska jag läsa många böcker.",
+                    "translation": "This summer I will read many books.",
+                    "audio": "./audio/phrases/I_sommar_ska_jag_läsa_många_böcker.mp3",
+                    "audioTranslation": "./audio/phrases/translation_I_sommar_ska_jag_läsa_många_böcker.mp3"
+                },
+                {
+                    "text": "det blir",
+                    "translation": "it will be",
+                    "audio": "./audio/phrases/det_blir.mp3",
+                    "audioTranslation": "./audio/phrases/translation_det_blir.mp3"
+                },
+                {
+                    "text": "Jag vill bli läkare.",
+                    "translation": "I want to become a doctor.",
+                    "audio": "./audio/phrases/Jag_vill_bli_läkare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_vill_bli_läkare.mp3"
+                },
+                {
+                    "text": "Det var en rolig dag.",
+                    "translation": "It was a fun day.",
+                    "audio": "./audio/phrases/Det_var_en_rolig_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_en_rolig_dag.mp3"
+                },
+                {
+                    "text": "Filmen var väldigt rolig.",
+                    "translation": "The movie was very fun.",
+                    "audio": "./audio/phrases/Filmen_var_väldigt_rolig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Filmen_var_väldigt_rolig.mp3"
+                },
+                {
+                    "text": "Den här deckaren är väldigt populär.",
+                    "translation": "This crime novel is very popular.",
+                    "audio": "./audio/phrases/Den_här_deckaren_är_väldigt_populär.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Den_här_deckaren_är_väldigt_populär.mp3"
+                },
+                {
+                    "text": "Vi hade en trevlig kväll hemma.",
+                    "translation": "We had a nice evening at home.",
+                    "audio": "./audio/phrases/Vi_hade_en_trevlig_kväll_hemma.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hade_en_trevlig_kväll_hemma.mp3"
+                },
+                {
+                    "text": "Han arbetar hemma idag.",
+                    "translation": "He is working from home today.",
+                    "audio": "./audio/phrases/Han_arbetar_hemma_idag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_arbetar_hemma_idag.mp3"
+                },
+                {
+                    "text": "Skandinavien består av Sverige, Norge och Danmark.",
+                    "translation": "Scandinavia consists of Sweden, Norway, and Denmark.",
+                    "audio": "./audio/phrases/Skandinavien_består_av_Sverige_Norge_och_Danmark.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Skandinavien_består_av_Sverige_Norge_och_Danmark.mp3"
+                },
+                {
+                    "text": "Har du varit på Island?",
+                    "translation": "Have you been to Iceland?",
+                    "audio": "./audio/phrases/Har_du_varit_på_Island.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Har_du_varit_på_Island.mp3"
+                },
+                {
+                    "text": "De har ett självstyrande system.",
+                    "translation": "They have an autonomous system.",
+                    "audio": "./audio/phrases/De_har_ett_självstyrande_system.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_har_ett_självstyrande_system.mp3"
+                },
+                {
+                    "text": "Färöarna är kända för sina vackra landskap.",
+                    "translation": "The Faroe Islands are known for their beautiful landscapes.",
+                    "audio": "./audio/phrases/Färöarna_är_kända_för_sina_vackra_landskap.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Färöarna_är_kända_för_sina_vackra_landskap.mp3"
+                },
+                {
+                    "text": "Grönland är världens största ö.",
+                    "translation": "Greenland is the world's largest island.",
+                    "audio": "./audio/phrases/Grönland_är_världens_största_ö.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Grönland_är_världens_största_ö.mp3"
+                },
+                {
+                    "text": "Finland är känt för sina tusentals sjöar.",
+                    "translation": "Finland is known for its thousands of lakes.",
+                    "audio": "./audio/phrases/Finland_är_känt_för_sina_tusentals_sjöar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Finland_är_känt_för_sina_tusentals_sjöar.mp3"
+                },
+                {
+                    "text": "Åland är en självstyrande del av Finland.",
+                    "translation": "Åland is a self-governing part of Finland.",
+                    "audio": "./audio/phrases/Åland_är_en_självstyrande_del_av_Finland.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Åland_är_en_självstyrande_del_av_Finland.mp3"
+                },
+                {
+                    "text": "Jag gillar många sporter, till exempel fotboll och tennis.",
+                    "translation": "I like many sports, for example, football and tennis.",
+                    "audio": "./audio/phrases/Jag_gillar_många_sporter_till_exempel_fotboll_och_tennis.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_gillar_många_sporter_till_exempel_fotboll_och_tennis.mp3"
+                },
+                {
+                    "text": "Vi ses imorgon.",
+                    "translation": "We will meet tomorrow.",
+                    "audio": "./audio/phrases/Vi_ses_imorgon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_ses_imorgon.mp3"
+                },
+                {
+                    "text": "De ses varje vecka.",
+                    "translation": "They meet every week.",
+                    "audio": "./audio/phrases/De_ses_varje_vecka.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_ses_varje_vecka.mp3"
+                },
+                {
+                    "text": "Vi hörs senare.",
+                    "translation": "We will be in touch later.",
+                    "audio": "./audio/phrases/Vi_hörs_senare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hörs_senare.mp3"
+                },
+                {
+                    "text": "Vi hörs på telefon.",
+                    "translation": "We will be in touch by phone.",
+                    "audio": "./audio/phrases/Vi_hörs_på_telefon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hörs_på_telefon.mp3"
+                },
+                {
+                    "text": "Det var en rolig fest.",
+                    "translation": "It was a fun party.",
+                    "audio": "./audio/phrases/Det_var_en_rolig_fest.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_en_rolig_fest.mp3"
+                },
+                {
+                    "text": "Vi hade en stor fest igår.",
+                    "translation": "We had a big party yesterday.",
+                    "audio": "./audio/phrases/Vi_hade_en_stor_fest_igår.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hade_en_stor_fest_igår.mp3"
+                },
+                {
+                    "text": "Min klasskompis heter Anna.",
+                    "translation": "My classmate's name is Anna.",
+                    "audio": "./audio/phrases/Min_klasskompis_heter_Anna.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_klasskompis_heter_Anna.mp3"
+                },
+                {
+                    "text": "Välkommen till Sverige.",
+                    "translation": "Welcome to Sweden.",
+                    "audio": "./audio/phrases/Välkommen_till_Sverige.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Välkommen_till_Sverige.mp3"
+                },
+                {
+                    "text": "Det här är min bok.",
+                    "translation": "This is my book.",
+                    "audio": "./audio/phrases/Det_här_är_min_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_här_är_min_bok.mp3"
+                },
+                {
+                    "text": "Jag gillar det här huset.",
+                    "translation": "I like this house.",
+                    "audio": "./audio/phrases/Jag_gillar_det_här_huset.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_gillar_det_här_huset.mp3"
+                },
+                {
+                    "text": "Han är en trevlig person.",
+                    "translation": "He is a nice person.",
+                    "audio": "./audio/phrases/Han_är_en_trevlig_person.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_en_trevlig_person.mp3"
+                },
+                {
+                    "text": "Vi hade en trevlig kväll.",
+                    "translation": "We had a nice evening.",
+                    "audio": "./audio/phrases/Vi_hade_en_trevlig_kväll.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hade_en_trevlig_kväll.mp3"
+                },
+                {
+                    "text": "Jag gillar att läsa.",
+                    "translation": "I like to read.",
+                    "audio": "./audio/phrases/Jag_gillar_att_läsa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_gillar_att_läsa.mp3"
+                },
+                {
+                    "text": "Det är viktigt att förstå.",
+                    "translation": "It is important to understand.",
+                    "audio": "./audio/phrases/Det_är_viktigt_att_förstå.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_viktigt_att_förstå.mp3"
+                },
+                {
+                    "text": "Vi träffas ofta på kaféet.",
+                    "translation": "We often meet at the café.",
+                    "audio": "./audio/phrases/Vi_träffas_ofta_på_kaféet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_träffas_ofta_på_kaféet.mp3"
+                },
+                {
+                    "text": "Det är en fin dag.",
+                    "translation": "It is a nice day.",
+                    "audio": "./audio/phrases/Det_är_en_fin_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_en_fin_dag.mp3"
+                },
+                {
+                    "text": "Han gav mig en fin present.",
+                    "translation": "He gave me a nice gift.",
+                    "audio": "./audio/phrases/Han_gav_mig_en_fin_present.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_gav_mig_en_fin_present.mp3"
+                },
+                {
+                    "text": "Lägenheten är mycket stor.",
+                    "translation": "The apartment is very large.",
+                    "audio": "./audio/phrases/Lägenheten_är_mycket_stor.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Lägenheten_är_mycket_stor.mp3"
+                },
+                {
+                    "text": "Vi letar efter en lägenhet i stan.",
+                    "translation": "We are looking for an apartment in the city.",
+                    "audio": "./audio/phrases/Vi_letar_efter_en_lägenhet_i_stan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_letar_efter_en_lägenhet_i_stan.mp3"
+                },
+                {
+                    "text": "Kom in!",
+                    "translation": "Come in!",
+                    "audio": "./audio/phrases/Kom_in!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kom_in!.mp3"
+                },
+                {
+                    "text": "Hon kom precis i tid.",
+                    "translation": "She arrived exactly on time.",
+                    "audio": "./audio/phrases/Hon_kom_precis_i_tid.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_kom_precis_i_tid.mp3"
+                },
+                {
+                    "text": "Det är precis samma sak.",
+                    "translation": "It is exactly the same thing.",
+                    "audio": "./audio/phrases/Det_är_precis_samma_sak.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_precis_samma_sak.mp3"
+                },
+                {
+                    "text": "Förlåt att jag är sen.",
+                    "translation": "I'm sorry that I am late.",
+                    "audio": "./audio/phrases/Förlåt_att_jag_är_sen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Förlåt_att_jag_är_sen.mp3"
+                },
+                {
+                    "text": "Förlåt, jag hörde inte vad du sa.",
+                    "translation": "Sorry, I didn't hear what you said.",
+                    "audio": "./audio/phrases/Förlåt_jag_hörde_inte_vad_du_sa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Förlåt_jag_hörde_inte_vad_du_sa.mp3"
+                },
+                {
+                    "text": "Nu förstår jag.",
+                    "translation": "Now I understand.",
+                    "audio": "./audio/phrases/Nu_förstår_jag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Nu_förstår_jag.mp3"
+                },
+                {
+                    "text": "Jag surfar på webben.",
+                    "translation": "I am browsing the Internet.",
+                    "audio": "./audio/phrases/Jag_surfar_på_webben.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_surfar_på_webben.mp3"
+                },
+                {
+                    "text": "Jag läste en intressant artikel i tidningen.",
+                    "translation": "I read an interesting article in the newspaper.",
+                    "audio": "./audio/phrases/Jag_läste_en_intressant_artikel_i_tidningen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_läste_en_intressant_artikel_i_tidningen.mp3"
+                },
+                {
+                    "text": "Maten är klar.",
+                    "translation": "The food is ready.",
+                    "audio": "./audio/phrases/Maten_är_klar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Maten_är_klar.mp3"
+                },
+                {
+                    "text": "Hon köpte mat från affären.",
+                    "translation": "She bought food from the store.",
+                    "audio": "./audio/phrases/Hon_köpte_mat_från_affären.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_köpte_mat_från_affären.mp3"
+                },
+                {
+                    "text": "Vi hade kul tillsammans.",
+                    "translation": "We had fun together.",
+                    "audio": "./audio/phrases/Vi_hade_kul_tillsammans.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_hade_kul_tillsammans.mp3"
+                },
+                {
+                    "text": "Det var en kul fest.",
+                    "translation": "It was a fun party.",
+                    "audio": "./audio/phrases/Det_var_en_kul_fest.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_en_kul_fest.mp3"
+                },
+                {
+                    "text": "Jag ska läsa en bok.",
+                    "translation": "I will read a book.",
+                    "audio": "./audio/phrases/Jag_ska_läsa_en_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_ska_läsa_en_bok.mp3"
+                },
+                {
+                    "text": "Vi ska resa till Italien.",
+                    "translation": "We will travel to Italy.",
+                    "audio": "./audio/phrases/Vi_ska_resa_till_Italien.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_ska_resa_till_Italien.mp3"
+                },
+                {
+                    "text": "Han gick hem.",
+                    "translation": "He went home.",
+                    "audio": "./audio/phrases/Han_gick_hem.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_gick_hem.mp3"
+                },
+                {
+                    "text": "Vi har gått till parken.",
+                    "translation": "We have gone to the park.",
+                    "audio": "./audio/phrases/Vi_har_gått_till_parken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_har_gått_till_parken.mp3"
+                },
+                {
+                    "text": "Detsamma gäller för dig.",
+                    "translation": "The same applies to you.",
+                    "audio": "./audio/phrases/Detsamma_gäller_för_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Detsamma_gäller_för_dig.mp3"
+                },
+                {
+                    "text": "Vi ses!",
+                    "translation": "See you!",
+                    "audio": "./audio/phrases/Vi_ses!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_ses!.mp3"
+                },
+                {
+                    "text": "Just det, vi ska träffas imorgon.",
+                    "translation": "Exactly, we will meet tomorrow.",
+                    "audio": "./audio/phrases/Just_det_vi_ska_träffas_imorgon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Just_det_vi_ska_träffas_imorgon.mp3"
+                },
+                {
+                    "text": "Ha det så bra!",
+                    "translation": "Be well!",
+                    "audio": "./audio/phrases/Ha_det_så_bra!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ha_det_så_bra!.mp3"
+                },
+                {
+                    "text": "Du med!",
+                    "translation": "You too!",
+                    "audio": "./audio/phrases/Du_med!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Du_med!.mp3"
+                },
+                {
+                    "text": "Hej då!",
+                    "translation": "Good bye!",
+                    "audio": "./audio/phrases/Hej_då!.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hej_då!.mp3"
+                },
+                {
+                    "text": "Man får inte ge upp.",
+                    "translation": "One must not give up.",
+                    "audio": "./audio/phrases/Man_får_inte_ge_upp.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Man_får_inte_ge_upp.mp3"
+                },
+                {
+                    "text": "Vi kompletterade projektet i tid.",
+                    "translation": "We completed the project on time.",
+                    "audio": "./audio/phrases/Vi_kompletterade_projektet_i_tid.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_kompletterade_projektet_i_tid.mp3"
+                },
+                {
+                    "text": "Jag måste komplettera min uppgift.",
+                    "translation": "I need to complete my assignment.",
+                    "audio": "./audio/phrases/Jag_måste_komplettera_min_uppgift.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_måste_komplettera_min_uppgift.mp3"
+                },
+                {
+                    "text": "Varför är du sen?",
+                    "translation": "Why are you late?",
+                    "audio": "./audio/phrases/Varför_är_du_sen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Varför_är_du_sen.mp3"
+                },
+                {
+                    "text": "Varför är det så kallt?",
+                    "translation": "Why is it so cold?",
+                    "audio": "./audio/phrases/Varför_är_det_så_kallt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Varför_är_det_så_kallt.mp3"
+                },
+                {
+                    "text": "Vi presenterade vårt projekt.",
+                    "translation": "We introduced our project.",
+                    "audio": "./audio/phrases/Vi_presenterade_vårt_projekt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_presenterade_vårt_projekt.mp3"
+                },
+                {
+                    "text": "Jag vill presentera mig själv.",
+                    "translation": "I want to introduce myself.",
+                    "audio": "./audio/phrases/Jag_vill_presentera_mig_själv.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_vill_presentera_mig_själv.mp3"
+                },
+                {
+                    "text": "Vi behöver en lista över deltagare.",
+                    "translation": "We need a list of participants.",
+                    "audio": "./audio/phrases/Vi_behöver_en_lista_över_deltagare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_behöver_en_lista_över_deltagare.mp3"
+                },
+                {
+                    "text": "Hon gjorde en lista över sina favoritböcker.",
+                    "translation": "She made a list of her favorite books.",
+                    "audio": "./audio/phrases/Hon_gjorde_en_lista_över_sina_favoritböcker.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_gjorde_en_lista_över_sina_favoritböcker.mp3"
+                },
+                {
+                    "text": "Jag har en väska.",
+                    "translation": "I have a bag.",
+                    "audio": "./audio/phrases/Jag_har_en_väska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_en_väska.mp3"
+                },
+                {
+                    "text": "Väskan är tung.",
+                    "translation": "The bag is heavy.",
+                    "audio": "./audio/phrases/Väskan_är_tung.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Väskan_är_tung.mp3"
+                },
+                {
+                    "text": "Folk gillar att resa.",
+                    "translation": "People like to travel.",
+                    "audio": "./audio/phrases/Folk_gillar_att_resa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Folk_gillar_att_resa.mp3"
+                },
+                {
+                    "text": "Folk från olika länder deltog i evenemanget.",
+                    "translation": "People from different countries participated in the event.",
+                    "audio": "./audio/phrases/Folk_från_olika_länder_deltog_i_evenemanget.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Folk_från_olika_länder_deltog_i_evenemanget.mp3"
+                },
+                {
+                    "text": "Hon bor på stan.",
+                    "translation": "She lives in the city.",
+                    "audio": "./audio/phrases/Hon_bor_på_stan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_bor_på_stan.mp3"
+                },
+                {
+                    "text": "Jag ska gå på stan och shoppa.",
+                    "translation": "I am going downtown to shop.",
+                    "audio": "./audio/phrases/Jag_ska_gå_på_stan_och_shoppa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_ska_gå_på_stan_och_shoppa.mp3"
+                },
+                {
+                    "text": "Stockholm är en stor stad.",
+                    "translation": "Stockholm is a big city.",
+                    "audio": "./audio/phrases/Stockholm_är_en_stor_stad.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Stockholm_är_en_stor_stad.mp3"
+                },
+                {
+                    "text": "Min mobiltelefon är trasig.",
+                    "translation": "My cell phone is broken.",
+                    "audio": "./audio/phrases/Min_mobiltelefon_är_trasig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_mobiltelefon_är_trasig.mp3"
+                },
+                {
+                    "text": "Tuggummipaketet är tomt.",
+                    "translation": "The pack of chewing gum is empty.",
+                    "audio": "./audio/phrases/Tuggummipaketet_är_tomt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tuggummipaketet_är_tomt.mp3"
+                },
+                {
+                    "text": "Jag köpte ett tuggummipaket.",
+                    "translation": "I bought a pack of chewing gum.",
+                    "audio": "./audio/phrases/Jag_köpte_ett_tuggummipaket.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_köpte_ett_tuggummipaket.mp3"
+                },
+                {
+                    "text": "Paketet är tomt.",
+                    "translation": "The pack is empty.",
+                    "audio": "./audio/phrases/Paketet_är_tomt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Paketet_är_tomt.mp3"
+                },
+                {
+                    "text": "Kan du ge mig ett tuggummi?",
+                    "translation": "Can you give me a chewing gum?",
+                    "audio": "./audio/phrases/Kan_du_ge_mig_ett_tuggummi.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_ge_mig_ett_tuggummi.mp3"
+                },
+                {
+                    "text": "Hon läser alltid böcker på sin läsplatta.",
+                    "translation": "She always reads books on her e-reader.",
+                    "audio": "./audio/phrases/Hon_läser_alltid_böcker_på_sin_läsplatta.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_läser_alltid_böcker_på_sin_läsplatta.mp3"
+                },
+                {
+                    "text": "Kan jag låna din kam?",
+                    "translation": "Can I borrow your comb?",
+                    "audio": "./audio/phrases/Kan_jag_låna_din_kam.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_jag_låna_din_kam.mp3"
+                },
+                {
+                    "text": "Hon tappade sin kam.",
+                    "translation": "She lost her comb.",
+                    "audio": "./audio/phrases/Hon_tappade_sin_kam.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_tappade_sin_kam.mp3"
+                },
+                {
+                    "text": "Ordboken ligger på bordet.",
+                    "translation": "The dictionary is on the table.",
+                    "audio": "./audio/phrases/Ordboken_ligger_på_bordet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ordboken_ligger_på_bordet.mp3"
+                },
+                {
+                    "text": "Hon har alltid cerat i väskan.",
+                    "translation": "She always has lip balm in her bag.",
+                    "audio": "./audio/phrases/Hon_har_alltid_cerat_i_väskan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_har_alltid_cerat_i_väskan.mp3"
+                },
+                {
+                    "text": "Hon tappade sin mössa.",
+                    "translation": "She lost her hat.",
+                    "audio": "./audio/phrases/Hon_tappade_sin_mössa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_tappade_sin_mössa.mp3"
+                },
+                {
+                    "text": "Han använder en mössa varje vinter.",
+                    "translation": "He uses a hat every winter.",
+                    "audio": "./audio/phrases/Han_använder_en_mössa_varje_vinter.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_använder_en_mössa_varje_vinter.mp3"
+                },
+                {
+                    "text": "Hon använder alltid ett suddgummi när hon ritar.",
+                    "translation": "She always uses an eraser when she draws.",
+                    "audio": "./audio/phrases/Hon_använder_alltid_ett_suddgummi_när_hon_ritar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_använder_alltid_ett_suddgummi_när_hon_ritar.mp3"
+                },
+                {
+                    "text": "Tack så mycket.",
+                    "translation": "Thank you very much.",
+                    "audio": "./audio/phrases/Tack_så_mycket.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tack_så_mycket.mp3"
+                },
+                {
+                    "text": "Det var så lite.",
+                    "translation": "It was nothing.",
+                    "audio": "./audio/phrases/Det_var_så_lite.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_så_lite.mp3"
+                },
+                {
+                    "text": "Bilden är suddig.",
+                    "translation": "The picture is blurry.",
+                    "audio": "./audio/phrases/Bilden_är_suddig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Bilden_är_suddig.mp3"
+                },
+                {
+                    "text": "Jag tog en bild.",
+                    "translation": "I took a picture.",
+                    "audio": "./audio/phrases/Jag_tog_en_bild.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_tog_en_bild.mp3"
+                },
+                {
+                    "text": "Jag tror på dig.",
+                    "translation": "I believe in you.",
+                    "audio": "./audio/phrases/Jag_tror_på_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_tror_på_dig.mp3"
+                },
+                {
+                    "text": "Han tror att det är sant.",
+                    "translation": "He thinks it is true.",
+                    "audio": "./audio/phrases/Han_tror_att_det_är_sant.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_tror_att_det_är_sant.mp3"
+                },
+                {
+                    "text": "Hon gillar att diskutera politik.",
+                    "translation": "She likes to discuss politics.",
+                    "audio": "./audio/phrases/Hon_gillar_att_diskutera_politik.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_gillar_att_diskutera_politik.mp3"
+                },
+                {
+                    "text": "Kan du ge mig ett förslag?",
+                    "translation": "Can you give me a suggestion?",
+                    "audio": "./audio/phrases/Kan_du_ge_mig_ett_förslag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_ge_mig_ett_förslag.mp3"
+                },
+                {
+                    "text": "Jag har ett förslag.",
+                    "translation": "I have a suggestion.",
+                    "audio": "./audio/phrases/Jag_har_ett_förslag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_ett_förslag.mp3"
+                },
+                {
+                    "text": "Hans respons var positiv.",
+                    "translation": "His response was positive.",
+                    "audio": "./audio/phrases/Hans_respons_var_positiv.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hans_respons_var_positiv.mp3"
+                },
+                {
+                    "text": "Kanske har du rätt.",
+                    "translation": "Maybe you are right.",
+                    "audio": "./audio/phrases/Kanske_har_du_rätt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kanske_har_du_rätt.mp3"
+                },
+                {
+                    "text": "Kanske kommer jag senare.",
+                    "translation": "Maybe I will come later.",
+                    "audio": "./audio/phrases/Kanske_kommer_jag_senare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kanske_kommer_jag_senare.mp3"
+                },
+                {
+                    "text": "Hon är absolut fantastisk.",
+                    "translation": "She is absolutely amazing.",
+                    "audio": "./audio/phrases/Hon_är_absolut_fantastisk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_absolut_fantastisk.mp3"
+                },
+                {
+                    "text": "Det är absolut sant.",
+                    "translation": "It is absolutely true.",
+                    "audio": "./audio/phrases/Det_är_absolut_sant.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_absolut_sant.mp3"
+                },
+                {
+                    "text": "Får jag gå nu?",
+                    "translation": "May I go now?",
+                    "audio": "./audio/phrases/Får_jag_gå_nu.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Får_jag_gå_nu.mp3"
+                },
+                {
+                    "text": "Får jag låna din penna?",
+                    "translation": "May I borrow your pen?",
+                    "audio": "./audio/phrases/Får_jag_låna_din_penna.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Får_jag_låna_din_penna.mp3"
+                },
+                {
+                    "text": "Jag har en sak att säga.",
+                    "translation": "I have a thing to say.",
+                    "audio": "./audio/phrases/Jag_har_en_sak_att_säga.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_en_sak_att_säga.mp3"
+                },
+                {
+                    "text": "Det är en viktig sak.",
+                    "translation": "It is an important thing.",
+                    "audio": "./audio/phrases/Det_är_en_viktig_sak.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_är_en_viktig_sak.mp3"
+                },
+                {
+                    "text": "Har du en bussbiljett?",
+                    "translation": "Do you have a bus ticket?",
+                    "audio": "./audio/phrases/Har_du_en_bussbiljett.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Har_du_en_bussbiljett.mp3"
+                },
+                {
+                    "text": "Jag köpte en bussbiljett.",
+                    "translation": "I bought a bus ticket.",
+                    "audio": "./audio/phrases/Jag_köpte_en_bussbiljett.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_köpte_en_bussbiljett.mp3"
+                },
+                {
+                    "text": "Kan jag låna ditt läppglans?",
+                    "translation": "Can I borrow your lip gloss?",
+                    "audio": "./audio/phrases/Kan_jag_låna_ditt_läppglans.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_jag_låna_ditt_läppglans.mp3"
+                },
+                {
+                    "text": "en flaska vatten",
+                    "translation": "a bottle of water",
+                    "audio": "./audio/phrases/en_flaska_vatten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_en_flaska_vatten.mp3"
+                },
+                {
+                    "text": "Läsken är kall.",
+                    "translation": "The soft drink is cold.",
+                    "audio": "./audio/phrases/Läsken_är_kall.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Läsken_är_kall.mp3"
+                },
+                {
+                    "text": "Han tjänar mycket pengar.",
+                    "translation": "He earns a lot of money.",
+                    "audio": "./audio/phrases/Han_tjänar_mycket_pengar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_tjänar_mycket_pengar.mp3"
+                },
+                {
+                    "text": "Jag har inga pengar.",
+                    "translation": "I have no money.",
+                    "audio": "./audio/phrases/Jag_har_inga_pengar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_inga_pengar.mp3"
+                },
+                {
+                    "text": "Kan du ge mig nyckeln?",
+                    "translation": "Can you give me the key?",
+                    "audio": "./audio/phrases/Kan_du_ge_mig_nyckeln.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_ge_mig_nyckeln.mp3"
+                },
+                {
+                    "text": "Jag har tappat min nyckel.",
+                    "translation": "I have lost my key.",
+                    "audio": "./audio/phrases/Jag_har_tappat_min_nyckel.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_tappat_min_nyckel.mp3"
+                },
+                {
+                    "text": "Jag köpte en ny tröja.",
+                    "translation": "I bought a new sweater.",
+                    "audio": "./audio/phrases/Jag_köpte_en_ny_tröja.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_köpte_en_ny_tröja.mp3"
+                },
+                {
+                    "text": "Tröjan är varm och skön.",
+                    "translation": "The sweater is warm and comfortable.",
+                    "audio": "./audio/phrases/Tröjan_är_varm_och_skön.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tröjan_är_varm_och_skön.mp3"
+                },
+                {
+                    "text": "ett par skor",
+                    "translation": "a pair of shoes",
+                    "audio": "./audio/phrases/ett_par_skor.mp3",
+                    "audioTranslation": "./audio/phrases/translation_ett_par_skor.mp3"
+                },
+                {
+                    "text": "Jag glömde min necessär hemma.",
+                    "translation": "I forgot my toiletry bag at home.",
+                    "audio": "./audio/phrases/Jag_glömde_min_necessär_hemma.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_glömde_min_necessär_hemma.mp3"
+                },
+                {
+                    "text": "Var är min dator?",
+                    "translation": "Where is my computer?",
+                    "audio": "./audio/phrases/Var_är_min_dator.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Var_är_min_dator.mp3"
+                },
+                {
+                    "text": "Kan du fixa min dator?",
+                    "translation": "Can you fix my computer?",
+                    "audio": "./audio/phrases/Kan_du_fixa_min_dator.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_fixa_min_dator.mp3"
+                },
+                {
+                    "text": "Jag behöver ett nytt pass.",
+                    "translation": "I need a new passport.",
+                    "audio": "./audio/phrases/Jag_behöver_ett_nytt_pass.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_behöver_ett_nytt_pass.mp3"
+                },
+                {
+                    "text": "Har du ditt pass med dig?",
+                    "translation": "Do you have your passport with you?",
+                    "audio": "./audio/phrases/Har_du_ditt_pass_med_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Har_du_ditt_pass_med_dig.mp3"
+                },
+                {
+                    "text": "Jag köpte en ny bil.",
+                    "translation": "I bought a new car.",
+                    "audio": "./audio/phrases/Jag_köpte_en_ny_bil.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_köpte_en_ny_bil.mp3"
+                },
+                {
+                    "text": "Hon har en ny telefon.",
+                    "translation": "She has a new phone.",
+                    "audio": "./audio/phrases/Hon_har_en_ny_telefon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_har_en_ny_telefon.mp3"
+                },
+                {
+                    "text": "Tavlan är full av text.",
+                    "translation": "The blackboard is full of text.",
+                    "audio": "./audio/phrases/Tavlan_är_full_av_text.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tavlan_är_full_av_text.mp3"
+                },
+                {
+                    "text": "Det här ordet är ett substantiv.",
+                    "translation": "This word is a noun.",
+                    "audio": "./audio/phrases/Det_här_ordet_är_ett_substantiv.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_här_ordet_är_ett_substantiv.mp3"
+                },
+                {
+                    "text": "Det här ordet är i singular.",
+                    "translation": "This word is in the singular.",
+                    "audio": "./audio/phrases/Det_här_ordet_är_i_singular.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_här_ordet_är_i_singular.mp3"
+                },
+                {
+                    "text": "Hon kom utan sin vän.",
+                    "translation": "She came without her friend.",
+                    "audio": "./audio/phrases/Hon_kom_utan_sin_vän.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_kom_utan_sin_vän.mp3"
+                },
+                {
+                    "text": "Han gick ut utan sin jacka.",
+                    "translation": "He went out without his jacket.",
+                    "audio": "./audio/phrases/Han_gick_ut_utan_sin_jacka.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_gick_ut_utan_sin_jacka.mp3"
+                },
+                {
+                    "text": "Kan vi byta platser?",
+                    "translation": "Can we exchange seats?",
+                    "audio": "./audio/phrases/Kan_vi_byta_platser.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_vi_byta_platser.mp3"
+                },
+                {
+                    "text": "Jag måste byta kläder.",
+                    "translation": "I need to change clothes.",
+                    "audio": "./audio/phrases/Jag_måste_byta_kläder.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_måste_byta_kläder.mp3"
+                },
+                {
+                    "text": "Hon har en röd halsduk.",
+                    "translation": "She has a red scarf.",
+                    "audio": "./audio/phrases/Hon_har_en_röd_halsduk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_har_en_röd_halsduk.mp3"
+                },
+                {
+                    "text": "Han tappade sin halsduk på bussen.",
+                    "translation": "He lost his scarf on the bus.",
+                    "audio": "./audio/phrases/Han_tappade_sin_halsduk_på_bussen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_tappade_sin_halsduk_på_bussen.mp3"
+                },
+                {
+                    "text": "Hunden skäller mycket.",
+                    "translation": "The dog barks a lot.",
+                    "audio": "./audio/phrases/Hunden_skäller_mycket.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hunden_skäller_mycket.mp3"
+                },
+                {
+                    "text": "Hunden är väldigt vänlig.",
+                    "translation": "The dog is very friendly.",
+                    "audio": "./audio/phrases/Hunden_är_väldigt_vänlig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hunden_är_väldigt_vänlig.mp3"
+                },
+                {
+                    "text": "Jag behöver en penna för att skriva.",
+                    "translation": "I need a pen to write.",
+                    "audio": "./audio/phrases/Jag_behöver_en_penna_för_att_skriva.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_behöver_en_penna_för_att_skriva.mp3"
+                },
+                {
+                    "text": "Har du läst den här boken?",
+                    "translation": "Have you read this book?",
+                    "audio": "./audio/phrases/Har_du_läst_den_här_boken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Har_du_läst_den_här_boken.mp3"
+                },
+                {
+                    "text": "Hon packade sin ryggsäck.",
+                    "translation": "She packed her backpack.",
+                    "audio": "./audio/phrases/Hon_packade_sin_ryggsäck.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_packade_sin_ryggsäck.mp3"
+                },
+                {
+                    "text": "Jag har en ryggsäck.",
+                    "translation": "I have a backpack.",
+                    "audio": "./audio/phrases/Jag_har_en_ryggsäck.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_en_ryggsäck.mp3"
+                },
+                {
+                    "text": "Hon tappade sin handväska på bussen.",
+                    "translation": "She lost her handbag on the bus.",
+                    "audio": "./audio/phrases/Hon_tappade_sin_handväska_på_bussen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_tappade_sin_handväska_på_bussen.mp3"
+                },
+                {
+                    "text": "Axelväskan är svart.",
+                    "translation": "The shoulder bag is black.",
+                    "audio": "./audio/phrases/Axelväskan_är_svart.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Axelväskan_är_svart.mp3"
+                },
+                {
+                    "text": "Kan du bära min resväska?",
+                    "translation": "Can you carry my suitcase?",
+                    "audio": "./audio/phrases/Kan_du_bära_min_resväska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_bära_min_resväska.mp3"
+                },
+                {
+                    "text": "Hon lade betoning på det viktiga ordet.",
+                    "translation": "She placed emphasis on the important word.",
+                    "audio": "./audio/phrases/Hon_lade_betoning_på_det_viktiga_ordet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_lade_betoning_på_det_viktiga_ordet.mp3"
+                },
+                {
+                    "text": "Hon ringade in sitt namn på listan.",
+                    "translation": "She circled her name on the list.",
+                    "audio": "./audio/phrases/Hon_ringade_in_sitt_namn_på_listan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_ringade_in_sitt_namn_på_listan.mp3"
+                },
+                {
+                    "text": "Jag vill göra det igen.",
+                    "translation": "I want to do it again.",
+                    "audio": "./audio/phrases/Jag_vill_göra_det_igen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_vill_göra_det_igen.mp3"
+                },
+                {
+                    "text": "Kan du säga det igen?",
+                    "translation": "Can you say that again?",
+                    "audio": "./audio/phrases/Kan_du_säga_det_igen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_säga_det_igen.mp3"
+                },
+                {
+                    "text": "Markera rätt svar.",
+                    "translation": "Mark the correct answer.",
+                    "audio": "./audio/phrases/Markera_rätt_svar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Markera_rätt_svar.mp3"
+                },
+                {
+                    "text": "Hon uttalade sitt namn tydligt.",
+                    "translation": "She pronounced her name clearly.",
+                    "audio": "./audio/phrases/Hon_uttalade_sitt_namn_tydligt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_uttalade_sitt_namn_tydligt.mp3"
+                },
+                {
+                    "text": "Kan du titta på det här?",
+                    "translation": "Can you look at this?",
+                    "audio": "./audio/phrases/Kan_du_titta_på_det_här.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_titta_på_det_här.mp3"
+                },
+                {
+                    "text": "Titta noga på bilden.",
+                    "translation": "Look carefully at the picture.",
+                    "audio": "./audio/phrases/Titta_noga_på_bilden.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Titta_noga_på_bilden.mp3"
+                },
+                {
+                    "text": "Rutan är tom.",
+                    "translation": "The box is empty.",
+                    "audio": "./audio/phrases/Rutan_är_tom.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Rutan_är_tom.mp3"
+                },
+                {
+                    "text": "Vi bor här.",
+                    "translation": "We live here.",
+                    "audio": "./audio/phrases/Vi_bor_här.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_bor_här.mp3"
+                },
+                {
+                    "text": "Här är din bok.",
+                    "translation": "Here is your book.",
+                    "audio": "./audio/phrases/Här_är_din_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Här_är_din_bok.mp3"
+                },
+                {
+                    "text": "Vi bor nedanför berget.",
+                    "translation": "We live below the mountain.",
+                    "audio": "./audio/phrases/Vi_bor_nedanför_berget.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_bor_nedanför_berget.mp3"
+                },
+                {
+                    "text": "Bilden är nedanför texten.",
+                    "translation": "The picture is below the text.",
+                    "audio": "./audio/phrases/Bilden_är_nedanför_texten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Bilden_är_nedanför_texten.mp3"
+                },
+                {
+                    "text": "Hon såg glad ut.",
+                    "translation": "She looked happy.",
+                    "audio": "./audio/phrases/Hon_såg_glad_ut.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_såg_glad_ut.mp3"
+                },
+                {
+                    "text": "Jag kan se dig.",
+                    "translation": "I can see you.",
+                    "audio": "./audio/phrases/Jag_kan_se_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_kan_se_dig.mp3"
+                },
+                {
+                    "text": "Tack för hjälpen.",
+                    "translation": "Thank you for the help.",
+                    "audio": "./audio/phrases/Tack_för_hjälpen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Tack_för_hjälpen.mp3"
+                },
+                {
+                    "text": "Positionen av huset är perfekt.",
+                    "translation": "The position of the house is perfect.",
+                    "audio": "./audio/phrases/Positionen_av_huset_är_perfekt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Positionen_av_huset_är_perfekt.mp3"
+                },
+                {
+                    "text": "Han har en hög position i företaget.",
+                    "translation": "He has a high position in the company.",
+                    "audio": "./audio/phrases/Han_har_en_hög_position_i_företaget.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_har_en_hög_position_i_företaget.mp3"
+                },
+                {
+                    "text": "Jag läser en bok.",
+                    "translation": "I am reading a book.",
+                    "audio": "./audio/phrases/Jag_läser_en_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_läser_en_bok.mp3"
+                },
+                {
+                    "text": "Sätt ett kryss i rutan.",
+                    "translation": "Put a tick in the box.",
+                    "audio": "./audio/phrases/Sätt_ett_kryss_i_rutan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Sätt_ett_kryss_i_rutan.mp3"
+                },
+                {
+                    "text": "Hon satte sig på stolen.",
+                    "translation": "She sat down on the chair.",
+                    "audio": "./audio/phrases/Hon_satte_sig_på_stolen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_satte_sig_på_stolen.mp3"
+                },
+                {
+                    "text": "Jag ska sätta boken på bordet.",
+                    "translation": "I will put the book on the table.",
+                    "audio": "./audio/phrases/Jag_ska_sätta_boken_på_bordet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_ska_sätta_boken_på_bordet.mp3"
+                },
+                {
+                    "text": "Alla barnen leker.",
+                    "translation": "All the children are playing.",
+                    "audio": "./audio/phrases/Alla_barnen_leker.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Alla_barnen_leker.mp3"
+                },
+                {
+                    "text": "Alla gillar glass.",
+                    "translation": "Everyone likes ice cream.",
+                    "audio": "./audio/phrases/Alla_gillar_glass.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Alla_gillar_glass.mp3"
+                },
+                {
+                    "text": "Kan jag fråga dig något?",
+                    "translation": "Can I ask you something?",
+                    "audio": "./audio/phrases/Kan_jag_fråga_dig_något.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_jag_fråga_dig_något.mp3"
+                },
+                {
+                    "text": "Han svarade inte på telefonen.",
+                    "translation": "He did not answer the phone.",
+                    "audio": "./audio/phrases/Han_svarade_inte_på_telefonen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_svarade_inte_på_telefonen.mp3"
+                },
+                {
+                    "text": "Kan du svara på frågan?",
+                    "translation": "Can you answer the question?",
+                    "audio": "./audio/phrases/Kan_du_svara_på_frågan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_svara_på_frågan.mp3"
+                },
+                {
+                    "text": "Vi delade upp klassen i grupper.",
+                    "translation": "We divided the class into groups.",
+                    "audio": "./audio/phrases/Vi_delade_upp_klassen_i_grupper.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_delade_upp_klassen_i_grupper.mp3"
+                },
+                {
+                    "text": "Kan du skriva ner det?",
+                    "translation": "Can you write it down?",
+                    "audio": "./audio/phrases/Kan_du_skriva_ner_det.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_skriva_ner_det.mp3"
+                },
+                {
+                    "text": "Kan du stava ditt namn?",
+                    "translation": "Can you spell your name?",
+                    "audio": "./audio/phrases/Kan_du_stava_ditt_namn.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_stava_ditt_namn.mp3"
+                },
+                {
+                    "text": "Sverige är ett vackert land.",
+                    "translation": "Sweden is a beautiful country.",
+                    "audio": "./audio/phrases/Sverige_är_ett_vackert_land.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Sverige_är_ett_vackert_land.mp3"
+                },
+                {
+                    "text": "Vi lär oss franska i skolan.",
+                    "translation": "We are learning French at school.",
+                    "audio": "./audio/phrases/Vi_lär_oss_franska_i_skolan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_lär_oss_franska_i_skolan.mp3"
+                },
+                {
+                    "text": "Vi presenterade vårt projekt.",
+                    "translation": "We introduced our project.",
+                    "audio": "./audio/phrases/Vi_presenterade_vårt_projekt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_presenterade_vårt_projekt.mp3"
+                },
+                {
+                    "text": "Kan du presentera mig för din vän?",
+                    "translation": "Can you introduce me to your friend?",
+                    "audio": "./audio/phrases/Kan_du_presentera_mig_för_din_vän.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_presentera_mig_för_din_vän.mp3"
+                },
+                {
+                    "text": "De pratar med varandra varje dag.",
+                    "translation": "They talk to each other every day.",
+                    "audio": "./audio/phrases/De_pratar_med_varandra_varje_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_pratar_med_varandra_varje_dag.mp3"
+                },
+                {
+                    "text": "Kan du säga det igen?",
+                    "translation": "Can you say that again?",
+                    "audio": "./audio/phrases/Kan_du_säga_det_igen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_säga_det_igen.mp3"
+                },
+                {
+                    "text": "Vad vill du säga?",
+                    "translation": "What do you want to say?",
+                    "audio": "./audio/phrases/Vad_vill_du_säga.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_vill_du_säga.mp3"
+                },
+                {
+                    "text": "Hon är den bästa i klassen.",
+                    "translation": "She is the best in the class.",
+                    "audio": "./audio/phrases/Hon_är_den_bästa_i_klassen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_den_bästa_i_klassen.mp3"
+                },
+                {
+                    "text": "Boken handlar om en pojke.",
+                    "translation": "The book is about a boy.",
+                    "audio": "./audio/phrases/Boken_handlar_om_en_pojke.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Boken_handlar_om_en_pojke.mp3"
+                },
+                {
+                    "text": "De arbetar hårt varje dag.",
+                    "translation": "They work hard every day.",
+                    "audio": "./audio/phrases/De_arbetar_hårt_varje_dag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_arbetar_hårt_varje_dag.mp3"
+                },
+                {
+                    "text": "Vi arbetar tillsammans.",
+                    "translation": "We work together.",
+                    "audio": "./audio/phrases/Vi_arbetar_tillsammans.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_arbetar_tillsammans.mp3"
+                },
+                {
+                    "text": "Hon arbetar som ingenjör.",
+                    "translation": "She works as an engineer.",
+                    "audio": "./audio/phrases/Hon_arbetar_som_ingenjör.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_arbetar_som_ingenjör.mp3"
+                },
+                {
+                    "text": "Han är en ingenjör.",
+                    "translation": "He is an engineer.",
+                    "audio": "./audio/phrases/Han_är_en_ingenjör.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_en_ingenjör.mp3"
+                },
+                {
+                    "text": "Hon arbetar som läkare.",
+                    "translation": "She works as a doctor.",
+                    "audio": "./audio/phrases/Hon_arbetar_som_läkare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_arbetar_som_läkare.mp3"
+                },
+                {
+                    "text": "Jag har en tid hos tandläkaren imorgon.",
+                    "translation": "I have an appointment with the dentist tomorrow.",
+                    "audio": "./audio/phrases/Jag_har_en_tid_hos_tandläkaren_imorgon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_har_en_tid_hos_tandläkaren_imorgon.mp3"
+                },
+                {
+                    "text": "Sjuksköterskan tog hand om patienten.",
+                    "translation": "The nurse took care of the patient.",
+                    "audio": "./audio/phrases/Sjuksköterskan_tog_hand_om_patienten.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Sjuksköterskan_tog_hand_om_patienten.mp3"
+                },
+                {
+                    "text": "Vi behöver fler sjuksköterskor på sjukhuset.",
+                    "translation": "We need more nurses at the hospital.",
+                    "audio": "./audio/phrases/Vi_behöver_fler_sjuksköterskor_på_sjukhuset.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_behöver_fler_sjuksköterskor_på_sjukhuset.mp3"
+                },
+                {
+                    "text": "Busschauffören körde oss till skolan.",
+                    "translation": "The bus driver drove us to school.",
+                    "audio": "./audio/phrases/Busschauffören_körde_oss_till_skolan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Busschauffören_körde_oss_till_skolan.mp3"
+                },
+                {
+                    "text": "Busschauffören var mycket vänlig.",
+                    "translation": "The bus driver was very friendly.",
+                    "audio": "./audio/phrases/Busschauffören_var_mycket_vänlig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Busschauffören_var_mycket_vänlig.mp3"
+                },
+                {
+                    "text": "Frisören klippte mitt hår.",
+                    "translation": "The hairdresser cut my hair.",
+                    "audio": "./audio/phrases/Frisören_klippte_mitt_hår.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Frisören_klippte_mitt_hår.mp3"
+                },
+                {
+                    "text": "Frisören gav mig en ny frisyr.",
+                    "translation": "The hairdresser gave me a new hairstyle.",
+                    "audio": "./audio/phrases/Frisören_gav_mig_en_ny_frisyr.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Frisören_gav_mig_en_ny_frisyr.mp3"
+                },
+                {
+                    "text": "Vi anlitade en fotograf för bröllopet.",
+                    "translation": "We hired a photographer for the wedding.",
+                    "audio": "./audio/phrases/Vi_anlitade_en_fotograf_för_bröllopet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_anlitade_en_fotograf_för_bröllopet.mp3"
+                },
+                {
+                    "text": "Läraren skriver på tavlan.",
+                    "translation": "The teacher is writing on the board.",
+                    "audio": "./audio/phrases/Läraren_skriver_på_tavlan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Läraren_skriver_på_tavlan.mp3"
+                },
+                {
+                    "text": "Läraren gav oss en uppgift.",
+                    "translation": "The teacher gave us an assignment.",
+                    "audio": "./audio/phrases/Läraren_gav_oss_en_uppgift.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Läraren_gav_oss_en_uppgift.mp3"
+                },
+                {
+                    "text": "Servitören tog vår beställning.",
+                    "translation": "The waiter took our order.",
+                    "audio": "./audio/phrases/Servitören_tog_vår_beställning.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Servitören_tog_vår_beställning.mp3"
+                },
+                {
+                    "text": "Servitören var mycket vänlig.",
+                    "translation": "The waiter was very friendly.",
+                    "audio": "./audio/phrases/Servitören_var_mycket_vänlig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Servitören_var_mycket_vänlig.mp3"
+                },
+                {
+                    "text": "Kocken lagade en utsökt måltid.",
+                    "translation": "The chef prepared a delicious meal.",
+                    "audio": "./audio/phrases/Kocken_lagade_en_utsökt_måltid.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kocken_lagade_en_utsökt_måltid.mp3"
+                },
+                {
+                    "text": "Vad ska du göra idag?",
+                    "translation": "What are you going to do today?",
+                    "audio": "./audio/phrases/Vad_ska_du_göra_idag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_ska_du_göra_idag.mp3"
+                },
+                {
+                    "text": "Jag måste göra mina läxor.",
+                    "translation": "I have to do my homework.",
+                    "audio": "./audio/phrases/Jag_måste_göra_mina_läxor.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_måste_göra_mina_läxor.mp3"
+                },
+                {
+                    "text": "Då förstod jag allt.",
+                    "translation": "Then I understood everything.",
+                    "audio": "./audio/phrases/Då_förstod_jag_allt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Då_förstod_jag_allt.mp3"
+                },
+                {
+                    "text": "Vad ska du göra då?",
+                    "translation": "What are you going to do then?",
+                    "audio": "./audio/phrases/Vad_ska_du_göra_då.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_ska_du_göra_då.mp3"
+                },
+                {
+                    "text": "Jag studerar svenska.",
+                    "translation": "I am studying Swedish.",
+                    "audio": "./audio/phrases/Jag_studerar_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_studerar_svenska.mp3"
+                },
+                {
+                    "text": "De studerar matematik.",
+                    "translation": "They are studying mathematics.",
+                    "audio": "./audio/phrases/De_studerar_matematik.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_studerar_matematik.mp3"
+                },
+                {
+                    "text": "Hon pluggar på universitetet.",
+                    "translation": "She studies at the university.",
+                    "audio": "./audio/phrases/Hon_pluggar_på_universitetet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_pluggar_på_universitetet.mp3"
+                },
+                {
+                    "text": "Min farfar är pensionär.",
+                    "translation": "My grandfather is a pensioner.",
+                    "audio": "./audio/phrases/Min_farfar_är_pensionär.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_farfar_är_pensionär.mp3"
+                },
+                {
+                    "text": "Hon blev pensionär förra året.",
+                    "translation": "She retired last year.",
+                    "audio": "./audio/phrases/Hon_blev_pensionär_förra_året.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_blev_pensionär_förra_året.mp3"
+                },
+                {
+                    "text": "Hon jobbar som lärare.",
+                    "translation": "She works as a teacher.",
+                    "audio": "./audio/phrases/Hon_jobbar_som_lärare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_jobbar_som_lärare.mp3"
+                },
+                {
+                    "text": "Han jobbar mycket.",
+                    "translation": "He works a lot.",
+                    "audio": "./audio/phrases/Han_jobbar_mycket.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_jobbar_mycket.mp3"
+                },
+                {
+                    "text": "Jag går med dig.",
+                    "translation": "I am going with you.",
+                    "audio": "./audio/phrases/Jag_går_med_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_går_med_dig.mp3"
+                },
+                {
+                    "text": "Han kom med sin hund.",
+                    "translation": "He came with his dog.",
+                    "audio": "./audio/phrases/Han_kom_med_sin_hund.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_kom_med_sin_hund.mp3"
+                },
+                {
+                    "text": "Barnet leker i parken.",
+                    "translation": "The child is playing in the park.",
+                    "audio": "./audio/phrases/Barnet_leker_i_parken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Barnet_leker_i_parken.mp3"
+                },
+                {
+                    "text": "Barnen går i skolan.",
+                    "translation": "The children go to school.",
+                    "audio": "./audio/phrases/Barnen_går_i_skolan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Barnen_går_i_skolan.mp3"
+                },
+                {
+                    "text": "De har en bra förskola i området.",
+                    "translation": "They have a good preschool in the area.",
+                    "audio": "./audio/phrases/De_har_en_bra_förskola_i_området.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_har_en_bra_förskola_i_området.mp3"
+                },
+                {
+                    "text": "Förskolan ligger nära vårt hus.",
+                    "translation": "The preschool is located near our house.",
+                    "audio": "./audio/phrases/Förskolan_ligger_nära_vårt_hus.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Förskolan_ligger_nära_vårt_hus.mp3"
+                },
+                {
+                    "text": "Vi kan börja nu.",
+                    "translation": "We can start now.",
+                    "audio": "./audio/phrases/Vi_kan_börja_nu.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_kan_börja_nu.mp3"
+                },
+                {
+                    "text": "Nu förstår jag.",
+                    "translation": "Now I understand.",
+                    "audio": "./audio/phrases/Nu_förstår_jag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Nu_förstår_jag.mp3"
+                },
+                {
+                    "text": "Jag söker ett jobb.",
+                    "translation": "I am looking for a job.",
+                    "audio": "./audio/phrases/Jag_söker_ett_jobb.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_söker_ett_jobb.mp3"
+                },
+                {
+                    "text": "Hon söker efter sina nycklar.",
+                    "translation": "She is looking for her keys.",
+                    "audio": "./audio/phrases/Hon_söker_efter_sina_nycklar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_söker_efter_sina_nycklar.mp3"
+                },
+                {
+                    "text": "Vi åt middag på en restaurang.",
+                    "translation": "We had dinner at a restaurant.",
+                    "audio": "./audio/phrases/Vi_åt_middag_på_en_restaurang.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_åt_middag_på_en_restaurang.mp3"
+                },
+                {
+                    "text": "Kan du rekommendera en bra restaurang?",
+                    "translation": "Can you recommend a good restaurant?",
+                    "audio": "./audio/phrases/Kan_du_rekommendera_en_bra_restaurang.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_rekommendera_en_bra_restaurang.mp3"
+                },
+                {
+                    "text": "Jag önskar dig lycka till.",
+                    "translation": "I wish you good luck.",
+                    "audio": "./audio/phrases/Jag_önskar_dig_lycka_till.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_önskar_dig_lycka_till.mp3"
+                },
+                {
+                    "text": "Lycka till på intervjun.",
+                    "translation": "Good luck with the interview.",
+                    "audio": "./audio/phrases/Lycka_till_på_intervjun.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Lycka_till_på_intervjun.mp3"
+                },
+                {
+                    "text": "Den här meningen är lång.",
+                    "translation": "This sentence is long.",
+                    "audio": "./audio/phrases/Den_här_meningen_är_lång.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Den_här_meningen_är_lång.mp3"
+                },
+                {
+                    "text": "Meningen är korrekt.",
+                    "translation": "The sentence is correct.",
+                    "audio": "./audio/phrases/Meningen_är_korrekt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Meningen_är_korrekt.mp3"
+                },
+                {
+                    "text": "Han läser en bok på portugisiska.",
+                    "translation": "He is reading a book in Portuguese.",
+                    "audio": "./audio/phrases/Han_läser_en_bok_på_portugisiska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_läser_en_bok_på_portugisiska.mp3"
+                },
+                {
+                    "text": "Hon läser en bok om filosofi.",
+                    "translation": "She is reading a book about philosophy.",
+                    "audio": "./audio/phrases/Hon_läser_en_bok_om_filosofi.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_läser_en_bok_om_filosofi.mp3"
+                },
+                {
+                    "text": "Psykologi hjälper oss att förstå mänskligt beteende.",
+                    "translation": "Psychology helps us understand human behavior.",
+                    "audio": "./audio/phrases/Psykologi_hjälper_oss_att_förstå_mänskligt_beteende.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Psykologi_hjälper_oss_att_förstå_mänskligt_beteende.mp3"
+                },
+                {
+                    "text": "Vad är ditt yrke?",
+                    "translation": "What is your profession?",
+                    "audio": "./audio/phrases/Vad_är_ditt_yrke.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_är_ditt_yrke.mp3"
+                },
+                {
+                    "text": "Vilket yrke vill du ha?",
+                    "translation": "What profession do you want to have?",
+                    "audio": "./audio/phrases/Vilket_yrke_vill_du_ha.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vilket_yrke_vill_du_ha.mp3"
+                },
+                {
+                    "text": "Ekonomi påverkar alla aspekter av livet.",
+                    "translation": "Economics affects all aspects of life.",
+                    "audio": "./audio/phrases/Ekonomi_påverkar_alla_aspekter_av_livet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ekonomi_påverkar_alla_aspekter_av_livet.mp3"
+                },
+                {
+                    "text": "Hon arbetar som programmerare.",
+                    "translation": "She works as a programmer.",
+                    "audio": "./audio/phrases/Hon_arbetar_som_programmerare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_arbetar_som_programmerare.mp3"
+                },
+                {
+                    "text": "De anställde en ny programmerare.",
+                    "translation": "They hired a new programmer.",
+                    "audio": "./audio/phrases/De_anställde_en_ny_programmerare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_anställde_en_ny_programmerare.mp3"
+                },
+                {
+                    "text": "Jag vill bli en ekonom.",
+                    "translation": "I want to become an accountant.",
+                    "audio": "./audio/phrases/Jag_vill_bli_en_ekonom.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_vill_bli_en_ekonom.mp3"
+                },
+                {
+                    "text": "Han arbetar som förskolelärare.",
+                    "translation": "He works as a preschool teacher.",
+                    "audio": "./audio/phrases/Han_arbetar_som_förskolelärare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_arbetar_som_förskolelärare.mp3"
+                },
+                {
+                    "text": "Hon arbetar inom programmering.",
+                    "translation": "She works in programming.",
+                    "audio": "./audio/phrases/Hon_arbetar_inom_programmering.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_arbetar_inom_programmering.mp3"
+                },
+                {
+                    "text": "Han studerar programmering på universitetet.",
+                    "translation": "He studies programming at the university.",
+                    "audio": "./audio/phrases/Han_studerar_programmering_på_universitetet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_studerar_programmering_på_universitetet.mp3"
+                },
+                {
+                    "text": "Han studerar till lärare.",
+                    "translation": "He is studying to be a teacher.",
+                    "audio": "./audio/phrases/Han_studerar_till_lärare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_studerar_till_lärare.mp3"
+                },
+                {
+                    "text": "De gick till parken.",
+                    "translation": "They went to the park.",
+                    "audio": "./audio/phrases/De_gick_till_parken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_gick_till_parken.mp3"
+                },
+                {
+                    "text": "Jag kan höra dig.",
+                    "translation": "I can hear you.",
+                    "audio": "./audio/phrases/Jag_kan_höra_dig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_kan_höra_dig.mp3"
+                },
+                {
+                    "text": "Kan du höra musiken?",
+                    "translation": "Can you hear the music?",
+                    "audio": "./audio/phrases/Kan_du_höra_musiken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_höra_musiken.mp3"
+                },
+                {
+                    "text": "Svaret är rätt.",
+                    "translation": "The answer is correct.",
+                    "audio": "./audio/phrases/Svaret_är_rätt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Svaret_är_rätt.mp3"
+                },
+                {
+                    "text": "Du har rätt.",
+                    "translation": "You are right.",
+                    "audio": "./audio/phrases/Du_har_rätt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Du_har_rätt.mp3"
+                },
+                {
+                    "text": "Vi har flera alternativ att välja mellan.",
+                    "translation": "We have several options to choose from.",
+                    "audio": "./audio/phrases/Vi_har_flera_alternativ_att_välja_mellan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_har_flera_alternativ_att_välja_mellan.mp3"
+                },
+                {
+                    "text": "Vilket alternativ föredrar du?",
+                    "translation": "Which option do you prefer?",
+                    "audio": "./audio/phrases/Vilket_alternativ_föredrar_du.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vilket_alternativ_föredrar_du.mp3"
+                },
+                {
+                    "text": "Hon arbetar som polis.",
+                    "translation": "She works as a police officer.",
+                    "audio": "./audio/phrases/Hon_arbetar_som_polis.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_arbetar_som_polis.mp3"
+                },
+                {
+                    "text": "Polisen grep tjuven.",
+                    "translation": "The police arrested the thief.",
+                    "audio": "./audio/phrases/Polisen_grep_tjuven.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Polisen_grep_tjuven.mp3"
+                },
+                {
+                    "text": "Är du gift?",
+                    "translation": "Are you married?",
+                    "audio": "./audio/phrases/Är_du_gift.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Är_du_gift.mp3"
+                },
+                {
+                    "text": "Hon är gift med en svensk.",
+                    "translation": "She is married to a Swede.",
+                    "audio": "./audio/phrases/Hon_är_gift_med_en_svensk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_gift_med_en_svensk.mp3"
+                },
+                {
+                    "text": "Hon bor med sin sambo.",
+                    "translation": "She lives with her live-in partner.",
+                    "audio": "./audio/phrases/Hon_bor_med_sin_sambo.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_bor_med_sin_sambo.mp3"
+                },
+                {
+                    "text": "Min hund är snäll.",
+                    "translation": "My dog is kind.",
+                    "audio": "./audio/phrases/Min_hund_är_snäll.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_hund_är_snäll.mp3"
+                },
+                {
+                    "text": "Han är min man.",
+                    "translation": "He is my husband.",
+                    "audio": "./audio/phrases/Han_är_min_man.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_min_man.mp3"
+                },
+                {
+                    "text": "De har varit gifta i tio år.",
+                    "translation": "They have been married for ten years.",
+                    "audio": "./audio/phrases/De_har_varit_gifta_i_tio_år.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_har_varit_gifta_i_tio_år.mp3"
+                },
+                {
+                    "text": "Min vän är schweizare.",
+                    "translation": "My friend is Swiss.",
+                    "audio": "./audio/phrases/Min_vän_är_schweizare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_vän_är_schweizare.mp3"
+                },
+                {
+                    "text": "Schweizaren talar flera språk.",
+                    "translation": "The Swiss person speaks several languages.",
+                    "audio": "./audio/phrases/Schweizaren_talar_flera_språk.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Schweizaren_talar_flera_språk.mp3"
+                },
+                {
+                    "text": "Jag vill gå ut, men det regnar.",
+                    "translation": "I want to go out, but it is raining.",
+                    "audio": "./audio/phrases/Jag_vill_gå_ut_men_det_regnar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_vill_gå_ut_men_det_regnar.mp3"
+                },
+                {
+                    "text": "Min son går i skolan.",
+                    "translation": "My son goes to school.",
+                    "audio": "./audio/phrases/Min_son_går_i_skolan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_son_går_i_skolan.mp3"
+                },
+                {
+                    "text": "Hon är stolt över sin dotter.",
+                    "translation": "She is proud of her daughter.",
+                    "audio": "./audio/phrases/Hon_är_stolt_över_sin_dotter.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_stolt_över_sin_dotter.mp3"
+                },
+                {
+                    "text": "De har en son och en dotter.",
+                    "translation": "They have a son and a daughter.",
+                    "audio": "./audio/phrases/De_har_en_son_och_en_dotter.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_har_en_son_och_en_dotter.mp3"
+                },
+                {
+                    "text": "Han talar också svenska.",
+                    "translation": "He also speaks Swedish.",
+                    "audio": "./audio/phrases/Han_talar_också_svenska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_talar_också_svenska.mp3"
+                },
+                {
+                    "text": "De är också intresserade.",
+                    "translation": "They are also interested.",
+                    "audio": "./audio/phrases/De_är_också_intresserade.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_är_också_intresserade.mp3"
+                },
+                {
+                    "text": "Min flickvän bor i Stockholm.",
+                    "translation": "My girlfriend lives in Stockholm.",
+                    "audio": "./audio/phrases/Min_flickvän_bor_i_Stockholm.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_flickvän_bor_i_Stockholm.mp3"
+                },
+                {
+                    "text": "Han köpte en present till sin flickvän.",
+                    "translation": "He bought a gift for his girlfriend.",
+                    "audio": "./audio/phrases/Han_köpte_en_present_till_sin_flickvän.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_köpte_en_present_till_sin_flickvän.mp3"
+                },
+                {
+                    "text": "Han bor nära skolan.",
+                    "translation": "He lives near the school.",
+                    "audio": "./audio/phrases/Han_bor_nära_skolan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_bor_nära_skolan.mp3"
+                },
+                {
+                    "text": "De planerar att bo ihop snart.",
+                    "translation": "They are planning to live together soon.",
+                    "audio": "./audio/phrases/De_planerar_att_bo_ihop_snart.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_planerar_att_bo_ihop_snart.mp3"
+                },
+                {
+                    "text": "Hon är en toppen vän.",
+                    "translation": "She is a great friend.",
+                    "audio": "./audio/phrases/Hon_är_en_toppen_vän.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_en_toppen_vän.mp3"
+                },
+                {
+                    "text": "Filmen var toppen.",
+                    "translation": "The movie was great.",
+                    "audio": "./audio/phrases/Filmen_var_toppen.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Filmen_var_toppen.mp3"
+                },
+                {
+                    "text": "Ett par skor.",
+                    "translation": "A pair of shoes.",
+                    "audio": "./audio/phrases/Ett_par_skor.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ett_par_skor.mp3"
+                },
+                {
+                    "text": "De är ett par.",
+                    "translation": "They are a couple.",
+                    "audio": "./audio/phrases/De_är_ett_par.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_är_ett_par.mp3"
+                },
+                {
+                    "text": "De skilde sig förra året.",
+                    "translation": "They got divorced last year.",
+                    "audio": "./audio/phrases/De_skilde_sig_förra_året.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_skilde_sig_förra_året.mp3"
+                },
+                {
+                    "text": "De bestämde sig för att skilja sig.",
+                    "translation": "They decided to get divorced.",
+                    "audio": "./audio/phrases/De_bestämde_sig_för_att_skilja_sig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_bestämde_sig_för_att_skilja_sig.mp3"
+                },
+                {
+                    "text": "Vi gick till samma skola.",
+                    "translation": "We went to the same school.",
+                    "audio": "./audio/phrases/Vi_gick_till_samma_skola.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_gick_till_samma_skola.mp3"
+                },
+                {
+                    "text": "Vi har samma åsikt.",
+                    "translation": "We have the same opinion.",
+                    "audio": "./audio/phrases/Vi_har_samma_åsikt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_har_samma_åsikt.mp3"
+                },
+                {
+                    "text": "Hon är fem år gammal.",
+                    "translation": "She is five years old.",
+                    "audio": "./audio/phrases/Hon_är_fem_år_gammal.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_fem_år_gammal.mp3"
+                },
+                {
+                    "text": "De firar sitt första år tillsammans.",
+                    "translation": "They are celebrating their first year together.",
+                    "audio": "./audio/phrases/De_firar_sitt_första_år_tillsammans.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_firar_sitt_första_år_tillsammans.mp3"
+                },
+                {
+                    "text": "Kvinnan arbetar som läkare.",
+                    "translation": "The woman works as a doctor.",
+                    "audio": "./audio/phrases/Kvinnan_arbetar_som_läkare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kvinnan_arbetar_som_läkare.mp3"
+                },
+                {
+                    "text": "Kvinnan läser en bok.",
+                    "translation": "The woman is reading a book.",
+                    "audio": "./audio/phrases/Kvinnan_läser_en_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kvinnan_läser_en_bok.mp3"
+                },
+                {
+                    "text": "Boken är en bra källa till information.",
+                    "translation": "The book is a good source of information.",
+                    "audio": "./audio/phrases/Boken_är_en_bra_källa_till_information.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Boken_är_en_bra_källa_till_information.mp3"
+                },
+                {
+                    "text": "Han är en pålitlig källa.",
+                    "translation": "He is a reliable source.",
+                    "audio": "./audio/phrases/Han_är_en_pålitlig_källa.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_är_en_pålitlig_källa.mp3"
+                },
+                {
+                    "text": "Hon är separerad från sin man.",
+                    "translation": "She is separated from her husband.",
+                    "audio": "./audio/phrases/Hon_är_separerad_från_sin_man.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_separerad_från_sin_man.mp3"
+                },
+                {
+                    "text": "Min tjej bor i Stockholm.",
+                    "translation": "My girlfriend lives in Stockholm.",
+                    "audio": "./audio/phrases/Min_tjej_bor_i_Stockholm.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_tjej_bor_i_Stockholm.mp3"
+                },
+                {
+                    "text": "Hon köpte en present till sin pojkvän.",
+                    "translation": "She bought a gift for her boyfriend.",
+                    "audio": "./audio/phrases/Hon_köpte_en_present_till_sin_pojkvän.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_köpte_en_present_till_sin_pojkvän.mp3"
+                },
+                {
+                    "text": "Min kille bor i Malmö.",
+                    "translation": "My boyfriend lives in Malmö.",
+                    "audio": "./audio/phrases/Min_kille_bor_i_Malmö.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_kille_bor_i_Malmö.mp3"
+                },
+                {
+                    "text": "Hans fru är mycket vänlig.",
+                    "translation": "His wife is very kind.",
+                    "audio": "./audio/phrases/Hans_fru_är_mycket_vänlig.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hans_fru_är_mycket_vänlig.mp3"
+                },
+                {
+                    "text": "Min fru arbetar som läkare.",
+                    "translation": "My wife works as a doctor.",
+                    "audio": "./audio/phrases/Min_fru_arbetar_som_läkare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Min_fru_arbetar_som_läkare.mp3"
+                },
+                {
+                    "text": "Pojken har en hund.",
+                    "translation": "The boy has a dog.",
+                    "audio": "./audio/phrases/Pojken_har_en_hund.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Pojken_har_en_hund.mp3"
+                },
+                {
+                    "text": "Pojken leker i parken.",
+                    "translation": "The boy is playing in the park.",
+                    "audio": "./audio/phrases/Pojken_leker_i_parken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Pojken_leker_i_parken.mp3"
+                },
+                {
+                    "text": "Flickan har en katt.",
+                    "translation": "The girl has a cat.",
+                    "audio": "./audio/phrases/Flickan_har_en_katt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Flickan_har_en_katt.mp3"
+                },
+                {
+                    "text": "Hon är en snäll flicka.",
+                    "translation": "She is a kind girl.",
+                    "audio": "./audio/phrases/Hon_är_en_snäll_flicka.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_är_en_snäll_flicka.mp3"
+                },
+                {
+                    "text": "Ja, det är jag.",
+                    "translation": "Yes, I am.",
+                    "audio": "./audio/phrases/Ja_det_är_jag.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Ja_det_är_jag.mp3"
+                },
+                {
+                    "text": "Han har ett bonusbarn.",
+                    "translation": "He has a stepchild.",
+                    "audio": "./audio/phrases/Han_har_ett_bonusbarn.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_har_ett_bonusbarn.mp3"
+                },
+                {
+                    "text": "Hon älskar sitt bonusbarn.",
+                    "translation": "She loves her stepchild.",
+                    "audio": "./audio/phrases/Hon_älskar_sitt_bonusbarn.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_älskar_sitt_bonusbarn.mp3"
+                },
+                {
+                    "text": "Vi behöver en generell plan.",
+                    "translation": "We need a general plan.",
+                    "audio": "./audio/phrases/Vi_behöver_en_generell_plan.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_behöver_en_generell_plan.mp3"
+                },
+                {
+                    "text": "Det här är en generell regel.",
+                    "translation": "This is a general rule.",
+                    "audio": "./audio/phrases/Det_här_är_en_generell_regel.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_här_är_en_generell_regel.mp3"
+                },
+                {
+                    "text": "Hon strök under det viktiga ordet.",
+                    "translation": "She underlined the important word.",
+                    "audio": "./audio/phrases/Hon_strök_under_det_viktiga_ordet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_strök_under_det_viktiga_ordet.mp3"
+                },
+                {
+                    "text": "Han tog examen från universitetet förra året.",
+                    "translation": "He graduated from the university last year.",
+                    "audio": "./audio/phrases/Han_tog_examen_från_universitetet_förra_året.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_tog_examen_från_universitetet_förra_året.mp3"
+                },
+                {
+                    "text": "Jag studerar vid universitetet.",
+                    "translation": "I study at the university.",
+                    "audio": "./audio/phrases/Jag_studerar_vid_universitetet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_studerar_vid_universitetet.mp3"
+                },
+                {
+                    "text": "Han står nära dörren.",
+                    "translation": "He is standing near the door.",
+                    "audio": "./audio/phrases/Han_står_nära_dörren.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_står_nära_dörren.mp3"
+                },
+                {
+                    "text": "Butiken ligger nära parken.",
+                    "translation": "The store is close to the park.",
+                    "audio": "./audio/phrases/Butiken_ligger_nära_parken.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Butiken_ligger_nära_parken.mp3"
+                },
+                {
+                    "text": "Hon sorterar böckerna efter färg.",
+                    "translation": "She sorts the books by color.",
+                    "audio": "./audio/phrases/Hon_sorterar_böckerna_efter_färg.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_sorterar_böckerna_efter_färg.mp3"
+                },
+                {
+                    "text": "Det var en lätt fråga.",
+                    "translation": "It was an easy question.",
+                    "audio": "./audio/phrases/Det_var_en_lätt_fråga.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Det_var_en_lätt_fråga.mp3"
+                },
+                {
+                    "text": "Han har ett lätt jobb.",
+                    "translation": "He has an easy job.",
+                    "audio": "./audio/phrases/Han_har_ett_lätt_jobb.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Han_har_ett_lätt_jobb.mp3"
+                },
+                {
+                    "text": "Vi börjar med att lära oss alfabetet.",
+                    "translation": "We start by learning the alphabet.",
+                    "audio": "./audio/phrases/Vi_börjar_med_att_lära_oss_alfabetet.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_börjar_med_att_lära_oss_alfabetet.mp3"
+                },
+                {
+                    "text": "Kan du stava ditt efternamn?",
+                    "translation": "Can you spell your surname?",
+                    "audio": "./audio/phrases/Kan_du_stava_ditt_efternamn.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_stava_ditt_efternamn.mp3"
+                },
+                {
+                    "text": "Vad är ditt efternamn?",
+                    "translation": "What is your last name?",
+                    "audio": "./audio/phrases/Vad_är_ditt_efternamn.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vad_är_ditt_efternamn.mp3"
+                },
+                {
+                    "text": "Hon har en annan åsikt.",
+                    "translation": "She has another opinion.",
+                    "audio": "./audio/phrases/Hon_har_en_annan_åsikt.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_har_en_annan_åsikt.mp3"
+                },
+                {
+                    "text": "Jag vill ha en annan bok.",
+                    "translation": "I want another book.",
+                    "audio": "./audio/phrases/Jag_vill_ha_en_annan_bok.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Jag_vill_ha_en_annan_bok.mp3"
+                },
+                {
+                    "text": "Kan jag använda din telefon?",
+                    "translation": "Can I use your phone?",
+                    "audio": "./audio/phrases/Kan_jag_använda_din_telefon.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_jag_använda_din_telefon.mp3"
+                },
+                {
+                    "text": "Hon använder en penna.",
+                    "translation": "She is using a pen.",
+                    "audio": "./audio/phrases/Hon_använder_en_penna.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Hon_använder_en_penna.mp3"
+                },
+                {
+                    "text": "Vi har en tysk lärare.",
+                    "translation": "We have a German teacher.",
+                    "audio": "./audio/phrases/Vi_har_en_tysk_lärare.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Vi_har_en_tysk_lärare.mp3"
+                },
+                {
+                    "text": "Kan du läsa den här texten på tyska?",
+                    "translation": "Can you read this text in German?",
+                    "audio": "./audio/phrases/Kan_du_läsa_den_här_texten_på_tyska.mp3",
+                    "audioTranslation": "./audio/phrases/translation_Kan_du_läsa_den_här_texten_på_tyska.mp3"
+                },
+                {
+                    "text": "De har forskat om klimatförändringar.",
+                    "translation": "They have researched climate change.",
+                    "audio": "./audio/phrases/De_har_forskat_om_klimatförändringar.mp3",
+                    "audioTranslation": "./audio/phrases/translation_De_har_forskat_om_klimatförändringar.mp3"
                 }
             ]
         }
@@ -1078,10 +3626,15 @@
     const durationInputContainer = document.getElementById('durationInputContainer');
     const durationInput = document.getElementById('duration');
     const muteCheckbox = document.getElementById('mute');
+    const muteTCheckbox = document.getElementById('muteT');
 
     // Mute/unmute audio when the checkbox is toggled
     muteCheckbox.addEventListener('change', function() {
         audioPlayer.muted = this.checked;
+        translationPlayer.muted = this.checked;
+    });
+
+    muteTCheckbox.addEventListener('change', function() {
         translationPlayer.muted = this.checked;
     });
 
@@ -1132,16 +3685,15 @@
             const part = currentDialog.parts[currentIndex];
 
             dialogText.innerText = part.text;
+            dialogTranslation.innerText = part.translation ?? '';
             // Show or hide translation based on the checkbox
             if (showTranslationsCheckbox.checked) {
-                dialogTranslation.innerText = part.translation;
                 dialogTranslation.classList.remove('hidden');
                 if (part.audioTranslation) {
                     translationPlayer.src = part.audioTranslation;
                     hasTranslationAudio = true;
                 }
             } else {
-                dialogTranslation.innerText = '';
                 dialogTranslation.classList.add('hidden');
             }
 
@@ -1204,7 +3756,13 @@
     });
 
     // Optionally reload the current part when toggling the "Show Translations" checkbox
-    // showTranslationsCheckbox.addEventListener('change', loadPart);
+    showTranslationsCheckbox.addEventListener('change', () => {
+        if (showTranslationsCheckbox.checked) {
+            dialogTranslation.classList.remove('hidden');
+        } else {
+            dialogTranslation.classList.add('hidden');
+        }
+    });
 
     // Initialize dialog list
     showDialogs();
