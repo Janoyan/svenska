@@ -50,24 +50,27 @@
 <div class="fixed bottom-0 left-0 w-full bg-white shadow p-4 flex flex-row items-center justify-center gap-4">
     <label class="flex items-center gap-2">
         <input type="checkbox" id="showTranslations" class="form-checkbox">
-        <span>Show Translations</span>
+        <span>Trs</span>
     </label>
     <label class="flex items-center gap-2">
         <input type="checkbox" id="autoplay" class="form-checkbox">
-        <span>Autoplay</span>
+        <span>Atpl</span>
     </label>
-    <!-- This input will be shown when "Autoplay" is checked -->
     <div id="durationInputContainer" class="hidden">
         <label for="duration"></label>
         <input type="number" id="duration" placeholder="Duration" value="1" class="border p-1 w-24">
     </div>
     <label class="flex items-center gap-2">
         <input type="checkbox" id="mute" class="form-checkbox">
-        <span>Mute</span>
+        <span>Mt</span>
     </label>
     <label class="flex items-center gap-2">
         <input type="checkbox" id="muteT" class="form-checkbox" checked>
-        <span>Mute T</span>
+        <span>Mtt</span>
+    </label>
+    <label class="flex items-center gap-2">
+        <input type="checkbox" id="randomize" class="form-checkbox" checked>
+        <span>Rnd</span>
     </label>
 </div>
 
@@ -672,18 +675,6 @@
                     "translation": "Read chapter one.",
                     "audio": "./audio/phrases/Läs_kapitel_ett.mp3",
                     "audioTranslation": "./audio/phrases/translation_Läs_kapitel_ett.mp3"
-                },
-                {
-                    "text": "Sidan var ganska lång.",
-                    "translation": "Hur många kapitel finns det i boken?",
-                    "audio": "./audio/phrases/Sidan_var_ganska_lång.mp3",
-                    "audioTranslation": "./audio/phrases/translation_Sidan_var_ganska_lång.mp3"
-                },
-                {
-                    "text": "How many chapters are there in the book?",
-                    "translation": "The page was quite long.",
-                    "audio": "./audio/phrases/How_many_chapters_are_there_in_the_book.mp3",
-                    "audioTranslation": "./audio/phrases/translation_How_many_chapters_are_there_in_the_book.mp3"
                 },
                 {
                     "text": "Vi gick till andra sidan av gatan.",
@@ -3627,6 +3618,7 @@
     const durationInput = document.getElementById('duration');
     const muteCheckbox = document.getElementById('mute');
     const muteTCheckbox = document.getElementById('muteT');
+    const randomizeCheckbox = document.getElementById('randomize');
 
     // Mute/unmute audio when the checkbox is toggled
     muteCheckbox.addEventListener('change', function() {
@@ -3662,6 +3654,11 @@
     function startDialog(dialogKey) {
         currentDialog = config[dialogKey];
         currentIndex = 0;
+
+        if (randomizeCheckbox.checked) {
+            currentDialog.parts = currentDialog.parts.sort(() => Math.random() - 0.5);
+        }
+
         loadPart();
         dialogList.classList.add('hidden');
         dialogView.classList.remove('hidden');
