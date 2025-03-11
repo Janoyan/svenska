@@ -3619,6 +3619,32 @@
     const muteCheckbox = document.getElementById('mute');
     const muteTCheckbox = document.getElementById('muteT');
     const randomizeCheckbox = document.getElementById('randomize');
+    let wakeLock = null;
+
+    async function requestWakeLock() {
+        try {
+            wakeLock = await navigator.wakeLock.request("screen");
+            console.log("Wake Lock is active");
+
+            // Renew the wake lock if it gets released
+            wakeLock.addEventListener("release", () => {
+                console.log("Wake Lock was released");
+            });
+        } catch (err) {
+            console.error(`Wake Lock error: ${err.message}`);
+        }
+    }
+
+    // Request wake lock when the page loads
+    document.addEventListener("DOMContentLoaded", requestWakeLock);
+
+    // Reapply wake lock when visibility changes (e.g., when switching tabs)
+    document.addEventListener("visibilitychange", () => {
+        if (wakeLock !== null && document.visibilityState === "visible") {
+            requestWakeLock();
+        }
+    });
+
 
     // Mute/unmute audio when the checkbox is toggled
     muteCheckbox.addEventListener('change', function() {
