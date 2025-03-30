@@ -27,6 +27,11 @@
             font-weight: bold;
         }
 
+        #dialogImg {
+            display: inline-block;
+            width: 300px;
+        }
+
         .btitle {
             text-align: left;
         }
@@ -50,6 +55,7 @@
 <div id="dialogView" class="hidden w-full bg-white shadow-lg rounded-lg p-4 text-center relative mb-16">
     <button id="backButton" class="absolute left-2 top-2 text-blue-500">menu</button>
     <h2 id="dialogText" class="text-2xl font-bold mb-4"></h2>
+    <img id="dialogImg"/>
     <p id="dialogTranslation" class="text-3xl mb-4"></p>
     <p id="dialogExamples" class="text-3xl mb-4"></p>
     <audio id="audioPlayer" controls class="w-full"></audio>
@@ -87,38 +93,102 @@
 <script>
     const config = {
         words1: {
-            title: 'Phrases 500',
+            title: 'Words',
             parts: [
                 {
-                    "text": "abandon",
-                    "translation": "հրաժարվել, լքել",
-                    "audio": "./audio/5000/abandon.mp3",
+                    "text": "dull",
+                    "image": "./images/dull.webp",
+                    "translation": "",
+                    "audio": "./audio/english/dull.mp3",
                     "examples": [
-                        "We have been abandoned to our fate.",
-                        "People often simply abandon their pets when they go abroad."
+                        "To do a dull thing with style is preferable to doing a dangerous thing without it.",
+                        "The word \"dull\" means something that is boring, not interesting, or lacks excitement. It can also describe something that is not bright or shiny, like a dull color or a dull knife."
                     ]
                 },
                 {
-                    "text": "ability",
-                    "translation": "կարողություն, ընդունակություն",
-                    "audio": "./audio/5000/ability.mp3",
+                    "text": "insanely",
+                    "translation": "",
+                    "audio": "./audio/english/insanely difficult it is to have a full-time job and run ultra-marathons.mp3",
                     "examples": [
-                        "People with the disease may lose their ability to communicate.",
-                        "This program has the ability to adapt to its user.",
+                        "insanely difficult it is to have a full-time job and run ultra-marathons",
+                        "Insanely means something that is extreme or crazy, often used to describe something done to a very high degree or in an exaggerated way."
                     ]
                 },
                 {
-                    "text": "abolish",
-                    "translation": "վերացնել",
-                    "audio": "./audio/5000/abolish.mp3",
+                    "text": "bow hunter",
+                    "translation": "",
+                    "image": "./images/also being the best bow hunter on earth.jpg",
+                    "audio": "./audio/english/also being the best bow hunter on earth.mp3",
                     "examples": [
-                        "This tax should be abolished.",
+                        "also being the best bow hunter on earth",
+                    ]
+                },
+                {
+                    "text": "fascinating",
+                    "translation": "",
+                    "image": "./images/fascinating.webp",
+                    "audio": "./audio/english/fascinating.mp3",
+                    "examples": [
+                        "He's a dark and troubled and fascinating and a weird person like Hunter S. Thompson.",
+                        "Fascinating means something that is extremely interesting, captivating, or holds your attention in a very strong way.",
+                    ]
+                },
+                {
+                    "text": "trials and tribulations",
+                    "translation": "",
+                    "image": "",
+                    "audio": "./audio/english/trials and tribulations.mp3",
+                    "examples": [
+                        "trials and tribulations of their own lives seem trivial",
+                        "\"Trials and tribulations\" is a phrase that refers to the difficult challenges and hardships that a person faces in life. It represents the tough times or struggles one must go through."
+                    ]
+                },
+                {
+                    "text": "grace and dignity",
+                    "translation": "",
+                    "image": "",
+                    "audio": "./audio/english/grace and dignity.mp3",
+                    "examples": [
+                        "with grace and dignity and discipline",
+                        "շնորքով և արժանապատվությամբ"
                     ]
                 },
             ]
 
-        }
+        },
+        words2: {
+            title: 'Sentences',
+            parts: [
+                {
+                    "text": "From the bottom of my heart, thank you.",
+                    "translation": "",
+                    "audio": "./audio/english/From the bottom of my heart, thank you.mp3",
+                    "examples": []
+                },
+                {
+                    "text": "someone who just like truly maximizes the grind",
+                    "translation": "",
+                    "image": "",
+                    "audio": "./audio/english/someone who just like truly maximizes the grind.mp3",
+                    "examples": []
+                },
+                {
+                    "text": "and it's pleasing for other people to see",
+                    "translation": "",
+                    "image": "",
+                    "audio": "./audio/english/pleasing for other people to see.mp3",
+                    "examples": []
+                },
+                {
+                    "text": "I try to look at the best aspects of how they live their life",
+                    "translation": "",
+                    "image": "",
+                    "audio": "./audio/english/I try to look at the best aspects of how they live their life and recognize those aspects.mp3",
+                    "examples": []
+                },
+            ]
 
+        }
     };
 
     // Elements
@@ -126,6 +196,7 @@
     const dialogList = document.getElementById('dialogList');
     const dialogView = document.getElementById('dialogView');
     const dialogText = document.getElementById('dialogText');
+    const dialogImg = document.getElementById('dialogImg');
     const dialogTranslation = document.getElementById('dialogTranslation');
     const dialogExamples = document.getElementById('dialogExamples');
     const audioPlayer = document.getElementById('audioPlayer');
@@ -232,6 +303,11 @@
             const part = currentDialog.parts[currentIndex];
 
             dialogText.innerText = part.text;
+            if (part.image) {
+                dialogImg.src = part.image;
+            } else {
+                dialogImg.src = "";
+            }
             dialogTranslation.innerText = part.translation ?? '';
             dialogExamples.innerHTML = part.examples?.map((exampleText) => {
                 const highlightedText = exampleText.replaceAll(new RegExp(part.text, 'gi'), `<span class="current">${part.text}</span>`);
