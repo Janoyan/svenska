@@ -388,10 +388,13 @@
         }, delay * 1000);
     }
 
-    const getRandomColor = () => {
-        const colors = ['green', 'teal', 'darkblue', 'brown'];
-        return colors[Math.floor(Math.random() * colors.length)];
-    };
+    class RandomColor {
+        colors = ['green', 'teal', 'darkblue', 'brown'];
+
+        getRandomColor() {
+            return this.colors.sort(() => Math.random() - 0.5).pop();
+        };
+    }
 
     // Load and display the current part of the dialog
     function loadPart() {
@@ -406,9 +409,10 @@
                 dialogImg.src = "";
             }
             dialogTranslation.innerText = part.translation ?? '';
+            const r = new RandomColor();
             dialogExamples.innerHTML = part.examples?.map((exampleText) => {
                 const highlightedText = exampleText.replaceAll(new RegExp(part.text, 'gi'), `<span class="current">${part.text}</span>`);
-                return `<p style="color: ${getRandomColor()}">${highlightedText}</p>`;
+                return `<p style="color: ${r.getRandomColor()}">${highlightedText}</p>`;
             }).join('')
             // Show or hide translation based on the checkbox
             if (showTranslationsCheckbox.checked) {
