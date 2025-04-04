@@ -1,0 +1,1025 @@
+[
+  {
+    "text": "bloated",
+    "image": "",
+    "translation": "տռուզ, ուռած",
+    "audio": "./audio/5000/bloated.mp3",
+    "examples": [
+      "his appearance is altered, where he looks very bloated"
+    ]
+  },
+  {
+    "text": "nourishment",
+    "image": "",
+    "translation": "սնուցում",
+    "audio": "./audio/5000/nourishment.mp3",
+    "examples": [
+      "it's as much of a nourishment of the mind as food is a nourishment of the body."
+    ]
+  },
+  {
+    "text": "passionate",
+    "image": "կրքոտ, տարված",
+    "translation": "",
+    "audio": "./audio/5000/passionate.mp3",
+    "examples": [
+      "it was just another thing that I was very, very passionate about"
+    ]
+  },
+  {
+    "text": "sit still",
+    "image": "",
+    "translation": "անշարժ նստել",
+    "audio": "./audio/5000/sit still.mp3",
+    "examples": [
+      "didn't wanna sit still"
+    ]
+  },
+  {
+    "text": "irritate",
+    "image": "",
+    "translation": "զայրացնել, ջղայնացնել",
+    "audio": "./audio/5000/irritate.mp3",
+    "examples": [
+      "Everything that irritates us about others can lead us to an understanding of ourselves."
+    ]
+  },
+  {
+    "text": "profound",
+    "image": "",
+    "translation": "խոր, խորագին, глубокое",
+    "audio": "./audio/5000/profound.mp3",
+    "examples": [
+      "He had the most profound impact on me when I was a kid."
+    ]
+  },
+  {
+    "text": "evolved",
+    "image": "",
+    "translation": "զարգացել է",
+    "audio": "./audio/5000/evolved.mp3",
+    "examples": [
+      "if you try to watch Lenny Bruce today, it doesn't work because society has evolved."
+    ]
+  },
+  {
+    "text": "miserable",
+    "image": "",
+    "translation": "դժբախտ, թշվառ",
+    "audio": "./audio/5000/miserable.mp3",
+    "examples": [
+      "they don't have comedy friends, those people are miserable because they can't relate."
+    ]
+  },
+  {
+    "text": "stunned",
+    "image": "",
+    "translation": "շշմած",
+    "audio": "./audio/5000/stunned.mp3",
+    "examples": [
+      "If there's 1000 professional comics on Earth, I'd be stunned."
+    ]
+  },
+  {
+    "text": "infiltrate",
+    "image": "",
+    "translation": "ներթափանցել",
+    "audio": "./audio/5000/infiltrate.mp3",
+    "examples": [
+      "if you have the number one podcast in the world that people would wanna infiltrate that."
+    ]
+  },
+  {
+    "text": "contempt",
+    "image": "",
+    "translation": "արհամարանք",
+    "audio": "./audio/5000/contempt.mp3",
+    "examples": [
+      "I think the government has a lot of contempt for the citizens, I really do."
+    ]
+  },
+  {
+    "text": "skeptical",
+    "image": "",
+    "translation": "կասկածամիտ",
+    "audio": "./audio/5000/skeptical.mp3",
+    "examples": [
+      "In which direction are you skeptical? - I'm skeptical that it's, they're aliens."
+    ]
+  },
+  {
+    "text": "an objective assessment",
+    "image": "",
+    "translation": "օբյեկտիվ գնահատական",
+    "audio": "./audio/5000/an objective assessment.mp3",
+    "examples": [
+      "it's really hard for anybody and especially to have an objective assessment of exactly what's going on."
+    ]
+  },
+  {
+    "text": "exacerbates",
+    "image": "",
+    "translation": "սաստկացնել",
+    "audio": "./audio/5000/exacerbates.mp3",
+    "examples": [
+      "And then you have people, obviously, that have mental health issues and that also exacerbates the anxiety, the lockdown exacerbated the anxiety."
+    ]
+  },
+  {
+    "text": "dull",
+    "image": "./images/dull.webp",
+    "translation": "ձանձրալի",
+    "audio": "./audio/5000/dull.mp3",
+    "examples": [
+      "To do a dull thing with style is preferable to doing a dangerous thing without it."
+    ]
+  },
+  {
+    "text": "insanely",
+    "translation": "խելագարորեն, безумно",
+    "audio": "./audio/5000/insanely.mp3",
+    "examples": [
+      "insanely difficult it is to have a full-time job and run ultra-marathons"
+    ]
+  },
+  {
+    "text": "bow hunter",
+    "translation": "охотник с луком",
+    "image": "./images/also being the best bow hunter on earth.jpg",
+    "audio": "./audio/5000/bow hunter.mp3",
+    "examples": [
+      "also being the best bow hunter on earth"
+    ]
+  },
+  {
+    "text": "fascinating",
+    "translation": "հմայիչ",
+    "image": "./images/fascinating.webp",
+    "audio": "./audio/5000/fascinating.mp3",
+    "examples": [
+      "He's a dark and troubled and fascinating and a weird person like Hunter S. Thompson.",
+      "And what's fascinating, is if you go and you try to watch it."
+    ]
+  },
+  {
+    "text": "trials and tribulations",
+    "translation": "փորձություններ",
+    "image": "",
+    "audio": "./audio/5000/trials and tribulations.mp3",
+    "examples": [
+      "trials and tribulations of their own lives seem trivial"
+    ]
+  },
+  {
+    "text": "grace and dignity",
+    "translation": "շնորք և արժանապատվություն",
+    "image": "",
+    "audio": "./audio/5000/grace and dignity.mp3",
+    "examples": [
+      "with grace and dignity and discipline",
+      "Because you seem to do it with grace."
+    ]
+  },
+  {
+    "text": "looming over your head",
+    "translation": "գլխիդ վերևում կախված",
+    "image": "",
+    "audio": "./audio/5000/looming over your head.mp3",
+    "examples": [
+      "There's no executives looming over your head or network or big meetings about ratings or any of that stuff"
+    ]
+  },
+  {
+    "id": 2,
+    "text": "ability",
+    "translation": "կարողություն, ունակություն",
+    "audio": "./audio/5000/ability.mp3",
+    "examples": [
+      "People with the disease may lose their ability to communicate.",
+      "This program has the ability to adapt to its user."
+    ]
+  },
+  {
+    "id": 3,
+    "text": "able",
+    "translation": "ընդունակ",
+    "audio": "./audio/5000/able.mp3",
+    "examples": [
+      "You must be able to speak French for this job.",
+      "A viral illness left her barely able to walk."
+    ]
+  },
+  {
+    "id": 4,
+    "text": "abolish",
+    "translation": "վերացնել",
+    "audio": "./audio/5000/abolish.mp3",
+    "examples": [
+      "This tax should be abolished."
+    ]
+  },
+  {
+    "id": 5,
+    "text": "abortion",
+    "translation": "աբորտ, վիժում",
+    "audio": "./audio/5000/abortion.mp3",
+    "examples": [
+      "a woman has right to abortion",
+      "the country's strict abortion laws"
+    ]
+  },
+  {
+    "id": 8,
+    "text": "above",
+    "translation": "վերևում, վեր",
+    "audio": "./audio/5000/above.mp3",
+    "examples": [
+      "Put it on the shelf above.",
+      "I could hear somebody calling out my name from up above."
+    ]
+  },
+  {
+    "id": 10,
+    "text": "abroad",
+    "translation": "արտասահման",
+    "audio": "./audio/5000/abroad.mp3",
+    "examples": [
+      "to study abroad ",
+      "She worked abroad for a year."
+    ]
+  },
+  {
+    "id": 11,
+    "text": "absence",
+    "translation": "բացակայություն",
+    "audio": "./audio/5000/absence.mp3",
+    "examples": [
+      "The decision was made in my absence.",
+      "We did not receive any news during his long absence."
+    ]
+  },
+  {
+    "id": 12,
+    "text": "absent",
+    "translation": "բացակայում է, բացակա",
+    "audio": "./audio/5000/absent.mp3",
+    "examples": [
+      "He was absent from work for two weeks.",
+      "Local people were conspicuously absent from the meeting."
+    ]
+  },
+  {
+    "id": 13,
+    "text": "absolute",
+    "translation": "բացարձակ",
+    "audio": "./audio/5000/absolute.mp3",
+    "examples": [
+      "I've joined a class for absolute",
+      "‘You're wrong,’ she said with absolute certainty.",
+      "Clean water is an absolute necessity."
+    ]
+  },
+  {
+    "id": 14,
+    "text": "absolutely",
+    "translation": "բացարձակապես",
+    "audio": "./audio/5000/absolutely.mp3",
+    "examples": [
+      "You're absolutely right.",
+      "Training is absolutely essential in this business."
+    ]
+  },
+  {
+    "id": 15,
+    "text": "absorb",
+    "translation": "կլանել, ներծծել",
+    "audio": "./audio/5000/absorb.mp3",
+    "examples": [
+      "Let the rice cook until it has absorbed all the water.",
+      "The cream is easily absorbed into the skin."
+    ]
+  },
+  {
+    "id": 16,
+    "text": "abstract",
+    "translation": "վերացական, աբստրակտ",
+    "audio": "./audio/5000/abstract.mp3",
+    "examples": [
+      "The research shows that pre-school children are capable of thinking in abstract terms."
+    ]
+  },
+  {
+    "id": 17,
+    "text": "absurd",
+    "translation": "անհեթեթ",
+    "audio": "./audio/5000/absurd.mp3",
+    "examples": [
+      "Of course it's not true, what an absurd idea."
+    ]
+  },
+  {
+    "id": 18,
+    "text": "abundance",
+    "translation": "առատություն",
+    "audio": "./audio/5000/abundance.mp3",
+    "examples": [
+      "The country has an abundance of natural resources.",
+      "We were amazed by the sheer abundance of food."
+    ]
+  },
+  {
+    "id": 19,
+    "text": "abuse",
+    "translation": "չարաշահում",
+    "audio": "./audio/5000/abuse.mp3",
+    "examples": [
+      "The legal system is open to abuse.",
+      "He was arrested on charges of corruption and abuse of power."
+    ]
+  },
+  {
+    "id": 21,
+    "text": "academic",
+    "translation": "համալսարանական",
+    "audio": "./audio/5000/academic.mp3",
+    "examples": [
+      "She had a brilliant academic career.",
+      "The university is renowned throughout the world for its academic excellence."
+    ]
+  },
+  {
+    "id": 23,
+    "text": "academy",
+    "translation": "ակադեմիա",
+    "audio": "./audio/5000/academy.mp3",
+    "examples": [
+      "She trained at the Royal Academy of Music.",
+      "a police academy"
+    ]
+  },
+  {
+    "id": 24,
+    "text": "accelerate",
+    "translation": "արագացնել",
+    "audio": "./audio/5000/accelerate.mp3",
+    "examples": [
+      "Inflation continues to accelerate."
+    ]
+  },
+  {
+    "id": 25,
+    "text": "accent",
+    "translation": "առոգանություն",
+    "audio": "./audio/5000/accent.mp3",
+    "examples": [
+      "She spoke English with an accent.",
+      "The Americans had learned Korean and spoke with a good accent."
+    ]
+  },
+  {
+    "id": 26,
+    "text": "accept",
+    "translation": "ընդունել, համաձայնել",
+    "audio": "./audio/5000/accept.mp3",
+    "examples": [
+      "He asked me to marry him and I accepted.",
+      "The board of directors accepted our proposal."
+    ]
+  },
+  {
+    "id": 27,
+    "text": "acceptable",
+    "translation": "ընդունելի",
+    "audio": "./audio/5000/acceptable.mp3",
+    "examples": [
+      "Children must learn socially acceptable behaviour.",
+      "It is perfectly acceptable for you as an employee to say no."
+    ]
+  },
+  {
+    "id": 28,
+    "text": "acceptance",
+    "translation": "ընդունումը",
+    "audio": "./audio/5000/acceptance.mp3",
+    "examples": [
+      "Please confirm your acceptance of this offer in writing.",
+
+      "So far we have had one refusal and three acceptances."
+    ]
+  },
+
+  {
+    "id": 31,
+    "text": "accessible",
+    "translation": "հասանելի",
+    "audio": "./audio/5000/accessible.mp3",
+    "examples": [
+      "The remote desert area is accessible only by helicopter.",
+      "These documents are not accessible to the public."
+    ]
+  },
+  {
+    "id": 32,
+    "text": "accident",
+    "translation": "վթար",
+    "audio": "./audio/5000/accident.mp3",
+    "examples": [
+      "Take out accident insurance before you go on your trip.",
+      "We don't know the cause of the accident."
+    ]
+  },
+  {
+    "id": 33,
+    "text": "accidentally",
+    "translation": "պատահաբար",
+    "audio": "./audio/5000/accidentally.mp3",
+    "examples": [
+      "As I turned around, I accidentally hit him in the face.",
+      "The damage couldn't have been caused accidentally."
+    ]
+  },
+  {
+    "id": 34,
+    "text": "accommodate",
+    "translation": "տեղավորել",
+    "audio": "./audio/5000/accommodate.mp3",
+    "examples": [
+      "The hotel can accommodate up to 500 guests.",
+      "The aircraft is capable of accommodating 28 passengers."
+    ]
+  },
+  {
+    "id": 35,
+    "text": "accommodation",
+    "translation": "կացարան",
+    "audio": "./audio/5000/accommodation.mp3",
+    "examples": [
+      "We may have to provide alternative accommodation for you.",
+      "It can be difficult to find suitable accommodation for those in need. "
+    ]
+  },
+  {
+    "id": 36,
+    "text": "accompany",
+    "translation": "ուղեկցել",
+    "audio": "./audio/5000/accompany.mp3",
+    "examples": [
+      "His wife accompanied him on the trip.",
+      " Each young person must be accompanied by an adult."
+    ]
+  },
+  {
+    "id": 37,
+    "text": "accomplish",
+    "translation": "իրականացնել, ավարտել",
+    "audio": "./audio/5000/accomplish.mp3",
+    "examples": [
+      "The first part of the plan has been safely accomplished.",
+      "I don't feel I've accomplished very much today."
+    ]
+  },
+  {
+    "id": 38,
+    "text": "accomplishment",
+    "translation": "ձեռքբերում",
+    "audio": "./audio/5000/accomplishment.mp3",
+    "examples": [
+      "It was one of the President's greatest accomplishments.",
+      "The series of paintings is quite an accomplishment."
+    ]
+  },
+  {
+    "id": 39,
+    "text": "accordance",
+    "translation": "համապատասխանությունը",
+    "audio": "./audio/5000/accordance.mp3",
+    "examples": [
+      "There is good accordance between the values"]
+  },
+  {
+    "id": 40,
+    "text": "according to",
+    "translation": "ըստ, համաձայն",
+    "audio": "./audio/5000/according to.mp3",
+    "examples": [
+      "According to Mick, it's a great movie.",
+      "You've been absent six times according to our records."
+    ]
+  },
+  {
+    "id": 41,
+    "text": "accordingly",
+    "translation": "համապատասխանաբար",
+    "audio": "./audio/5000/accordingly.mp3",
+    "examples": [
+      "We have to discover his plans and act accordingly."
+    ]
+  },
+  {
+    "id": 42,
+    "text": "account",
+    "translation": "հաշիվ",
+    "audio": "./audio/5000/account.mp3",
+    "examples": [
+      "I don't have a bank account.",
+      "I paid the money into my savings account."
+    ]
+  },
+
+  {
+    "id": 44,
+    "text": "accountability",
+    "translation": "հաշվետվողականություն",
+    "audio": "./audio/5000/accountability.mp3",
+    "examples": [
+      "the accountability of a company’s directors to the shareholders"
+    ]
+  },
+  {
+    "id": 45,
+    "text": "accountable",
+    "translation": "հաշվետու",
+    "audio": "./audio/5000/accountable.mp3",
+    "examples": [
+      "The state spends taxpayers’ money and should be held accountable."
+    ]
+  },
+  {
+    "id": 46,
+    "text": "accountant",
+    "translation": "հաշվապահ",
+    "audio": "./audio/5000/accountant.mp3",
+    "examples": [
+      "We talked to the company’s chief accountant."
+    ]
+  },
+  {
+    "id": 48,
+    "text": "accumulate",
+    "translation": "կուտակել",
+    "audio": "./audio/5000/accumulate.mp3",
+    "examples": [
+      "I seem to have accumulated a lot of books.",
+      "We have accumulated a great amount of evidence."
+    ]
+  },
+  {
+    "id": 49,
+    "text": "accumulation",
+    "translation": "կուտակում",
+    "audio": "./audio/5000/accumulation.mp3",
+    "examples": [
+      "the accumulation of wealth"
+    ]
+  },
+  {
+    "id": 50,
+    "text": "accuracy",
+    "translation": "ճշգրտություն",
+    "audio": "./audio/5000/accuracy.mp3",
+    "examples": [
+      "They questioned the accuracy of the information in the file.",
+      "She hits the ball with great accuracy."
+    ]
+  },
+  {
+    "id": 51,
+    "text": "accurate",
+    "translation": "ճշգրիտ",
+    "audio": "./audio/5000/accurate.mp3",
+    "examples": [
+      "Accurate measurements are essential.",
+      "The film is not historically accurate."
+    ]
+  },
+  {
+    "id": 52,
+    "text": "accurately",
+    "translation": "ճշգրտորեն",
+    "audio": "./audio/5000/accurately.mp3",
+    "examples": [
+      "The article accurately reflects public opinion.",
+      "The report accurately reflects the current state of the industry."
+    ]
+  },
+  {
+    "id": 53,
+    "text": "accusation",
+    "translation": "մեղադրանք",
+    "audio": "./audio/5000/accusation.mp3",
+    "examples": [
+      "I don't want to make an accusation until I have some proof.",
+      "There was a hint of accusation in her voice."
+    ]
+  },
+  {
+    "id": 54,
+    "text": "accuse",
+    "translation": "մեղադրել",
+    "audio": "./audio/5000/accuse.mp3",
+    "examples": [
+      "She accused him of lying.",
+      "The government was accused of incompetence."
+    ]
+  },
+  {
+    "id": 55,
+    "text": "accused",
+    "translation": "մեղադրյալ",
+    "audio": "./audio/5000/accused.mp3",
+    "examples": [
+      "The accused was found innocent.",
+      "All the accused have pleaded guilty."
+    ]
+  },
+  {
+    "id": 56,
+    "text": "achieve",
+    "translation": "հասնել",
+    "audio": "./audio/5000/achieve.mp3",
+    "examples": [
+      "He had finally achieved success.",
+      "She has worked hard to achieve her goal."
+    ]
+  },
+  {
+    "id": 57,
+    "text": "achievement",
+    "translation": "ձեռքբերում",
+    "audio": "./audio/5000/achievement.mp3",
+    "examples": [
+      "the greatest scientific achievement of the decade",
+      "It was a remarkable achievement for such a young player."
+    ]
+  },
+  {
+    "id": 58,
+    "text": "acid",
+    "translation": "թթու",
+    "audio": "./audio/5000/acid.mp3",
+    "examples": [
+      "Rye is tolerant of poor, acid soils."
+    ]
+  },
+  {
+    "id": 60,
+    "text": "acknowledge",
+    "translation": "ճանաչել, ընդունել",
+    "audio": "./audio/5000/acknowledge.mp3",
+    "examples": [
+      "She refuses to acknowledge the need for reform.",
+      "It's a generally acknowledged fact."
+    ]
+  },
+  {
+    "id": 61,
+    "text": "acquire",
+    "translation": "ձեռք բերել",
+    "audio": "./audio/5000/acquire.mp3",
+    "examples": [
+      "She has acquired a good knowledge of English.",
+      "How long will it take to acquire the necessary skills?"
+    ]
+  },
+  {
+    "id": 62,
+    "text": "acquisition",
+    "translation": "ձեռքբերում",
+    "audio": "./audio/5000/acquisition.mp3",
+    "examples": [
+      "theories of child language acquisition"
+    ]
+  },
+  {
+    "id": 64,
+    "text": "across",
+    "translation": "երկայնքով, վրայով",
+    "audio": "./audio/5000/across.mp3",
+    "examples": [
+      "It's too wide. We can't swim across.",
+      "The yard measures about 50 feet across."
+    ]
+  },
+  {
+    "id": 66,
+    "text": "act",
+    "translation": "վարմունք, գործել",
+    "audio": "./audio/5000/act.mp3",
+    "examples": [
+      "They performed acts of great heroism.",
+      "The murder was the act of a psychopath."
+    ]
+  },
+
+  {
+    "id": 68,
+    "text": "action",
+    "translation": "գործողություն",
+    "audio": "./audio/5000/action.mp3",
+    "examples": [
+      "Divers were close at hand, ready to go into action if the stunt went wrong.",
+      "She began to explain her plan of action to the group."
+    ]
+  },
+  {
+    "id": 69,
+    "text": "activate",
+    "translation": "ակտիվացնել",
+    "audio": "./audio/5000/activate.mp3",
+    "examples": [
+      "The burglar alarm is activated by movement.",
+      "The gene is activated by a specific protein."
+    ]
+  },
+  {
+    "id": 70,
+    "text": "activation",
+    "translation": "ակտիվացում",
+    "audio": "./audio/5000/activation.mp3",
+    "examples": [
+      "The activation of several target genes results in two major effects.",
+      "to trigger/inhibit/block the activation of something"
+    ]
+  },
+  {
+    "id": 71,
+    "text": "active",
+    "translation": "ակտիվ",
+    "audio": "./audio/5000/active.mp3",
+    "examples": [
+      "Staying physically active in later years can also keep you feeling younger. ",
+      "Before our modern age, people had a more physical and active lifestyle."
+    ]
+  },
+  {
+    "id": 72,
+    "text": "activist",
+    "translation": "ակտիվիստ",
+    "audio": "./audio/5000/activist.mp3",
+    "examples": [
+      "Thousands of environmental activists joined the march to demand action on climate change."
+    ]
+  },
+  {
+    "id": 73,
+    "text": "activity",
+    "translation": "գործունեություն",
+    "audio": "./audio/5000/activity.mp3",
+    "examples": [
+      "The club provides a wide variety of activities including tennis, swimming and squash."
+    ]
+  },
+  {
+    "id": 74,
+    "text": "actor",
+    "translation": "դերասան",
+    "audio": "./audio/5000/actor.mp3",
+    "examples": [
+      "The movie starred a bunch of relatively unknown young actors. "
+    ]
+  },
+  {
+    "id": 75,
+    "text": "actress",
+    "translation": "դերասանուհի",
+    "audio": "./audio/5000/actress.mp3",
+    "examples": [
+      "The Oscar-winning actress has taken a break from acting."
+    ]
+  },
+  {
+    "id": 76,
+    "text": "actual",
+    "translation": "փաստացի",
+    "audio": "./audio/5000/actual.mp3",
+    "examples": [
+      "The story of the film is based on actual events and people."
+    ]
+  },
+  {
+    "id": 77,
+    "text": "actually",
+    "translation": "իրականում",
+    "audio": "./audio/5000/actually.mp3",
+    "examples": [
+      "What did she actually say?",
+      "There are lots of people there who can actually help you."
+    ]
+  },
+  {
+    "id": 78,
+    "text": "acute",
+    "translation": "սուր",
+    "audio": "./audio/5000/acute.mp3",
+    "examples": [
+      "There is an acute shortage of water.",
+      "acute pain"
+    ]
+  },
+  {
+    "id": 79,
+    "text": "ad",
+    "translation": "գովազդ",
+    "audio": "./audio/5000/ad.mp3",
+    "examples": [
+      "The TV ads were first run last year.",
+      "They've produced an ad for a new chocolate bar."
+    ]
+  },
+  {
+    "id": 80,
+    "text": "adapt",
+    "translation": "հարմարվել",
+    "audio": "./audio/5000/adapt.mp3",
+    "examples": [
+      "The company was able to adapt to the conditions and enhance its position.",
+      "We have had to adapt quickly to the new system."
+    ]
+  },
+  {
+    "id": 81,
+    "text": "adaptation",
+    "translation": "հարմարվողականություն",
+    "audio": "./audio/5000/adaptation.mp3",
+    "examples": [
+      "the adaptation of buildings for military purposes",
+      "The process of adaptation to a new school is difficult for some children."
+    ]
+  },
+  {
+    "id": 83,
+    "text": "addiction",
+    "translation": "կախվածություն",
+    "audio": "./audio/5000/addiction.mp3",
+    "examples": [
+      "He is now fighting his addiction to alcohol."
+    ]
+  },
+  {
+    "id": 84,
+    "text": "addition",
+    "translation": "հավելում",
+    "audio": "./audio/5000/addition.mp3",
+    "examples": [
+      "All of these technologies are fairly recent additions.",
+      "This is a welcome addition to the literature of western art history."
+    ]
+  },
+  {
+    "id": 85,
+    "text": "additional",
+    "translation": "լրացուցիչ",
+    "audio": "./audio/5000/additional.mp3",
+    "examples": [
+      "The government provided an additional £25 million to expand the service.",
+      "He provided additional information about this incident."
+    ]
+  },
+  {
+    "id": 86,
+    "text": "additionally",
+    "translation": "ի հավելում",
+    "audio": "./audio/5000/additionally.mp3",
+    "examples": [
+      "Additionally, the bus service will run on Sundays, every two hours."
+    ]
+  },
+  {
+    "id": 87,
+    "text": "address",
+    "translation": "հասցե",
+    "audio": "./audio/5000/address.mp3",
+    "examples": [
+      "What's your name and address?",
+      "I'll give you my address and phone number."
+    ]
+  },
+  {
+    "id": 88,
+    "text": "to address",
+    "translation": "հասցեագրել",
+    "audio": "./audio/5000/address.mp3",
+    "examples": [
+      "Your essay does not address the real issues.",
+      "The policy fails to address the needs of the poor. "
+    ]
+  },
+  {
+    "id": 89,
+    "text": "adequate",
+    "translation": "համարժեք",
+    "audio": "./audio/5000/adequate.mp3",
+    "examples": [
+      "They'll need an adequate supply of hot water.",
+      "The room was small but adequate."
+    ]
+  },
+  {
+    "id": 90,
+    "text": "adequately",
+    "translation": "համարժեքորեն",
+    "audio": "./audio/5000/adequately.mp3",
+    "examples": [
+      "Are you adequately insured?"
+    ]
+  },
+  {
+    "id": 91,
+    "text": "adhere",
+    "translation": "կառչել, ամուր կպչել",
+    "audio": "./audio/5000/adhere.mp3",
+    "examples": [
+      "Once in the bloodstream, the bacteria adhere to the surface of the red cells.",
+      "Clean the surface first, or the paint will not adhere."
+    ]
+  },
+  {
+    "id": 92,
+    "text": "adjacent",
+    "translation": "կից",
+    "audio": "./audio/5000/adjacent.mp3",
+    "examples": [
+      "The planes landed on adjacent runways.",
+      "Our farm land was adjacent to the river."
+    ]
+  },
+  {
+    "id": 93,
+    "text": "adjust",
+    "translation": "հարմարեցնել",
+    "audio": "./audio/5000/adjust.mp3",
+    "examples": [
+      "Watch out for sharp bends and adjust your speed accordingly.",
+      "This button is for adjusting the volume."
+    ]
+  },
+  {
+    "id": 94,
+    "text": "adjustment",
+    "translation": "ճշգրտում, հարմարեցում",
+    "audio": "./audio/5000/adjustment.mp3",
+    "examples": [
+      "I've made a few adjustments to the design.",
+      "Some adjustment of the lens may be necessary."
+    ]
+  },
+  {
+    "id": 95,
+    "text": "administer",
+    "translation": "տնօրինել",
+    "audio": "./audio/5000/administer.mp3",
+    "examples": [
+      "The pension funds are administered by commercial banks."
+    ]
+  },
+  {
+    "id": 96,
+    "text": "administration",
+    "translation": "վարչակազմ",
+    "audio": "./audio/5000/administration.mp3",
+    "examples": [
+      "Administration costs are passed on to the customer.",
+      "I work in the Sales Administration department."
+    ]
+  },
+  {
+    "id": 97,
+    "text": "administrative",
+    "translation": "վարչական",
+    "audio": "./audio/5000/administrative.mp3",
+    "examples": [
+      "an administrative job/assistant/error"
+    ]
+  },
+  {
+    "id": 98,
+    "text": "administrator",
+    "translation": "ադմինիստրատոր",
+    "audio": "./audio/5000/administrator.mp3",
+    "examples": [
+      "Such organizational decisions are made by the hospital administrators.",
+      "For an application form, please contact our administrator."
+    ]
+  },
+  {
+    "id": 99,
+    "text": "admire",
+    "translation": "հիանալ",
+    "audio": "./audio/5000/admire.mp3",
+    "examples": [
+      "I really admire your enthusiasm.",
+      "You have to admire the way he handled the situation."
+    ]
+  },
+  {
+    "id": 100,
+    "text": "admission",
+    "translation": "ընդունելություն, թույլատրելություն",
+    "audio": "./audio/5000/admission.mp3",
+    "examples": [
+      "Hospital admission is not necessary in most cases.",
+      "Hospital admissions for asthma attacks have doubled.",
+      "Last admissions to the park are at 4 p.m."
+    ]
+  }
+]
