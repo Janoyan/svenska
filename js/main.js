@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ];
 
         for (const item of window.configData) {
-            const res = await fetch(`/jsons/${item.json}`);
+            const res = await fetch(`./jsons/${item.json}`);
             item.parts = await res.json();
         }
 
