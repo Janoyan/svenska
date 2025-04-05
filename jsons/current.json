@@ -3135,7 +3135,7 @@
     "audio": "./audio/5000/house.mp3",
     "examples": [
       "They went from house to house, begging for food.",
-      "The government is committed to housing the refugees.",
+      "The government is committed to housing the refugees."
     ]
   },
   {
@@ -3266,7 +3266,7 @@
     "audio": "./audio/5000/hunt.mp3",
     "examples": [
       "The hunt is on for a suitable candidate.",
-      "Lions sometimes hunt alone.",
+      "Lions sometimes hunt alone."
 
     ]
   },
@@ -3310,5 +3310,5 @@
       "Steve didn't look seriously hurt.",
       "Stop that or you'll get hurt!"
     ]
-  },
+  }
 ]
