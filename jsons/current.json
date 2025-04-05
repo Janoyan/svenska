@@ -1795,5 +1795,819 @@
       "The road was closed so we had to find an alternative route.",
       "Can you offer an alternative explanation? "
     ]
+  },
+  {
+    "id": 3800,
+    "text": "pattern",
+    "translation": "ձևանմուշ, шаблон",
+    "audio": "./audio/5000/pattern.mp3",
+    "examples": [
+      "Wages in both sectors have followed a similar pattern.",
+      "The music contains repeated rhythmic patterns."
+    ]
+  },
+  {
+    "id": 3801,
+    "text": "pause",
+    "translation": "դադար",
+    "audio": "./audio/5000/pause.mp3",
+    "examples": [
+      "There was a long pause before she answered.",
+      "After a brief pause, they continued climbing."
+    ]
+  },
+  {
+    "id": 3803,
+    "text": "pay",
+    "translation": "վճարել, վարձ",
+    "audio": "./audio/5000/pay.mp3",
+    "examples": [
+      "Her job is hard work, but the pay is good.",
+      "Two members of staff have been suspended on full pay."
+    ]
+  },
+  {
+    "id": 3805,
+    "text": "payment",
+    "translation": "վճարում",
+    "audio": "./audio/5000/payment.mp3",
+    "examples": [
+      "What method of payment do you prefer?",
+      "They asked for payment in advance. "
+    ]
+  },
+  {
+    "id": 3806,
+    "text": "peace",
+    "translation": "խաղաղություն",
+    "audio": "./audio/5000/peace.mp3",
+    "examples": [
+      "he two communities live together in peace.",
+      "After years of war, the people long for a lasting peace."
+    ]
+  },
+  {
+    "id": 3807,
+    "text": "peaceful",
+    "translation": "խաղաղ",
+    "audio": "./audio/5000/peaceful.mp3",
+    "examples": [
+      "The only way ahead was via diplomatic and peaceful means. ",
+      "The time without her in the house had been blissfully peaceful."
+    ]
+  },
+  {
+    "id": 3808,
+    "text": "peak",
+    "translation": "գագաթնակետ",
+    "audio": "./audio/5000/peak.mp3",
+    "examples": [
+      "Traffic reaches its peak between 8 and 9 in the morning.",
+      "She's at the peak of her career."
+    ]
+  },
+  {
+    "id": 3809,
+    "text": "peasant",
+    "translation": "գյուղացի",
+    "audio": "./audio/5000/peasant.mp3",
+    "examples": [
+      "peasant farmers"
+    ]
+  },
+  {
+    "id": 3810,
+    "text": "peculiar",
+    "translation": "յուրօրինակ",
+    "audio": "./audio/5000/peculiar.mp3",
+    "examples": [
+      "The meat tasted rather peculiar.",
+      "There was something peculiar in the way he smiled."
+    ]
+  },
+  {
+    "id": 3811,
+    "text": "peer",
+    "translation": "հասակակից",
+    "audio": "./audio/5000/peer.mp3",
+    "examples": [
+      "She enjoys the respect of her peers.",
+      "Peer pressure is strong among young people."
+    ]
+  },
+  {
+    "id": 3812,
+    "text": "pen",
+    "translation": "գրիչ",
+    "audio": "./audio/5000/pen.mp3",
+    "examples": [
+      "Let me grab a pen.",
+      "to use pen and paper"
+    ]
+  },
+  {
+    "id": 3813,
+    "text": "penalty",
+    "translation": "տուգանք",
+    "audio": "./audio/5000/penalty.mp3",
+    "examples": [
+      "The penalty for travelling without a ticket is £200.",
+      "Contractors who fall behind schedule incur heavy financial penalties."
+    ]
+  },
+  {
+    "id": 3814,
+    "text": "pencil",
+    "translation": "մատիտ",
+    "audio": "./audio/5000/pencil.mp3",
+    "examples": [
+      "I'll get a pencil and paper."
+    ]
+  },
+  {
+    "id": 3815,
+    "text": "penny",
+    "translation": "կոպեկ",
+    "audio": "./audio/5000/penny.mp3",
+    "examples": [
+      "He had a few pennies in his pocket."
+    ]
+  },
+  {
+    "id": 3816,
+    "text": "pension",
+    "translation": "կենսաթոշակ",
+    "audio": "./audio/5000/pension.mp3",
+    "examples": [
+      "The party promised to increase the basic state pension by £15 a week.",
+      "I've been paying into a private pension for years."
+    ]
+  },
+  {
+    "id": 3817,
+    "text": "people",
+    "translation": "մարդիկ",
+    "audio": "./audio/5000/people.mp3",
+    "examples": [
+      "At least ten people were killed in the crash.",
+      "There were a lot of people at the party."
+    ]
+  },
+  {
+    "id": 3818,
+    "text": "pepper",
+    "translation": "պղպեղ",
+    "audio": "./audio/5000/pepper.mp3",
+    "examples": [
+      "Season with salt and pepper"
+    ]
+  },
+  {
+    "id": 3819,
+    "text": "per",
+    "translation": "մեկ, յուրաքանչյուր",
+    "audio": "./audio/5000/per.mp3",
+    "examples": [
+      "Rooms cost £50 per person, per night.",
+      "60 miles per hour"
+    ]
+  },
+  {
+    "id": 3820,
+    "text": "per cent",
+    "translation": "տոկոս",
+    "audio": "./audio/5000/per cent.mp3",
+    "examples": [
+      "a 15 per cent rise in price",
+      "The company announced a 21 per cent increase in profits. "
+    ]
+  },
+  {
+    "id": 3823,
+    "text": "perceive",
+    "translation": "ընկալել",
+    "audio": "./audio/5000/perceive.mp3",
+    "examples": [
+      "This discovery was perceived as a major breakthrough.",
+      "I do not perceive myself as an expert."
+    ]
+  },
+  {
+    "id": 3824,
+    "text": "percentage",
+    "translation": "տոկոս",
+    "audio": "./audio/5000/percentage.mp3",
+    "examples": [
+      "What percentage of the population is overweight?",
+      "A high percentage of the female staff are part-time workers."
+    ]
+  },
+  {
+    "id": 3825,
+    "text": "perception",
+    "translation": "ընկալում",
+    "audio": "./audio/5000/perception.mp3",
+    "examples": [
+      "a campaign to change public perception of the police",
+      "There is a general public perception that standards in schools are falling."
+    ]
+  },
+  {
+    "id": 3826,
+    "text": "perfect",
+    "translation": "կատարյալ",
+    "audio": "./audio/5000/perfect.mp3",
+    "examples": [
+      "He smiled, revealing a perfect set of teeth.",
+      "What's your idea of the perfect partner?"
+    ]
+  },
+  {
+    "id": 3827,
+    "text": "perfectly",
+    "translation": "կատարելապես",
+    "audio": "./audio/5000/perfectly.mp3",
+    "examples": [
+      "It's perfectly normal to feel like this.",
+      "I thought he'd be upset, but he seems perfectly fine."
+    ]
+  },
+  {
+    "id": 3828,
+    "text": "perform",
+    "translation": "կատարել, ներկայացնել",
+    "audio": "./audio/5000/perform.mp3",
+    "examples": [
+      "Visiting artists will perform their music and poetry.",
+      "I'm looking forward to seeing you perform."
+    ]
+  },
+  {
+    "id": 3829,
+    "text": "performance",
+    "translation": "ներկայացում",
+    "audio": "./audio/5000/performance.mp3",
+    "examples": [
+      "The performance starts at seven.",
+      "They put on performances for the tourists. "
+    ]
+  },
+  {
+    "id": 3830,
+    "text": "perhaps",
+    "translation": "գուցե, հնարավոր է",
+    "audio": "./audio/5000/perhaps.mp3",
+    "examples": [
+      "‘Are you going to come?’ ‘Perhaps. I'll see how I feel.’",
+      "Perhaps he's forgotten."
+    ]
+  },
+  {
+    "id": 3831,
+    "text": "period",
+    "translation": "ժամանակաշրջան",
+    "audio": "./audio/5000/period.mp3",
+    "examples": [
+      "All these changes happened over a period of time.",
+      "A year-to-year lease has no fixed time period."
+    ]
+  },
+  {
+    "id": 3832,
+    "text": "permanent",
+    "translation": "մշտական",
+    "audio": "./audio/5000/permanent.mp3",
+    "examples": [
+      "She was unable to find a permanent job.",
+      "The accident has not done any permanent damage."
+    ]
+  },
+  {
+    "id": 3833,
+    "text": "permanently",
+    "translation": "մշտապես",
+    "audio": "./audio/5000/permanently.mp3",
+    "examples": [
+      "The stroke left his right side permanently damaged.",
+      "She had decided to settle permanently in France."
+    ]
+  },
+  {
+    "id": 3834,
+    "text": "permission",
+    "translation": "թույլտվություն",
+    "audio": "./audio/5000/permission.mp3",
+    "examples": [
+      "The school has been refused permission to expand.",
+      "All minors must seek parental permission to marry. "
+    ]
+  },
+  {
+    "id": 3835,
+    "text": "permit",
+    "translation": "թույլտվություն",
+    "audio": "./audio/5000/permit.mp3",
+    "examples": [
+      "to apply for a permit",
+      "You cannot enter the military base without a permit."
+    ]
+  },
+  {
+    "id": 3837,
+    "text": "persist",
+    "translation": "համառել, դիմանալ, պահպանվել",
+    "audio": "./audio/5000/persist.mp3",
+    "examples": [
+      "Why do you persist in blaming yourself for what happened?",
+      "She persisted in her search for the truth."
+    ]
+  },
+  {
+    "id": 3838,
+    "text": "persistent",
+    "translation": "համառ, կայուն",
+    "audio": "./audio/5000/persistent.mp3",
+    "examples": [
+      "How do you deal with persistent salesmen who won't take no for an answer?",
+      "She can be very persistent when she wants something."
+    ]
+  },
+  {
+    "id": 3839,
+    "text": "person",
+    "translation": "անձ",
+    "audio": "./audio/5000/person.mp3",
+    "examples": [
+      "What sort of person would do a thing like that?",
+      "He's a fascinating person."
+    ]
+  },
+  {
+    "id": 3840,
+    "text": "personal",
+    "translation": "անձնական",
+    "audio": "./audio/5000/personal.mp3",
+    "examples": [
+      "The novel is written from personal experience.",
+      "I need my own personal space."
+    ]
+  },
+  {
+    "id": 3841,
+    "text": "personality",
+    "translation": "անհատականություն",
+    "audio": "./audio/5000/personality.mp3",
+    "examples": [
+      "His wife has a strong personality.",
+      "The characters' names reflect their personalities."
+    ]
+  },
+  {
+    "id": 3842,
+    "text": "personally",
+    "translation": "անձամբ",
+    "audio": "./audio/5000/personally.mp3",
+    "examples": [
+      "Personally, I prefer the second option.",
+      "I personally think it would be the wrong thing to do. "
+    ]
+  },
+  {
+    "id": 3843,
+    "text": "personnel",
+    "translation": "անձնակազմ",
+    "audio": "./audio/5000/personnel.mp3",
+    "examples": [
+      "There is a severe shortage of skilled personnel."
+    ]
+  },
+  {
+    "id": 3844,
+    "text": "perspective",
+    "translation": "հեռանկար",
+    "audio": "./audio/5000/perspective.mp3",
+    "examples": [
+      "A historical perspective may help us understand the issue.",
+      "The aim is to offer a fresh perspective."
+    ]
+  },
+  {
+    "id": 3845,
+    "text": "persuade",
+    "translation": "համոզել",
+    "audio": "./audio/5000/persuade.mp3",
+    "examples": [
+      "Try to persuade him to come.",
+      "She's always easily persuaded."
+    ]
+  },
+  {
+    "id": 3846,
+    "text": "pet",
+    "translation": "ընտանի կենդանի",
+    "audio": "./audio/5000/pet.mp3",
+    "examples": [
+      "Do you have any pets?",
+      "Keeping pigs as pets has become extremely popular. "
+    ]
+  },
+  {
+    "id": 3847,
+    "text": "petition",
+    "translation": "միջնորդություն",
+    "audio": "./audio/5000/petition.mp3",
+    "examples": [
+      "Would you like to sign our petition against experiments on animals?",
+      "The workers are getting up a petition for tighter safety standards."
+    ]
+  },
+  {
+    "id": 3848,
+    "text": "petrol",
+    "translation": "բենզին",
+    "audio": "./audio/5000/petrol.mp3",
+    "examples": [
+      "to run out of petrol",
+      "The car has a 2-litre petrol engine. "
+    ]
+  },
+  {
+    "id": 3849,
+    "text": "phase",
+    "translation": "փուլ",
+    "audio": "./audio/5000/phase.mp3",
+    "examples": [
+      "during the final phase",
+      "This technology is still in an early phase of development.",
+      "The semester was divided into three phases of study. "
+    ]
+  },
+  {
+    "id": 3850,
+    "text": "phenomenon",
+    "translation": "երևույթ",
+    "audio": "./audio/5000/phenomenon.mp3",
+    "examples": [
+      "Globalization is a phenomenon of the 21st century.",
+      "Early retirement is a relatively new phenomenon in Britain."
+    ]
+  },
+  {
+    "id": 3851,
+    "text": "philosopher",
+    "translation": "փիլիսոփա",
+    "audio": "./audio/5000/philosopher.mp3",
+    "examples": [
+      "We studied the writings of the Greek philosopher Aristotle."
+    ]
+  },
+  {
+    "id": 3852,
+    "text": "philosophical",
+    "translation": "փիլիսոփայական",
+    "audio": "./audio/5000/philosophical.mp3",
+    "examples": [
+      "the philosophical writings of Kant"
+    ]
+  },
+  {
+    "id": 3853,
+    "text": "philosophy",
+    "translation": "փիլիսոփայություն",
+    "audio": "./audio/5000/philosophy.mp3",
+    "examples": [
+      "a professor of philosophy",
+      "a degree in philosophy"
+    ]
+  },
+  {
+    "id": 3854,
+    "text": "phone",
+    "translation": "հեռախոս",
+    "audio": "./audio/5000/phone.mp3",
+    "examples": [
+      "I have to make a phone call.",
+      "Please switch off your phones before the show begins.",
+      "I was just phoning up for a chat."
+    ]
+  },
+  {
+    "id": 3856,
+    "text": "photo",
+    "translation": "լուսանկար",
+    "audio": "./audio/5000/photo.mp3",
+    "examples": [
+      "I'll take a photo of you.",
+      "I've uploaded my holiday photos."
+    ]
+  },
+  {
+    "id": 3857,
+    "text": "photograph",
+    "translation": "լուսանկար",
+    "audio": "./audio/5000/photograph.mp3",
+    "examples": [
+      "His photograph appeared in the local paper.",
+      "Please enclose a recent passport-sized photograph of yourself."
+    ]
+  },
+  {
+    "id": 3859,
+    "text": "photographer",
+    "translation": "լուսանկարիչ",
+    "audio": "./audio/5000/photographer.mp3",
+    "examples": [
+      "The couple posed for photographers before going back inside. "
+    ]
+  },
+  {
+    "id": 3860,
+    "text": "photography",
+    "translation": "լուսանկարչություն",
+    "audio": "./audio/5000/photography.mp3",
+    "examples": [
+      "Her hobbies include hiking and photography."
+    ]
+  },
+  {
+    "id": 3861,
+    "text": "phrase",
+    "translation": "արտահայտություն",
+    "audio": "./audio/5000/phrase.mp3",
+    "examples": [
+      "She was, in her own favourite phrase, ‘a woman without a past’.",
+      "colourful words and phrases "
+    ]
+  },
+  {
+    "id": 3862,
+    "text": "physical",
+    "translation": "ֆիզիկական",
+    "audio": "./audio/5000/physical.mp3",
+    "examples": [
+      "All subjects undergo a physical examination.",
+      "The ordeal has affected both her mental and physical health. "
+    ]
+  },
+  {
+    "id": 3863,
+    "text": "physician",
+    "translation": "բժիշկ",
+    "audio": "./audio/5000/physician.mp3",
+    "examples": [
+      "Please consult your physician before beginning any new exercise program."
+    ]
+  },
+  {
+    "id": 3864,
+    "text": "physics",
+    "translation": "ֆիզիկա",
+    "audio": "./audio/5000/physics.mp3",
+    "examples": [
+      "a degree in physics"
+    ]
+  },
+  {
+    "id": 3865,
+    "text": "piano",
+    "translation": "դաշնամուր",
+    "audio": "./audio/5000/piano.mp3",
+    "examples": [
+      "to play the piano"
+    ]
+  },
+  {
+    "id": 3866,
+    "text": "pick",
+    "translation": "ընտրել",
+    "audio": "./audio/5000/pick.mp3",
+    "examples": [
+      "Take your pick",
+      "The winner gets first pick of the prizes."
+    ]
+  },
+  {
+    "id": 3868,
+    "text": "picture",
+    "translation": "նկար, պատկեր",
+    "audio": "./audio/5000/picture.mp3",
+    "examples": [
+      "He likes books with lots of pictures in them.",
+      "The children were drawing pictures of their pets."
+    ]
+  },
+  {
+    "id": 3870,
+    "text": "piece",
+    "translation": "կտոր",
+    "audio": "./audio/5000/piece.mp3",
+    "examples": [
+      "She wrote something on a small piece of paper.",
+      "a piece of cake"
+    ]
+  },
+  {
+    "id": 3871,
+    "text": "pig",
+    "translation": "խոզ",
+    "audio": "./audio/5000/pig.mp3",
+    "examples": [
+      "a pig farmer",
+      "Pigs were grunting and squealing in the yard."
+    ]
+  },
+  {
+    "id": 3872,
+    "text": "pile",
+    "translation": "կույտ",
+    "audio": "./audio/5000/pile.mp3",
+    "examples": [
+      "I found it in a pile of documents on his desk.",
+      "I've sorted the books into three separate piles."
+    ]
+  },
+  {
+    "id": 3874,
+    "text": "pill",
+    "translation": "հաբ",
+    "audio": "./audio/5000/pill.mp3",
+    "examples": [
+      "Take three pills daily after meals.",
+      "I was on various pills for my heart condition."
+    ]
+  },
+  {
+    "id": 3875,
+    "text": "pilot",
+    "translation": "օդաչու",
+    "audio": "./audio/5000/pilot.mp3",
+    "examples": [
+      "The accident was caused by pilot error.",
+      "He has his own plane and a pilot's licence. "
+    ]
+  },
+  {
+    "id": 3876,
+    "text": "pin",
+    "translation": "քորոց",
+    "audio": "./audio/5000/pin.mp3",
+    "examples": [
+      "Use pins to keep the patch in place while you sew it on."
+    ]
+  },
+  {
+    "id": 3878,
+    "text": "pink",
+    "translation": "վարդագույն",
+    "audio": "./audio/5000/pink.mp3",
+    "examples": [
+      "The sun was now just a pink glow in the evening sky."
+    ]
+  },
+  {
+    "id": 3880,
+    "text": "pioneer",
+    "translation": "pioneer, առաջին",
+    "audio": "./audio/5000/pioneer.mp3",
+    "examples": [
+      "a pioneer in the field of microsurgery"
+    ]
+  },
+  {
+    "id": 3882,
+    "text": "pipe",
+    "translation": "խողովակ",
+    "audio": "./audio/5000/pipe.mp3",
+    "examples": [
+      "Both hot and cold water pipes should be properly insulated.",
+      "The house was blown apart by an explosion, caused by a leaking gas pipe."
+    ]
+  },
+  {
+    "id": 3883,
+    "text": "pipeline",
+    "translation": "խողովակաշար",
+    "audio": "./audio/5000/pipeline.mp3",
+    "examples": [
+      "There are plans to lay a gas pipeline through the region.",
+      "The pipeline runs through central Mozambique."
+    ]
+  },
+  {
+    "id": 3884,
+    "text": "pirate",
+    "translation": "ծովահեն",
+    "audio": "./audio/5000/pirate.mp3",
+    "examples": [
+      "There were reports that a pirate ship had come looking for treasure in the cove."
+    ]
+  },
+  {
+    "id": 3885,
+    "text": "pit",
+    "translation": "փոս",
+    "audio": "./audio/5000/pit.mp3",
+    "examples": [
+      "We dug a deep pit in the yard."
+    ]
+  },
+  {
+    "id": 3887,
+    "text": "pity",
+    "translation": "ափսոս, խղճահարություն",
+    "audio": "./audio/5000/pity.mp3",
+    "examples": [
+      "What a pity that she didn't tell me earlier.",
+      "This dress is really nice. Pity it's so expensive."
+    ]
+  },
+  {
+    "id": 3888,
+    "text": "place",
+    "translation": "տեղ",
+    "audio": "./audio/5000/place.mp3",
+    "examples": [
+      "I can't be in two places at once.",
+      "I happened to be in the right place at the right time."
+    ]
+  },
+  {
+    "id": 3890,
+    "text": "placement",
+    "translation": "տեղաբաշխում",
+    "audio": "./audio/5000/placement.mp3",
+    "examples": [
+      "a job placement service",
+      "placement with a foster family"
+    ]
+  },
+  {
+    "id": 3891,
+    "text": "plain",
+    "translation": "պարզ",
+    "audio": "./audio/5000/plain.mp3",
+    "examples": [
+      "a plain but elegant dress",
+      "plain food"
+    ]
+  },
+  {
+    "id": 3892,
+    "text": "plan",
+    "translation": "պլան",
+    "audio": "./audio/5000/plan.mp3",
+    "examples": [
+      "There's been a change of plan.",
+      "We can't change our plans now."
+    ]
+  },
+  {
+    "id": 3894,
+    "text": "plane",
+    "translation": "ինքնաթիռ",
+    "audio": "./audio/5000/plane.mp3",
+    "examples": [
+      "They boarded the plane and flew to Chicago.",
+      "I caught the next plane to Dublin."
+    ]
+  },
+  {
+    "id": 3895,
+    "text": "planet",
+    "translation": "մոլորակ",
+    "audio": "./audio/5000/planet.mp3",
+    "examples": [
+      "the planets of our solar system",
+      "the possibility of life deep below the planet's surface "
+    ]
+  },
+  {
+    "id": 3896,
+    "text": "planning",
+    "translation": "պլանավորում",
+    "audio": "./audio/5000/planning.mp3",
+    "examples": [
+      "The department is responsible for all financial planning."
+    ]
+  },
+  {
+    "id": 3897,
+    "text": "plant",
+    "translation": "բույս",
+    "audio": "./audio/5000/plant.mp3",
+    "examples": [
+      "All plants need light and water.",
+      "The area is home to many rare plant species."
+    ]
+  },
+  {
+    "id": 3899,
+    "text": "plastic",
+    "translation": "պլաստիկ",
+    "audio": "./audio/5000/plastic.mp3",
+    "examples": [
+      "a plastic bottle",
+      "recyclable plastic containers "
+    ]
   }
 ]
