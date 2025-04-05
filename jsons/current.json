@@ -2609,5 +2609,706 @@
       "a plastic bottle",
       "recyclable plastic containers "
     ]
-  }
+  },
+  {
+    "id": 2502,
+    "text": "herb",
+    "translation": "խոտաբույս",
+    "audio": "./audio/5000/herb.mp3",
+    "examples": [
+      "a herb garden"
+    ]
+  },
+  {
+    "id": 2504,
+    "text": "heritage",
+    "translation": "ժառանգություն",
+    "audio": "./audio/5000/heritage.mp3",
+    "examples": [
+      "Spain’s rich cultural heritage",
+      "The building is part of our national heritage."
+    ]
+  },
+  {
+    "id": 2505,
+    "text": "hero",
+    "translation": "հերոս",
+    "audio": "./audio/5000/hero.mp3",
+    "examples": [
+      "a hero of the First World War",
+      "His charity work has made him something of a local hero."
+    ]
+  },
+  {
+    "id": 2508,
+    "text": "hesitate",
+    "translation": "վարանել, տատանվել",
+    "audio": "./audio/5000/hesitate.mp3",
+    "examples": [
+      "She hesitated before replying.",
+      "He seemed to hesitate a second."
+    ]
+  },
+  {
+    "id": 2511,
+    "text": "hidden",
+    "translation": "թաքնված",
+    "audio": "./audio/5000/hidden.mp3",
+    "examples": [
+      "Hidden dangers lurk in the ocean depths.",
+      "A reporter wearing a hidden camera got footage of the abuse."
+    ]
+  },
+  {
+    "id": 2512,
+    "text": "hide",
+    "translation": "թաքցնել",
+    "audio": "./audio/5000/hide.mp3",
+    "examples": [
+      "He hid the letter in a drawer.",
+      "I keep my private papers hidden."
+    ]
+  },
+  {
+    "id": 2513,
+    "text": "hierarchy",
+    "translation": "հիերարխիա",
+    "audio": "./audio/5000/hierarchy.mp3",
+    "examples": [
+      "the social/political hierarchy",
+      "She's quite high up in the management hierarchy."
+    ]
+  },
+  {
+    "id": 2514,
+    "text": "high",
+    "translation": "բարձր",
+    "audio": "./audio/5000/high.mp3",
+    "examples": [
+      "What's the highest mountain in the US?",
+      "The house has a high wall all the way round it."
+    ]
+  },
+  {
+    "id": 2517,
+    "text": "high-profile",
+    "translation": "բարձրակարգ",
+    "audio": "./audio/5000/high-profile.mp3",
+    "examples": [
+      "a high-profile campaign"
+    ]
+  },
+  {
+    "id": 2518,
+    "text": "highlight",
+    "translation": "ընդգծել",
+    "audio": "./audio/5000/highlight.mp3",
+    "examples": [
+      "The report highlighted the importance of exercise to maintain a healthy body.",
+      "One of the highlights of the trip was seeing the Taj Mahal."
+    ]
+  },
+  {
+    "id": 2520,
+    "text": "highly",
+    "translation": "խիստ, չափազանց",
+    "audio": "./audio/5000/highly.mp3",
+    "examples": [
+      "It is highly unlikely that she'll be late.",
+      "His choice of subject is highly significant."
+    ]
+  },
+  {
+    "id": 2521,
+    "text": "highway",
+    "translation": "մայրուղի",
+    "audio": "./audio/5000/highway.mp3",
+    "examples": [
+      "Plans were being made for the construction of a new interstate highway system.",
+      "Highway patrol officers closed the road."
+    ]
+  },
+  {
+    "id": 2522,
+    "text": "hilarious",
+    "translation": "զվարթ",
+    "audio": "./audio/5000/hilarious.mp3",
+    "examples": [
+      "a hilarious story",
+      "Lynn found the whole situation hilarious."
+    ]
+  },
+  {
+    "id": 2523,
+    "text": "hill",
+    "translation": "բլուր",
+    "audio": "./audio/5000/hill.mp3",
+    "examples": [
+      "The house is built on the side of a hill overlooking the river.",
+      "They make their way up the hill."
+    ]
+  },
+  {
+    "id": 2526,
+    "text": "hint",
+    "translation": "ակնարկ",
+    "audio": "./audio/5000/hint.mp3",
+    "examples": [
+      "Should I drop a hint (= give a hint) to Matt?",
+      "What are you hinting at ?"
+    ]
+  },
+  {
+    "id": 2528,
+    "text": "hip",
+    "translation": "կոնք",
+    "audio": "./audio/5000/hip.mp3",
+    "examples": [
+      "She stood with her hands on her hips.",
+      "These jeans are too tight around the hips."
+    ]
+  },
+  {
+    "id": 2529,
+    "text": "hire",
+    "translation": "վարձել",
+    "audio": "./audio/5000/hire.mp3",
+    "examples": [
+      "The price includes the hire of the hall.",
+      "She was hired three years ago."
+    ]
+  },
+  {
+    "id": 2533,
+    "text": "historian",
+    "translation": "պատմաբան",
+    "audio": "./audio/5000/historian.mp3",
+    "examples": [
+      "No serious historian today accepts this theory.",
+      "What will future historians make of the late 20th century?"
+    ]
+  },
+  {
+    "id": 2534,
+    "text": "historic",
+    "translation": "պատմական",
+    "audio": "./audio/5000/historic.mp3",
+    "examples": [
+      "the restoration of historic buildings",
+      "The area is of special historic interest."
+    ]
+  },
+  {
+    "id": 2535,
+    "text": "historical",
+    "translation": "պատմական",
+    "audio": "./audio/5000/historical.mp3",
+    "examples": [
+      "You must place these events in their historical context.",
+      "This book provides a historical perspective."
+    ]
+  },
+  {
+    "id": 2536,
+    "text": "history",
+    "translation": "պատմություն",
+    "audio": "./audio/5000/history.mp3",
+    "examples": [
+      "one of the worst disasters in recent history",
+      "These events changed the course of history."
+    ]
+  },
+  {
+    "id": 2538,
+    "text": "hit",
+    "translation": "հարվածել",
+    "audio": "./audio/5000/hit.mp3",
+    "examples": [
+      "I was afraid he was going to hit me.",
+      "She hit him with her umbrella."
+    ]
+  },
+  {
+    "id": 2539,
+    "text": "hobby",
+    "translation": "սիրած զբաղմունք",
+    "audio": "./audio/5000/hobby.mp3",
+    "examples": [
+      "Do you have any hobbies?",
+      "Her hobbies include swimming and gardening."
+    ]
+  },
+  {
+    "id": 2540,
+    "text": "hockey",
+    "translation": "հոկեյ",
+    "audio": "./audio/5000/hockey.mp3",
+    "examples": [
+      "to play hockey"
+    ]
+  },
+  {
+    "id": 2541,
+    "text": "hold",
+    "translation": "պահել, բռնել",
+    "audio": "./audio/5000/hold.mp3",
+    "examples": [
+      "He lost his hold on the rock and was swept away by the tide.",
+      "The girl held her father's hand tightly."
+    ]
+  },
+  {
+    "id": 2543,
+    "text": "hole",
+    "translation": "փոս",
+    "audio": "./audio/5000/hole.mp3",
+    "examples": [
+      "He dug a deep hole in the garden.",
+      "Water had collected in the holes in the road."
+    ]
+  },
+  {
+    "id": 2544,
+    "text": "holiday",
+    "translation": "տոն",
+    "audio": "./audio/5000/holiday.mp3",
+    "examples": [
+      "She spent her holiday decorating the flat.",
+      "The package includes 20 days' paid holiday a year."
+    ]
+  },
+  {
+    "id": 2545,
+    "text": "hollow",
+    "image": "./images/hollow.jpeg",
+    "translation": "խոռոչ, սնամեջ",
+    "audio": "./audio/5000/hollow.mp3",
+    "examples": [
+      "The tree trunk was hollow inside.",
+      "Her stomach felt hollow with fear."
+    ]
+  },
+  {
+    "id": 2546,
+    "text": "holy",
+    "translation": "սուրբ, անարատ",
+    "audio": "./audio/5000/holy.mp3",
+    "examples": [
+      "the Holy Bible",
+      "a holy war (= one fought to defend the beliefs of a particular religion)"   
+    ]
+  },
+  {
+    "id": 2547,
+    "text": "home",
+    "translation": "տուն",
+    "audio": "./audio/5000/home.mp3",
+    "examples": [
+      "Come on, it's time to go home.",
+      "What time did you get home last night?",
+      "We offer customers a free home delivery service."
+    ]
+  },
+  {
+    "id": 2550,
+    "text": "homeland",
+    "translation": "հայրենիք",
+    "audio": "./audio/5000/homeland.mp3",
+    "examples": [
+      "Many refugees have been forced to flee their homeland."
+    ]
+  },
+  {
+    "id": 2551,
+    "text": "homeless",
+    "translation": "անօթևան",
+    "audio": "./audio/5000/homeless.mp3",
+    "examples": [
+      "The scheme has been set up to help homeless people.",
+      "Three hundred people were left homeless by the earthquake."
+    ]
+  },
+  {
+    "id": 2552,
+    "text": "homework",
+    "translation": "տնային աշխատանք",
+    "audio": "./audio/5000/homework.mp3",
+    "examples": [
+      "I always do my homework on the bus.",
+      "I still haven't done my geography homework."
+    ]
+  },
+  {
+    "id": 2553,
+    "text": "honest",
+    "translation": "ազնիվ",
+    "audio": "./audio/5000/honest.mp3",
+    "examples": [
+      "They were honest, hard-working people, trying to farm on their own two feet."
+    ]
+  },
+  {
+    "id": 2554,
+    "text": "honesty",
+    "translation": "ազնվություն, անկեղծություն",
+    "audio": "./audio/5000/honesty.mp3",
+    "examples": [
+      "She answered all my questions with her usual honesty.",
+      "His honesty is not in question."
+    ]
+  },
+  {
+    "id": 2555,
+    "text": "honour",
+    "translation": "պատիվ",
+    "audio": "./audio/5000/honour.mp3",
+    "examples": [
+      "They stood in silence as a mark of honour to her.",
+      "This biography does great honour to the poet's achievements."
+    ]
+  },
+  {
+    "id": 2557,
+    "text": "hook",
+    "translation": "կեռիկ, որսալ",
+    "audio": "./audio/5000/hook.mp3",
+    "examples": [
+      "a picture/curtain/coat hook",
+      "a fish hook",
+      "Hang your towel on the hook.",
+      "The key was hanging from a hook.",
+      "Your coat’s hanging on a hook behind the door."
+    ]
+  },
+  {
+    "id": 2559,
+    "text": "hope",
+    "translation": "հույս, հուսալ",
+    "audio": "./audio/5000/hope.mp3",
+    "examples": [
+      "Don't lose hope—we'll find her.",
+      "She told me all her hopes and dreams.",
+      "All we can do now is wait and hope."
+    ]
+  },
+  {
+    "id": 2561,
+    "text": "hopeful",
+    "translation": "հուսադրող",
+    "audio": "./audio/5000/hopeful.mp3",
+    "examples": [
+      "I feel hopeful that we'll find a suitable house very soon.",
+      "He is not very hopeful about the outcome of the interview."
+    ]
+  },
+  {
+    "id": 2562,
+    "text": "hopefully",
+    "translation": "հուսով եմ",
+    "audio": "./audio/5000/hopefully.mp3",
+    "examples": [
+      "Hopefully, we'll arrive before dark."
+    ]
+  },
+  {
+    "id": 2563,
+    "text": "horizon",
+    "translation": "հորիզոն",
+    "audio": "./audio/5000/horizon.mp3",
+    "examples": [
+      "The sun sank below the horizon.",
+      "A ship appeared on the horizon."
+    ]
+  },
+  {
+    "id": 2564,
+    "text": "horn",
+    "translation": "եղջյուր",
+    "audio": "./audio/5000/horn.mp3",
+    "examples": [
+      "a large bull with curved horns"
+    ]
+  },
+  {
+    "id": 2565,
+    "text": "horrible",
+    "translation": "սարսափելի",
+    "audio": "./audio/5000/horrible.mp3",
+    "examples": [
+      "What horrible weather!",
+      "He admits that he made a horrible mistake when he left her. "
+    ]
+  },
+  {
+    "id": 2566,
+    "text": "horror",
+    "translation": "սարսափ",
+    "audio": "./audio/5000/horror.mp3",
+    "examples": [
+      "The thought of being left alone filled her with horror.",
+      "She revealed her horror at discovering the truth about her husband."
+    ]
+  },
+  {
+    "id": 2567,
+    "text": "horse",
+    "translation": "ձի",
+    "audio": "./audio/5000/horse.mp3",
+    "examples": [
+      "He mounted his horse and rode off.",
+      "He wants to become a professional horse trainer."
+    ]
+  },
+  {
+    "id": 2568,
+    "text": "hospital",
+    "translation": "հիվանդանոց",
+    "audio": "./audio/5000/hospital.mp3",
+    "examples": [
+      "He had to go to/into hospital for treatment.",
+      "The procedure requires a two-to-three-night hospital stay."
+    ]
+  },
+  {
+    "id": 2569,
+    "text": "host",
+    "translation": "հյուրընկալող, հյուրընկալել",
+    "audio": "./audio/5000/host.mp3",
+    "examples": [
+      "Ian, our host, introduced us to the other guests.",
+      "South Africa hosted the World Cup finals"
+    ]
+  },
+  {
+    "id": 2571,
+    "text": "hostage",
+    "translation": "պատանդ",
+    "audio": "./audio/5000/hostage.mp3",
+    "examples": [
+      "Three children were taken hostage during the bank robbery.",
+      "The gunmen took 24 hostages."
+    ]
+  },
+  {
+    "id": 2572,
+    "text": "hostile",
+    "translation": "աբգդեզ",
+    "audio": "./audio/5000/hostile.mp3",
+    "examples": [
+      "The speaker got a hostile reception from the audience.",
+      " hostile to/towards somebody/something She was openly hostile towards her parents."
+    ]
+  },
+  {
+    "id": 2573,
+    "text": "hostility",
+    "translation": "թշնամական",
+    "audio": "./audio/5000/hostility.mp3",
+    "examples": [
+      "There was a barely veiled hostility in her tone.",
+      "There was open hostility between the two schools."
+    ]
+  },
+  {
+    "id": 2574,
+    "text": "hot",
+    "translation": "շոգ, տաք",
+    "audio": "./audio/5000/hot.mp3",
+    "examples": [
+      "It was hot and getting hotter.",
+      "Cook in a very hot oven."
+    ]
+  },
+  {
+    "id": 2575,
+    "text": "hotel",
+    "translation": "հյուրանոց",
+    "audio": "./audio/5000/hotel.mp3",
+    "examples": [
+      "online hotel booking sites"
+    ]
+  },
+  {
+    "id": 2577,
+    "text": "house",
+    "translation": "տուն",
+    "audio": "./audio/5000/house.mp3",
+    "examples": [
+      "They went from house to house, begging for food.",
+      "The government is committed to housing the refugees.",
+    ]
+  },
+  {
+    "id": 2579,
+    "text": "household",
+    "translation": "хозяйство",
+    "audio": "./audio/5000/household.mp3",
+    "examples": [
+      "Most households now own at least one car.",
+      "The average household spends more on housing than on food.",
+      "Household incomes have remained stagnant."
+    ]
+  },
+  {
+    "id": 2580,
+    "text": "housing",
+    "translation": "բնակարանային",
+    "audio": "./audio/5000/housing.mp3",
+    "examples": [
+      "There is an urgent need to build more affordable housing.",
+      "We must find a way to solve the city's housing crisis."
+    ]
+  },
+  {
+    "id": 2582,
+    "text": "however",
+    "translation": "սակայն, այնուամենայնիվ",
+    "audio": "./audio/5000/however.mp3",
+    "examples": [
+      "He was feeling bad. He went to work, however, and tried to concentrate.",
+      "We thought the figures were correct. However, we have now discovered some errors."
+    ]
+  },
+  {
+    "id": 2583,
+    "text": "huge",
+    "translation": "հսկայական",
+    "audio": "./audio/5000/huge.mp3",
+    "examples": [
+      "The sums of money involved are potentially huge.",
+      "A huge crowd had gathered in the square."
+    ]
+  },
+  {
+    "id": 2584,
+    "text": "human",
+    "translation": "մարդ",
+    "audio": "./audio/5000/human.mp3",
+    "examples": [
+      "Contact with other people is a basic human need.",
+      "This food is not fit for human consumption."
+    ]
+  },
+  {
+    "id": 2586,
+    "text": "humanitarian",
+    "translation": "մարդասիրական",
+    "audio": "./audio/5000/humanitarian.mp3",
+    "examples": [
+      "to provide humanitarian aid to the war zone",
+      "They are calling for the release of the hostages on humanitarian grounds."
+    ]
+  },
+  {
+    "id": 2587,
+    "text": "humanity",
+    "translation": "մարդկություն",
+    "audio": "./audio/5000/humanity.mp3",
+    "examples": [
+      "He was found guilty of crimes against humanity.",
+      "He believed in serving the greater good of humanity."
+    ]
+  },
+  {
+    "id": 2588,
+    "text": "humble",
+    "translation": "խոնարհ",
+    "audio": "./audio/5000/humble.mp3",
+    "examples": [
+      "Be humble enough to learn from your mistakes.",
+      "my humble tribute to this great man"
+    ]
+  },
+  {
+    "id": 2589,
+    "text": "humorous",
+    "translation": "հումորային",
+    "audio": "./audio/5000/humorous.mp3",
+    "examples": [
+      "It's a humorous look at the world of fashion.",
+      "The show offers a humorous take on family life."
+    ]
+  },
+  {
+    "id": 2590,
+    "text": "humour",
+    "translation": "հումոր",
+    "audio": "./audio/5000/humour.mp3",
+    "examples": [
+      "It was a story full of gentle humour.",
+      "They failed to see the humour of the situation."
+    ]
+  },
+  {
+    "id": 2592,
+    "text": "hunger",
+    "translation": "սով",
+    "audio": "./audio/5000/hunger.mp3",
+    "examples": [
+      "Around fifty people die of hunger every day in the camp.",
+      "The organization works to alleviate world hunger and disease."
+    ]
+  },
+  {
+    "id": 2593,
+    "text": "hungry",
+    "translation": "սոված",
+    "audio": "./audio/5000/hungry.mp3",
+    "examples": [
+      "I'm really hungry.",
+      "All this talk of food is making me hungry."
+    ]
+  },
+  {
+    "id": 2594,
+    "text": "hunt",
+    "translation": "որս, որսալ",
+    "audio": "./audio/5000/hunt.mp3",
+    "examples": [
+      "The hunt is on for a suitable candidate.",
+      "Lions sometimes hunt alone.",
+
+    ]
+  },
+  {
+    "id": 2596,
+    "text": "hunting",
+    "translation": "որսորդություն",
+    "audio": "./audio/5000/hunting.mp3",
+    "examples": [
+      "He goes hunting every weekend.",
+      "Since 1977 otter hunting has been illegal."
+    ]
+  },
+  {
+    "id": 2597,
+    "text": "hurricane",
+    "translation": "փոթորիկ",
+    "audio": "./audio/5000/hurricane.mp3",
+    "examples": [
+      "A powerful hurricane hit the Florida coast.",
+      "Hurricane Sandy devastated the area."
+    ]
+  },
+  {
+    "id": 2598,
+    "text": "hurry",
+    "translation": "շտապեք, շտապել",
+    "audio": "./audio/5000/hurry.mp3",
+    "examples": [
+      "Take your time—there's no hurry.",
+      "You'll have to hurry if you want to catch that train."
+    ]
+  },
+  {
+    "id": 2600,
+    "text": "hurt",
+    "translation": "վիրավորվել",
+    "audio": "./audio/5000/hurt.mp3",
+    "examples": [
+      "None of the passengers were badly hurt.",
+      "Steve didn't look seriously hurt.",
+      "Stop that or you'll get hurt!"
+    ]
+  },
 ]
