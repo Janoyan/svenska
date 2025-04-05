@@ -1021,5 +1021,779 @@
       "Hospital admissions for asthma attacks have doubled.",
       "Last admissions to the park are at 4 p.m."
     ]
+  },
+  {
+    "id": 101,
+    "text": "admit",
+    "translation": "խոստովանել, ընդունել",
+    "audio": "./audio/5000/admit.mp3",
+    "examples": [
+      "It was a stupid thing to do, I admit.",
+      "He admitted all his mistakes."
+    ]
+  },
+  {
+    "id": 102,
+    "text": "adolescent",
+    "translation": "դեռահաս",
+    "audio": "./audio/5000/adolescent.mp3",
+    "examples": [
+      "Stop acting like an adolescent!"
+    ]
+  },
+  {
+    "id": 103,
+    "text": "adopt",
+    "translation": "որդեգրել",
+    "audio": "./audio/5000/adopt.mp3",
+    "examples": [
+      "She was forced to have her baby adopted.",
+      "She adopted three children from the orphanage."
+    ]
+  },
+  {
+    "id": 104,
+    "text": "adoption",
+    "translation": "որդեգրում",
+    "audio": "./audio/5000/adoption.mp3",
+    "examples": [
+      "She put the baby up for adoption.",
+      "The number of adoptions has fallen markedly since the 1970s."
+    ]
+  },
+  {
+    "id": 105,
+    "text": "adult",
+    "translation": "չափահաս",
+    "audio": "./audio/5000/adult.mp3",
+    "examples": [
+      "He was a healthy young adult male.",
+      "She spent her entire adult life caring for others."
+    ]
+  },
+  {
+    "id": 107,
+    "text": "advance",
+    "translation": "կանխավճար, նախապես",
+    "audio": "./audio/5000/advance.mp3",
+    "examples": [
+      "Please give us advance warning of any changes.",
+      "We need advance notice of the numbers involved."
+    ]
+  },
+  {
+    "id": 110,
+    "text": "advanced",
+    "translation": "առաջադեմ",
+    "audio": "./audio/5000/advanced.mp3",
+    "examples": [
+      "Scientists are working on highly advanced technology to replace fossil fuels.",
+      "It is a technologically advanced society."
+    ]
+  },
+  {
+    "id": 111,
+    "text": "advantage",
+    "translation": "առավելություն",
+    "audio": "./audio/5000/advantage.mp3",
+    "examples": [
+      "It gives you an unfair advantage",
+      "Being tall gave him an advantage over the other players."
+    ]
+  },
+  {
+    "id": 112,
+    "text": "adventure",
+    "translation": "արկած",
+    "audio": "./audio/5000/adventure.mp3",
+    "examples": [
+      "her adventures travelling in Africa",
+      "They fly around in their rocket ship and go on exciting adventures."
+    ]
+  },
+  {
+    "id": 113,
+    "text": "adverse",
+    "translation": "անբարենպաստ",
+    "audio": "./audio/5000/adverse.mp3",
+    "examples": [
+      "They have attracted strong adverse criticism.",
+      "This drug is known to have adverse side effects."
+    ]
+  },
+  {
+    "id": 114,
+    "text": "advertise",
+    "translation": "գովազդել",
+    "audio": "./audio/5000/advertise.mp3",
+    "examples": [
+      "If you want to attract customers you need to advertise."
+    ]
+  },
+  {
+    "id": 115,
+    "text": "advertisement",
+    "translation": "գովազդ",
+    "audio": "./audio/5000/advertisement.mp3",
+    "examples": [
+      "You can place an advertisement on a classifieds website."
+    ]
+  },
+  {
+    "id": 116,
+    "text": "advertising",
+    "translation": "գովազդ",
+    "audio": "./audio/5000/advertising.mp3",
+    "examples": [
+      "Cigarette advertising has been banned.",
+      "We were very happy with our advertising strategy last year."
+    ]
+  },
+  {
+    "id": 117,
+    "text": "advice",
+    "translation": "խորհուրդ",
+    "audio": "./audio/5000/advice.mp3",
+    "examples": [
+      "Ask your teacher's advice on how to prepare for the exam.",
+      "Let me give you a piece of advice."
+    ]
+  },
+  {
+    "id": 118,
+    "text": "advise",
+    "translation": "խորհուրդ տալ",
+    "audio": "./audio/5000/advise.mp3",
+    "examples": [
+      "Doctors advised the patient to have surgery.",
+      "I'd advise you not to tell him."
+    ]
+  },
+  {
+    "id": 119,
+    "text": "advocate",
+    "translation": "փաստաբան",
+    "audio": "./audio/5000/advocate.mp3",
+    "examples": [
+      "an advocate for hospital workers"
+    ]
+  },
+  {
+    "id": 121,
+    "text": "aesthetic",
+    "translation": "գեղագիտական, էսթետիկ",
+    "audio": "./audio/5000/aesthetic.mp3",
+    "examples": [
+      "The works of art are judged on purely aesthetic grounds.",
+      "The benefits of conservation are both financial and aesthetic."
+    ]
+  },
+  {
+    "id": 122,
+    "text": "affair",
+    "translation": "գործ",
+    "audio": "./audio/5000/affair.mp3",
+    "examples": [
+      "world/international affairs",
+      "an expert on foreign affairs",
+      "We are expecting a statement from the home affairs spokesman."
+    ]
+  },
+  {
+    "id": 123,
+    "text": "affect",
+    "translation": "ազդել",
+    "audio": "./audio/5000/affect.mp3",
+    "examples": [
+      "How will these changes affect us?",
+      "The article deals with issues affecting the lives of children."
+    ]
+  },
+  {
+    "id": 124,
+    "text": "affection",
+    "translation": "կապվածություն, ջերմություն",
+    "audio": "./audio/5000/affection.mp3",
+    "examples": [
+      "Children need lots of love and affection.",
+      "He didn't show his wife any affection.",
+      "She was held in deep affection by all her students."
+    ]
+  },
+  {
+    "id": 125,
+    "text": "afford",
+    "translation": "թույլ տալ",
+    "audio": "./audio/5000/afford.mp3",
+    "examples": [
+      "None of them could afford £50 for a ticket.",
+      "She never took a taxi, even though she could afford to."
+    ]
+  },
+  {
+    "id": 126,
+    "text": "affordable",
+    "translation": "մատչելի",
+    "audio": "./audio/5000/affordable.mp3",
+    "examples": [
+      "We offer quality products at affordable prices."
+    ]
+  },
+  {
+    "id": 127,
+    "text": "afraid",
+    "translation": "վախենալ",
+    "audio": "./audio/5000/afraid.mp3",
+    "examples": [
+      "Don't be afraid.",
+      "Are you afraid of spiders?"
+    ]
+  },
+  {
+    "id": 128,
+    "text": "after",
+    "translation": "հետո",
+    "audio": "./audio/5000/after.mp3",
+    "examples": [
+      "I could come next week, or the week after.",
+      "And they all lived happily ever after."
+    ]
+  },
+  {
+    "id": 131,
+    "text": "aftermath",
+    "translation": "հետեւանքները",
+    "audio": "./audio/5000/aftermath.mp3",
+    "examples": [
+      "A lot of rebuilding took place in the aftermath of the war.",
+      "The president visited the region in the immediate aftermath of the disaster."
+    ]
+  },
+  {
+    "id": 132,
+    "text": "afternoon",
+    "translation": "կեսօրից հետո",
+    "audio": "./audio/5000/afternoon.mp3",
+    "examples": [
+      "She studies art two afternoons a week.",
+      "Are you ready for this afternoon's meeting?"
+    ]
+  },
+  {
+    "id": 133,
+    "text": "afterwards",
+    "translation": "հետո",
+    "audio": "./audio/5000/afterwards.mp3",
+    "examples": [
+      "Afterwards she was sorry for what she'd said.",
+      "Let's go out now and eat afterwards."
+    ]
+  },
+  {
+    "id": 134,
+    "text": "again",
+    "translation": "կրկին",
+    "audio": "./audio/5000/again.mp3",
+    "examples": [
+      "This must never happen again.",
+      "Once again, the train was late."
+    ]
+  },
+  {
+    "id": 135,
+    "text": "against",
+    "translation": "դեմ, ընդդեմ",
+    "audio": "./audio/5000/against.mp3",
+    "examples": [
+      "We're playing against the league champions next week.",
+      "I'd advise you against doing that."
+    ]
+  },
+  {
+    "id": 136,
+    "text": "age",
+    "translation": "տարիք, հասակ",
+    "audio": "./audio/5000/age.mp3",
+    "examples": [
+      "You're the same age as my brother.",
+      "The show appeals to all age ranges."
+    ]
+  },
+  {
+    "id": 138,
+    "text": "aged",
+    "translation": "ծերացած, տարեց",
+    "audio": "./audio/5000/aged.mp3",
+    "examples": [
+      "They have two children aged six and nine.",
+      "Children have the opportunity to meet similarly aged children."
+    ]
+  },
+  {
+    "id": 139,
+    "text": "agency",
+    "translation": "գործակալություն",
+    "audio": "./audio/5000/agency.mp3",
+    "examples": [
+      "She works for an advertising agency.",
+      "He managed to find a job through an agency."
+    ]
+  },
+  {
+    "id": 140,
+    "text": "agenda",
+    "translation": "օրակարգ",
+    "audio": "./audio/5000/agenda.mp3",
+    "examples": [
+      "We have a very full agenda of issues to discuss."
+    ]
+  },
+  {
+    "id": 141,
+    "text": "agent",
+    "translation": "գործակալ",
+    "audio": "./audio/5000/agent.mp3",
+    "examples": [
+      "Our agent in New York deals with all US sales."
+    ]
+  },
+  {
+    "id": 142,
+    "text": "aggression",
+    "translation": "ագրեսիա",
+    "audio": "./audio/5000/aggression.mp3",
+    "examples": [
+      "The research shows that computer games may cause aggression.",
+      "Nowadays our aggression is channelled into sports."
+    ]
+  },
+  {
+    "id": 143,
+    "text": "aggressive",
+    "translation": "ագրեսիվ",
+    "audio": "./audio/5000/aggressive.mp3",
+    "examples": [
+      "Seals have been known to exhibit aggressive behaviour towards swimmers.",
+      "He became increasingly aggressive as the evening wore on."
+    ]
+  },
+  {
+    "id": 144,
+    "text": "ago",
+    "translation": "առաջ",
+    "audio": "./audio/5000/ago.mp3",
+    "examples": [
+      "The letter came a few days ago.",
+      "She was here just a minute ago."
+    ]
+  },
+  {
+    "id": 145,
+    "text": "agree",
+    "translation": "համաձայնել",
+    "audio": "./audio/5000/agree.mp3",
+    "examples": [
+      "When he said that, I had to agree.",
+      "We agreed (that) the proposal was a good one."
+    ]
+  },
+  {
+    "id": 146,
+    "text": "agreement",
+    "translation": "համաձայնագիր",
+    "audio": "./audio/5000/agreement.mp3",
+    "examples": [
+      "The agreement was signed during a meeting at the UN.",
+      "The specific terms of the agreement have not been disclosed."
+    ]
+  },
+  {
+    "id": 147,
+    "text": "agricultural",
+    "translation": "գյուղատնտեսական",
+    "audio": "./audio/5000/agricultural.mp3",
+    "examples": []
+  },
+  {
+    "id": 148,
+    "text": "agriculture",
+    "translation": "գյուղատնտեսություն",
+    "audio": "./audio/5000/agriculture.mp3",
+    "examples": [
+      "The number of people employed in agriculture has fallen in the last decade.",
+      "50% of the country’s population depends on agriculture."
+    ]
+  },
+  {
+    "id": 150,
+    "text": "ahead",
+    "translation": "առաջ",
+    "audio": "./audio/5000/ahead.mp3",
+    "examples": [
+      "I'll run ahead and warn them.",
+      "The road ahead was blocked."
+    ]
+  },
+  {
+    "id": 151,
+    "text": "aid",
+    "translation": "օգնություն",
+    "audio": "./audio/5000/aid.mp3",
+    "examples": [
+      "An extra £10 million in foreign aid has been provided for victims of the earthquake."
+    ]
+  },
+  {
+    "id": 153,
+    "text": "aide",
+    "translation": "օգնական",
+    "audio": "./audio/5000/aide.mp3",
+    "examples": [
+      "White House aides"
+    ]
+  },
+  {
+    "id": 154,
+    "text": "AIDS",
+    "translation": "ՁԻԱՀ",
+    "audio": "./audio/5000/AIDS.mp3",
+    "examples": [
+      "the AIDS epidemic",
+      "She died of an AIDs-related illness at the age of 54."
+    ]
+  },
+  {
+    "id": 155,
+    "text": "aim",
+    "translation": "նպատակ",
+    "audio": "./audio/5000/aim.mp3",
+    "examples": [
+      "Our main aim is to provide affordable childcare.",
+      "Teamwork is required in order to achieve these aims."
+    ]
+  },
+  {
+    "id": 157,
+    "text": "air",
+    "translation": "օդ",
+    "audio": "./audio/5000/air.mp3",
+    "examples": [
+      "Let's go out for some fresh air.",
+      "The agreement requires reductions in air pollution."
+    ]
+  },
+  {
+    "id": 158,
+    "text": "aircraft",
+    "translation": "ինքնաթիռ(ներ)",
+    "audio": "./audio/5000/aircraft.mp3",
+    "examples": [
+      "The aircraft was flown by a young American pilot.",
+      "We operate a fleet of six aircraft. "
+    ]
+  },
+  {
+    "id": 159,
+    "text": "airline",
+    "translation": "ավիաընկերություն",
+    "audio": "./audio/5000/airline.mp3",
+    "examples": [
+      "He needed to buy an airline ticket immediately.",
+      "The company is looking to expand into the commercial airline industry."
+    ]
+  },
+  {
+    "id": 160,
+    "text": "airport",
+    "translation": "օդանավակայան",
+    "audio": "./audio/5000/airport.mp3",
+    "examples": [
+      "He landed at Heathrow airport this morning. ",
+      "Passengers were banned from taking hand luggage through airport security. "
+    ]
+  },
+  {
+    "id": 161,
+    "text": "alarm",
+    "translation": "ահազանգ, տագնապ",
+    "audio": "./audio/5000/alarm.mp3",
+    "examples": [
+      "She decided to sound the alarm (= warn people that the situation was dangerous).",
+      "I hammered on all the doors to raise the alarm."
+    ]
+  },
+  {
+    "id": 163,
+    "text": "albeit",
+    "translation": "չնայած",
+    "audio": "./audio/5000/albeit.mp3",
+    "examples": [
+      "He finally agreed, albeit reluctantly, to help us."
+    ]
+  },
+  {
+    "id": 164,
+    "text": "album",
+    "translation": "ալբոմ",
+    "audio": "./audio/5000/album.mp3",
+    "examples": [
+      "a photo album",
+      "I keep the photographs in an album."
+    ]
+  },
+  {
+    "id": 165,
+    "text": "alcohol",
+    "translation": "ալկոհոլ",
+    "audio": "./audio/5000/alcohol.mp3",
+    "examples": [
+      "He never drinks alcohol.",
+      "He was unable to overcome his addiction to alcohol."
+    ]
+  },
+  {
+    "id": 166,
+    "text": "alcoholic",
+    "translation": "ալկոհոլիկ",
+    "audio": "./audio/5000/alcoholic.mp3",
+    "examples": [
+      "The fruit juice tasted slightly alcoholic."
+    ]
+  },
+  {
+    "id": 167,
+    "text": "alert",
+    "translation": "զգոն",
+    "audio": "./audio/5000/alert.mp3",
+    "examples": [
+      "Suddenly he found himself awake and fully alert.",
+      "Two alert scientists spotted the mistake.",
+      "Try to stay alert while driving at night."
+    ]
+  },
+  {
+    "id": 170,
+    "text": "alien, խորթ",
+    "translation": "այլմոլորակային",
+    "audio": "./audio/5000/alien.mp3",
+    "examples": [
+      "In a world that had suddenly become alien and dangerous, he was her only security."
+    ]
+  },
+  {
+    "id": 172,
+    "text": "align",
+    "translation": "հարթեցնել",
+    "audio": "./audio/5000/align.mp3",
+    "examples": [
+      "Make sure the shelf is aligned with the top of the cupboard.",
+      "The top and bottom line of each column on the page should align."
+    ]
+  },
+  {
+    "id": 173,
+    "text": "alignment",
+    "translation": "հավասարեցում",
+    "audio": "./audio/5000/alignment.mp3",
+    "examples": [
+      "the alignment of the sun, moon and earth at a particular time",
+      "A bone in my spine was out of alignment."
+    ]
+  },
+  {
+    "id": 174,
+    "text": "alike",
+    "translation": "միանման",
+    "audio": "./audio/5000/alike.mp3",
+    "examples": [
+      "My sister and I do not look alike.",
+      "Airports are all alike to me."
+    ]
+  },
+  {
+    "id": 176,
+    "text": "alive",
+    "translation": "ողջ",
+    "audio": "./audio/5000/alive.mp3",
+    "examples": [
+      "She had to steal food just to stay alive.",
+      "The police are desperate to catch this man dead or alive."
+    ]
+  },
+  {
+    "id": 177,
+    "text": "all",
+    "translation": "բոլորը, ամբողջ",
+    "audio": "./audio/5000/all.mp3",
+    "examples": [
+      "She was dressed all in white.",
+      "All horses are animals, but not all animals are horses."
+    ]
+  },
+  {
+    "id": 180,
+    "text": "all right",
+    "translation": "լավ",
+    "audio": "./audio/5000/all right.mp3",
+    "examples": [
+      "Is the coffee all right?",
+      "Are you getting along all right in your new job?"
+    ]
+  },
+  {
+    "id": 183,
+    "text": "allegation",
+    "translation": "պնդում",
+    "audio": "./audio/5000/allegation.mp3",
+    "examples": [
+      "Several newspapers made allegations of corruption in the city's police department.",
+      "The committee has made serious allegations about interference in its work."
+    ]
+  },
+  {
+    "id": 185,
+    "text": "allegedly",
+    "translation": "իբր",
+    "audio": "./audio/5000/allegedly.mp3",
+    "examples": [
+      "crimes allegedly committed during the war"
+    ]
+  },
+  {
+    "id": 186,
+    "text": "alliance",
+    "translation": "դաշինք",
+    "audio": "./audio/5000/alliance.mp3",
+    "examples": [
+      "The Social Democrats are now in alliance with the Greens."
+    ]
+  },
+  {
+    "id": 187,
+    "text": "allocate",
+    "translation": "հատկացնել",
+    "audio": "./audio/5000/allocate.mp3",
+    "examples": [
+      "A large sum has been allocated for buying new books for the library.",
+      "More resources are being allocated to the project."
+    ]
+  },
+  {
+    "id": 188,
+    "text": "allocation",
+    "translation": "հատկացում",
+    "audio": "./audio/5000/allocation.mp3",
+    "examples": [
+      "We have spent our entire allocation for the year."
+    ]
+  },
+  {
+    "id": 189,
+    "text": "allow",
+    "translation": "թույլ տալ",
+    "audio": "./audio/5000/allow.mp3",
+    "examples": [
+      "The law allowed companies to dismiss workers without any reason.",
+      "This research must be allowed to continue."
+    ]
+  },
+  {
+    "id": 190,
+    "text": "allowance",
+    "translation": "նպաստ",
+    "audio": "./audio/5000/allowance.mp3",
+    "examples": [
+      "an allowance of $20 a day",
+      "Do you get an allowance for clothing?"
+    ]
+  },
+  {
+    "id": 191,
+    "text": "ally",
+    "translation": "դաշնակից",
+    "audio": "./audio/5000/ally.mp3",
+    "examples": [
+      "a loyal ally of the United States",
+      "Portugal is a traditional ally of England."
+    ]
+  },
+  {
+    "id": 192,
+    "text": "almost",
+    "translation": "գրեթե",
+    "audio": "./audio/5000/almost.mp3",
+    "examples": [
+      "I like almost all of them.",
+      "They'll eat almost anything."
+    ]
+  },
+  {
+    "id": 193,
+    "text": "alone",
+    "translation": "միայնակ",
+    "audio": "./audio/5000/alone.mp3",
+    "examples": [
+      "He was afraid of being alone with his thoughts.",
+      "He lives alone."
+    ]
+  },
+  {
+    "id": 195,
+    "text": "along",
+    "translation": "երկայնքով",
+    "audio": "./audio/5000/along.mp3",
+    "examples": [
+      "I was just walking along singing to myself.",
+      "He pointed out various landmarks as we drove along."
+    ]
+  },
+  {
+    "id": 197,
+    "text": "alongside",
+    "translation": "կողքին",
+    "audio": "./audio/5000/alongside.mp3",
+    "examples": [
+      "A police car pulled up alongside us.",
+      "Much of the land alongside the river is below sea level."
+    ]
+  },
+  {
+    "id": 198,
+    "text": "already",
+    "translation": "արդեն",
+    "audio": "./audio/5000/already.mp3",
+    "examples": [
+      "We got there early but Mike had already left.",
+      "Much of what he said I knew already."
+    ]
+  },
+  {
+    "id": 199,
+    "text": "also",
+    "translation": "նույնպես, նաև",
+    "audio": "./audio/5000/also.mp3",
+    "examples": [
+      "She's fluent in French and German. She also speaks a little Italian."
+    ]
+  },
+  {
+    "id": 200,
+    "text": "alter",
+    "translation": "փոխել",
+    "audio": "./audio/5000/alter.mp3",
+    "examples": [
+      "Prices did not alter significantly during 2019.",
+      "He has the power to fundamentally alter the course of history."
+    ]
+  },
+  {
+    "id": 201,
+    "text": "alternative",
+    "translation": "այլընտրանք",
+    "audio": "./audio/5000/alternative.mp3",
+    "examples": [
+      "The road was closed so we had to find an alternative route.",
+      "Can you offer an alternative explanation? "
+    ]
   }
 ]
