@@ -194,7 +194,7 @@
 
     function maskWord(word) {
         const chars = word.split('');
-        const totalToShow = Math.max(1, Math.floor(chars.length * 0.3));
+        const totalToShow = Math.max(1, Math.floor(chars.length * 0.5));
         const indexes = [...Array(chars.length).keys()];
         shuffleArray(indexes);
         const showIndexes = indexes.slice(0, totalToShow);
