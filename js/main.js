@@ -141,7 +141,10 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 dialogImg.src = "";
             }
-            dialogTranslation.innerText = part.translation ?? '';
+            dialogTranslation.innerText = '';
+            setTimeout(() => {
+                dialogTranslation.innerText = part.translation ?? '';
+            }, 2000)
             const r = new RandomColor();
             dialogExamples.innerHTML = part.examples?.map((exampleText) => {
                 const highlightedText = exampleText.replaceAll(new RegExp(part.text, 'gi'), `<span class="current">${part.text}</span>`);
