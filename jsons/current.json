@@ -3310,5 +3310,801 @@
       "Steve didn't look seriously hurt.",
       "Stop that or you'll get hurt!"
     ]
+  },
+  {
+    "id": 1300,
+    "text": "curved",
+    "translation": "կոր",
+    "audio": "./audio/5000/curved.mp3",
+    "examples": [
+      "A ball follows a curved path as it travels through the air.",
+      "The knife has a curved blade."
+    ]
+  },
+  {
+    "id": 1301,
+    "text": "custody",
+    "translation": "խնամակալությունը",
+    "audio": "./audio/5000/custody.mp3",
+    "examples": [
+      "Who will have custody of the children?",
+      "The parents were given joint custody of the two children."
+    ]
+  },
+  {
+    "id": 1302,
+    "text": "սովորույթն",
+    "translation": "աբգդեզ",
+    "audio": "./audio/5000/custom.mp3",
+    "examples": [
+      "She grew up with Chinese customs and traditions.",
+      "It is the custom in that country for women to marry young."
+    ]
+  },
+  {
+    "id": 1303,
+    "text": "customer",
+    "translation": "հաճախորդ",
+    "audio": "./audio/5000/customer.mp3",
+    "examples": [
+      "The company rewards loyal customers with discounts.",
+      "Our success is measured by how well we serve our customers."
+    ]
+  },
+  {
+    "id": 1304,
+    "text": "cut",
+    "translation": "կտրել",
+    "audio": "./audio/5000/cut.mp3",
+    "examples": [
+      "She cut her finger on a piece of glass.",
+      "She picked up the knife and cut into the meat."
+    ]
+  },
+  {
+    "id": 1308,
+    "text": "cycle",
+    "translation": "ցիկլ, հեծանիվ",
+    "audio": "./audio/5000/cycle.mp3",
+    "examples": [
+      "He was riding his cycle home when he was hit by a lorry.",
+      "I usually cycle home through the park."
+    ]
+  },
+  {
+    "id": 1310,
+    "text": "cynical",
+    "translation": "ցինիկ",
+    "audio": "./audio/5000/cynical.mp3",
+    "examples": [
+      "a cynical smile",
+      "Do you have to be so cynical about everything?"
+    ]
+  },
+  {
+    "id": 1311,
+    "text": "dad",
+    "translation": "հայրիկ",
+    "audio": "./audio/5000/dad.mp3",
+    "examples": [
+      "That's my dad over there.",
+      "Do you live with your mum or your dad?"
+    ]
+  },
+  {
+    "id": 1312,
+    "text": "daily",
+    "translation": "օրական",
+    "audio": "./audio/5000/daily.mp3",
+    "examples": [
+      "Many people still read a daily newspaper.",
+      "Invoices are signed on a daily basis."
+    ]
+  },
+  {
+    "id": 1314,
+    "text": "dairy",
+    "translation": "կաթնամթերք",
+    "audio": "./audio/5000/dairy.mp3",
+    "examples": [
+      "dairy products",
+      "The doctor told me to eat less red meat and dairy."
+    ]
+  },
+  {
+    "id": 1316,
+    "text": "dam",
+    "translation": "ամբարտակ",
+    "audio": "./audio/5000/dam.mp3",
+    "examples": [
+      "The dam burst and the valley was flooded."
+    ]
+  },
+  {
+    "id": 1317,
+    "text": "damage",
+    "translation": "վնաս",
+    "audio": "./audio/5000/damage.mp3",
+    "examples": [
+      "The building suffered extensive damage by fire in 1925.",
+      "It could take years to repair the damage."
+    ]
+  },
+  {
+    "id": 1319,
+    "text": "damaging",
+    "translation": "վնասում է",
+    "audio": "./audio/5000/damaging.mp3",
+    "examples": [
+      "That is potentially damaging to children's health."
+    ]
+  },
+  {
+    "id": 1320,
+    "text": "dance",
+    "translation": "պարել",
+    "audio": "./audio/5000/dance.mp3",
+    "examples": [
+      "Do you know any other Latin American dances?",
+      "Find a partner and practise these new dance steps."
+    ]
+  },
+  {
+    "id": 1322,
+    "text": "dancer",
+    "translation": "պարող/պարուհի",
+    "audio": "./audio/5000/dancer.mp3",
+    "examples": [
+      "She's a fantastic dancer.",
+      "He's a principal dancer with the Royal Ballet."
+    ]
+  },
+  {
+    "id": 1323,
+    "text": "dancing",
+    "translation": "պարել",
+    "audio": "./audio/5000/dancing.mp3",
+    "examples": [
+      "There was music and dancing till two in the morning.",
+      "I love Irish dancing."
+    ]
+  },
+  {
+    "id": 1324,
+    "text": "danger",
+    "translation": "վտանգ",
+    "audio": "./audio/5000/danger.mp3",
+    "examples": [
+      "in mortal danger",
+      "They found themselves in grave danger.",
+      "Doctors said she is now out of danger (= not likely to die)."
+    ]
+  },
+  {
+    "id": 1325,
+    "text": "dangerous",
+    "translation": "վտանգավոր",
+    "audio": "./audio/5000/dangerous.mp3",
+    "examples": [
+      "The situation is extremely dangerous.",
+      "Fog and ice are making the roads very dangerous."
+    ]
+  },
+  {
+    "id": 1326,
+    "text": "dare",
+    "translation": "համարձակվել",
+    "audio": "./audio/5000/dare.mp3",
+    "examples": [
+      "She said it as loudly as she dared.",
+      "Dare to be different!",
+      "There was something, dare I say it, a little unusual about him."
+    ]
+  },
+  {
+    "id": 1327,
+    "text": "dark",
+    "translation": "մութ",
+    "audio": "./audio/5000/dark.mp3",
+    "examples": [
+      "What time does it get dark in summer?",
+      "Then the theatre went dark. ",
+      "It was dark outside and I couldn't see much."
+    ]
+  },
+  {
+    "id": 1329,
+    "text": "darkness",
+    "translation": "մթություն",
+    "audio": "./audio/5000/darkness.mp3",
+    "examples": [
+      "After a few minutes our eyes got used to the darkness.",
+      "The house was plunged into total darkness when the electricity was cut off."
+    ]
+  },
+  {
+    "id": 1330,
+    "text": "data",
+    "translation": "տվյալներ",
+    "audio": "./audio/5000/data.mp3",
+    "examples": [
+      "We collected publicly available data over a 10-day period.",
+      "It is essential to protect your personal data."
+    ]
+  },
+  {
+    "id": 1331,
+    "text": "database",
+    "translation": "տվյալների բազա",
+    "audio": "./audio/5000/database.mp3",
+    "examples": [
+      "The database is updated monthly.",
+      "The new database contains 200 images."
+    ]
+  },
+  {
+    "id": 1332,
+    "text": "date",
+    "translation": "ամսաթիվ",
+    "audio": "./audio/5000/date.mp3",
+    "examples": [
+      "Write today's date at the top of the page."
+    ]
+  },
+  {
+    "id": 1334,
+    "text": "daughter",
+    "translation": "դուստր",
+    "audio": "./audio/5000/daughter.mp3",
+    "examples": [
+      "We have two sons and a daughter.",
+      "Living alone and trying to bring up a small daughter is no easy task."
+    ]
+  },
+  {
+    "id": 1335,
+    "text": "dawn",
+    "translation": "լուսաբաց",
+    "audio": "./audio/5000/dawn.mp3",
+    "examples": [
+      "They start work at dawn.",
+      "He works from dawn till dusk (= from morning till night)."
+    ]
+  },
+  {
+    "id": 1336,
+    "text": "day",
+    "translation": "օր",
+    "audio": "./audio/5000/day.mp3",
+    "examples": [
+      "‘What day is it today?’ ‘Monday.’",
+      "I go to the gym every day."
+    ]
+  },
+  {
+    "id": 1337,
+    "text": "dead",
+    "translation": "մահացած",
+    "audio": "./audio/5000/dead.mp3",
+    "examples": [
+      "Catherine's dead body lay peacefully on the bed.",
+      "He was shot dead by a gunman outside his home."
+    ]
+  },
+  {
+    "id": 1338,
+    "text": "deadline",
+    "translation": "վերջնաժամկետ",
+    "audio": "./audio/5000/deadline.mp3",
+    "examples": [
+      "I prefer to work to a deadline.",
+      "The deadline for applications is 23 March."
+    ]
+  },
+  {
+    "id": 1339,
+    "text": "deadly",
+    "translation": "մահացու",
+    "audio": "./audio/5000/deadly.mp3",
+    "examples": [
+      "He was charged with possession of a deadly weapon.",
+      "The cobra is one of the world's deadliest snakes."
+    ]
+  },
+  {
+    "id": 1340,
+    "text": "deal",
+    "translation": "գործարք",
+    "audio": "./audio/5000/deal.mp3",
+    "examples": [
+      "She is travelling to New York to seal the deal (= conclude it).",
+      "Both sides are willing to agree on a peace deal."
+    ]
+  },
+  {
+    "id": 1343,
+    "text": "dear",
+    "translation": "սիրելի",
+    "audio": "./audio/5000/dear.mp3",
+    "examples": [
+      "Dear Sir or Madam",
+      "Dear Mrs Jones"
+    ]
+  },
+  {
+    "id": 1345,
+    "text": "death",
+    "translation": "մահ",
+    "audio": "./audio/5000/death.mp3",
+    "examples": [
+      "the anniversary of his wife’s death",
+      "He suffered a slow and painful death."
+    ]
+  },
+  {
+    "id": 1346,
+    "text": "debate",
+    "translation": "բանավեճ",
+    "audio": "./audio/5000/debate.mp3",
+    "examples": [
+      "After a long debate, Congress approved the proposal.",
+      "They debated endlessly, without ever reaching a decision."
+    ]
+  },
+  {
+    "id": 1348,
+    "text": "debris",
+    "translation": "բեկորներ",
+    "audio": "./audio/5000/debris.mp3",
+    "examples": [
+      "Emergency teams are still clearing the debris from the plane crash.",
+      "Several people were injured by flying debris in the explosion."
+    ]
+  },
+  {
+    "id": 1349,
+    "text": "debt",
+    "translation": "պարտք",
+    "audio": "./audio/5000/debt.mp3",
+    "examples": [
+      "I need to pay off all my debts.",
+      "I've finally cleared all my debts."
+    ]
+  },
+  {
+    "id": 1350,
+    "text": "debut",
+    "translation": "առաջին ելույթ",
+    "audio": "./audio/5000/debut.mp3",
+    "examples": [
+      "He will make his debut for the first team this week.",
+      "the band’s debut album"
+    ]
+  },
+  {
+    "id": 1351,
+    "text": "decade",
+    "translation": "տասնամյակ",
+    "audio": "./audio/5000/decade.mp3",
+    "examples": [
+      "The nineties were a decade of rapid advances.",
+      "He's changed a lot over the past decade."
+    ]
+  },
+  {
+    "id": 1352,
+    "text": "December",
+    "translation": "դեկտեմբեր",
+    "audio": "./audio/5000/December.mp3",
+    "examples": [
+      "She was born in December.",
+      "We went to Japan last December."
+    ]
+  },
+  {
+    "id": 1353,
+    "text": "decent",
+    "translation": "պարկեշտ",
+    "audio": "./audio/5000/decent.mp3",
+    "examples": [
+      "I just want to get a decent job with decent pay.",
+      "We think he's got a decent chance of qualifying."
+    ]
+  },
+  {
+    "id": 1354,
+    "text": "decide",
+    "translation": "որոշել",
+    "audio": "./audio/5000/decide.mp3",
+    "examples": [
+      "It's up to you to decide.",
+      "You will have to decide soon.",
+      "She decided that she wanted to live in France."
+    ]
+  },
+  {
+    "id": 1355,
+    "text": "decision",
+    "translation": "որոշումը",
+    "audio": "./audio/5000/decision.mp3",
+    "examples": [
+      "I think I've made the right decision.",
+      "The editor's decision is final."
+    ]
+  },
+  {
+    "id": 1357,
+    "text": "decisive",
+    "translation": "վճռական",
+    "audio": "./audio/5000/decisive.mp3",
+    "examples": [
+      "Climate was a decisive factor in establishing where the tournament should be held.",
+      "She has played a decisive role in the peace negotiations."
+    ]
+  },
+  {
+    "id": 1358,
+    "text": "deck",
+    "translation": "տախտակամած",
+    "audio": "./audio/5000/deck.mp3",
+    "examples": [
+      "I was the only person on deck at that time of night.",
+      "When we heard the alarm, we went up on deck."
+    ]
+  },
+  {
+    "id": 1359,
+    "text": "declaration",
+    "translation": "հռչակագիր",
+    "audio": "./audio/5000/declaration.mp3",
+    "examples": [
+      "the declaration of war",
+      "the Declaration of Independence"
+    ]
+  },
+  {
+    "id": 1360,
+    "text": "declare",
+    "translation": "հայտարարել",
+    "audio": "./audio/5000/declare.mp3",
+    "examples": [
+      "The government has declared a state of emergency.",
+      "Germany declared war on France on 1 August 1914."
+    ]
+  },
+  {
+    "id": 1361,
+    "text": "decline",
+    "translation": "անկում",
+    "audio": "./audio/5000/decline.mp3",
+    "examples": [
+      "There has been a 5 per cent decline in student numbers.",
+      "They have experienced decades of economic decline.",
+      "Sales of whole milk declined by 4 per cent."
+    ]
+  },
+  {
+    "id": 1363,
+    "text": "decorate",
+    "translation": "զարդարել",
+    "audio": "./audio/5000/decorate.mp3",
+    "examples": [
+      "They decorated the room with flowers and balloons."
+    ]
+  },
+  {
+    "id": 1364,
+    "text": "decoration",
+    "translation": "զարդարանք",
+    "audio": "./audio/5000/decoration.mp3",
+    "examples": [
+      "Halloween decorations hung from every corner.",
+      "We made our own decorations."
+    ]
+  },
+  {
+    "id": 1365,
+    "text": "decrease",
+    "translation": "նվազում",
+    "audio": "./audio/5000/decrease.mp3",
+    "examples": [
+      "Sales for May show a decrease compared with the same month last year.",
+      "There has been a dramatic decrease in activity among our kids. "
+    ]
+  },
+  {
+    "id": 1367,
+    "text": "dedicated",
+    "translation": "նվիրված",
+    "audio": "./audio/5000/dedicated.mp3",
+    "examples": [
+      "a dedicated teacher",
+      "She is dedicated to her job."
+    ]
+  },
+  {
+    "id": 1368,
+    "text": "dedication",
+    "translation": "նվիրվածություն",
+    "audio": "./audio/5000/dedication.mp3",
+    "examples": [
+      "hard work and dedication",
+      "I really admire Gina for her dedication to her family."
+    ]
+  },
+  {
+    "id": 1369,
+    "text": "deed",
+    "translation": "գործ",
+    "audio": "./audio/5000/deed.mp3",
+    "examples": [
+      "She tried to do a good deed every day.",
+      "They will be punished for their evil deeds."
+    ]
+  },
+  {
+    "id": 1370,
+    "text": "deem",
+    "translation": "համարել",
+    "audio": "./audio/5000/deem.mp3",
+    "examples": [
+      "The evening was deemed a great success.",
+      "They would take any action deemed necessary."
+    ]
+  },
+  {
+    "id": 1371,
+    "text": "deep",
+    "translation": "խոր",
+    "audio": "./audio/5000/deep.mp3",
+    "examples": [
+      "a deep hole",
+      "Sunflowers have deep roots. ",
+      "He stood with his hands deep in his pockets."
+    ]
+  },
+  {
+    "id": 1373,
+    "text": "deeply",
+    "translation": "խորապես",
+    "audio": "./audio/5000/deeply.mp3",
+    "examples": [
+      "She is deeply religious.",
+      "We are deeply grateful for your support."
+    ]
+  },
+  {
+    "id": 1374,
+    "text": "default",
+    "translation": "լռելյայն",
+    "audio": "./audio/5000/default.mp3",
+    "examples": [
+      "The default is fifty lines.",
+      "The default option is to save your work every five minutes."
+    ]
+  },
+  {
+    "id": 1375,
+    "text": "defeat",
+    "translation": "պարտություն",
+    "audio": "./audio/5000/defeat.mp3",
+    "examples": [
+      "The party faces defeat in the election.",
+      "The goal is to defeat the enemy by whatever means possible."
+    ]
+  },
+  {
+    "id": 1377,
+    "text": "defect",
+    "translation": "արատ",
+    "audio": "./audio/5000/defect.mp3",
+    "examples": [
+      "a defect in the glass"
+    ]
+  },
+  {
+    "id": 1378,
+    "text": "defence",
+    "translation": "պաշտպանություն",
+    "audio": "./audio/5000/defence.mp3",
+    "examples": [
+      "What points can be raised in defence of this argument?",
+      "When her brother was criticized she leapt to his defence."
+    ]
+  },
+  {
+    "id": 1379,
+    "text": "defend",
+    "translation": "պաշտպանել",
+    "audio": "./audio/5000/defend.mp3",
+    "examples": [
+      "Troops have been sent to defend the borders.",
+      "The male birds defend their territory against other males."
+    ]
+  },
+  {
+    "id": 1380,
+    "text": "defender",
+    "translation": "պաշտպան",
+    "audio": "./audio/5000/defender.mp3",
+    "examples": []
+  },
+  {
+    "id": 1381,
+    "text": "defensive",
+    "translation": "պաշտպանական",
+    "audio": "./audio/5000/defensive.mp3",
+    "examples": [
+      "These are purely defensive measures.",
+      "Troops took up a defensive position around the town."
+    ]
+  },
+  {
+    "id": 1382,
+    "text": "deficiency",
+    "translation": "պակասություն",
+    "audio": "./audio/5000/deficiency.mp3",
+    "examples": [
+      "Vitamin deficiency in the diet can cause illness.",
+      "a deficiency of Vitamin B"
+    ]
+  },
+  {
+    "id": 1383,
+    "text": "deficit",
+    "translation": "պակասորդ",
+    "audio": "./audio/5000/deficit.mp3",
+    "examples": [
+      "a budget deficit",
+      "The trade balance has been in deficit for the past five years."
+    ]
+  },
+  {
+    "id": 1384,
+    "text": "define",
+    "translation": "սահմանել",
+    "audio": "./audio/5000/define.mp3",
+    "examples": [
+      "term ‘normal’ is difficult to define."
+    ]
+  },
+  {
+    "id": 1385,
+    "text": "definite",
+    "translation": "որոշակի",
+    "audio": "./audio/5000/definite.mp3",
+    "examples": [
+      "Can you give me a definite answer by tomorrow?",
+      "They have very definite ideas on how to bring up children."
+    ]
+  },
+  {
+    "id": 1386,
+    "text": "definitely",
+    "translation": "հաստատ",
+    "audio": "./audio/5000/definitely.mp3",
+    "examples": [
+      "I definitely remember sending the letter.",
+      "The claim is definitely true."
+    ]
+  },
+  {
+    "id": 1387,
+    "text": "definition",
+    "translation": "սահմանում",
+    "audio": "./audio/5000/definition.mp3",
+    "examples": [
+      "The dictionary provides clear, simple definitions.",
+      "We need a good working definition of ‘pollution’."
+    ]
+  },
+  {
+    "id": 1388,
+    "text": "defy",
+    "translation": "դիմադրել",
+    "audio": "./audio/5000/defy.mp3",
+    "examples": [
+      "I wouldn't have dared to defy my teachers.",
+      "Hundreds of people today defied the ban on political gatherings."
+    ]
+  },
+  {
+    "id": 1389,
+    "text": "degree",
+    "translation": "աստիճան",
+    "audio": "./audio/5000/degree.mp3",
+    "examples": [
+      "Temperatures are expected to drop below 2 degrees.",
+      "Last weekend temperatures reached 40 degrees."
+    ]
+  },
+  {
+    "id": 1390,
+    "text": "delay",
+    "translation": "ուշացում",
+    "audio": "./audio/5000/delay.mp3",
+    "examples": [
+      "They will face long delays on the roads today.",
+      "The strike has led to some delays in train services.",
+      "My flight was delayed. "
+    ]
+  },
+  {
+    "id": 1392,
+    "text": "delegate",
+    "translation": "պատվիրակ",
+    "audio": "./audio/5000/delegate.mp3",
+    "examples": [
+      "Congress delegates rejected the proposals."
+    ]
+  },
+  {
+    "id": 1393,
+    "text": "delegation",
+    "translation": "պատվիրակություն",
+    "audio": "./audio/5000/delegation.mp3",
+    "examples": [
+      "the Dutch delegation to the United Nations"
+    ]
+  },
+  {
+    "id": 1394,
+    "text": "delete",
+    "translation": "ջնջել",
+    "audio": "./audio/5000/delete.mp3",
+    "examples": [
+      "Your name has been deleted from the list.",
+      "This command deletes files from the directory."
+    ]
+  },
+  {
+    "id": 1395,
+    "text": "deliberate",
+    "translation": "դիտավորյալ",
+    "audio": "./audio/5000/deliberate.mp3",
+    "examples": [
+      "a deliberate act of vandalism",
+      "The speech was a deliberate attempt to embarrass the government."
+    ]
+  },
+  {
+    "id": 1396,
+    "text": "deliberately",
+    "translation": "միտումնավոր",
+    "audio": "./audio/5000/deliberately.mp3",
+    "examples": [
+      "She's been deliberately ignoring him all day.",
+      "The fire had been started deliberately."
+    ]
+  },
+  {
+    "id": 1397,
+    "text": "delicate",
+    "translation": "նուրբ",
+    "audio": "./audio/5000/delicate.mp3",
+    "examples": [
+      "delicate china teacups",
+      "The eye is one of the most delicate organs of the body."
+    ]
+  },
+  {
+    "id": 1398,
+    "text": "delicious",
+    "translation": "համեղ",
+    "audio": "./audio/5000/delicious.mp3",
+    "examples": [
+      "Who cooked this? It's absolutely delicious.",
+      "This dish is delicious with cream."
+    ]
+  },
+  {
+    "id": 1399,
+    "text": "delight",
+    "translation": "հրճվանք",
+    "audio": "./audio/5000/delight.mp3",
+    "examples": [
+      "The children squealed with delight when they saw the puppy.",
+      "This news will delight his fans all over the world."
+    ]
   }
 ]
