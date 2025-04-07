@@ -4106,5 +4106,854 @@
       "The children squealed with delight when they saw the puppy.",
       "This news will delight his fans all over the world."
     ]
+  },
+  {
+    "id": 3300,
+    "text": "methodology",
+    "translation": "մեթոդաբանություն",
+    "audio": "./audio/5000/methodology.mp3",
+    "examples": [
+      "recent changes in the methodology of language teaching"
+    ]
+  },
+  {
+    "id": 3301,
+    "text": "metre",
+    "translation": "մետր",
+    "audio": "./audio/5000/metre.mp3",
+    "examples": [
+      "a 50-metre swimming pool",
+      "Every few metres the cat stopped and turned to look at me."
+    ]
+  },
+  {
+    "id": 3302,
+    "text": "middle",
+    "translation": "մեջտեղ",
+    "audio": "./audio/5000/middle.mp3",
+    "examples": [
+      "Pens are kept in the middle drawer.",
+      "The phone rang in the middle of the night.",
+      "The film's middle section was rather dull."
+    ]
+  },
+  {
+    "id": 3304,
+    "text": "midnight",
+    "translation": "կեսգիշեր",
+    "audio": "./audio/5000/midnight.mp3",
+    "examples": [
+      "She heard the clock strike midnight.",
+      "We have to catch the midnight train."
+    ]
+  },
+  {
+    "id": 3305,
+    "text": "midst",
+    "translation": "մեջտեղ",
+    "audio": "./audio/5000/midst.mp3",
+    "examples": [
+      "Such beauty was unexpected in the midst of the city.",
+      "The house is set in the midst of large gardens."
+    ]
+  },
+  {
+    "id": 3306,
+    "text": "might",
+    "translation": "կարող է",
+    "audio": "./audio/5000/might.mp3",
+    "examples": [
+      "He might get there in time, but I can't be sure.",
+      "It might not be too late to save the building."
+    ]
+  },
+  {
+    "id": 3307,
+    "text": "migration",
+    "translation": "միգրացիա",
+    "audio": "./audio/5000/migration.mp3",
+    "examples": [
+      "the migration routes of birds"
+    ]
+  },
+  {
+    "id": 3308,
+    "text": "mild",
+    "translation": "մեղմ",
+    "audio": "./audio/5000/mild.mp3",
+    "examples": [
+      "a mild form of the disease",
+      "The symptoms were mild."
+    ]
+  },
+  {
+    "id": 3309,
+    "text": "mile",
+    "translation": "մղոն",
+    "audio": "./audio/5000/mile.mp3",
+    "examples": [
+      "The nearest bank is about half a mile down the road.",
+      "The boys were left stranded two miles from home."
+    ]
+  },
+  {
+    "id": 3310,
+    "text": "militant",
+    "translation": "ռազմատենչ",
+    "audio": "./audio/5000/militant.mp3",
+    "examples": [
+      "Some trade unions have a more militant approach to pay negotiations.",
+      "Student militants were fighting with the police."
+    ]
+  },
+  {
+    "id": 3312,
+    "text": "military",
+    "translation": "ռազմական",
+    "audio": "./audio/5000/military.mp3",
+    "examples": [
+      "We may have to take military action.",
+      "The authorities controlled the people through military force.",
+      "He served in the military."
+    ]
+  },
+  {
+    "id": 3314,
+    "text": "militia",
+    "translation": "ջոկատ",
+    "audio": "./audio/5000/militia.mp3",
+    "examples": [
+      "He said he would call out the state militia if the rebels did not surrender.",
+      "The anarchists started to form volunteer militias."
+    ]
+  },
+  {
+    "id": 3315,
+    "text": "milk",
+    "translation": "կաթ",
+    "audio": "./audio/5000/milk.mp3",
+    "examples": [
+      "She drank a glass of cool frothy milk.",
+      "I am allergic to cow's milk."
+    ]
+  },
+  {
+    "id": 3316,
+    "text": "mill",
+    "translation": "ջրաղաց",
+    "audio": "./audio/5000/mill.mp3",
+    "examples": [
+      "The old mill has been converted into apartments."
+    ]
+  },
+  {
+    "id": 3317,
+    "text": "million",
+    "translation": "միլիոն",
+    "audio": "./audio/5000/million.mp3",
+    "examples": [
+      "a population of half a million",
+      "tens of millions of dollars"
+    ]
+  },
+  {
+    "id": 3318,
+    "text": "mind",
+    "translation": "միտք",
+    "audio": "./audio/5000/mind.mp3",
+    "examples": [
+      "There were all kinds of thoughts running through my mind.",
+      "She was in a disturbed state of mind."
+    ]
+  },
+  {
+    "id": 3320,
+    "text": "mine",
+    "translation": "հանք",
+    "audio": "./audio/5000/mine.mp3",
+    "examples": [
+      "They were appalled at the poor working conditions in the mines."
+    ]
+  },
+  {
+    "id": 3321,
+    "text": "mine",
+    "translation": "իմը",
+    "audio": "./audio/5000/mine.mp3",
+    "examples": [
+      "That's mine."
+    ]
+  },
+  {
+    "id": 3322,
+    "text": "miner",
+    "translation": "հանքափոր",
+    "audio": "./audio/5000/miner.mp3",
+    "examples": [
+      "Rescuers are trying to save miners trapped underground after a gas explosion."
+    ]
+  },
+  {
+    "id": 3323,
+    "text": "mineral",
+    "translation": "հանքային",
+    "audio": "./audio/5000/mineral.mp3",
+    "examples": [
+      "a country rich in mineral resources",
+      "Low bone mineral density is linked with vitamin deficiency."
+    ]
+  },
+  {
+    "id": 3324,
+    "text": "minimal",
+    "translation": "նվազագույն",
+    "audio": "./audio/5000/minimal.mp3",
+    "examples": [
+      "The work was carried out at minimal cost.",
+      "There's only a minimal amount of risk involved."
+    ]
+  },
+  {
+    "id": 3325,
+    "text": "minimize",
+    "translation": "նվազագույնի հասցնել",
+    "audio": "./audio/5000/minimize.mp3",
+    "examples": [
+      "Good hygiene helps to minimize the risk of infection.",
+      "Costs were minimized by using plastic instead of leather."
+    ]
+  },
+  {
+    "id": 3326,
+    "text": "minimum",
+    "translation": "նվազագույնը",
+    "audio": "./audio/5000/minimum.mp3",
+    "examples": [
+      "The trust failed to meet the minimum standards expected.",
+      "What are your minimum requirements for the job?"
+    ]
+  },
+  {
+    "id": 3328,
+    "text": "mining",
+    "translation": "հանքարդյունաբերություն",
+    "audio": "./audio/5000/mining.mp3",
+    "examples": [
+      "Mining is prohibited in the National Park."
+    ]
+  },
+  {
+    "id": 3329,
+    "text": "minister",
+    "translation": "նախարար",
+    "audio": "./audio/5000/minister.mp3",
+    "examples": [
+      "A new minister of defence had been appointed.",
+      "The health minister announced £10 billion in extra funding."
+    ]
+  },
+  {
+    "id": 3330,
+    "text": "ministry",
+    "translation": "նախարարություն",
+    "audio": "./audio/5000/ministry.mp3",
+    "examples": [
+      "The Ministry of Defence has issued the following statement.",
+      "A ministry spokesperson defended the measures."
+    ]
+  },
+  {
+    "id": 3331,
+    "text": "minor",
+    "translation": "աննշան",
+    "audio": "./audio/5000/minor.mp3",
+    "examples": [
+      "Both the driver and the passenger suffered minor injuries.",
+      "There may be some minor changes to the schedule."
+    ]
+  },
+  {
+    "id": 3332,
+    "text": "minority",
+    "translation": "փոքրամասնություն",
+    "audio": "./audio/5000/minority.mp3",
+    "examples": [
+      "Only a small minority of students are interested in politics these days.",
+      "That's very much a minority view."
+    ]
+  },
+  {
+    "id": 3333,
+    "text": "minute",
+    "translation": "րոպե",
+    "audio": "./audio/5000/minute.mp3",
+    "examples": [
+      "It's only a ten-minute bus ride into town.",
+      "Two minutes later the phone rang."
+    ]
+  },
+  {
+    "id": 3335,
+    "text": "miracle",
+    "translation": "հրաշք",
+    "audio": "./audio/5000/miracle.mp3",
+    "examples": [
+      "the miracle of rising from the grave"
+    ]
+  },
+  {
+    "id": 3336,
+    "text": "mirror",
+    "translation": "հայելի",
+    "audio": "./audio/5000/mirror.mp3",
+    "examples": [
+      "He looked at himself in the mirror.",
+      "Remember to look in the mirror (= in a car, when driving) before signalling."
+    ]
+  },
+  {
+    "id": 3338,
+    "text": "misery",
+    "translation": "թշվառություն",
+    "audio": "./audio/5000/misery.mp3",
+    "examples": [
+      "Fame brought her nothing but misery."
+    ]
+  },
+  {
+    "id": 3339,
+    "text": "misleading",
+    "translation": "մոլորեցնող",
+    "audio": "./audio/5000/misleading.mp3",
+    "examples": [
+      "misleading information",
+      "It would be seriously misleading to suggest that television has no effect on children."
+    ]
+  },
+  {
+    "id": 3341,
+    "text": "missile",
+    "translation": "նետման արկ",
+    "audio": "./audio/5000/missile.mp3",
+    "examples": [
+      "nuclear missiles",
+      "a missile base/site"
+    ]
+  },
+  {
+    "id": 3342,
+    "text": "missing",
+    "translation": "կորած",
+    "audio": "./audio/5000/missing.mp3",
+    "examples": [
+      "I never found the missing piece.",
+      "My gloves have been missing for ages."
+    ]
+  },
+  {
+    "id": 3343,
+    "text": "mission",
+    "translation": "առաքելությունը",
+    "audio": "./audio/5000/mission.mp3",
+    "examples": []
+  },
+  {
+    "id": 3344,
+    "text": "mistake",
+    "translation": "սխալ",
+    "audio": "./audio/5000/mistake.mp3",
+    "examples": [
+      "It's easy to make a mistake.",
+      "Don't worry, we all make mistakes."
+    ]
+  },
+  {
+    "id": 3346,
+    "text": "mix",
+    "translation": "խառնել",
+    "audio": "./audio/5000/mix.mp3",
+    "examples": [
+      "Oil and water do not mix.",
+      "Their music is an eclectic mix of regional styles.",
+      "I love the city's heady mix of cultures."
+    ]
+  },
+  {
+    "id": 3348,
+    "text": "mixed",
+    "translation": "խառնած",
+    "audio": "./audio/5000/mixed.mp3",
+    "examples": [
+      "a mixed diet",
+      "beaches with mixed sand and shingle"
+    ]
+  },
+  {
+    "id": 3349,
+    "text": "mixture",
+    "translation": "խառնուրդ",
+    "audio": "./audio/5000/mixture.mp3",
+    "examples": [
+      "She was a curious mixture, part grand lady, part wild child.",
+      "We listened to the news with a mixture of surprise and horror."
+    ]
+  },
+  {
+    "id": 3350,
+    "text": "mob",
+    "translation": "ամբոխ",
+    "audio": "./audio/5000/mob.mp3",
+    "examples": [
+      "an angry mob",
+      "The mob was preparing to storm the building."
+    ]
+  },
+  {
+    "id": 3351,
+    "text": "mobile",
+    "translation": "բջջային",
+    "audio": "./audio/5000/mobile.mp3",
+    "examples": [
+      "What's your mobile number?",
+      "Mobile users spent 35 per cent more time on their devices this year."
+    ]
+  },
+  {
+    "id": 3353,
+    "text": "mobility",
+    "translation": "շարժունակություն",
+    "audio": "./audio/5000/mobility.mp3",
+    "examples": [
+      "The high cost of living acts as an obstacle to mobility of labour."
+    ]
+  },
+  {
+    "id": 3354,
+    "text": "mobilize",
+    "translation": "մոբիլիզացնել",
+    "audio": "./audio/5000/mobilize.mp3",
+    "examples": [
+      "The unions mobilized thousands of workers in a protest against the cuts.",
+      "They successfully mobilized public opinion against him."
+    ]
+  },
+  {
+    "id": 3355,
+    "text": "mode",
+    "translation": "եղանակ",
+    "audio": "./audio/5000/mode.mp3",
+    "examples": [
+      "a mode of communication",
+      "a mode of behaviour",
+      "environment-friendly modes of transport"
+    ]
+  },
+  {
+    "id": 3356,
+    "text": "model",
+    "translation": "մոդել",
+    "audio": "./audio/5000/model.mp3",
+    "examples": [
+      "a working model of a fire engine",
+      "I used to build model aeroplanes."
+    ]
+  },
+  {
+    "id": 3358,
+    "text": "moderate",
+    "translation": "չափավոր",
+    "audio": "./audio/5000/moderate.mp3",
+    "examples": [
+      "Even moderate amounts of the drug can be fatal.",
+      "The team enjoyed only moderate success last season."
+    ]
+  },
+  {
+    "id": 3359,
+    "text": "modern",
+    "translation": "ժամանակակից",
+    "audio": "./audio/5000/modern.mp3",
+    "examples": [
+      "the modern industrial world",
+      "Stress is a major problem of modern life.",
+      "Shakespeare's language can be a problem for modern readers."
+    ]
+  },
+  {
+    "id": 3360,
+    "text": "modest",
+    "translation": "համեստ",
+    "audio": "./audio/5000/modest.mp3",
+    "examples": [
+      "He charged a relatively modest fee.",
+      "She grew up in a modest little house in the suburbs."
+    ]
+  },
+  {
+    "id": 3361,
+    "text": "modification",
+    "translation": "փոփոխություն",
+    "audio": "./audio/5000/modification.mp3",
+    "examples": [
+      "Considerable modification of the existing system is needed."
+    ]
+  },
+  {
+    "id": 3362,
+    "text": "modify",
+    "translation": "փոփոխել",
+    "audio": "./audio/5000/modify.mp3",
+    "examples": [
+      "Patients are taught how to modify their diet.",
+      "The law has been significantly modified since that ruling."
+    ]
+  },
+  {
+    "id": 3363,
+    "text": "moment",
+    "translation": "պահը",
+    "audio": "./audio/5000/moment.mp3",
+    "examples": [
+      "Could you wait a moment, please?",
+      "This won't take a moment."
+    ]
+  },
+  {
+    "id": 3364,
+    "text": "momentum",
+    "translation": "թափ",
+    "audio": "./audio/5000/momentum.mp3",
+    "examples": [
+      "The fight for his release gathers momentum each day.",
+      "They began to lose momentum in the second half of the game."
+    ]
+  },
+  {
+    "id": 3366,
+    "text": "money",
+    "translation": "փող",
+    "audio": "./audio/5000/money.mp3",
+    "examples": [
+      "How much money is there in my account?",
+      "The money is much better in my new job."
+    ]
+  },
+  {
+    "id": 3369,
+    "text": "monk",
+    "translation": "վանական",
+    "audio": "./audio/5000/monk.mp3",
+    "examples": [
+      "Buddhist monks"
+    ]
+  },
+  {
+    "id": 3370,
+    "text": "monkey",
+    "translation": "կապիկ",
+    "audio": "./audio/5000/monkey.mp3",
+    "examples": [
+      "Like humans, apes and monkeys live in complex social groupings."
+    ]
+  },
+  {
+    "id": 3371,
+    "text": "monopoly",
+    "translation": "մենաշնորհ",
+    "audio": "./audio/5000/monopoly.mp3",
+    "examples": [
+      "In the past central government had a monopoly on television broadcasting.",
+      "Electricity, gas and water were considered to be natural monopolies."
+    ]
+  },
+  {
+    "id": 3372,
+    "text": "monster",
+    "translation": "հրեշ",
+    "audio": "./audio/5000/monster.mp3",
+    "examples": [
+      "a monster with three heads"
+    ]
+  },
+  {
+    "id": 3373,
+    "text": "month",
+    "translation": "ամիս",
+    "audio": "./audio/5000/month.mp3",
+    "examples": [
+      "The months of July and August are the hottest.",
+      "We're moving house next month."
+    ]
+  },
+  {
+    "id": 3374,
+    "text": "monthly",
+    "translation": "ամսական",
+    "audio": "./audio/5000/monthly.mp3",
+    "examples": [
+      "a monthly meeting"
+    ]
+  },
+  {
+    "id": 3375,
+    "text": "monument",
+    "translation": "հուշարձան",
+    "audio": "./audio/5000/monument.mp3",
+    "examples": [
+      "A monument to him was erected in St Paul's Cathedral."
+    ]
+  },
+  {
+    "id": 3376,
+    "text": "mood",
+    "translation": "տրամադրություն",
+    "audio": "./audio/5000/mood.mp3",
+    "examples": [
+      "Wait until he’s in a better mood before you ask him.",
+      "He was in no mood for being polite to visitors."
+    ]
+  },
+  {
+    "id": 3377,
+    "text": "moon",
+    "translation": "լուսին",
+    "audio": "./audio/5000/moon.mp3",
+    "examples": [
+      "the surface of the moon",
+      "the first man to walk on the moon"
+    ]
+  },
+  {
+    "id": 3378,
+    "text": "moral",
+    "translation": "բարոյական",
+    "audio": "./audio/5000/moral.mp3",
+    "examples": [
+      "a moral issue",
+      "Young people these days have no morals.",
+      "a decline in moral standards"
+    ]
+  },
+  {
+    "id": 3380,
+    "text": "morality",
+    "translation": "բարոյականություն",
+    "audio": "./audio/5000/morality.mp3",
+    "examples": [
+      "Standards of morality seem to be dropping."
+    ]
+  },
+  {
+    "id": 3381,
+    "text": "more",
+    "translation": "ավելին",
+    "audio": "./audio/5000/more.mp3",
+    "examples": [
+      "She was far more intelligent than her sister.",
+      "He read the letter more carefully the second time."
+    ]
+  },
+  {
+    "id": 202,
+    "text": "alternative",
+    "translation": "այլընտրանք",
+    "audio": "./audio/5000/alternative.mp3",
+    "examples": [
+      "The car is too expensive so we're trying to find a cheaper alternative.",
+      "There is a vegetarian alternative on the menu every day."
+    ]
+  },
+  {
+    "id": 203,
+    "text": "although",
+    "translation": "չնայած",
+    "audio": "./audio/5000/although.mp3",
+    "examples": [
+      "Although the sun was shining, it wasn't very warm.",
+      "Although small, the kitchen is well designed."
+    ]
+  },
+  {
+    "id": 204,
+    "text": "altogether",
+    "translation": "ամբողջությամբ",
+    "audio": "./audio/5000/altogether.mp3",
+    "examples": [
+      "The train went slower and slower until it stopped altogether.",
+      "I don't altogether agree with you."
+    ]
+  },
+  {
+    "id": 205,
+    "text": "aluminium",
+    "translation": "աբգդեզ",
+    "audio": "./audio/5000/aluminium.mp3",
+    "examples": [
+      "aluminium saucepans/window frames",
+      "aluminium foil (= for example, for wrapping food in)"
+    ]
+  },
+  {
+    "id": 206,
+    "text": "always",
+    "translation": "միշտ",
+    "audio": "./audio/5000/always.mp3",
+    "examples": [
+      "There's almost always somebody at home in the evenings.",
+      "Always lock your car.",
+      "She always arrives at 7.30.",
+      "The children always seem to be hungry.",
+      "Success seems always to be out of reach.",
+      "Your ideas are always welcome.",
+      "It's not always easy to do the right thing.",
+      "We're not always this busy!"
+    ]
+  },
+  {
+    "id": 207,
+    "text": "amateur",
+    "translation": "սիրողական",
+    "audio": "./audio/5000/amateur.mp3",
+    "examples": [
+      "an amateur photographer",
+      "The tournament is open to both amateurs and professionals."
+    ]
+  },
+  {
+    "id": 209,
+    "text": "amazed",
+    "translation": "զարմացած",
+    "audio": "./audio/5000/amazed.mp3",
+    "examples": [
+      "We were all amazed at the number of people who came.",
+      "I was amazed at her knowledge of French literature.",
+      "We just moved house and are amazed at the amount of junk we have.",
+      "We are constantly amazed by the quality and range of the books.",
+      "We were amazed by his generosity.",
+      "I was banging so loudly I’m amazed (that) they didn’t hear me.",
+      "She was amazed how little he had changed.",
+      "I was amazed at how well we did.",
+      " amazed to see, find, learn, discover We were amazed to find that no one was hurt."
+    ]
+  },
+  {
+    "id": 210,
+    "text": "amazing",
+    "translation": "ապշեցուցիչ, զարմանալի",
+    "audio": "./audio/5000/amazing.mp3",
+    "examples": [
+      "an amazing feat/story/experience",
+      "That's amazing, isn't it?",
+      "The amazing thing is, he really believes he'll get away with it.",
+      " amazing to do something It was truly amazing to see how much work goes into a Broadway musical.",
+      " it is amazing how, what, etc… It's amazing how quickly people adapt.",
+      " it is amazing that… I find it amazing that people can be so irresponsible.",
+      "It’s amazing the difference a few polite words make."
+    ]
+  },
+  {
+    "id": 211,
+    "text": "ambassador",
+    "translation": "դեսպան",
+    "audio": "./audio/5000/ambassador.mp3",
+    "examples": [
+      "the British Ambassador to Italy/in Rome",
+      "a former ambassador to the UN"
+    ]
+  },
+  {
+    "id": 212,
+    "text": "ambition",
+    "translation": "փառասիրություն",
+    "audio": "./audio/5000/ambition.mp3",
+    "examples": [
+      "She had fulfilled her lifelong ambition.",
+      "His burning ambition was to study medicine.",
+      "political/artistic/career ambitions",
+      "At last he had realized his life's ambition.",
+      "He had only one ambition in life.",
+      "the country's nuclear ambitions (= plans to develop nuclear weapons)",
+      " ambition of being/doing something She never achieved her ambition of becoming a famous writer."
+    ]
+  },
+  {
+    "id": 213,
+    "text": "ambitious",
+    "translation": "հավակնոտ",
+    "audio": "./audio/5000/ambitious.mp3",
+    "examples": [
+      "a fiercely ambitious young manager",
+      "They were very ambitious for their children (= they wanted them to be successful)."
+    ]
+  },
+  {
+    "id": 214,
+    "text": "ambulance",
+    "translation": "շտապօգնություն",
+    "audio": "./audio/5000/ambulance.mp3",
+    "examples": [
+      "Call an ambulance!",
+      "the ambulance service",
+      "The ambulance crew rushed her to the hospital."
+    ]
+  },
+  {
+    "id": 215,
+    "text": "amend",
+    "translation": "փոփոխել",
+    "audio": "./audio/5000/amend.mp3",
+    "examples": [
+      "He asked to see the amended version.",
+      "The law has been amended to read as follows:…",
+      "Parliament will vote to amend the constitution."
+    ]
+  },
+  {
+    "id": 216,
+    "text": "amendment",
+    "translation": "փոփոխություն",
+    "audio": "./audio/5000/amendment.mp3",
+    "examples": [
+      "to introduce/propose/table an amendment (= to suggest it)",
+      "Parliament passed the bill without further amendment.",
+      " amendment to something She made several minor amendments to her essay."
+    ]
+  },
+  {
+    "id": 217,
+    "text": "amid",
+    "translation": "մեջ",
+    "audio": "./audio/5000/amid.mp3",
+    "examples": [
+      "He finished his speech amid tremendous applause.",
+      "The firm collapsed amid allegations of fraud."
+    ]
+  },
+  {
+    "id": 218,
+    "text": "among",
+    "translation": "շարքում",
+    "audio": "./audio/5000/among.mp3",
+    "examples": [
+      "a house among the trees",
+      "They strolled among the crowds.",
+      "I found the letter amongst his papers.",
+      "It's OK, you're among friends now."
+    ]
+  },
+  {
+    "id": 219,
+    "text": "amount",
+    "translation": "քանակ",
+    "audio": "./audio/5000/amount.mp3",
+    "examples": [
+      "I was amazed at the amount he could eat.",
+      "Mix the colours in equal amounts.",
+      " amount of something an amount of money/information/work/time",
+      "A certain amount of time has already been spent on the project.",
+      "The server is designed to store huge amounts of data.",
+      "Try to reduce the amount of energy and water you use at home.",
+      "Faculty should increase the amount and quality of feedback they provide."
+    ]
   }
 ]
