@@ -97,13 +97,24 @@
 
     function generateOptions(correct, items, field) {
         const options = [correct];
-        const otherItems = items.filter((item) => item[field][0] !== correct[0]);
+        const usedFirstLetters = new Set(correct[0].toLowerCase());
+
+        const otherItems = items.filter(item => item[field] &&
+            item[field][0].toLowerCase() !== correct[0].toLowerCase()
+        );
         shuffleArray(otherItems);
-        for (let i = 0; i < 5 && i < otherItems.length; i++) {
-            options.push(otherItems[i][field]);
+
+        for (let i = 0; i < otherItems.length && options.length < 6; i++) {
+            const firstLetter = otherItems[i][field][0].toLowerCase();
+            if (!usedFirstLetters.has(firstLetter)) {
+                options.push(otherItems[i][field]);
+                usedFirstLetters.add(firstLetter);
+            }
         }
+
         return shuffleArray(options);
     }
+
 
     function nextQuestion() {
         if (data.length === 0) return;
@@ -177,18 +188,18 @@
             resultEl.innerHTML = `<div>${currentAnswer}</div><div style="font-size: 0.7em; margin-top: 8px; color: #555;">${example}</div>`;
             score += 1;
             updateScore();
-            fadeOutResult();
+            fadeOutResult(true);
         } else {
             resultEl.style.color = "red";
             resultEl.innerHTML = `<div>❌ ${currentAnswer}</div><div style="font-size: 0.7em; margin-top: 8px; color: #555;">${example}</div>`;
             score -= 1;
             updateScore();
-            fadeOutResult();
+            fadeOutResult(false);
         }
     }
 
 
-    function fadeOutResult() {
+    function fadeOutResult(isCorrect) {
         const resultEl = document.getElementById('result');
         const optionsEl = document.getElementById('options');
         setTimeout(() => {
@@ -196,7 +207,7 @@
             setTimeout(() => {
                 nextQuestion();
             }, 500);  // Delay next question to show result
-        }, 5000);
+        }, isCorrect ? 1000 : 5000);
         resultEl.style.opacity = 1;
         optionsEl.style.display = 'none';
     }
@@ -212,14 +223,7 @@
 
     function maskWord(word) {
         const chars = word.split('');
-        const totalToShow = Math.max(1, Math.floor(chars.length * 0.5));
-
-        // Always show index 0
-        const indexes = [...Array(chars.length).keys()].filter(i => i !== 0);
-        shuffleArray(indexes);
-        const showIndexes = [0, ...indexes.slice(0, totalToShow - 1)]; // already showing first letter
-
-        return chars.map((char, idx) => showIndexes.includes(idx) ? char : '_ ').join('');
+        return chars.map((char, idx) => idx === 0 ? char : '_ ').join('');
     }
 
     // Start
