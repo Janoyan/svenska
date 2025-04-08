@@ -192,7 +192,7 @@
   {
     "id": 237,
     "text": "ankle",
-    "translation": "աբգդեզ",
+    "translation": "կոճ",
     "audio": "./audio/5000/ankle.mp3",
     "examples": [
       "to sprain/break/twist your ankle",
@@ -208,7 +208,7 @@
   {
     "id": 238,
     "text": "anniversary",
-    "translation": "աբգդեզ",
+    "translation": "տարեդարձ",
     "audio": "./audio/5000/anniversary.mp3",
     "examples": [
       "on the anniversary of his wife’s death",
@@ -224,7 +224,7 @@
   {
     "id": 239,
     "text": "announce",
-    "translation": "աբգդեզ",
+    "translation": "հայտարարել",
     "audio": "./audio/5000/announce.mp3",
     "examples": [
       " announce something He officially announced his intention to resign at today's press conference.",
@@ -240,7 +240,7 @@
   {
     "id": 240,
     "text": "announcement",
-    "translation": "աբգդեզ",
+    "translation": "հայտարարություն",
     "audio": "./audio/5000/announcement.mp3",
     "examples": [
       "to make an announcement",
@@ -256,7 +256,7 @@
   {
     "id": 241,
     "text": "annoy",
-    "translation": "աբգդեզ",
+    "translation": "զայրացնել",
     "audio": "./audio/5000/annoy.mp3",
     "examples": [
       " annoy somebody His constant joking was beginning to annoy her.",
@@ -269,7 +269,7 @@
   {
     "id": 242,
     "text": "annoyed",
-    "translation": "աբգդեզ",
+    "translation": "ջղայնացած",
     "audio": "./audio/5000/annoyed.mp3",
     "examples": [
       " annoyed with somebody at/about something He was beginning to get very annoyed with me about my carelessness.",
@@ -284,7 +284,7 @@
   {
     "id": 243,
     "text": "annoying",
-    "translation": "աբգդեզ",
+    "translation": "նյարդայնացնող",
     "audio": "./audio/5000/annoying.mp3",
     "examples": [
       "This interruption is very annoying.",
@@ -295,7 +295,7 @@
   {
     "id": 244,
     "text": "annual",
-    "translation": "աբգդեզ",
+    "translation": "տարեկան",
     "audio": "./audio/5000/annual.mp3",
     "examples": [
       "an annual meeting/event/report/conference",
@@ -307,7 +307,7 @@
   {
     "id": 245,
     "text": "annually",
-    "translation": "աբգդեզ",
+    "translation": "ամեն տարի",
     "audio": "./audio/5000/annually.mp3",
     "examples": [
       "The exhibition is held annually."
@@ -316,7 +316,7 @@
   {
     "id": 246,
     "text": "anonymous",
-    "translation": "աբգդեզ",
+    "translation": "անանուն",
     "audio": "./audio/5000/anonymous.mp3",
     "examples": [
       "an anonymous donor",
@@ -327,20 +327,7 @@
   {
     "id": 247,
     "text": "another",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/another.mp3",
-    "examples": [
-      "Would you like another drink?",
-      "‘Finished?’ ‘No, I've got another three questions to do.’",
-      "We've still got another (= a further) forty miles to go.",
-      "‘It's a bill.’ ‘Oh no, not another!’",
-      "I got another of those calls yesterday."
-    ]
-  },
-  {
-    "id": 248,
-    "text": "another",
-    "translation": "աբգդեզ",
+    "translation": "ուրիշ",
     "audio": "./audio/5000/another.mp3",
     "examples": [
       "Would you like another drink?",
@@ -353,7 +340,7 @@
   {
     "id": 249,
     "text": "answer",
-    "translation": "աբգդեզ",
+    "translation": "պատասխան",
     "audio": "./audio/5000/answer.mp3",
     "examples": [
       "I rang the bell, but there was no answer.",
@@ -372,7 +359,7 @@
   {
     "id": 250,
     "text": "answer",
-    "translation": "աբգդեզ",
+    "translation": "պատասխանել",
     "audio": "./audio/5000/answer.mp3",
     "examples": [
       "I repeated the question, but she didn't answer.",
@@ -398,7 +385,7 @@
   {
     "id": 251,
     "text": "anticipate",
-    "translation": "աբգդեզ",
+    "translation": "կանխատեսել",
     "audio": "./audio/5000/anticipate.mp3",
     "examples": [
       " anticipate something We don't anticipate any major problems.",
@@ -413,7 +400,7 @@
   {
     "id": 252,
     "text": "anxiety",
-    "translation": "աբգդեզ",
+    "translation": "անհանգստություն",
     "audio": "./audio/5000/anxiety.mp3",
     "examples": [
       "acute/intense/deep anxiety",
@@ -424,7 +411,7 @@
   {
     "id": 253,
     "text": "anxious",
-    "translation": "աբգդեզ",
+    "translation": "անհանգիստ",
     "audio": "./audio/5000/anxious.mp3",
     "examples": [
       "The bus was late and Sue began to get anxious.",
@@ -434,22 +421,9 @@
     ]
   },
   {
-    "id": 254,
-    "text": "any",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/any.mp3",
-    "examples": [
-      "He wasn't any good at French.",
-      "I can't run any faster.",
-      "Is your father feeling any better?",
-      "I don't want any more.",
-      "If you don't tell them, nobody will be any the wiser (= they will not find out about it)."
-    ]
-  },
-  {
     "id": 255,
     "text": "any",
-    "translation": "աբգդեզ",
+    "translation": "որևէ",
     "audio": "./audio/5000/any.mp3",
     "examples": [
       "I didn't eat any meat.",
@@ -461,22 +435,9 @@
     ]
   },
   {
-    "id": 256,
-    "text": "any",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/any.mp3",
-    "examples": [
-      "We need some more paint; there isn't any left.",
-      "I need some stamps. Are there any in your bag?",
-      "Please let me know how many people are coming, if any.",
-      "She spent hardly any of the money.",
-      "He returned home without any of the others."
-    ]
-  },
-  {
     "id": 257,
     "text": "any more",
-    "translation": "աբգդեզ",
+    "translation": "այլևս",
     "audio": "./audio/5000/any more.mp3",
     "examples": [
       "She doesn't live here any more.",
@@ -487,18 +448,17 @@
   {
     "id": 258,
     "text": "anybody",
-    "translation": "աբգդեզ",
+    "translation": "ամեն մեկը",
     "audio": "./audio/5000/anybody.mp3",
     "examples": [
       "Is there anybody who can help me?",
-      "Anybody can use the pool—you don't need to be a member.",
-      "She wasn't anybody before she got that job."
+      "Anybody can use the pool—you don't need to be a member."
     ]
   },
   {
     "id": 259,
     "text": "anyone",
-    "translation": "աբգդեզ",
+    "translation": "որևէ մեկը",
     "audio": "./audio/5000/anyone.mp3",
     "examples": [
       "Is anyone there?",
@@ -511,7 +471,7 @@
   {
     "id": 260,
     "text": "anything",
-    "translation": "աբգդեզ",
+    "translation": "ինչ-որ բան",
     "audio": "./audio/5000/anything.mp3",
     "examples": [
       "Would you like anything else?",
@@ -523,7 +483,7 @@
   {
     "id": 261,
     "text": "anyway",
-    "translation": "աբգդեզ",
+    "translation": "ամեն դեպքում",
     "audio": "./audio/5000/anyway.mp3",
     "examples": [
       "It's too expensive and anyway the colour doesn't suit you.",
@@ -533,7 +493,7 @@
   },
   {
     "id": 262,
-    "text": "anywhere",
+    "text": "որևէ տեղ",
     "translation": "աբգդեզ",
     "audio": "./audio/5000/anywhere.mp3",
     "examples": [
@@ -544,30 +504,9 @@
     ]
   },
   {
-    "id": 263,
-    "text": "anywhere",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/anywhere.mp3",
-    "examples": [
-      "I don't have anywhere to stay.",
-      "Do you know anywhere I can get my bike repaired?"
-    ]
-  },
-  {
-    "id": 264,
-    "text": "apart",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/apart.mp3",
-    "examples": [
-      "The two houses stood 500 metres apart.",
-      "Their birthdays are only three days apart.",
-      " (figurative) The two sides in the talks are still a long way apart (= are far from reaching an agreement)."
-    ]
-  },
-  {
     "id": 265,
     "text": "apartment",
-    "translation": "աբգդեզ",
+    "translation": "բնակարան",
     "audio": "./audio/5000/apartment.mp3",
     "examples": [
       "an apartment building",
@@ -583,7 +522,7 @@
   {
     "id": 266,
     "text": "apologize",
-    "translation": "աբգդեզ",
+    "translation": "ներողություն խնդրել",
     "audio": "./audio/5000/apologize.mp3",
     "examples": [
       "Why should I apologize?",
@@ -601,7 +540,7 @@
   {
     "id": 267,
     "text": "apology",
-    "translation": "աբգդեզ",
+    "translation": "ներողություն",
     "audio": "./audio/5000/apology.mp3",
     "examples": [
       "to offer/make/demand/accept an apology",
@@ -611,24 +550,9 @@
     ]
   },
   {
-    "id": 268,
-    "text": "app",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/app.mp3",
-    "examples": [
-      "You first need to install the app on your device.",
-      "to download/launch an app",
-      "to build/develop an app",
-      "Have you got the dictionary app on your phone?",
-      "Gaming today is all about mobile app downloads.",
-      "app developers",
-      "The app is available on/in the app store."
-    ]
-  },
-  {
     "id": 269,
     "text": "apparatus",
-    "translation": "աբգդեզ",
+    "translation": "ապարատ",
     "audio": "./audio/5000/apparatus.mp3",
     "examples": [
       "a piece of laboratory apparatus",
@@ -639,7 +563,7 @@
   {
     "id": 270,
     "text": "apparent",
-    "translation": "աբգդեզ",
+    "translation": "ակնհայտ",
     "audio": "./audio/5000/apparent.mp3",
     "examples": [
       "Their devotion was apparent.",
@@ -654,7 +578,7 @@
   {
     "id": 271,
     "text": "apparently",
-    "translation": "աբգդեզ",
+    "translation": "ըստ երևույթին",
     "audio": "./audio/5000/apparently.mp3",
     "examples": [
       "Apparently they are getting divorced soon.",
@@ -667,7 +591,7 @@
   {
     "id": 272,
     "text": "appeal",
-    "translation": "աբգդեզ",
+    "translation": "բողոքարկել",
     "audio": "./audio/5000/appeal.mp3",
     "examples": [
       " appeal for something to launch a TV appeal for donations to the charity",
@@ -678,23 +602,9 @@
     ]
   },
   {
-    "id": 273,
-    "text": "appeal",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/appeal.mp3",
-    "examples": [
-      "I am appealing (= asking for money) on behalf of the famine victims.",
-      " appeal for something Community leaders appealed for calm (= urged people to remain calm).",
-      " appeal to somebody Appeal directly to the public, answer their questions.",
-      " appeal to somebody for something The government appealed to the British people for help.",
-      " appeal for somebody to do something Police have appealed for witnesses to come forward.",
-      " appeal to somebody to do something Organizers appealed to the crowd not to panic."
-    ]
-  },
-  {
     "id": 274,
     "text": "appealing",
-    "translation": "աբգդեզ",
+    "translation": "գրավիչ",
     "audio": "./audio/5000/appealing.mp3",
     "examples": [
       "Spending the holidays in Britain wasn't a prospect that I found particularly appealing.",
@@ -705,7 +615,7 @@
   {
     "id": 275,
     "text": "appear",
-    "translation": "աբգդեզ",
+    "translation": "հայտնվել",
     "audio": "./audio/5000/appear.mp3",
     "examples": [
       "Three days later a rash appeared.",
@@ -720,7 +630,7 @@
   {
     "id": 276,
     "text": "appearance",
-    "translation": "աբգդեզ",
+    "translation": "տեսք",
     "audio": "./audio/5000/appearance.mp3",
     "examples": [
       "the physical/outward/external appearance of something",
@@ -734,7 +644,7 @@
   {
     "id": 277,
     "text": "appetite",
-    "translation": "աբգդեզ",
+    "translation": "ախորժակ",
     "audio": "./audio/5000/appetite.mp3",
     "examples": [
       "He suffered from headaches and loss of appetite.",
@@ -745,7 +655,7 @@
   {
     "id": 278,
     "text": "applaud",
-    "translation": "աբգդեզ",
+    "translation": "ծափահարել",
     "audio": "./audio/5000/applaud.mp3",
     "examples": [
       "He started to applaud and the others joined in.",
@@ -757,7 +667,7 @@
   {
     "id": 279,
     "text": "apple",
-    "translation": "աբգդեզ",
+    "translation": "խնձոր",
     "audio": "./audio/5000/apple.mp3",
     "examples": [
       "Peel and core the apples.",
@@ -770,7 +680,7 @@
   {
     "id": 280,
     "text": "applicable",
-    "translation": "աբգդեզ",
+    "translation": "կիրառելի",
     "audio": "./audio/5000/applicable.mp3",
     "examples": [
       "Give details of children where applicable (= if you have any).",
@@ -780,7 +690,7 @@
   {
     "id": 281,
     "text": "applicant",
-    "translation": "աբգդեզ",
+    "translation": "դիմորդ",
     "audio": "./audio/5000/applicant.mp3",
     "examples": [
       "There were over 500 applicants for the job.",
@@ -790,11 +700,11 @@
   {
     "id": 282,
     "text": "application",
-    "translation": "աբգդեզ",
+    "translation": "դիմում",
     "audio": "./audio/5000/application.mp3",
     "examples": [
       "a planning/patent/visa application",
-      "We have received applications from more than 3 000 students.",
+      "We have received applications from more than 3.000 students.",
       "You need to complete the online application form. ",
       "application for something an application for asylum/a licence",
       " (formal) an application for leave to appeal against the conviction",
@@ -807,7 +717,7 @@
   {
     "id": 283,
     "text": "apply",
-    "translation": "աբգդեզ",
+    "translation": "դիմել",
     "audio": "./audio/5000/apply.mp3",
     "examples": [
       "You should apply in person/by letter.",
@@ -823,7 +733,7 @@
   {
     "id": 284,
     "text": "appoint",
-    "translation": "աբգդեզ",
+    "translation": "նշանակել",
     "audio": "./audio/5000/appoint.mp3",
     "examples": [
       " appoint somebody They have appointed a new head teacher at my son's school.",
@@ -836,7 +746,7 @@
   {
     "id": 285,
     "text": "appointment",
-    "translation": "աբգդեզ",
+    "translation": "ժամադրություն",
     "audio": "./audio/5000/appointment.mp3",
     "examples": [
       "I've got a dental appointment at 3 o'clock.",
@@ -853,7 +763,7 @@
   {
     "id": 286,
     "text": "appreciate",
-    "translation": "աբգդեզ",
+    "translation": "գնահատել",
     "audio": "./audio/5000/appreciate.mp3",
     "examples": [
       "Over the years he came to appreciate the beauty and tranquillity of the river.",
@@ -866,7 +776,7 @@
   {
     "id": 287,
     "text": "appreciation",
-    "translation": "աբգդեզ",
+    "translation": "գնահատանք",
     "audio": "./audio/5000/appreciation.mp3",
     "examples": [
       "She shows little appreciation of good music.",
@@ -876,7 +786,7 @@
   {
     "id": 288,
     "text": "approach",
-    "translation": "աբգդեզ",
+    "translation": "մոտեցում",
     "audio": "./audio/5000/approach.mp3",
     "examples": [
       "She took the wrong approach in her dealings with them.",
@@ -887,29 +797,16 @@
       " approach to something We need to adopt a new approach to the problem.",
       "The therapy takes a holistic approach to health and well-being.",
       " approach for something a variety of approaches for the treatment of depression",
-      " approach for doing something Will this be a successful approach for providing high-tech offices?"
-    ]
-  },
-  {
-    "id": 289,
-    "text": "approach",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/approach.mp3",
-    "examples": [
+      " approach for doing something Will this be a successful approach for providing high-tech offices?",
       "We could hear the train approaching.",
       "Winter is approaching.",
-      "The deadline was fast approaching.",
-      "The rapidly approaching storm could be seen on the horizon. ",
-      "approach somebody/something She's approaching the end of her first year in the job.",
-      "I was approached by a woman who asked for the time.",
-      "The house is approached via a long driveway.",
-      " approach (somebody/something) from… The men approached the creature cautiously from behind."
+      "The deadline was fast approaching."
     ]
   },
   {
     "id": 290,
     "text": "appropriate",
-    "translation": "աբգդեզ",
+    "translation": "համապատասխան",
     "audio": "./audio/5000/appropriate.mp3",
     "examples": [
       "an appropriate response/measure/method",
@@ -928,7 +825,7 @@
   {
     "id": 291,
     "text": "appropriately",
-    "translation": "աբգդեզ",
+    "translation": "համապատասխանաբար",
     "audio": "./audio/5000/appropriately.mp3",
     "examples": [
       "The government has been accused of not responding appropriately to the needs of the homeless.",
@@ -938,7 +835,7 @@
   {
     "id": 292,
     "text": "approval",
-    "translation": "աբգդեզ",
+    "translation": "հավանություն",
     "audio": "./audio/5000/approval.mp3",
     "examples": [
       "She desperately wanted to win her father's approval.",
@@ -950,7 +847,7 @@
   {
     "id": 293,
     "text": "approve",
-    "translation": "աբգդեզ",
+    "translation": "հաստատել",
     "audio": "./audio/5000/approve.mp3",
     "examples": [
       "I told my mother I wanted to leave school but she didn't approve.",
@@ -963,7 +860,7 @@
   {
     "id": 294,
     "text": "approximately",
-    "translation": "աբգդեզ",
+    "translation": "մոտավորապես",
     "audio": "./audio/5000/approximately.mp3",
     "examples": [
       "The journey took approximately seven hours.",
@@ -974,7 +871,7 @@
   {
     "id": 295,
     "text": "April",
-    "translation": "աբգդեզ",
+    "translation": "ապրիլ",
     "audio": "./audio/5000/April.mp3",
     "examples": [
       " in April She was born in April.",
@@ -990,7 +887,7 @@
   {
     "id": 296,
     "text": "arbitrary",
-    "translation": "աբգդեզ",
+    "translation": "կամայական",
     "audio": "./audio/5000/arbitrary.mp3",
     "examples": [
       "The choice of players for the team seemed completely arbitrary.",
@@ -1000,7 +897,7 @@
   {
     "id": 297,
     "text": "architect",
-    "translation": "աբգդեզ",
+    "translation": "ճարտարապետ",
     "audio": "./audio/5000/architect.mp3",
     "examples": [
       "The house was designed by architect Louis Kahn.",
@@ -1011,7 +908,7 @@
   {
     "id": 298,
     "text": "architectural",
-    "translation": "աբգդեզ",
+    "translation": "ճարտարապետական",
     "audio": "./audio/5000/architectural.mp3",
     "examples": [
       "architectural features"
@@ -1020,7 +917,7 @@
   {
     "id": 299,
     "text": "architecture",
-    "translation": "աբգդեզ",
+    "translation": "ճարտարապետություն",
     "audio": "./audio/5000/architecture.mp3",
     "examples": [
       "to study architecture",
@@ -1031,7 +928,7 @@
   {
     "id": 300,
     "text": "archive",
-    "translation": "աբգդեզ",
+    "translation": "արխիվ",
     "audio": "./audio/5000/archive.mp3",
     "examples": [
       "the National Sound Archive",
@@ -1042,7 +939,7 @@
   {
     "id": 301,
     "text": "area",
-    "translation": "աբգդեզ",
+    "translation": "տարածք, շրջան",
     "audio": "./audio/5000/area.mp3",
     "examples": [
       "to improve access to services in rural areas",
@@ -1063,7 +960,7 @@
   {
     "id": 302,
     "text": "arena",
-    "translation": "աբգդեզ",
+    "translation": "արենա",
     "audio": "./audio/5000/arena.mp3",
     "examples": [
       "a concert at Wembley Arena",
@@ -1075,7 +972,7 @@
   {
     "id": 303,
     "text": "arguably",
-    "translation": "աբգդեզ",
+    "translation": "վիճելիորեն",
     "audio": "./audio/5000/arguably.mp3",
     "examples": [
       "He is arguably the best actor of his generation."
@@ -1084,7 +981,7 @@
   {
     "id": 304,
     "text": "argue",
-    "translation": "աբգդեզ",
+    "translation": "վիճել",
     "audio": "./audio/5000/argue.mp3",
     "examples": [
       "My brothers are always arguing.",
@@ -1098,7 +995,7 @@
   {
     "id": 305,
     "text": "argument",
-    "translation": "աբգդեզ",
+    "translation": "փաստարկ",
     "audio": "./audio/5000/argument.mp3",
     "examples": [
       "to win/lose an argument ",
@@ -1112,7 +1009,7 @@
   {
     "id": 306,
     "text": "arise",
-    "translation": "աբգդեզ",
+    "translation": "առաջանալ",
     "audio": "./audio/5000/arise.mp3",
     "examples": [
       "An opportunity arose to work in the United States.",
@@ -1127,7 +1024,7 @@
   },
   {
     "id": 307,
-    "text": "arm",
+    "text": "բազուկ, զինվել",
     "translation": "աբգդեզ",
     "audio": "./audio/5000/arm.mp3",
     "examples": [
@@ -1148,20 +1045,9 @@
     ]
   },
   {
-    "id": 308,
-    "text": "arm",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/arm.mp3",
-    "examples": [
-      "The country was arming against the enemy.",
-      " arm yourself/somebody (with something) The men armed themselves with sticks and stones.",
-      " (figurative) She had armed herself for the meeting with all the latest statistics."
-    ]
-  },
-  {
     "id": 309,
     "text": "armed",
-    "translation": "աբգդեզ",
+    "translation": "զինված",
     "audio": "./audio/5000/armed.mp3",
     "examples": [
       "an armed robbery",
@@ -1172,7 +1058,7 @@
   {
     "id": 310,
     "text": "arms",
-    "translation": "աբգդեզ",
+    "translation": "զենքեր",
     "audio": "./audio/5000/arms.mp3",
     "examples": [
       "arms and ammunition",
@@ -1186,7 +1072,7 @@
   {
     "id": 311,
     "text": "army",
-    "translation": "աբգդեզ",
+    "translation": "բանակ",
     "audio": "./audio/5000/army.mp3",
     "examples": [
       "The two opposing armies faced each other across the battlefield.",
@@ -1196,21 +1082,13 @@
   {
     "id": 312,
     "text": "around",
-    "translation": "աբգդեզ",
+    "translation": "մոտավորապես, շուրջը",
     "audio": "./audio/5000/around.mp3",
     "examples": [
       "He arrived around five o'clock.",
       "The cost would be somewhere around £1 500.",
       "There were only around 125 people present.",
-      "The correct figure is actually around double that amount."
-    ]
-  },
-  {
-    "id": 313,
-    "text": "around",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/around.mp3",
-    "examples": [
+      "The correct figure is actually around double that amount.",
       "The house is built around a central courtyard.",
       "He put his arms around her."
     ]
@@ -1218,7 +1096,7 @@
   {
     "id": 314,
     "text": "arrange",
-    "translation": "աբգդեզ",
+    "translation": "կազմակերպել",
     "audio": "./audio/5000/arrange.mp3",
     "examples": [
       " arrange something The party was arranged quickly.",
@@ -1237,7 +1115,7 @@
   {
     "id": 315,
     "text": "arrangement",
-    "translation": "աբգդեզ",
+    "translation": "պայմանավորվածություն",
     "audio": "./audio/5000/arrangement.mp3",
     "examples": [
       "Travel and accommodation arrangements have been finalized.",
@@ -1247,7 +1125,7 @@
   {
     "id": 316,
     "text": "array",
-    "translation": "աբգդեզ",
+    "translation": "զանգված",
     "audio": "./audio/5000/array.mp3",
     "examples": [
       "a vast array of bottles of different shapes and sizes",
@@ -1257,7 +1135,7 @@
   {
     "id": 317,
     "text": "arrest",
-    "translation": "աբգդեզ",
+    "translation": "ձերբակալություն, կալանք",
     "audio": "./audio/5000/arrest.mp3",
     "examples": [
       "The police made several arrests.",
@@ -1267,24 +1145,9 @@
     ]
   },
   {
-    "id": 318,
-    "text": "arrest",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/arrest.mp3",
-    "examples": [
-      " arrest somebody A man has been arrested in connection with the robbery.",
-      "A local man has since been arrested on suspicion of murder.",
-      "Police arrested three suspects.",
-      "He was arrested on corruption charges. ",
-      "She was arrested and charged with arson.",
-      " arrest somebody for something She was arrested for drug-related offences.",
-      " arrest somebody for doing something You could get arrested for doing that."
-    ]
-  },
-  {
     "id": 319,
     "text": "arrival",
-    "translation": "աբգդեզ",
+    "translation": "ժամանում",
     "audio": "./audio/5000/arrival.mp3",
     "examples": [
       "We apologize for the late arrival of the train.",
@@ -1301,7 +1164,7 @@
   {
     "id": 320,
     "text": "arrive",
-    "translation": "աբգդեզ",
+    "translation": "ժամանել",
     "audio": "./audio/5000/arrive.mp3",
     "examples": [
       "I'll wait until they arrive.",
@@ -1320,7 +1183,7 @@
   {
     "id": 321,
     "text": "arrow",
-    "translation": "աբգդեզ",
+    "translation": "նետ, սլաք",
     "audio": "./audio/5000/arrow.mp3",
     "examples": [
       "a bow and arrow",
@@ -1331,7 +1194,7 @@
   {
     "id": 322,
     "text": "art",
-    "translation": "աբգդեզ",
+    "translation": "արվեստ",
     "audio": "./audio/5000/art.mp3",
     "examples": [
       "modern/contemporary art",
@@ -1346,7 +1209,7 @@
   {
     "id": 323,
     "text": "article",
-    "translation": "աբգդեզ",
+    "translation": "հոդված",
     "audio": "./audio/5000/article.mp3",
     "examples": [
       "to read/write/publish an article",
@@ -1359,7 +1222,7 @@
   {
     "id": 324,
     "text": "articulate",
-    "translation": "աբգդեզ",
+    "translation": "արտահայտել",
     "audio": "./audio/5000/articulate.mp3",
     "examples": [
       "She struggled to articulate her thoughts.",
@@ -1369,7 +1232,7 @@
   {
     "id": 325,
     "text": "artificial",
-    "translation": "աբգդեզ",
+    "translation": "արհեստական",
     "audio": "./audio/5000/artificial.mp3",
     "examples": [
       "an artificial limb/flower/sweetener/fertilizer ",
@@ -1379,7 +1242,7 @@
   {
     "id": 326,
     "text": "artist",
-    "translation": "աբգդեզ",
+    "translation": "նկարիչ, արվեստագետ",
     "audio": "./audio/5000/artist.mp3",
     "examples": [
       "an exhibition of work by contemporary British artists",
@@ -1394,7 +1257,7 @@
   {
     "id": 327,
     "text": "artistic",
-    "translation": "աբգդեզ",
+    "translation": "գեղարվեստական",
     "audio": "./audio/5000/artistic.mp3",
     "examples": [
       "the artistic works of the period",
@@ -1406,53 +1269,16 @@
   {
     "id": 328,
     "text": "artwork",
-    "translation": "աբգդեզ",
+    "translation": "արվեստի գործ",
     "audio": "./audio/5000/artwork.mp3",
     "examples": [
       "Can you let me have the finished artwork for the poster by Friday?"
     ]
   },
   {
-    "id": 329,
-    "text": "as",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/as.mp3",
-    "examples": [
-      "You're as tall as your father.",
-      "He was as white as a sheet.",
-      "She doesn't play as well as her sister.",
-      "I haven't known him as long as you (= as you have known him).",
-      "He doesn't earn as much as me.",
-      "He doesn't earn as much as I do.",
-      "It's not as hard as I thought.",
-      "Run as fast as you can.",
-      "We'd like it as soon as possible."
-    ]
-  },
-  {
-    "id": 330,
-    "text": "as",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/as.mp3",
-    "examples": [
-      "He sat watching her as she got ready.",
-      "As she grew older she gained in confidence."
-    ]
-  },
-  {
-    "id": 331,
-    "text": "as",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/as.mp3",
-    "examples": [
-      "They were all dressed as clowns.",
-      "The bomb was disguised as a package."
-    ]
-  },
-  {
     "id": 332,
     "text": "ash",
-    "translation": "աբգդեզ",
+    "translation": "մոխիր",
     "audio": "./audio/5000/ash.mp3",
     "examples": [
       "cigarette ash",
@@ -1464,7 +1290,7 @@
   {
     "id": 333,
     "text": "ashamed",
-    "translation": "աբգդեզ",
+    "translation": "ամաչել",
     "audio": "./audio/5000/ashamed.mp3",
     "examples": [
       " ashamed of something She was deeply ashamed of her behaviour at the party.",
@@ -1480,7 +1306,7 @@
   {
     "id": 334,
     "text": "aside",
-    "translation": "աբգդեզ",
+    "translation": "մի կողմ",
     "audio": "./audio/5000/aside.mp3",
     "examples": [
       "She pulled the curtain aside.",
@@ -1493,7 +1319,7 @@
   {
     "id": 335,
     "text": "ask",
-    "translation": "աբգդեզ",
+    "translation": "հարցնել",
     "audio": "./audio/5000/ask.mp3",
     "examples": [
       "How old are you—if you don’t mind me/my asking?",
@@ -1520,7 +1346,7 @@
   {
     "id": 336,
     "text": "asleep",
-    "translation": "աբգդեզ",
+    "translation": "քնած",
     "audio": "./audio/5000/asleep.mp3",
     "examples": [
       "I waited until they were all fast asleep (= sleeping deeply).",
@@ -1534,7 +1360,7 @@
   {
     "id": 337,
     "text": "aspect",
-    "translation": "աբգդեզ",
+    "translation": "տեսակետ",
     "audio": "./audio/5000/aspect.mp3",
     "examples": [
       " aspect of something The book aims to cover all aspects of city life.",
@@ -1549,7 +1375,7 @@
   {
     "id": 338,
     "text": "aspiration",
-    "translation": "աբգդեզ",
+    "translation": "ձգտում",
     "audio": "./audio/5000/aspiration.mp3",
     "examples": [
       "I didn't realize you had political aspirations.",
@@ -1560,7 +1386,7 @@
   {
     "id": 339,
     "text": "aspire",
-    "translation": "աբգդեզ",
+    "translation": "ձգտել",
     "audio": "./audio/5000/aspire.mp3",
     "examples": [
       " aspire (to something) She aspired to a scientific career.",
@@ -1570,7 +1396,7 @@
   {
     "id": 340,
     "text": "assassination",
-    "translation": "աբգդեզ",
+    "translation": "սպանություն",
     "audio": "./audio/5000/assassination.mp3",
     "examples": [
       "The president survived a number of assassination attempts.",
@@ -1580,30 +1406,20 @@
   {
     "id": 341,
     "text": "assault",
-    "translation": "աբգդեզ",
+    "translation": "հարձակում",
     "audio": "./audio/5000/assault.mp3",
     "examples": [
       "Both men were charged with assault.",
       "sexual assaults",
-      " assault on/upon somebody A significant number of indecent assaults on women go unreported."
-    ]
-  },
-  {
-    "id": 342,
-    "text": "assault",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/assault.mp3",
-    "examples": [
+      " assault on/upon somebody A significant number of indecent assaults on women go unreported.",
       "He has been charged with assaulting a police officer.",
-      "Four women have been sexually assaulted in the area recently.",
-      "He admitted indecently assaulting the child.",
-      "Many healthcare workers say they have been physically assaulted by patients."
+      "Four women have been sexually assaulted in the area recently."
     ]
   },
   {
     "id": 343,
     "text": "assemble",
-    "translation": "աբգդեզ",
+    "translation": "հավաքել",
     "audio": "./audio/5000/assemble.mp3",
     "examples": [
       "All the students were asked to assemble in the main hall.",
@@ -1616,7 +1432,7 @@
   {
     "id": 344,
     "text": "assembly",
-    "translation": "աբգդեզ",
+    "translation": "ժողով",
     "audio": "./audio/5000/assembly.mp3",
     "examples": [
       "state/legislative/federal/local assemblies",
@@ -1631,7 +1447,7 @@
   {
     "id": 345,
     "text": "assert",
-    "translation": "աբգդեզ",
+    "translation": "պնդել",
     "audio": "./audio/5000/assert.mp3",
     "examples": [
       " assert that… She continued to assert that she was innocent.",
@@ -1645,7 +1461,7 @@
   {
     "id": 346,
     "text": "assertion",
-    "translation": "աբգդեզ",
+    "translation": "պնդում",
     "audio": "./audio/5000/assertion.mp3",
     "examples": [
       "He was correct in his assertion that the minister had been lying.",
@@ -1655,7 +1471,7 @@
   {
     "id": 347,
     "text": "assess",
-    "translation": "աբգդեզ",
+    "translation": "գնահատել",
     "audio": "./audio/5000/assess.mp3",
     "examples": [
       " assess somebody/something Accurately assessing environmental impacts is very complex.",
@@ -1673,7 +1489,7 @@
   {
     "id": 348,
     "text": "assessment",
-    "translation": "աբգդեզ",
+    "translation": "գնահատում",
     "audio": "./audio/5000/assessment.mp3",
     "examples": [
       "a detailed assessment of the risks involved",
@@ -1686,7 +1502,7 @@
   {
     "id": 349,
     "text": "asset",
-    "translation": "աբգդեզ",
+    "translation": "ունեցվածք",
     "audio": "./audio/5000/asset.mp3",
     "examples": [
       "In his job, patience is an invaluable asset.",
@@ -1698,7 +1514,7 @@
   {
     "id": 350,
     "text": "assign",
-    "translation": "աբգդեզ",
+    "translation": "հանձնարարել",
     "audio": "./audio/5000/assign.mp3",
     "examples": [
       " assign something (to somebody) The teacher assigned a different task to each of the children.",
@@ -1710,7 +1526,7 @@
   {
     "id": 351,
     "text": "assignment",
-    "translation": "աբգդեզ",
+    "translation": "հանձնարարություն",
     "audio": "./audio/5000/assignment.mp3",
     "examples": [
       "Students are required to complete all homework assignments.",
@@ -1724,7 +1540,7 @@
   {
     "id": 352,
     "text": "assist",
-    "translation": "աբգդեզ",
+    "translation": "օժանդակել, աջակցել",
     "audio": "./audio/5000/assist.mp3",
     "examples": [
       "Anyone willing to assist can contact this number.",
@@ -1743,7 +1559,7 @@
   {
     "id": 353,
     "text": "assistance",
-    "translation": "աբգդեզ",
+    "translation": "աջակցություն",
     "audio": "./audio/5000/assistance.mp3",
     "examples": [
       "technical/economic/military assistance",
@@ -1759,7 +1575,7 @@
   {
     "id": 354,
     "text": "assistant",
-    "translation": "աբգդեզ",
+    "translation": "օգնական",
     "audio": "./audio/5000/assistant.mp3",
     "examples": [
       "the assistant manager/director/commissioner",
@@ -1767,15 +1583,7 @@
       "Assistant Chief Constable Owen",
       "Assistant Attorney General William Weld",
       "a former assistant Secretary of State",
-      "an assistant coach/editor"
-    ]
-  },
-  {
-    "id": 355,
-    "text": "assistant",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/assistant.mp3",
-    "examples": [
+      "an assistant coach/editor",
       "My assistant will now demonstrate the machine in action.",
       "a senior research assistant",
       "She works as a care assistant in an old people's home.",
@@ -1786,7 +1594,7 @@
   {
     "id": 356,
     "text": "associate",
-    "translation": "աբգդեզ",
+    "translation": "ասոսացնել",
     "audio": "./audio/5000/associate.mp3",
     "examples": [
       " associate somebody/something with somebody/something I always associate the smell of baking with my childhood.",
@@ -1798,7 +1606,7 @@
   {
     "id": 357,
     "text": "associated",
-    "translation": "աբգդեզ",
+    "translation": "ասոցացված",
     "audio": "./audio/5000/associated.mp3",
     "examples": [
       " associated with doing something the risks associated with taking drugs",
@@ -1812,7 +1620,7 @@
   {
     "id": 358,
     "text": "association",
-    "translation": "աբգդեզ",
+    "translation": "ասոսացիա",
     "audio": "./audio/5000/association.mp3",
     "examples": [
       "Do you belong to any professional or trade associations?",
@@ -1822,7 +1630,7 @@
   {
     "id": 359,
     "text": "assume",
-    "translation": "աբգդեզ",
+    "translation": "ենթադրել",
     "audio": "./audio/5000/assume.mp3",
     "examples": [
       " assume (that)… It is reasonable to assume (that) the economy will continue to improve.",
