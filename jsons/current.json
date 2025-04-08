@@ -1,5 +1,6 @@
 [
   {
+    "id": -1,
     "text": "bloated",
     "image": "",
     "translation": "տռուզ, ուռած",
@@ -9,6 +10,7 @@
     ]
   },
   {
+    "id": -2,
     "text": "nourishment",
     "image": "",
     "translation": "սնուցում",
@@ -18,6 +20,7 @@
     ]
   },
   {
+    "id": -3,
     "text": "passionate",
     "image": "կրքոտ, տարված",
     "translation": "",
@@ -27,6 +30,7 @@
     ]
   },
   {
+    "id": -4,
     "text": "sit still",
     "image": "",
     "translation": "անշարժ նստել",
@@ -36,6 +40,7 @@
     ]
   },
   {
+    "id": -5,
     "text": "irritate",
     "image": "",
     "translation": "զայրացնել, ջղայնացնել",
@@ -45,6 +50,7 @@
     ]
   },
   {
+    "id": -6,
     "text": "profound",
     "image": "",
     "translation": "խոր, խորագին, глубокое",
@@ -54,6 +60,7 @@
     ]
   },
   {
+    "id": -7,
     "text": "evolved",
     "image": "",
     "translation": "զարգացել է",
@@ -63,6 +70,7 @@
     ]
   },
   {
+    "id": -8,
     "text": "miserable",
     "image": "",
     "translation": "դժբախտ, թշվառ",
@@ -72,6 +80,7 @@
     ]
   },
   {
+    "id": -9,
     "text": "stunned",
     "image": "",
     "translation": "շշմած",
@@ -81,6 +90,7 @@
     ]
   },
   {
+    "id": -10,
     "text": "infiltrate",
     "image": "",
     "translation": "ներթափանցել",
@@ -90,6 +100,7 @@
     ]
   },
   {
+    "id": -11,
     "text": "contempt",
     "image": "",
     "translation": "արհամարանք",
@@ -99,6 +110,7 @@
     ]
   },
   {
+    "id": -12,
     "text": "skeptical",
     "image": "",
     "translation": "կասկածամիտ",
@@ -108,6 +120,7 @@
     ]
   },
   {
+    "id": -13,
     "text": "an objective assessment",
     "image": "",
     "translation": "օբյեկտիվ գնահատական",
@@ -117,6 +130,7 @@
     ]
   },
   {
+    "id": -14,
     "text": "exacerbates",
     "image": "",
     "translation": "սաստկացնել",
@@ -126,6 +140,7 @@
     ]
   },
   {
+    "id": -15,
     "text": "dull",
     "image": "./images/dull.webp",
     "translation": "ձանձրալի",
@@ -135,6 +150,7 @@
     ]
   },
   {
+    "id": -16,
     "text": "insanely",
     "translation": "խելագարորեն, безумно",
     "audio": "./audio/5000/insanely.mp3",
@@ -143,6 +159,7 @@
     ]
   },
   {
+    "id": -17,
     "text": "bow hunter",
     "translation": "охотник с луком",
     "image": "./images/also being the best bow hunter on earth.jpg",
@@ -152,6 +169,7 @@
     ]
   },
   {
+    "id": -18,
     "text": "fascinating",
     "translation": "հմայիչ",
     "image": "./images/fascinating.webp",
@@ -162,6 +180,7 @@
     ]
   },
   {
+    "id": -19,
     "text": "trials and tribulations",
     "translation": "փորձություններ",
     "image": "",
@@ -171,6 +190,7 @@
     ]
   },
   {
+    "id": -20,
     "text": "grace and dignity",
     "translation": "շնորք և արժանապատվություն",
     "image": "",
@@ -181,6 +201,7 @@
     ]
   },
   {
+    "id": -21,
     "text": "looming over your head",
     "translation": "գլխիդ վերևում կախված",
     "image": "",
@@ -3092,7 +3113,7 @@
   {
     "id": 2572,
     "text": "hostile",
-    "translation": "աբգդեզ",
+    "translation": "թշնամական",
     "audio": "./audio/5000/hostile.mp3",
     "examples": [
       "The speaker got a hostile reception from the audience.",
@@ -3102,7 +3123,7 @@
   {
     "id": 2573,
     "text": "hostility",
-    "translation": "թշնամական",
+    "translation": "թշնամանք",
     "audio": "./audio/5000/hostility.mp3",
     "examples": [
       "There was a barely veiled hostility in her tone.",
@@ -3333,8 +3354,8 @@
   },
   {
     "id": 1302,
-    "text": "սովորույթն",
-    "translation": "աբգդեզ",
+    "text": "custom",
+    "translation": "սովորույթն",
     "audio": "./audio/5000/custom.mp3",
     "examples": [
       "She grew up with Chinese customs and traditions.",
@@ -4786,7 +4807,7 @@
   {
     "id": 205,
     "text": "aluminium",
-    "translation": "աբգդեզ",
+    "translation": "ալյումին",
     "audio": "./audio/5000/aluminium.mp3",
     "examples": [
       "aluminium saucepans/window frames",
