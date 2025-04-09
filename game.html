@@ -73,7 +73,7 @@
         }
         .score {
             margin-top: 10px;
-            font-size: 2em;
+            font-size: 1em;
             color: #008b8f;
             transition: font-size 0.3s ease-in-out;
         }
@@ -271,9 +271,9 @@
 
     function updateScore() {
         const scoreEl = document.getElementById('score');
-        scoreEl.style.fontSize = "2.5em";
+        scoreEl.style.fontSize = "1.5em";
         setTimeout(() => {
-            scoreEl.style.fontSize = "2em";
+            scoreEl.style.fontSize = "1em";
         }, 300);
         scoreEl.textContent = `${data.length}`;
     }

@@ -1646,7 +1646,7 @@
   {
     "id": 360,
     "text": "assumption",
-    "translation": "աբգդեզ",
+    "translation": "ենթադրություն",
     "audio": "./audio/5000/assumption.mp3",
     "examples": [
       "an underlying/implicit assumption",
@@ -1660,7 +1660,7 @@
   {
     "id": 361,
     "text": "assurance",
-    "translation": "աբգդեզ",
+    "translation": "հավաստիացում",
     "audio": "./audio/5000/assurance.mp3",
     "examples": [
       "They called for assurances that the government is committed to its education policy.",
@@ -1670,7 +1670,7 @@
   {
     "id": 362,
     "text": "assure",
-    "translation": "աբգդեզ",
+    "translation": "վստահեցնել",
     "audio": "./audio/5000/assure.mp3",
     "examples": [
       " assure somebody (that)… You think I did it deliberately, but I assure you (that) I did not.",
@@ -1685,7 +1685,7 @@
   {
     "id": 363,
     "text": "astonishing",
-    "translation": "աբգդեզ",
+    "translation": "ապշեցուցիչ",
     "audio": "./audio/5000/astonishing.mp3",
     "examples": [
       "She ran 100m in an astonishing 10.6 seconds.",
@@ -1695,7 +1695,7 @@
   {
     "id": 364,
     "text": "asylum",
-    "translation": "աբգդեզ",
+    "translation": "ապաստան",
     "audio": "./audio/5000/asylum.mp3",
     "examples": [
       "to seek/apply for/be granted asylum",
@@ -1703,25 +1703,9 @@
     ]
   },
   {
-    "id": 365,
-    "text": "at",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/at.mp3",
-    "examples": [
-      "at the corner of the street",
-      "We changed at Crewe.",
-      "They arrived late at the airport.",
-      "At the roundabout take the third exit.",
-      "I'll be at home all morning.",
-      "She's at Tom's (= at Tom's house).",
-      "I met her at the hospital.",
-      "How many people were there at the concert?"
-    ]
-  },
-  {
     "id": 366,
     "text": "athlete",
-    "translation": "աբգդեզ",
+    "translation": "ատլետ, մարզիկ",
     "audio": "./audio/5000/athlete.mp3",
     "examples": [
       "Olympic athletes",
@@ -1733,7 +1717,7 @@
   {
     "id": 367,
     "text": "atmosphere",
-    "translation": "աբգդեզ",
+    "translation": "մթնոլորտ",
     "audio": "./audio/5000/atmosphere.mp3",
     "examples": [
       "Wind power doesn't release carbon dioxide into the atmosphere.",
@@ -1746,7 +1730,7 @@
   {
     "id": 368,
     "text": "atrocity",
-    "translation": "աբգդեզ",
+    "translation": "վայրագություն",
     "audio": "./audio/5000/atrocity.mp3",
     "examples": [
       "In the war, both sides committed atrocities."
@@ -1755,7 +1739,7 @@
   {
     "id": 369,
     "text": "attach",
-    "translation": "աբգդեզ",
+    "translation": "կցել",
     "audio": "./audio/5000/attach.mp3",
     "examples": [
       " attach something I attach a copy of my notes for your information.",
@@ -1767,7 +1751,7 @@
   {
     "id": 370,
     "text": "attachment",
-    "translation": "աբգդեզ",
+    "translation": "հավելված",
     "audio": "./audio/5000/attachment.mp3",
     "examples": [
       "No attachment was included."
@@ -1776,22 +1760,14 @@
   {
     "id": 371,
     "text": "attack",
-    "translation": "աբգդեզ",
+    "translation": "հարձակում",
     "audio": "./audio/5000/attack.mp3",
     "examples": [
       "Five people were killed in the attacks that took place last night.",
       " attack on/upon somebody/something the recent series of deadly terrorist attacks on European cities",
       "a violent attack upon a police officer",
       " attack against somebody vicious attacks against defenceless people",
-      " attack by somebody/something A child is recovering in hospital after a serious attack by a stray dog."
-    ]
-  },
-  {
-    "id": 372,
-    "text": "attack",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/attack.mp3",
-    "examples": [
+      " attack by somebody/something A child is recovering in hospital after a serious attack by a stray dog.",
       "Most dogs will not attack unless provoked.",
       " attack somebody/something Terrorists attacked several targets across the city.",
       "A woman was brutally attacked by a gang of youths.",
@@ -1802,7 +1778,7 @@
   {
     "id": 373,
     "text": "attain",
-    "translation": "աբգդեզ",
+    "translation": "հասնել",
     "audio": "./audio/5000/attain.mp3",
     "examples": [
       "Most of our students attained five ‘A’ grades in their exams.",
@@ -1813,7 +1789,7 @@
   {
     "id": 374,
     "text": "attempt",
-    "translation": "աբգդեզ",
+    "translation": "փորձ փորձել",
     "audio": "./audio/5000/attempt.mp3",
     "examples": [
       "I passed my driving test at the first attempt.",
@@ -1824,15 +1800,7 @@
       "He has failed in three previous attempts to win the world title.",
       " in an attempt to do something Two factories were closed in an attempt to cut costs.",
       " attempt at something The couple made an unsuccessful attempt at a compromise.",
-      " attempt at doing something They were praised for making an attempt at solving the problem."
-    ]
-  },
-  {
-    "id": 375,
-    "text": "attempt",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/attempt.mp3",
-    "examples": [
+      " attempt at doing something They were praised for making an attempt at solving the problem.",
       " attempt to do something I will attempt to answer all your questions.",
       "She never attempted to explain her behaviour to her family.",
       "She has been unsuccessfully attempting to find out the name of the police officer.",
@@ -1844,7 +1812,7 @@
   {
     "id": 376,
     "text": "attend",
-    "translation": "աբգդեզ",
+    "translation": "ներկա լինել",
     "audio": "./audio/5000/attend.mp3",
     "examples": [
       "We'd like as many people as possible to attend.",
@@ -1858,7 +1826,7 @@
   {
     "id": 377,
     "text": "attendance",
-    "translation": "աբգդեզ",
+    "translation": "հաճախում, ներկայություն",
     "audio": "./audio/5000/attendance.mp3",
     "examples": [
       "Attendance at these lectures is not compulsory.",
@@ -1868,18 +1836,10 @@
   {
     "id": 378,
     "text": "attention",
-    "translation": "աբգդեզ",
+    "translation": "ուշադրություն",
     "audio": "./audio/5000/attention.mp3",
     "examples": [
-      "Attention, please! Passengers for flight KL412 are requested to go to gate 21 immediately."
-    ]
-  },
-  {
-    "id": 379,
-    "text": "attention",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/attention.mp3",
-    "examples": [
+      "Attention, please! Passengers for flight KL412 are requested to go to gate 21 immediately.",
       "the report’s attention to detail",
       "He turned his attention back to the road again.",
       "His attention turned to other matters.",
@@ -1905,7 +1865,7 @@
   {
     "id": 380,
     "text": "attitude",
-    "translation": "աբգդեզ",
+    "translation": "վերաբերմունք",
     "audio": "./audio/5000/attitude.mp3",
     "examples": [
       " attitude towards somebody/something These societies have to change their attitudes towards women.",
@@ -1923,7 +1883,7 @@
   {
     "id": 381,
     "text": "attorney",
-    "translation": "աբգդեզ",
+    "translation": "փաստաբան",
     "audio": "./audio/5000/attorney.mp3",
     "examples": [
       "The prosecuting attorney began with a short opening statement."
@@ -1932,7 +1892,7 @@
   {
     "id": 382,
     "text": "attract",
-    "translation": "աբգդեզ",
+    "translation": "գրավել, հրապուրել",
     "audio": "./audio/5000/attract.mp3",
     "examples": [
       " be attracted by somebody/something I had always been attracted by the idea of working abroad.",
@@ -1943,7 +1903,7 @@
   {
     "id": 383,
     "text": "attraction",
-    "translation": "աբգդեզ",
+    "translation": "ատրակցիոն",
     "audio": "./audio/5000/attraction.mp3",
     "examples": [
       "Buckingham Palace is a major tourist attraction.",
@@ -1956,7 +1916,7 @@
   {
     "id": 384,
     "text": "attractive",
-    "translation": "աբգդեզ",
+    "translation": "գրավիչ",
     "audio": "./audio/5000/attractive.mp3",
     "examples": [
       "an attractive woman",
@@ -1967,19 +1927,11 @@
   {
     "id": 385,
     "text": "attribute",
-    "translation": "աբգդեզ",
+    "translation": "հատկանիշ, վերագրել",
     "audio": "./audio/5000/attribute.mp3",
     "examples": [
       "Patience is one of the most important attributes in a teacher.",
-      "The most basic attribute of all animals is consciousness."
-    ]
-  },
-  {
-    "id": 386,
-    "text": "attribute",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/attribute.mp3",
-    "examples": [
+      "The most basic attribute of all animals is consciousness.",
       "She attributes her success to hard work and a little luck.",
       "The power failure was attributed to the recent storms and high winds."
     ]
@@ -1987,7 +1939,7 @@
   {
     "id": 387,
     "text": "auction",
-    "translation": "աբգդեզ",
+    "translation": "աճուրդ",
     "audio": "./audio/5000/auction.mp3",
     "examples": [
       "an auction of paintings",
@@ -1999,7 +1951,7 @@
   {
     "id": 388,
     "text": "audience",
-    "translation": "աբգդեզ",
+    "translation": "հանդիսատես",
     "audio": "./audio/5000/audience.mp3",
     "examples": [
       "The audience was/were clapping for 10 minutes.",
@@ -2011,19 +1963,9 @@
     ]
   },
   {
-    "id": 389,
-    "text": "audio",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/audio.mp3",
-    "examples": [
-      "audio and video recordings/files/clips",
-      "The audio quality was poor."
-    ]
-  },
-  {
     "id": 390,
     "text": "audit",
-    "translation": "աբգդեզ",
+    "translation": "հաշվեքննություն",
     "audio": "./audio/5000/audit.mp3",
     "examples": [
       "an annual audit",
@@ -2034,7 +1976,7 @@
   {
     "id": 391,
     "text": "August",
-    "translation": "աբգդեզ",
+    "translation": "օգոստոս",
     "audio": "./audio/5000/August.mp3",
     "examples": [
       "She was born in August.",
@@ -2049,7 +1991,7 @@
   {
     "id": 392,
     "text": "aunt",
-    "translation": "աբգդեզ",
+    "translation": "մորաքույր, հորաքույր",
     "audio": "./audio/5000/aunt.mp3",
     "examples": [
       "Aunt Alice",
@@ -2061,7 +2003,7 @@
   {
     "id": 393,
     "text": "authentic",
-    "translation": "աբգդեզ",
+    "translation": "իսկական",
     "audio": "./audio/5000/authentic.mp3",
     "examples": [
       "I don't know if the painting is authentic."
@@ -2070,7 +2012,7 @@
   {
     "id": 394,
     "text": "author",
-    "translation": "աբգդեզ",
+    "translation": "հեղինակ",
     "audio": "./audio/5000/author.mp3",
     "examples": [
       "Who is your favourite author?",
@@ -2088,7 +2030,7 @@
   {
     "id": 395,
     "text": "authority",
-    "translation": "աբգդեզ",
+    "translation": "իշխանություն",
     "audio": "./audio/5000/authority.mp3",
     "examples": [
       "in a position of authority",
@@ -2102,7 +2044,7 @@
   {
     "id": 396,
     "text": "authorize",
-    "translation": "աբգդեզ",
+    "translation": "լիազորել",
     "audio": "./audio/5000/authorize.mp3",
     "examples": [
       " authorize something I can authorize payments up to £5 000.",
@@ -2113,7 +2055,7 @@
   {
     "id": 397,
     "text": "auto",
-    "translation": "աբգդեզ",
+    "translation": "ավտոմոբիլ",
     "audio": "./audio/5000/auto.mp3",
     "examples": [
       "the auto industry"
@@ -2122,7 +2064,7 @@
   {
     "id": 398,
     "text": "automatic",
-    "translation": "աբգդեզ",
+    "translation": "ավտոմատ",
     "audio": "./audio/5000/automatic.mp3",
     "examples": [
       "automatic doors",
@@ -2135,7 +2077,7 @@
   {
     "id": 399,
     "text": "automatically",
-    "translation": "աբգդեզ",
+    "translation": "ավտոմատ կերպով",
     "audio": "./audio/5000/automatically.mp3",
     "examples": [
       "The heating switches off automatically."
@@ -2144,7 +2086,7 @@
   {
     "id": 400,
     "text": "autonomy",
-    "translation": "աբգդեզ",
+    "translation": "ինքնավարություն",
     "audio": "./audio/5000/autonomy.mp3",
     "examples": [
       "a campaign in Wales for greater autonomy"
@@ -2153,7 +2095,7 @@
   {
     "id": 401,
     "text": "autumn",
-    "translation": "աբգդեզ",
+    "translation": "աշուն",
     "audio": "./audio/5000/autumn.mp3",
     "examples": [
       " in the autumn of something in the autumn of 2010",
@@ -2170,7 +2112,7 @@
   {
     "id": 402,
     "text": "availability",
-    "translation": "աբգդեզ",
+    "translation": "հասանելիություն",
     "audio": "./audio/5000/availability.mp3",
     "examples": [
       "the availability of cheap flights",
@@ -2180,7 +2122,7 @@
   {
     "id": 403,
     "text": "available",
-    "translation": "աբգդեզ",
+    "translation": "հասանելի",
     "audio": "./audio/5000/available.mp3",
     "examples": [
       "available resources/data",
@@ -2198,7 +2140,7 @@
   {
     "id": 404,
     "text": "average",
-    "translation": "աբգդեզ",
+    "translation": "միջին, միջինում",
     "audio": "./audio/5000/average.mp3",
     "examples": [
       "The average age of participants was 52 years.",
@@ -2207,15 +2149,7 @@
       "Average daily summer temperatures are about 20°C .",
       "Average earnings are around £20 000 per annum.",
       "The school has an average class size of 24 students.",
-      "at an average speed of 100 miles per hour"
-    ]
-  },
-  {
-    "id": 405,
-    "text": "average",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/average.mp3",
-    "examples": [
+      "at an average speed of 100 miles per hour",
       "The average of 4, 5 and 9 is 6.",
       " an average of something Parents spend an average of $220 a year on toys.",
       "Prices rose by an average of 10 percent over the decade. ",
@@ -2223,15 +2157,7 @@
       "Class sizes in the school are below the national average.",
       "We will deliver growth in the economy that is higher than the OECD average this year.",
       "They had higher mortality rates from accidents compared with the national average.",
-      "Children here score well above the city average on math and reading tests."
-    ]
-  },
-  {
-    "id": 406,
-    "text": "average",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/average.mp3",
-    "examples": [
+      "Children here score well above the city average on math and reading tests.",
       "Economic growth is expected to average 2% next year.",
       "Drivers in London can expect to average about 12 miles per hour (= to have that as their average speed).",
       "The women averaged 41 points per game.",
@@ -2242,7 +2168,7 @@
   {
     "id": 407,
     "text": "avoid",
-    "translation": "աբգդեզ",
+    "translation": "խուսափել",
     "audio": "./audio/5000/avoid.mp3",
     "examples": [
       " avoid something to avoid conflict/confrontation",
@@ -2257,7 +2183,7 @@
   {
     "id": 408,
     "text": "await",
-    "translation": "աբգդեզ",
+    "translation": "սպասել",
     "audio": "./audio/5000/await.mp3",
     "examples": [
       "He is in custody awaiting trial.",
@@ -2267,7 +2193,7 @@
   {
     "id": 409,
     "text": "award",
-    "translation": "աբգդեզ",
+    "translation": "մրցանակ, պարգևատրել",
     "audio": "./audio/5000/award.mp3",
     "examples": [
       "He was nominated for the best actor award.",
@@ -2278,15 +2204,7 @@
       "He received numerous awards for excellence in teaching. ",
       "She was recently honoured with a lifetime achievement award.",
       "The winners of the awards are picked by the network's viewers.",
-      "an awards ceremony"
-    ]
-  },
-  {
-    "id": 410,
-    "text": "award",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/award.mp3",
-    "examples": [
+      "an awards ceremony",
       " award something Knowing why and how corporations award contracts is vitally important.",
       " award something to somebody The judges awarded equal points to both finalists.",
       " award somebody something The judges awarded both finalists equal points.",
@@ -2298,7 +2216,7 @@
   {
     "id": 411,
     "text": "aware",
-    "translation": "աբգդեզ",
+    "translation": "տեղյակ",
     "audio": "./audio/5000/aware.mp3",
     "examples": [
       "As you're aware, this is not a new problem.",
@@ -2318,7 +2236,7 @@
   {
     "id": 412,
     "text": "awareness",
-    "translation": "աբգդեզ",
+    "translation": "իրազեկում",
     "audio": "./audio/5000/awareness.mp3",
     "examples": [
       " awareness of something an awareness of the importance of eating a healthy diet",
@@ -2332,7 +2250,7 @@
   {
     "id": 413,
     "text": "away",
-    "translation": "աբգդեզ",
+    "translation": "հեռու",
     "audio": "./audio/5000/away.mp3",
     "examples": [
       "The beach is a mile away.",
@@ -2345,7 +2263,7 @@
   {
     "id": 414,
     "text": "awful",
-    "translation": "աբգդեզ",
+    "translation": "սարսափելի, սոսկալի",
     "audio": "./audio/5000/awful.mp3",
     "examples": [
       "That's an awful colour.",
@@ -2363,7 +2281,7 @@
   {
     "id": 415,
     "text": "awkward",
-    "translation": "աբգդեզ",
+    "translation": "անհարմար",
     "audio": "./audio/5000/awkward.mp3",
     "examples": [
       "There was an awkward silence.",
@@ -2373,7 +2291,7 @@
   {
     "id": 416,
     "text": "baby",
-    "translation": "աբգդեզ",
+    "translation": "մանկիկ",
     "audio": "./audio/5000/baby.mp3",
     "examples": [
       "The baby's crying!",
@@ -2393,7 +2311,7 @@
   {
     "id": 417,
     "text": "back",
-    "translation": "աբգդեզ",
+    "translation": "ետ, ետև, մեջք, աջակցել",
     "audio": "./audio/5000/back.mp3",
     "examples": [
       "We were sitting in the back row",
@@ -2402,15 +2320,7 @@
       "My phone's in my back pocket.",
       "back teeth",
       "the back page of a newspaper",
-      "We drove along miles of twisty back roads (= away from the main roads)."
-    ]
-  },
-  {
-    "id": 418,
-    "text": "back",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/back.mp3",
-    "examples": [
+      "We drove along miles of twisty back roads (= away from the main roads).",
       "When is he coming back to work?",
       "He'll be back on Monday.",
       "Don't forget to bring it back when you've finished with it.",
@@ -2421,15 +2331,7 @@
       "I can't wait to get back home.",
       "It takes me an hour to walk there and back.",
       "We were right back where we started, only this time without any money.",
-      "It's good to have the whole family back together again."
-    ]
-  },
-  {
-    "id": 419,
-    "text": "back",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/back.mp3",
-    "examples": [
+      "It's good to have the whole family back together again.",
       " on your back He was lying on his back on the sofa.",
       "Do you sleep on your back or your front?",
       " with your back to somebody/something She was standing with her back to the camera so you can't see her face.",
@@ -2441,15 +2343,7 @@
       "a bad (= painful) back",
       "I pulled (= injured the muscles in) my back playing squash.",
       "She was laid up with severe back pain.",
-      "A small boy rode on the elephant's back."
-    ]
-  },
-  {
-    "id": 420,
-    "text": "back",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/back.mp3",
-    "examples": [
+      "A small boy rode on the elephant's back.",
       "Her parents backed her in her choice of career.",
       "The project to improve healthcare is backed (= given financial support) by the government."
     ]
@@ -2457,7 +2351,7 @@
   {
     "id": 421,
     "text": "backdrop",
-    "translation": "աբգդեզ",
+    "translation": "ֆոն",
     "audio": "./audio/5000/backdrop.mp3",
     "examples": [
       "The mountains provided a dramatic backdrop for our picnic."
@@ -2466,7 +2360,7 @@
   {
     "id": 422,
     "text": "background",
-    "translation": "աբգդեզ",
+    "translation": "ֆոն, կենսագրություն",
     "audio": "./audio/5000/background.mp3",
     "examples": [
       "somebody's ethnic/genetic/cultural background ",
@@ -2480,7 +2374,7 @@
   {
     "id": 423,
     "text": "backing",
-    "translation": "աբգդեզ",
+    "translation": "աջակցություն",
     "audio": "./audio/5000/backing.mp3",
     "examples": [
       "The police gave the proposals their full backing.",
@@ -2490,7 +2384,7 @@
   {
     "id": 424,
     "text": "backup",
-    "translation": "աբգդեզ",
+    "translation": "կրկնօրինակում, պահուստ",
     "audio": "./audio/5000/backup.mp3",
     "examples": [
       "The police had backup from the army.",
@@ -2501,7 +2395,7 @@
   {
     "id": 425,
     "text": "backwards",
-    "translation": "աբգդեզ",
+    "translation": "հետընթաց",
     "audio": "./audio/5000/backwards.mp3",
     "examples": [
       "I lost my balance and fell backwards.",
@@ -2512,7 +2406,7 @@
   {
     "id": 426,
     "text": "bacteria",
-    "translation": "աբգդեզ",
+    "translation": "բակտերիաներ",
     "audio": "./audio/5000/bacteria.mp3",
     "examples": [
       "Neither chilling nor freezing kills all bacteria.",
@@ -2527,7 +2421,7 @@
   {
     "id": 427,
     "text": "bad",
-    "translation": "աբգդեզ",
+    "translation": "վատ",
     "audio": "./audio/5000/bad.mp3",
     "examples": [
       "I have some bad news for you, I'm afraid.",
@@ -2543,7 +2437,7 @@
   {
     "id": 428,
     "text": "badge",
-    "translation": "աբգդեզ",
+    "translation": "կրծքանշան",
     "audio": "./audio/5000/badge.mp3",
     "examples": [
       "She wore a badge saying ‘Vote for Coates’.",
@@ -2556,7 +2450,7 @@
   {
     "id": 429,
     "text": "badly",
-    "translation": "աբգդեզ",
+    "translation": "վատ, ուժգին",
     "audio": "./audio/5000/badly.mp3",
     "examples": [
       "to play/sing badly",
@@ -2566,7 +2460,7 @@
   {
     "id": 430,
     "text": "bag",
-    "translation": "աբգդեզ",
+    "translation": "պայուսակ",
     "audio": "./audio/5000/bag.mp3",
     "examples": [
       "He was carrying a heavy bag of groceries.",
@@ -2580,7 +2474,7 @@
   {
     "id": 431,
     "text": "bail",
-    "translation": "աբգդեզ",
+    "translation": "գրավ",
     "audio": "./audio/5000/bail.mp3",
     "examples": [
       "Can anyone put up bail for you?",
@@ -2593,7 +2487,7 @@
   {
     "id": 432,
     "text": "bake",
-    "translation": "աբգդեզ",
+    "translation": "թխել",
     "audio": "./audio/5000/bake.mp3",
     "examples": [
       " bake (something) to bake bread/biscuits/cookies",
@@ -2608,22 +2502,14 @@
   {
     "id": 433,
     "text": "balance",
-    "translation": "աբգդեզ",
+    "translation": "հավասարակշռություն",
     "audio": "./audio/5000/balance.mp3",
     "examples": [
       "This newspaper maintains a good balance in its presentation of different opinions.",
       "Tourists often disturb the delicate balance of nature on the island.",
       "His wife's death disturbed the balance of his mind.",
       " balance between A and B Try to keep a balance between work and relaxation.",
-      " in balance It is important to keep the different aspects of your life in balance."
-    ]
-  },
-  {
-    "id": 434,
-    "text": "balance",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/balance.mp3",
-    "examples": [
+      " in balance It is important to keep the different aspects of your life in balance.",
       " balance on something How long can you balance on one leg?",
       " balance something on something The television was precariously balanced on top of a pile of books.",
       "She balanced the cup on her knee.",
@@ -2633,7 +2519,7 @@
   {
     "id": 435,
     "text": "balanced",
-    "translation": "աբգդեզ",
+    "translation": "հավասարակշռված",
     "audio": "./audio/5000/balanced.mp3",
     "examples": [
       "The programme presented a balanced view of the two sides of the conflict.",
@@ -2644,7 +2530,7 @@
   {
     "id": 436,
     "text": "ball",
-    "translation": "աբգդեզ",
+    "translation": "գնդակ",
     "audio": "./audio/5000/ball.mp3",
     "examples": [
       "a golf/tennis/bowling/soccer ball ",
@@ -2658,7 +2544,7 @@
   {
     "id": 437,
     "text": "ballet",
-    "translation": "աբգդեզ",
+    "translation": "բալետ",
     "audio": "./audio/5000/ballet.mp3",
     "examples": [
       "She wants to be a ballet dancer.",
@@ -2668,7 +2554,7 @@
   {
     "id": 438,
     "text": "balloon",
-    "translation": "աբգդեզ",
+    "translation": "փուչիկ",
     "audio": "./audio/5000/balloon.mp3",
     "examples": [
       "to blow up/burst/pop a balloon",
@@ -2681,7 +2567,7 @@
   {
     "id": 439,
     "text": "ballot",
-    "translation": "աբգդեզ",
+    "translation": "քվեաթերթիկ",
     "audio": "./audio/5000/ballot.mp3",
     "examples": [
       "The chairperson is chosen by secret ballot.",
@@ -2694,22 +2580,14 @@
   {
     "id": 440,
     "text": "ban",
-    "translation": "աբգդեզ",
+    "translation": "արգելք, արգելել",
     "audio": "./audio/5000/ban.mp3",
     "examples": [
       "a smoking ban",
       "A majority of people are against the ban.",
       " ban on something They are calling for a blanket ban (= complete ban) on the use of phones while driving.",
       "They have imposed a total ban on the import of seal skins.",
-      "There are no plans to lift the ban on the sale of fireworks to children."
-    ]
-  },
-  {
-    "id": 441,
-    "text": "ban",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/ban.mp3",
-    "examples": [
+      "There are no plans to lift the ban on the sale of fireworks to children.",
       " ban something The law effectively bans smoking in all public places.",
       "a list of banned substances ",
       "The use of these chemicals in homes was banned outright by the government in 2000.",
@@ -2719,7 +2597,7 @@
   {
     "id": 442,
     "text": "banana",
-    "translation": "աբգդեզ",
+    "translation": "բանան",
     "audio": "./audio/5000/banana.mp3",
     "examples": [
       "a bunch of bananas",
@@ -2731,7 +2609,7 @@
   {
     "id": 443,
     "text": "band",
-    "translation": "աբգդեզ",
+    "translation": "նվագախումբ",
     "audio": "./audio/5000/band.mp3",
     "examples": [
       "a rock/punk/jazz band ",
@@ -2745,7 +2623,7 @@
   {
     "id": 444,
     "text": "bank",
-    "translation": "աբգդեզ",
+    "translation": "բանկ",
     "audio": "./audio/5000/bank.mp3",
     "examples": [
       "I don't have much money in the bank at the end of the month.",
@@ -2761,7 +2639,7 @@
   {
     "id": 445,
     "text": "banner",
-    "translation": "աբգդեզ",
+    "translation": "գովազդային վահանակ, բաներ",
     "audio": "./audio/5000/banner.mp3",
     "examples": [
       "A huge banner over the street said ‘Welcome home’.",
@@ -2771,7 +2649,7 @@
   {
     "id": 446,
     "text": "bar",
-    "translation": "աբգդեզ",
+    "translation": "բար",
     "audio": "./audio/5000/bar.mp3",
     "examples": [
       "We arranged to meet in a bar called the Flamingo.",
@@ -2784,7 +2662,7 @@
   {
     "id": 447,
     "text": "bar",
-    "translation": "աբգդեզ",
+    "translation": "արգելել",
     "audio": "./audio/5000/bar.mp3",
     "examples": [
       " bar somebody from doing something Prisoners are barred by law from voting in general elections. ",
@@ -2797,7 +2675,7 @@
   {
     "id": 448,
     "text": "bare",
-    "translation": "աբգդեզ",
+    "translation": "մերկ",
     "audio": "./audio/5000/bare.mp3",
     "examples": [
       "She likes to walk around in bare feet.",
@@ -2808,7 +2686,7 @@
   {
     "id": 449,
     "text": "barely",
-    "translation": "աբգդեզ",
+    "translation": "հազիվ",
     "audio": "./audio/5000/barely.mp3",
     "examples": [
       "He could barely read and write.",
@@ -2820,7 +2698,7 @@
   {
     "id": 450,
     "text": "bargain",
-    "translation": "աբգդեզ",
+    "translation": "սակարկություն",
     "audio": "./audio/5000/bargain.mp3",
     "examples": [
       "I picked up a few good bargains in the sale.",
@@ -2831,7 +2709,7 @@
   {
     "id": 451,
     "text": "barrel",
-    "translation": "աբգդեզ",
+    "translation": "տակառ",
     "audio": "./audio/5000/barrel.mp3",
     "examples": [
       "a beer/wine barrel",
@@ -2842,7 +2720,7 @@
   {
     "id": 452,
     "text": "barrier",
-    "translation": "աբգդեզ",
+    "translation": "արգելք",
     "audio": "./audio/5000/barrier.mp3",
     "examples": [
       "The crowd had to stand behind barriers.",
@@ -2853,20 +2731,12 @@
   {
     "id": 453,
     "text": "base",
-    "translation": "աբգդեզ",
+    "translation": "հիմք, հաստատվել",
     "audio": "./audio/5000/base.mp3",
     "examples": [
       "The lamp has a heavy base.",
       "the base of a column/glass",
-      " at the base of something He felt a sharp pain at the base of his spine."
-    ]
-  },
-  {
-    "id": 454,
-    "text": "base",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/base.mp3",
-    "examples": [
+      " at the base of something He felt a sharp pain at the base of his spine.",
       " be based in… The organization is now based in Geneva.",
       " base something/somebody in… They decided to base the new company in York.",
       " base yourself in… We're going to base ourselves in Tokyo and make trips from there.",
@@ -2876,7 +2746,7 @@
   {
     "id": 455,
     "text": "baseball",
-    "translation": "աբգդեզ",
+    "translation": "բեյսբոլ",
     "audio": "./audio/5000/baseball.mp3",
     "examples": [
       "a baseball bat/team/cap/fan/player/game",
@@ -2888,7 +2758,7 @@
   {
     "id": 456,
     "text": "based",
-    "translation": "աբգդեզ",
+    "translation": "հիմնված",
     "audio": "./audio/5000/based.mp3",
     "examples": [
       "The movie is based on a real-life incident.",
@@ -2900,7 +2770,7 @@
   {
     "id": 457,
     "text": "basement",
-    "translation": "աբգդեզ",
+    "translation": "նկուղ",
     "audio": "./audio/5000/basement.mp3",
     "examples": [
       "Kitchen goods are sold in the basement.",
@@ -2911,7 +2781,7 @@
   {
     "id": 458,
     "text": "basic",
-    "translation": "աբգդեզ",
+    "translation": "հիմնական",
     "audio": "./audio/5000/basic.mp3",
     "examples": [
       "basic information/facts/ideas",
@@ -2923,7 +2793,7 @@
   {
     "id": 459,
     "text": "basically",
-    "translation": "աբգդեզ",
+    "translation": "հիմնականում",
     "audio": "./audio/5000/basically.mp3",
     "examples": [
       "I think we are basically saying the same thing. ",
@@ -2936,7 +2806,7 @@
   {
     "id": 460,
     "text": "basis",
-    "translation": "աբգդեզ",
+    "translation": "հիմք, բազա",
     "audio": "./audio/5000/basis.mp3",
     "examples": [
       "We are in contact on a regular basis.",
@@ -2950,7 +2820,7 @@
   {
     "id": 461,
     "text": "basket",
-    "translation": "աբգդեզ",
+    "translation": "զամբյուղ",
     "audio": "./audio/5000/basket.mp3",
     "examples": [
       "a shopping basket",
@@ -2963,7 +2833,7 @@
   {
     "id": 462,
     "text": "basketball",
-    "translation": "աբգդեզ",
+    "translation": "բասկետբոլ",
     "audio": "./audio/5000/basketball.mp3",
     "examples": [
       "a basketball game/coach/team/player",
@@ -2974,7 +2844,7 @@
   {
     "id": 463,
     "text": "bass",
-    "translation": "աբգդեզ",
+    "translation": "բաս",
     "audio": "./audio/5000/bass.mp3",
     "examples": [
       "He always plays his stereo with the bass turned right up.",
@@ -2985,18 +2855,10 @@
   {
     "id": 464,
     "text": "bat",
-    "translation": "աբգդեզ",
+    "translation": "դուբինկա, չղջիկ, խփել",
     "audio": "./audio/5000/bat.mp3",
     "examples": [
-      "a baseball/cricket bat"
-    ]
-  },
-  {
-    "id": 465,
-    "text": "bat",
-    "translation": "աբգդեզ",
-    "audio": "./audio/5000/bat.mp3",
-    "examples": [
+      "a baseball/cricket bat",
       "He bats very well.",
       "Who's batting first for the Orioles?"
     ]
@@ -3004,7 +2866,7 @@
   {
     "id": 466,
     "text": "bath",
-    "translation": "աբգդեզ",
+    "translation": "լոգարան",
     "audio": "./audio/5000/bath.mp3",
     "examples": [
       "I'm in the bath!",
@@ -3015,7 +2877,7 @@
   {
     "id": 467,
     "text": "bathroom",
-    "translation": "աբգդեզ",
+    "translation": "սանհանգույց",
     "audio": "./audio/5000/bathroom.mp3",
     "examples": [
       "Go and wash your hands in the bathroom.",
