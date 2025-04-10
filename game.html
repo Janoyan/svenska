@@ -151,23 +151,7 @@
     }
 
     function generateOptions(correct, items, field) {
-        const options = [correct];
-        const usedFirstLetters = new Set(correct[0].toLowerCase());
-
-        const otherItems = items.filter(item => item[field] &&
-            item[field][0].toLowerCase() !== correct[0].toLowerCase()
-        );
-        shuffleArray(otherItems);
-
-        for (let i = 0; i < otherItems.length && options.length < 6; i++) {
-            const firstLetter = otherItems[i][field][0].toLowerCase();
-            if (!usedFirstLetters.has(firstLetter)) {
-                options.push(otherItems[i][field]);
-                usedFirstLetters.add(firstLetter);
-            }
-        }
-
-        return shuffleArray(options);
+        return [correct, 'X'];
     }
 
     function nextQuestion() {
