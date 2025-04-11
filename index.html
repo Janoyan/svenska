@@ -18,12 +18,13 @@
              background: #ffffff;
             border-radius: 16px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 95%;
+            width: 100%;
             text-align: center;
             height: 100%;
+            margin: 0;
         }
         .question {
-            font-size: 30px;
+            font-size: 3em;
             margin-bottom: 20px;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
@@ -93,6 +94,12 @@
         button:hover {
             background-color: #45a049;
         }
+
+        #dontKnow {
+            display: block;
+            width: 100%;
+            color: black;
+        }
     </style>
 </head>
 <body class="game-container">
@@ -103,6 +110,7 @@
 
 <div class="accordion">
     <div class="accordion-header" onclick="toggleAccordion()"></div>
+    <button id="dontKnow" class="option red" onclick="dontKnow()">-</button>
     <div class="options" id="options"></div>
 </div>
 
@@ -150,6 +158,11 @@
         localStorage.setItem('answers', answersArray.join(','));
     }
 
+    function dontKnow() {
+        toggleAccordion();
+        checkAnswer('X');
+    }
+
     function generateOptions(correct, items, field) {
         return [correct, 'X'];
     }
@@ -158,6 +171,7 @@
         if (data.length === 0) return;
 
         document.getElementById('nextBtn').style.display = 'none'; // Hide Next button
+        document.querySelector('#dontKnow').style.display = 'block';
         const questionEl = document.getElementById('question');
         const optionsEl = document.getElementById('options');
         const resultEl = document.getElementById('result');
@@ -267,6 +281,7 @@
     }
 
     function toggleAccordion() {
+        document.querySelector('#dontKnow').style.display = 'none';
         const optionsEl = document.getElementById('options');
         const accordion = document.querySelector('.accordion');
 
