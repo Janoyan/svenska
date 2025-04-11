@@ -1,94 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Learn Swedish</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word-Translation Game</title>
     <style>
-        #dialogText {
-            font-size: 2.5rem;
-            line-height: normal;
+        #nextBtn {
+            display: inline-block;
+            width: 100%;
+            height: 50%;
+            background-color: #5b575f;
+        }
+        .game-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+             background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 95%;
+            text-align: center;
+            height: 100%;
+        }
+        .question {
+            font-size: 30px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            word-wrap: break-word;
+        }
+        .accordion-header {
+            background: #dbeafe;
+            padding: 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            user-select: none;
+            font-weight: bold;
+            height: 250px;
         }
 
-        #audioPlayer {
+        .accordion-header:hover {
+            background: #bfdbfe;
+        }
+        .accordion.open .accordion-header {
             display: none;
         }
 
-        #dialogTranslation {
-            color: blue;
-        }
 
-        #dialogExamples {
-            font-size: 25px;
+        .options {
+            display: none;
+            font-size: 30px;
+            margin-top: 20px;
         }
-
-        #dialogExamples .current {
+        .option {
+            padding: 25% 2px;
+            background: #e2f8db;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 80%;
+            margin: 10px auto;
+        }
+        .option.red {
+            background: rgba(255, 0, 0, 0.25);
+            font-size: 50px;
             font-weight: bold;
         }
-
-        #dialogImg {
-            display: inline-block;
-            width: 300px;
+        .result {
+            margin-top: 20px;
+            font-size: 30px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
-
-        .btitle {
-            text-align: left;
+        .score {
+            margin-top: 60px;
+            font-size: 1em;
+            color: #008b8f;
+            transition: font-size 0.3s ease-in-out;
         }
-
-        #backButton {
-            position: fixed;
-            left: 30px;
-            top: 5px;
-            font-size: 20px;
-            background-color: black;
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
             color: white;
-            padding: 2px;
-            border-radius: 5px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: none; /* Initially hidden */
+        }
+        button:hover {
+            background-color: #45a049;
         }
     </style>
-<script src="js/main.js"></script>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 relative">
-<div id="dialogList" class="w-full max-w-md bg-white shadow-lg rounded-lg p-4 mb-16">
-    <!-- Dialog buttons will be inserted here -->
-</div>
-<div id="dialogView" class="hidden w-full bg-white shadow-lg rounded-lg p-4 text-center relative mb-16">
-    <button id="backButton" class="absolute left-2 top-2 text-blue-500">menu</button>
-    <h2 id="dialogText" class="text-2xl font-bold mb-4"></h2>
-    <img id="dialogImg"/>
-    <p id="dialogTranslation" class="text-3xl mb-4"></p>
-    <p id="dialogExamples" class="text-3xl mb-4"></p>
-    <audio id="audioPlayer" controls class="w-full"></audio>
-    <audio id="translationPlayer" controls style="display: none" muted></audio>
+<body class="game-container">
+
+<div class="score" id="score">0</div>
+<div class="question" id="question">Loading...</div>
+<div class="result" id="result"></div>
+
+<div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion()"></div>
+    <div class="options" id="options"></div>
 </div>
 
-<!-- Bottom control panel -->
-<div class="fixed bottom-0 left-0 w-full bg-white shadow p-4 flex flex-row items-center justify-center gap-4">
-    <label class="flex items-center gap-2">
-        <input type="checkbox" id="showTranslations" class="form-checkbox" checked/>
-        <span>Trs</span>
-    </label>
-    <label class="flex items-center gap-2">
-        <input type="checkbox" id="autoplay" class="form-checkbox">
-        <span>Atpl</span>
-    </label>
-    <div id="durationInputContainer" class="hidden">
-        <label for="duration"></label>
-        <input type="number" id="duration" placeholder="Duration" value="1" class="border p-1 w-24">
-    </div>
-    <label class="flex items-center gap-2">
-        <input type="checkbox" id="mute" class="form-checkbox">
-        <span>Mt</span>
-    </label>
-    <label class="flex items-center gap-2">
-        <input type="checkbox" id="muteT" class="form-checkbox" checked>
-        <span>Mtt</span>
-    </label>
-    <label class="flex items-center gap-2">
-        <input type="checkbox" id="randomize" class="form-checkbox" checked>
-        <span>Rnd</span>
-    </label>
-</div>
+<button id="nextBtn" onclick="nextQuestion()"> </button>
+
+<script>
+    const DATA_URL = './jsons/current.json';
+
+    let data = [];
+    let currentType = 0;
+    let currentAnswer = "";
+    let currentAudio = null;
+    let score = 0;
+
+    async function fetchData() {
+        try {
+            const response = await fetch(DATA_URL);
+            data = await response.json();
+            filterOutAnsweredItems();
+            updateScore();
+            nextQuestion();
+        } catch (error) {
+            document.getElementById('question').textContent = "Failed to load data.";
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    function shuffleArray(arr) {
+        return arr.sort(() => Math.random() - 0.5);
+    }
+
+    function filterOutAnsweredItems() {
+        const answersString = localStorage.getItem('answers') ?? '';
+        const answersArray = answersString.split(',');
+
+        data = data.filter(item => !answersArray.includes(item.id.toString()));
+    }
+
+    function pushAnswer(item) {
+        const answersString = localStorage.getItem('answers') ?? '';
+        const answersArray = answersString.split(',');
+
+        answersArray.push(item.id);
+
+        localStorage.setItem('answers', answersArray.join(','));
+    }
+
+    function generateOptions(correct, items, field) {
+        return [correct, 'X'];
+    }
+
+    function nextQuestion() {
+        if (data.length === 0) return;
+
+        document.getElementById('nextBtn').style.display = 'none'; // Hide Next button
+        const questionEl = document.getElementById('question');
+        const optionsEl = document.getElementById('options');
+        const resultEl = document.getElementById('result');
+
+        resultEl.textContent = "";
+
+        const item = data[Math.floor(Math.random() * data.length)];
+        currentType = Math.round(Math.random());
+        let questionText = "";
+        let options = [];
+
+        if (currentType === 0) {
+            questionText = item.text;
+            currentAnswer = item.translation;
+            options = generateOptions(item.translation, data, "translation");
+        } else {
+            questionText = item.translation;
+            currentAnswer = item.text;
+            options = generateOptions(item.text, data, "text");
+        }
+
+        currentAudio = new Audio(item.audio);
+
+        questionEl.textContent = questionText;
+        questionEl.style.opacity = 0;
+
+        setTimeout(() => {
+            questionEl.style.opacity = 1;
+        }, 200);
+
+        optionsEl.innerHTML = "";
+        options.forEach(option => {
+            const btn = document.createElement('div');
+            btn.className = `option ${option === 'X' ? 'red': ''}`;
+            btn.textContent = option === 'X' ? '-' : maskWord(option);
+            btn.onclick = () => checkAnswer(option);
+            optionsEl.appendChild(btn);
+        });
+
+        optionsEl.style.display = 'none'; // Hide options initially
+        document.querySelector('.accordion').classList.remove('open');
+    }
+
+    function checkAnswer(selected) {
+        const resultEl = document.getElementById('result');
+        const optionsEl = document.getElementById('options');
+
+        if (currentAudio) {
+            currentAudio.play();
+        }
+
+        const item = data.find(d =>
+            (currentType === 0 && d.translation === currentAnswer) ||
+            (currentType === 1 && d.text === currentAnswer)
+        );
+
+
+        if (selected === currentAnswer) {
+            resultEl.style.color = "green";
+            resultEl.innerHTML = '✔';
+            score += 1;
+            fadeOutResult(true);
+            pushAnswer(item);
+            filterOutAnsweredItems();
+            updateScore();
+        } else {
+            resultEl.style.color = "red";
+            resultEl.innerHTML = `<div>❌ ${currentAnswer}</div>` + shuffleArray(item.examples).slice(0, 3).map((example, index) => {
+                return `<div style="font-size: 20px; margin-top: 8px; color: #555;">${index+1}. ${example}</div>`;
+            }).join('\n');
+            score -= 1;
+            fadeOutResult(false);
+        }
+    }
+
+    function fadeOutResult(isCorrect) {
+        const resultEl = document.getElementById('result');
+        const optionsEl = document.getElementById('options');
+        const nextBtn = document.getElementById('nextBtn');
+
+        resultEl.style.opacity = 1;
+        optionsEl.style.display = 'none';
+
+        if (isCorrect) {
+            setTimeout(() => {
+                resultEl.style.opacity = 0;
+                nextQuestion();
+            }, 1000);
+        } else {
+            nextBtn.style.display = 'inline-block'; // Show "Next" button
+        }
+    }
+
+    function updateScore() {
+        const scoreEl = document.getElementById('score');
+        scoreEl.style.fontSize = "1.5em";
+        setTimeout(() => {
+            scoreEl.style.fontSize = "1em";
+        }, 300);
+        scoreEl.textContent = `${data.length}`;
+    }
+
+    function maskWord(word) {
+        // const chars = word.split('');
+        // return chars.map((char, idx) => idx === 0 ? char : '_ ').join('');
+        return word;
+    }
+
+    function toggleAccordion() {
+        const optionsEl = document.getElementById('options');
+        const accordion = document.querySelector('.accordion');
+
+        if (optionsEl.style.display === 'none') {
+            optionsEl.style.display = 'grid';
+            accordion.classList.add('open');
+        } else {
+            optionsEl.style.display = 'none';
+            accordion.classList.remove('open');
+        }
+    }
+
+    // Start the game
+    fetchData();
+</script>
+
 </body>
 </html>
