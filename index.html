@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Word-Translation Game</title>
     <style>
+        /* (your same styles here, unchanged) */
         #nextBtn {
             display: inline-block;
             width: 100%;
@@ -40,15 +41,12 @@
             font-weight: bold;
             padding: 25% 2px;
         }
-
         .accordion-header:hover {
             background: #bfdbfe;
         }
         .accordion.open .accordion-header {
             display: none;
         }
-
-
         .options {
             display: none;
             font-size: 30px;
@@ -89,12 +87,11 @@
             border-radius: 12px;
             cursor: pointer;
             font-size: 1.2em;
-            display: none; /* Initially hidden */
+            display: none;
         }
         button:hover {
             background-color: #45a049;
         }
-
         #dontKnow {
             display: block;
             width: 100%;
@@ -102,6 +99,7 @@
         }
     </style>
 </head>
+
 <body class="game-container">
 
 <div class="score" id="score">0</div>
@@ -145,16 +143,13 @@
     function filterOutAnsweredItems() {
         const answersString = localStorage.getItem('answers') ?? '';
         const answersArray = answersString.split(',');
-
         data = data.filter(item => !answersArray.includes(item.id.toString()));
     }
 
     function pushAnswer(item) {
         const answersString = localStorage.getItem('answers') ?? '';
         const answersArray = answersString.split(',');
-
         answersArray.push(item.id);
-
         localStorage.setItem('answers', answersArray.join(','));
     }
 
@@ -169,13 +164,12 @@
 
     function nextQuestion() {
         if (data.length === 0) return;
-
-        document.getElementById('nextBtn').style.display = 'none'; // Hide Next button
+        document.getElementById('nextBtn').style.display = 'none';
         document.querySelector('#dontKnow').style.display = 'block';
+
         const questionEl = document.getElementById('question');
         const optionsEl = document.getElementById('options');
         const resultEl = document.getElementById('result');
-
         resultEl.textContent = "";
 
         const item = data[Math.floor(Math.random() * data.length)];
@@ -205,13 +199,14 @@
         optionsEl.innerHTML = "";
         options.forEach(option => {
             const btn = document.createElement('div');
-            btn.className = `option ${option === 'X' ? 'red': ''}`;
+            btn.className = `option ${option === 'X' ? 'red' : ''}`;
             btn.textContent = option === 'X' ? '-' : maskWord(option);
             btn.onclick = () => checkAnswer(option);
+            addSwipeListener(btn, () => checkAnswer(option));
             optionsEl.appendChild(btn);
         });
 
-        optionsEl.style.display = 'none'; // Hide options initially
+        optionsEl.style.display = 'none';
         document.querySelector('.accordion').classList.remove('open');
     }
 
@@ -219,15 +214,12 @@
         const resultEl = document.getElementById('result');
         const optionsEl = document.getElementById('options');
 
-        if (currentAudio) {
-            currentAudio.play();
-        }
+        if (currentAudio) currentAudio.play();
 
         const item = data.find(d =>
             (currentType === 0 && d.translation === currentAnswer) ||
             (currentType === 1 && d.text === currentAnswer)
         );
-
 
         if (selected === currentAnswer) {
             resultEl.style.color = "green";
@@ -240,7 +232,7 @@
         } else {
             resultEl.style.color = "red";
             resultEl.innerHTML = `<div>❌ ${currentAnswer}</div>` + shuffleArray(item.examples).slice(0, 3).map((example, index) => {
-                return `<div style="font-size: 20px; margin-top: 8px; color: #555;">${index+1}. ${example}</div>`;
+                return `<div style="font-size: 20px; margin-top: 8px; color: #555;">${index + 1}. ${example}</div>`;
             }).join('\n');
             score -= 1;
             fadeOutResult(false);
@@ -261,7 +253,7 @@
                 nextQuestion();
             }, 1000);
         } else {
-            nextBtn.style.display = 'inline-block'; // Show "Next" button
+            nextBtn.style.display = 'inline-block';
         }
     }
 
@@ -275,8 +267,6 @@
     }
 
     function maskWord(word) {
-        // const chars = word.split('');
-        // return chars.map((char, idx) => idx === 0 ? char : '_ ').join('');
         return word;
     }
 
@@ -284,7 +274,6 @@
         document.querySelector('#dontKnow').style.display = 'none';
         const optionsEl = document.getElementById('options');
         const accordion = document.querySelector('.accordion');
-
         if (optionsEl.style.display === 'none') {
             optionsEl.style.display = 'grid';
             accordion.classList.add('open');
@@ -294,7 +283,33 @@
         }
     }
 
-    // Start the game
+    function addSwipeListener(element, callback) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        element.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+
+        element.addEventListener('touchend', function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe(callback);
+        }, false);
+
+        function handleSwipe(callback) {
+            if (Math.abs(touchEndX - touchStartX) > 30) { // swipe threshold
+                callback();
+            }
+        }
+    }
+
+    // Add swipe support to static elements
+    document.addEventListener('DOMContentLoaded', function () {
+        addSwipeListener(document.getElementById('nextBtn'), nextQuestion);
+        addSwipeListener(document.getElementById('dontKnow'), dontKnow);
+        addSwipeListener(document.querySelector('.accordion-header'), toggleAccordion);
+    });
+
     fetchData();
 </script>
 
