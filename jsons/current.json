@@ -7067,5 +7067,845 @@
     "translation": "եղունգ",
     "audio": "./audio/5000/nail.mp3",
     "example": "Stop biting your nails!"
+  },
+  {
+    "id": 1008,
+    "text": "cupboard",
+    "translation": "պահարան, բուֆետ",
+    "audio": "./audio/5000/cupboard.mp3",
+    "example": "There's plenty of food in the cupboards."
+  },
+  {
+    "id": 1009,
+    "text": "engineering",
+    "translation": "ճարտարագիտություն",
+    "audio": "./audio/5000/engineering.mp3",
+    "example": "The bridge is a triumph of modern engineering."
+  },
+  {
+    "id": 1010,
+    "text": "guess",
+    "translation": "կռահել",
+    "audio": "./audio/5000/guess.mp3",
+    "example": "I don't really know. I'm just guessing."
+  },
+  {
+    "id": 1011,
+    "text": "harvest",
+    "translation": "բերքահավաք",
+    "audio": "./audio/5000/harvest.mp3",
+    "example": "Farmers are extremely busy during the harvest."
+  },
+  {
+    "id": 1012,
+    "text": "detail",
+    "translation": "մանրամասն",
+    "audio": "./audio/5000/detail.mp3",
+    "example": "The brochure details all the hotels in the area and their facilities."
+  },
+  {
+    "id": 1013,
+    "text": "income",
+    "translation": "եկամուտ",
+    "audio": "./audio/5000/income.mp3",
+    "example": "Average household income fell slightly."
+  },
+  {
+    "id": 1014,
+    "text": "handle",
+    "translation": "բռնակ",
+    "audio": "./audio/5000/handle.mp3",
+    "example": "She turned the handle and opened the door."
+  },
+  {
+    "id": 1015,
+    "text": "coverage",
+    "translation": "ծածկույթ",
+    "audio": "./audio/5000/coverage.mp3",
+    "example": "A network of eighty transmitters would give nationwide coverage."
+  },
+  {
+    "id": 1016,
+    "text": "letter",
+    "translation": "նամակ",
+    "audio": "./audio/5000/letter.mp3",
+    "example": "I wrote a letter to the editor of our local paper."
+  },
+  {
+    "id": 1017,
+    "text": "derive",
+    "translation": "ստանալ, ժառանգել",
+    "audio": "./audio/5000/derive.mp3",
+    "example": "Many English words derive from Latin."
+  },
+  {
+    "id": 1018,
+    "text": "impact",
+    "translation": "ազդեցություն",
+    "audio": "./audio/5000/impact.mp3",
+    "example": "These restrictions will impact on all farmers in Ireland."
+  },
+  {
+    "id": 1019,
+    "text": "inappropriate",
+    "translation": "անպատշաճ, անհամապատասխան",
+    "audio": "./audio/5000/inappropriate.mp3",
+    "example": "It is inappropriate to wear casual clothes to a formal business meeting."
+  },
+  {
+    "id": 1020,
+    "text": "master",
+    "translation": "վարպետ",
+    "audio": "./audio/5000/master.mp3",
+    "example": "She never completely mastered the art of lip-reading."
+  },
+  {
+    "id": 1021,
+    "text": "endure",
+    "translation": "դիմանալ",
+    "audio": "./audio/5000/endure.mp3",
+    "example": "She could not endure the thought of parting."
+  },
+  {
+    "id": 1022,
+    "text": "mass",
+    "translation": "զանգված",
+    "audio": "./audio/5000/mass.mp3",
+    "example": "She saw a large dark mass in the water."
+  },
+  {
+    "id": 1023,
+    "text": "embrace",
+    "translation": "գրկել, գրկախառնվել",
+    "audio": "./audio/5000/embrace.mp3",
+    "example": "They embraced and promised to keep in touch."
+  },
+  {
+    "id": 1024,
+    "text": "exchange",
+    "translation": "փոխանակում",
+    "audio": "./audio/5000/exchange.mp3",
+    "example": "We use the forum to exchange ideas."
+  },
+  {
+    "id": 1025,
+    "text": "lab",
+    "translation": "լաբորատորիա",
+    "audio": "./audio/5000/lab.mp3",
+    "example": "We conducted an experiment in the chemistry lab."
+  },
+  {
+    "id": 1026,
+    "text": "denial",
+    "translation": "ժխտում, հերքում",
+    "audio": "./audio/5000/denial.mp3",
+    "example": "The terrorists issued a denial of responsibility for the attack."
+  },
+  {
+    "id": 1027,
+    "text": "considerable",
+    "translation": "նշանակալի, զգալի",
+    "audio": "./audio/5000/considerable.mp3",
+    "example": "The project wasted a considerable amount of time and money."
+  },
+  {
+    "id": 1028,
+    "text": "commerce",
+    "translation": "հարաբերություն, առևտուր",
+    "audio": "./audio/5000/commerce.mp3",
+    "example": "Leaders of industry and commerce met at the summit in Paris."
+  },
+  {
+    "id": 1029,
+    "text": "complaint",
+    "translation": "բողոք, գանգատ, դժգոհություն",
+    "audio": "./audio/5000/complaint.mp3",
+    "example": "The police had immediately investigated the complaint."
+  },
+  {
+    "id": 1030,
+    "text": "content",
+    "translation": "գոհունակություն, բովանդակություն",
+    "audio": "./audio/5000/content.mp3",
+    "example": "He seemed more content, less bitter."
+  },
+  {
+    "id": 1031,
+    "text": "demonstration",
+    "translation": "ցույց, ցուցադրություն",
+    "audio": "./audio/5000/demonstration.mp3",
+    "example": "The teacher gave a demonstration on how to use the new science equipment."
+  },
+  {
+    "id": 1032,
+    "text": "chase",
+    "translation": "հալածում, հետապնդում",
+    "audio": "./audio/5000/chase.mp3",
+    "example": "The kids chased each other around the kitchen table."
+  },
+  {
+    "id": 1033,
+    "text": "material",
+    "translation": "նյութ, նյութական",
+    "audio": "./audio/5000/material.mp3",
+    "example": "The early pioneers had few material resources at their disposal."
+  },
+  {
+    "id": 1034,
+    "text": "exotic",
+    "translation": "տարաշխարհիկ, էկզոտիկ",
+    "audio": "./audio/5000/exotic.mp3",
+    "example": "She travels to all kinds of exotic locations all over the world."
+  },
+  {
+    "id": 1035,
+    "text": "extensive",
+    "translation": "ընդարձակ",
+    "audio": "./audio/5000/extensive.mp3",
+    "example": "The house has extensive grounds."
+  },
+  {
+    "id": 1036,
+    "text": "exist",
+    "translation": "գոյություն ունենալ, լինել",
+    "audio": "./audio/5000/exist.mp3",
+    "example": "Does life exist on other planets?"
+  },
+  {
+    "id": 1037,
+    "text": "experience",
+    "translation": "փորձառություն",
+    "audio": "./audio/5000/experience.mp3",
+    "example": "My lack of practical experience was a disadvantage."
+  },
+  {
+    "id": 1038,
+    "text": "experimental",
+    "translation": "փորձնական",
+    "audio": "./audio/5000/experimental.mp3",
+    "example": "The school's experimental teaching methods include letting the children decide what to study."
+  },
+  {
+    "id": 1039,
+    "text": "isolated",
+    "translation": "մեկուսացված",
+    "audio": "./audio/5000/isolated.mp3",
+    "example": "After moving to a new city, she felt isolated and lonely."
+  },
+  {
+    "id": 1040,
+    "text": "copyright",
+    "translation": "հեղինակային իրավունք",
+    "audio": "./audio/5000/copyright.mp3",
+    "example": "Copyright expires seventy years after the death of the author."
+  },
+  {
+    "id": 1041,
+    "text": "incorporate",
+    "translation": "ներառել",
+    "audio": "./audio/5000/incorporate.mp3",
+    "example": "Many of your suggestions have been incorporated in the plan."
+  },
+  {
+    "id": 1042,
+    "text": "kick",
+    "translation": "հարված, ոտքով հարված",
+    "audio": "./audio/5000/kick.mp3",
+    "example": "He barely got a kick of the ball the whole match."
+  },
+  {
+    "id": 1043,
+    "text": "cruel",
+    "translation": "դաժան, անգութ",
+    "audio": "./audio/5000/cruel.mp3",
+    "example": "He was known to be a cruel dictator."
+  },
+  {
+    "id": 1044,
+    "text": "everything",
+    "translation": "ամեն ինչ",
+    "audio": "./audio/5000/everything.mp3",
+    "example": "Everything had gone."
+  },
+  {
+    "id": 1045,
+    "text": "disastrous",
+    "translation": "աղետալի, կորստաբեր",
+    "audio": "./audio/5000/disastrous.mp3",
+    "example": "Lowering interest rates could have disastrous consequences for the economy."
+  },
+  {
+    "id": 1046,
+    "text": "front",
+    "translation": "ճակատ, առջեվի մաս",
+    "audio": "./audio/5000/front.mp3",
+    "example": "The front of the building was covered with ivy."
+  },
+  {
+    "id": 1047,
+    "text": "gaming",
+    "translation": "խաղեր, խաղային",
+    "audio": "./audio/5000/gaming.mp3",
+    "example": "With each new release, this video game has repeatedly transformed the world of gaming."
+  },
+  {
+    "id": 1048,
+    "text": "charter",
+    "translation": "կանոնադրություն",
+    "audio": "./audio/5000/charter.mp3",
+    "example": "The European Social Charter of workers’ rights"
+  },
+  {
+    "id": 1049,
+    "text": "meeting",
+    "translation": "հանդիպում, ժողով",
+    "audio": "./audio/5000/meeting.mp3",
+    "example": "A hundred people attended the public meeting."
+  },
+  {
+    "id": 1050,
+    "text": "nearly",
+    "translation": "գրեթե, համարյա",
+    "audio": "./audio/5000/nearly.mp3",
+    "example": "The bottle's nearly empty."
+  },
+  {
+    "id": 1051,
+    "text": "logo",
+    "translation": "լոգո, տարբերանշան",
+    "audio": "./audio/5000/logo.mp3",
+    "example": "All over the world there are red and white paper cups bearing the company logo."
+  },
+  {
+    "id": 1052,
+    "text": "exert",
+    "translation": "գործադրել",
+    "audio": "./audio/5000/exert.mp3",
+    "example": "He exerted all his authority to make them accept the plan."
+  },
+  {
+    "id": 1053,
+    "text": "important",
+    "translation": "կարևոր",
+    "audio": "./audio/5000/important.mp3",
+    "example": "We have an important decision to make."
+  },
+  {
+    "id": 1054,
+    "text": "mark",
+    "translation": "նշան, նշել",
+    "audio": "./audio/5000/mark.mp3",
+    "example": "Why have you marked this wrong?"
+  },
+  {
+    "id": 1055,
+    "text": "maintain",
+    "translation": "պահպանել",
+    "audio": "./audio/5000/maintain.mp3",
+    "example": "ANU has maintained its position as Australia's top university."
+  },
+  {
+    "id": 1056,
+    "text": "info",
+    "translation": "տեղեկատվություն",
+    "audio": "./audio/5000/info.mp3",
+    "example": "For more info, click here."
+  },
+  {
+    "id": 1057,
+    "text": "mail",
+    "translation": "փոստ",
+    "audio": "./audio/5000/mail.mp3",
+    "example": "I received a letter in the mail this morning."
+  },
+  {
+    "id": 1058,
+    "text": "estimate",
+    "translation": "գնահատում, նախահաշիվ",
+    "audio": "./audio/5000/estimate.mp3",
+    "example": "What is the latest estimate of the number of chimpanzees in the wild?"
+  },
+  {
+    "id": 1059,
+    "text": "regional",
+    "translation": "տարածաշրջանային, շրջանային",
+    "audio": "./audio/5000/regional.mp3",
+    "example": "services available at a local and regional level"
+  },
+  {
+    "id": 1060,
+    "text": "currency",
+    "translation": "արժույթ",
+    "audio": "./audio/5000/currency.mp3",
+    "example": "You'll need some cash in local currency but you can also use your credit card."
+  },
+  {
+    "id": 1061,
+    "text": "indigenous",
+    "translation": "բնիկ",
+    "audio": "./audio/5000/indigenous.mp3",
+    "example": "She campaigns for indigenous rights."
+  },
+  {
+    "id": 1062,
+    "text": "coin",
+    "translation": "մետաղադրամ",
+    "audio": "./audio/5000/coin.mp3",
+    "example": "They flipped a coin to see who should go first."
+  },
+  {
+    "id": 1063,
+    "text": "realistic",
+    "translation": "իրատեսական",
+    "audio": "./audio/5000/realistic.mp3",
+    "example": "It would not be realistic for the Government to demand a pay freeze in the sector at this point."
+  },
+  {
+    "id": 1064,
+    "text": "pump",
+    "translation": "պոմպ, ջրհան",
+    "audio": "./audio/5000/pump.mp3",
+    "example": "She washed her face at the pump in front of the inn."
+  },
+  {
+    "id": 1065,
+    "text": "privacy",
+    "translation": "գաղտնիություն, մենություն",
+    "audio": "./audio/5000/privacy.mp3",
+    "example": "She was longing for some peace and privacy."
+  },
+  {
+    "id": 1066,
+    "text": "reconstruction",
+    "translation": "վերակառուցում, վերականգնում",
+    "audio": "./audio/5000/reconstruction.mp3",
+    "example": "the reconstruction of the educational system"
+  },
+  {
+    "id": 1067,
+    "text": "rapidly",
+    "translation": "արագորեն",
+    "audio": "./audio/5000/rapidly.mp3",
+    "example": "Crime figures are rising rapidly."
+  },
+  {
+    "id": 1068,
+    "text": "pure",
+    "translation": "անարատ, մաքուր, զուտ",
+    "audio": "./audio/5000/pure.mp3",
+    "example": "These shirts are 100% pure cotton."
+  },
+  {
+    "id": 1069,
+    "text": "export",
+    "translation": "արտահանում",
+    "audio": "./audio/5000/export.mp3",
+    "example": "Their main export market is the United States."
+  },
+  {
+    "id": 1070,
+    "text": "gain",
+    "translation": "եկամուտ, շահույթ",
+    "audio": "./audio/5000/gain.mp3",
+    "example": "The opposition made unexpected gains in the last election."
+  },
+  {
+    "id": 1071,
+    "text": "doubt",
+    "translation": "կասկած",
+    "audio": "./audio/5000/doubt.mp3",
+    "example": "New evidence has cast doubt on the guilt of the man jailed for the crime."
+  },
+  {
+    "id": 1072,
+    "text": "naturally",
+    "translation": "բնականաբար",
+    "audio": "./audio/5000/naturally.mp3",
+    "example": "Naturally, I get upset when things go wrong."
+  },
+  {
+    "id": 1073,
+    "text": "purple",
+    "translation": "մանուշակագույն",
+    "audio": "./audio/5000/purple.mp3",
+    "example": "His face was purple with rage."
+  },
+  {
+    "id": 1074,
+    "text": "reasoning",
+    "translation": "դատողություն",
+    "audio": "./audio/5000/reasoning.mp3",
+    "example": "What is the reasoning behind this decision?"
+  },
+  {
+    "id": 1075,
+    "text": "old-fashioned",
+    "translation": "հին ձևերով",
+    "audio": "./audio/5000/old-fashioned.mp3",
+    "example": "These sweets are still made in the old-fashioned way. "
+  },
+  {
+    "id": 1076,
+    "text": "shelter",
+    "translation": "ապաստան",
+    "audio": "./audio/5000/shelter.mp3",
+    "example": "Human beings need food, clothing and shelter."
+  },
+  {
+    "id": 1077,
+    "text": "reward",
+    "translation": "պարգև, հատուցում",
+    "audio": "./audio/5000/reward.mp3",
+    "example": "In some states of India, doctors are richly rewarded for serving in the rural areas. "
+  },
+  {
+    "id": 1078,
+    "text": "play",
+    "translation": "խաղալ",
+    "audio": "./audio/5000/play.mp3",
+    "example": "She wrote a play for the students to perform."
+  },
+  {
+    "id": 1079,
+    "text": "post",
+    "translation": "փոստ, գրառում",
+    "audio": "./audio/5000/post.mp3",
+    "example": "I sent it by first-class post."
+  },
+  {
+    "id": 1080,
+    "text": "sigh",
+    "translation": "հառաչանք, հոգոց",
+    "audio": "./audio/5000/sigh.mp3",
+    "example": "He sighed deeply at the thought."
+  },
+  {
+    "id": 1081,
+    "text": "council",
+    "translation": "խորհուրդ",
+    "audio": "./audio/5000/council.mp3",
+    "example": "The decision still has to be ratified by the full council."
+  },
+  {
+    "id": 1082,
+    "text": "share",
+    "translation": "կիսվել, բաժնետոմս, փայ",
+    "audio": "./audio/5000/share.mp3",
+    "example": "There isn't an empty table. Would you mind sharing?"
+  },
+  {
+    "id": 1083,
+    "text": "show",
+    "translation": "ցուցադրել, շոու",
+    "audio": "./audio/5000/show.mp3",
+    "example": "Millions of people watch the show."
+  },
+  {
+    "id": 1084,
+    "text": "consensus",
+    "translation": "համաձայնություն",
+    "audio": "./audio/5000/consensus.mp3",
+    "example": "There is a growing consensus of opinion on this issue."
+  },
+  {
+    "id": 1085,
+    "text": "journalist",
+    "translation": "լրագրող",
+    "audio": "./audio/5000/journalist.mp3",
+    "example": "She's an investigative journalist with a French newspaper."
+  },
+  {
+    "id": 1086,
+    "text": "punk",
+    "translation": "փանկ",
+    "audio": "./audio/5000/punk.mp3",
+    "example": "a punk band"
+  },
+  {
+    "id": 1087,
+    "text": "popularity",
+    "translation": "հանրաճանաչություն, ժողովրդականություն",
+    "audio": "./audio/5000/popularity.mp3",
+    "example": "The band's growing popularity landed them a US tour. "
+  },
+  {
+    "id": 1088,
+    "text": "question",
+    "translation": "հարց",
+    "audio": "./audio/5000/question.mp3",
+    "example": "Two men are being questioned by police."
+  },
+  {
+    "id": 1089,
+    "text": "dependence",
+    "translation": "կախվածություն, կախում",
+    "audio": "./audio/5000/dependence.mp3",
+    "example": "Our relationship was based on mutual dependence."
+  },
+  {
+    "id": 1090,
+    "text": "luck",
+    "translation": "բախտ, հաջողություն",
+    "audio": "./audio/5000/luck.mp3",
+    "example": "I could hardly believe my luck when he said yes."
+  },
+  {
+    "id": 1091,
+    "text": "exclude",
+    "translation": "բացառել",
+    "audio": "./audio/5000/exclude.mp3",
+    "example": "The cost of borrowing has been excluded from the inflation figures."
+  },
+  {
+    "id": 1092,
+    "text": "engage",
+    "translation": "զբաղեցնել, ներգրավել",
+    "audio": "./audio/5000/engage.mp3",
+    "example": "It is a movie that engages both the mind and the eye."
+  },
+  {
+    "id": 1093,
+    "text": "crystal",
+    "translation": "բյուրեղ",
+    "audio": "./audio/5000/crystal.mp3",
+    "example": "ice crystals"
+  },
+  {
+    "id": 1094,
+    "text": "response",
+    "translation": "պատասխան, արձագանք",
+    "audio": "./audio/5000/response.mp3",
+    "example": "She made no response."
+  },
+  {
+    "id": 1095,
+    "text": "left",
+    "translation": "ձախ",
+    "audio": "./audio/5000/left.mp3",
+    "example": "Fewer people write with their left hand than with their right."
+  },
+  {
+    "id": 1096,
+    "text": "policy",
+    "translation": "քաղաքականություն",
+    "audio": "./audio/5000/policy.mp3",
+    "example": "The company has adopted a firm policy on shoplifting."
+  },
+  {
+    "id": 1097,
+    "text": "gift",
+    "translation": "նվեր",
+    "audio": "./audio/5000/gift.mp3",
+    "example": "Thank you for your generous gift."
+  },
+  {
+    "id": 1098,
+    "text": "meat",
+    "translation": "միս",
+    "audio": "./audio/5000/meat.mp3",
+    "example": "Their diet consists of lean meat and vegetables."
+  },
+  {
+    "id": 1099,
+    "text": "oblige",
+    "translation": "պարտադրել",
+    "audio": "./audio/5000/oblige.mp3",
+    "example": "Parents are obliged by law to send their children to school."
+  },
+  {
+    "id": 1100,
+    "text": "original",
+    "translation": "բնօրինակ",
+    "audio": "./audio/5000/original.mp3",
+    "example": "The room still has many of its original features."
+  },
+  {
+    "id": 1101,
+    "text": "lecture",
+    "translation": "դասախոսություն",
+    "audio": "./audio/5000/lecture.mp3",
+    "example": "I have a lecture at nine tomorrow."
+  },
+  {
+    "id": 1102,
+    "text": "neither",
+    "translation": "ոչ մեկը, ոչ էլ",
+    "audio": "./audio/5000/neither.mp3",
+    "example": "Neither answer is correct."
+  },
+  {
+    "id": 1103,
+    "text": "rate",
+    "translation": "դրույք, գնահատել",
+    "audio": "./audio/5000/rate.mp3",
+    "example": "They rated him highly as a colleague."
+  },
+  {
+    "id": 1104,
+    "text": "entertainment",
+    "translation": "զվարճանք",
+    "audio": "./audio/5000/entertainment.mp3",
+    "example": "There will be live entertainment at the party."
+  },
+  {
+    "id": 1105,
+    "text": "pray",
+    "translation": "աղոթել",
+    "audio": "./audio/5000/pray.mp3",
+    "example": "They knelt down and prayed."
+  },
+  {
+    "id": 1106,
+    "text": "cost",
+    "translation": "արժեք",
+    "audio": "./audio/5000/cost.mp3",
+    "example": "You could buy a used car at a fraction of the cost of a new one."
+  },
+  {
+    "id": 1107,
+    "text": "curious",
+    "translation": "հետաքրքրասեր",
+    "audio": "./audio/5000/curious.mp3",
+    "example": "He is such a curious boy, always asking questions."
+  },
+  {
+    "id": 1108,
+    "text": "eye",
+    "translation": "աչք",
+    "audio": "./audio/5000/eye.mp3",
+    "example": "The suspect has dark hair and green eyes."
+  },
+  {
+    "id": 1109,
+    "text": "precisely",
+    "translation": "ճշգրիտ",
+    "audio": "./audio/5000/precisely.mp3",
+    "example": "They look precisely the same to me."
+  },
+  {
+    "id": 1110,
+    "text": "quietly",
+    "translation": "լուռ, անաղմուկ",
+    "audio": "./audio/5000/quietly.mp3",
+    "example": "She closed the door quietly so she wouldn’t wake the baby."
+  },
+  {
+    "id": 1111,
+    "text": "infant",
+    "translation": "նորածին, մանուկ",
+    "audio": "./audio/5000/infant.mp3",
+    "example": "The infant slept peacefully in the crib."
+  },
+  {
+    "id": 1112,
+    "text": "neighbourhood",
+    "translation": "թաղամաս, թաղ",
+    "audio": "./audio/5000/neighbourhood.mp3",
+    "example": "We grew up in the same neighbourhood."
+  },
+  {
+    "id": 1113,
+    "text": "occasion",
+    "translation": "առիթ, դեպք",
+    "audio": "./audio/5000/occasion.mp3",
+    "example": "I've met him on several occasions."
+  },
+  {
+    "id": 1114,
+    "text": "qualify",
+    "translation": "որակավորել",
+    "audio": "./audio/5000/qualify.mp3",
+    "example": "How long does it take to qualify?"
+  },
+  {
+    "id": 1115,
+    "text": "imprison",
+    "translation": "բանտարկել",
+    "audio": "./audio/5000/imprison.mp3",
+    "example": "They were imprisoned for possession of drugs."
+  },
+  {
+    "id": 1116,
+    "text": "potential",
+    "translation": "պոտենցիալ",
+    "audio": "./audio/5000/potential.mp3",
+    "example": "We have compiled a list of 10 potential candidates. "
+  },
+  {
+    "id": 1117,
+    "text": "next",
+    "translation": "հաջորդը",
+    "audio": "./audio/5000/next.mp3",
+    "example": "The next train to Baltimore is at ten."
+  },
+  {
+    "id": 1118,
+    "text": "match",
+    "translation": "համընկնում, լուցկի, մրցություն",
+    "audio": "./audio/5000/match.mp3",
+    "example": "They are playing an important match against Liverpool on Saturday."
+  },
+  {
+    "id": 1119,
+    "text": "refer",
+    "translation": "հղել, դիմել",
+    "audio": "./audio/5000/refer.mp3",
+    "example": "The company says it has referred the matter to its lawyers."
+  },
+  {
+    "id": 1120,
+    "text": "convert",
+    "translation": "փոխակերպել",
+    "audio": "./audio/5000/convert.mp3",
+    "example": "You need to ensure that you've converted the data properly."
+  },
+  {
+    "id": 1121,
+    "text": "end",
+    "translation": "վարջ",
+    "audio": "./audio/5000/end.mp3",
+    "example": "At last the war ended."
+  },
+  {
+    "id": 1122,
+    "text": "exceed",
+    "translation": "գերազանցել",
+    "audio": "./audio/5000/exceed.mp3",
+    "example": "The price will not exceed 100$."
+  },
+  {
+    "id": 1123,
+    "text": "quit",
+    "translation": "դադարեցնել, լքել",
+    "audio": "./audio/5000/quit.mp3",
+    "example": "If I don't get more money I'll quit."
+  },
+  {
+    "id": 1124,
+    "text": "sailor",
+    "translation": "նավաստի, ծովագնաց",
+    "audio": "./audio/5000/sailor.mp3",
+    "example": "The vessels are manned by 1300 sailors."
+  },
+  {
+    "id": 1125,
+    "text": "possible",
+    "translation": "հնարավոր",
+    "audio": "./audio/5000/possible.mp3",
+    "example": "It's just not physically possible to finish all this by the end of the week."
+  },
+  {
+    "id": 1126,
+    "text": "flawed",
+    "translation": "թերի",
+    "audio": "./audio/5000/flawed.mp3",
+    "example": "The study was methodologically flawed."
+  },
+  {
+    "id": 1127,
+    "text": "scope",
+    "translation": "շրջանակ",
+    "audio": "./audio/5000/scope.mp3",
+    "example": "Her job offers very little scope for promotion."
   }
 ]
