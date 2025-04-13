@@ -1,7 +1,8 @@
 const fs = require('fs');
 
 // Path to your JSON file
-const filePath = 'jsons/current.json';
+// const filePath = 'jsons/current.json';
+const filePath = 'jsons/shuffled.json';
 
 
 // Read the JSON file

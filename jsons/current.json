@@ -7907,5 +7907,453 @@
     "translation": "շրջանակ",
     "audio": "./audio/5000/scope.mp3",
     "example": "Her job offers very little scope for promotion."
+  },
+  {
+    "id": 1128,
+    "text": "listen",
+    "translation": "լսել, ունկնդրել",
+    "audio": "./audio/5000/listen.mp3",
+    "example": "Listen! What's that noise? Can you hear it?"
+  },
+  {
+    "id": 1129,
+    "text": "practical",
+    "translation": "պրակտիկ, գործնական",
+    "audio": "./audio/5000/practical.mp3",
+    "example": "He offered her some practical advice."
+  },
+  {
+    "id": 1130,
+    "text": "reference",
+    "translation": "հղում, վկայակոչում",
+    "audio": "./audio/5000/reference.mp3",
+    "example": "Her book contains many biblical references."
+  },
+  {
+    "id": 1131,
+    "text": "raw",
+    "translation": "հում",
+    "audio": "./audio/5000/raw.mp3",
+    "example": "These fish are often eaten raw."
+  },
+  {
+    "id": 1132,
+    "text": "opposite",
+    "translation": "հակառակը, դեմուդեմ",
+    "audio": "./audio/5000/opposite.mp3",
+    "example": "I sat opposite him during the meal."
+  },
+  {
+    "id": 1133,
+    "text": "favourite",
+    "translation": "սիրելի, սիրած",
+    "audio": "./audio/5000/favourite.mp3",
+    "example": "Which one's your favourite?"
+  },
+  {
+    "id": 1134,
+    "text": "operational",
+    "translation": "գործառնական, օպերատիվ",
+    "audio": "./audio/5000/operational.mp3",
+    "example": "operational activities/costs/difficulties"
+  },
+  {
+    "id": 1135,
+    "text": "inadequate",
+    "translation": "անբավարար, անհամապատասխան",
+    "audio": "./audio/5000/inadequate.mp3",
+    "example": "The shelter had inadequate food and water for all the people after the storm."
+  },
+  {
+    "id": 1136,
+    "text": "simulate",
+    "translation": "մոդելավորել, նմանեցնել",
+    "audio": "./audio/5000/simulate.mp3",
+    "example": "Computer software can be used to simulate conditions on the seabed."
+  },
+  {
+    "id": 1137,
+    "text": "discovery",
+    "translation": "հայտնագործություն",
+    "audio": "./audio/5000/discovery.mp3",
+    "example": "Researchers in this field have made some important new discoveries."
+  },
+  {
+    "id": 1138,
+    "text": "schedule",
+    "translation": "ժամանակացույց, գրաֆիկ",
+    "audio": "./audio/5000/schedule.mp3",
+    "example": "Local elections were tentatively scheduled for November."
+  },
+  {
+    "id": 1139,
+    "text": "secure",
+    "translation": "անվտանգ, ապահովել",
+    "audio": "./audio/5000/secure.mp3",
+    "example": "The team managed to secure a place in the finals."
+  },
+  {
+    "id": 1140,
+    "text": "live",
+    "translation": "կենդանի, ապրել, ուղիղ",
+    "audio": "./audio/5000/live.mp3",
+    "example": "We saw a real live rattlesnake!"
+  },
+  {
+    "id": 1141,
+    "text": "responsible",
+    "translation": "պատասխանատու",
+    "audio": "./audio/5000/responsible.mp3",
+    "example": "The management team is directly responsible for the day-to-day operations of the company."
+  },
+  {
+    "id": 1142,
+    "text": "judgement",
+    "translation": "դատողություն",
+    "audio": "./audio/5000/judgement.mp3",
+    "example": "She showed a lack of judgement when she gave Mark the job."
+  },
+  {
+    "id": 1143,
+    "text": "politics",
+    "translation": "քաղաքականություն",
+    "audio": "./audio/5000/politics.mp3",
+    "example": "The economy has been the major issue in electoral politics."
+  },
+  {
+    "id": 1144,
+    "text": "covered",
+    "translation": "ծածկված",
+    "audio": "./audio/5000/covered.mp3",
+    "example": "His face was covered in blood."
+  },
+  {
+    "id": 1145,
+    "text": "environment",
+    "translation": "միջավայր",
+    "audio": "./audio/5000/environment.mp3",
+    "example": "The government should do more to protect the environment."
+  },
+  {
+    "id": 1146,
+    "text": "commentary",
+    "translation": "մեկնաբանություն",
+    "audio": "./audio/5000/commentary.mp3",
+    "example": "He kept up a running commentary on everyone who came in or went out."
+  },
+  {
+    "id": 1147,
+    "text": "fully",
+    "translation": "լիովին, ամբողջովին",
+    "audio": "./audio/5000/fully.mp3",
+    "example": "I fully understand your motives."
+  },
+  {
+    "id": 1148,
+    "text": "praise",
+    "translation": "գովասանք, գովաբանել",
+    "audio": "./audio/5000/praise.mp3",
+    "example": "The coach praised the team for their hard work and teamwork."
+  },
+  {
+    "id": 1149,
+    "text": "correct",
+    "translation": "ճիշտ, ստույգ",
+    "audio": "./audio/5000/correct.mp3",
+    "example": "Do you have the correct time?"
+  },
+  {
+    "id": 1150,
+    "text": "reduction",
+    "translation": "նվազեցում, կրճատում",
+    "audio": "./audio/5000/reduction.mp3",
+    "example": "Some staff received wage rises, while others experienced a reduction."
+  },
+  {
+    "id": 1151,
+    "text": "compel",
+    "translation": "հարկադրել, ստիպել",
+    "audio": "./audio/5000/compel.mp3",
+    "example": "I feel compelled to write and tell you how much I enjoyed your book."
+  },
+  {
+    "id": 1152,
+    "text": "signal",
+    "translation": "ազդանշան",
+    "audio": "./audio/5000/signal.mp3",
+    "example": "Don't fire until I signal."
+  },
+  {
+    "id": 1153,
+    "text": "quiet",
+    "translation": "հանգիստ, հանդարտ",
+    "audio": "./audio/5000/quiet.mp3",
+    "example": "Could you keep the kids quiet while I'm on the phone?"
+  },
+  {
+    "id": 1154,
+    "text": "precision",
+    "translation": "ճշգրտություն, դիպուկություն",
+    "audio": "./audio/5000/precision.mp3",
+    "example": "Her writing is imaginative but lacks precision."
+  },
+  {
+    "id": 1155,
+    "text": "save",
+    "translation": "պահպանել, փրկել",
+    "audio": "./audio/5000/save.mp3",
+    "example": "Doctors were unable to save her."
+  },
+  {
+    "id": 1156,
+    "text": "root",
+    "translation": "պատճառ, արմատ",
+    "audio": "./audio/5000/root.mp3",
+    "example": "Tree roots can cause damage to buildings."
+  },
+  {
+    "id": 1157,
+    "text": "fun",
+    "translation": "զվարճանք",
+    "audio": "./audio/5000/fun.mp3",
+    "example": "She's really fun to be with."
+  },
+  {
+    "id": 1158,
+    "text": "ideological",
+    "translation": "գաղափարական",
+    "audio": "./audio/5000/ideological.mp3",
+    "example": "This was rejected for ideological reasons."
+  },
+  {
+    "id": 1159,
+    "text": "radar",
+    "translation": "ռադար",
+    "audio": "./audio/5000/radar.mp3",
+    "example": "They located the ship by radar."
+  },
+  {
+    "id": 1160,
+    "text": "grey",
+    "translation": "մոխրագույն",
+    "audio": "./audio/5000/grey.mp3",
+    "example": "His eyes are a dark grey."
+  },
+  {
+    "id": 1161,
+    "text": "fabric",
+    "translation": "հյուսվածք, գործվածք",
+    "audio": "./audio/5000/fabric.mp3",
+    "example": "They sell a wide variety of printed cotton fabric."
+  },
+  {
+    "id": 1162,
+    "text": "critically",
+    "translation": "քննադատաբար",
+    "audio": "./audio/5000/critically.mp3",
+    "example": "She spoke critically of her father."
+  },
+  {
+    "id": 1163,
+    "text": "log",
+    "translation": "գրանցամատյան, կոճղ, գերան",
+    "audio": "./audio/5000/log.mp3",
+    "example": "He threw a log into the fire to keep it burning."
+  },
+  {
+    "id": 1164,
+    "text": "frog",
+    "translation": "գորտ",
+    "audio": "./audio/5000/frog.mp3",
+    "example": "The frog jumped into the pond."
+  },
+  {
+    "id": 1165,
+    "text": "feedback",
+    "translation": "հետադարձ կապ, արձագանք",
+    "audio": "./audio/5000/feedback.mp3",
+    "example": "The teacher will give you feedback on the test."
+  },
+  {
+    "id": 1166,
+    "text": "maximize",
+    "translation": "հասցնել առավելագույնին",
+    "audio": "./audio/5000/maximize.mp3",
+    "example": "To maximize your chances of success, you should study a little every day."
+  },
+  {
+    "id": 1167,
+    "text": "online",
+    "translation": "առցանց",
+    "audio": "./audio/5000/online.mp3",
+    "example": "Online shopping is both cheap and convenient."
+  },
+  {
+    "id": 1168,
+    "text": "competitor",
+    "translation": "մրցակից",
+    "audio": "./audio/5000/competitor.mp3",
+    "example": "Over 200 competitors entered the race."
+  },
+  {
+    "id": 1169,
+    "text": "score",
+    "translation": "միավոր, հաշիվ",
+    "audio": "./audio/5000/score.mp3",
+    "example": "What's the score now?"
+  },
+  {
+    "id": 1170,
+    "text": "creation",
+    "translation": "ստեղծում",
+    "audio": "./audio/5000/creation.mp3",
+    "example": "Job creation needs to be the top priority."
+  },
+  {
+    "id": 1171,
+    "text": "command",
+    "translation": "հրաման",
+    "audio": "./audio/5000/command.mp3",
+    "example": "The general gave a command for the soldiers to move forward."
+  },
+  {
+    "id": 1172,
+    "text": "hail",
+    "translation": "կարկուտ",
+    "audio": "./audio/5000/hail.mp3",
+    "example": "It started to hail during the storm."
+  },
+  {
+    "id": 1173,
+    "text": "disk",
+    "translation": "սկավառակ",
+    "audio": "./audio/5000/disk.mp3",
+    "example": "The moon looked like a bright disk in the night sky."
+  },
+  {
+    "id": 1174,
+    "text": "kidney",
+    "translation": "երիկամ",
+    "audio": "./audio/5000/kidney.mp3",
+    "example": "The kidneys help clean waste from the blood and produce urine."
+  },
+  {
+    "id": 1175,
+    "text": "meantime",
+    "translation": "մինչ այդ, միևնույն ժամանակ",
+    "audio": "./audio/5000/meantime.mp3",
+    "example": "The movie starts in an hour. In the meantime, let’s get some coffee."
+  },
+  {
+    "id": 1176,
+    "text": "observation",
+    "translation": "դիտարկում, զննում",
+    "audio": "./audio/5000/observation.mp3",
+    "example": "Most information was collected by direct observation of the animals' behaviour."
+  },
+  {
+    "id": 1177,
+    "text": "individual",
+    "translation": "անհատ",
+    "audio": "./audio/5000/individual.mp3",
+    "example": "The competition is open to both teams and individuals."
+  },
+  {
+    "id": 1178,
+    "text": "cruise",
+    "translation": "նավարկություն",
+    "audio": "./audio/5000/cruise.mp3",
+    "example": "We went on a cruise around the Caribbean for our vacation."
+  },
+  {
+    "id": 1179,
+    "text": "nutrition",
+    "translation": "սնուցում",
+    "audio": "./audio/5000/nutrition.mp3",
+    "example": "Good nutrition is important for maintaining a healthy lifestyle."
+  },
+  {
+    "id": 1180,
+    "text": "except",
+    "translation": "բացառությամբ, բացի",
+    "audio": "./audio/5000/except.mp3",
+    "example": "I didn't tell him anything except that I needed the money."
+  },
+  {
+    "id": 1181,
+    "text": "headquarters",
+    "translation": "գլխամաս (օֆիսի)",
+    "audio": "./audio/5000/headquarters.mp3",
+    "example": "Several companies have their headquarters in the area."
+  },
+  {
+    "id": 1182,
+    "text": "era",
+    "translation": "դարաշրջան",
+    "audio": "./audio/5000/era.mp3",
+    "example": "This is the start of a new era of peace and prosperity."
+  },
+  {
+    "id": 1183,
+    "text": "confused",
+    "translation": "շփոթված",
+    "audio": "./audio/5000/confused.mp3",
+    "example": "I'm confused—say all that again."
+  },
+  {
+    "id": 1184,
+    "text": "prayer",
+    "translation": "աղոթք",
+    "audio": "./audio/5000/prayer.mp3",
+    "example": "She said a prayer before the exam, hoping for good luck."
+  },
+  {
+    "id": 1185,
+    "text": "saint",
+    "translation": "սուրբ",
+    "audio": "./audio/5000/saint.mp3",
+    "example": "She was known as a saint for all the charity work she did in the community."
+  },
+  {
+    "id": 1186,
+    "text": "raid",
+    "translation": "ասպատակություն",
+    "audio": "./audio/5000/raid.mp3",
+    "example": "The pirates planned a raid on the coastal town."
+  },
+  {
+    "id": 1187,
+    "text": "newspaper",
+    "translation": "թերթ, լրագիր",
+    "audio": "./audio/5000/newspaper.mp3",
+    "example": "British newspapers and their websites carried no photos of the event."
+  },
+  {
+    "id": 1188,
+    "text": "position",
+    "translation": "դիրք, պաշտոն",
+    "audio": "./audio/5000/position.mp3",
+    "example": "Where would be the best position for the lights?"
+  },
+  {
+    "id": 1189,
+    "text": "sanction",
+    "translation": "պատժամիջոց",
+    "audio": "./audio/5000/sanction.mp3",
+    "example": "The government imposed economic sanctions on the country for violating international laws."
+  },
+  {
+    "id": 1190,
+    "text": "commander",
+    "translation": "հրամանատար",
+    "audio": "./audio/5000/commander.mp3",
+    "example": "The commander gave orders to his troops before the battle began."
+  },
+  {
+    "id": 1191,
+    "text": "reverse",
+    "translation": "հակառակ, հակառակ կողմ",
+    "audio": "./audio/5000/reverse.mp3",
+    "example": "Falling birth rates may reverse the trend towards early retirement."
   }
 ]
