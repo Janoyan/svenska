@@ -8355,5 +8355,124 @@
     "translation": "հակառակ, հակառակ կողմ",
     "audio": "./audio/5000/reverse.mp3",
     "example": "Falling birth rates may reverse the trend towards early retirement."
+  },
+  {
+    "id": 1192,
+    "text": "firework",
+    "translation": "հրավառություն",
+    "audio": "./audio/5000/firework.mp3",
+    "example": "The firework spluttered and went out."
+  },
+  {
+    "id": 1193,
+    "text": "ride",
+    "translation": "զբոսանք (Ձի, հեծանիվ)",
+    "audio": "./audio/5000/ride.mp3",
+    "example": "We went for a ride on our bikes around the park."
+  },
+  {
+    "id": 1194,
+    "text": "collective",
+    "translation": "հավաքական",
+    "audio": "./audio/5000/collective.mp3",
+    "example": "The decision was a collective effort by all the team members."
+  },
+  {
+    "id": 1195,
+    "text": "contractor",
+    "translation": "կապալառու, պայմանագիր ստորագրած անձ",
+    "audio": "./audio/5000/contractor.mp3",
+    "example": "The government gave the project to a private contractor."
+  },
+  {
+    "id": 1196,
+    "text": "similar",
+    "translation": "նման",
+    "audio": "./audio/5000/similar.mp3",
+    "example": "We have very similar interests."
+  },
+  {
+    "id": 1197,
+    "text": "kilometre",
+    "translation": "կիլոմետր",
+    "audio": "./audio/5000/kilometre.mp3",
+    "example": "The industrial estate is 6 kilometres from the city centre."
+  },
+  {
+    "id": 1198,
+    "text": "consumer",
+    "translation": "սպառող",
+    "audio": "./audio/5000/consumer.mp3",
+    "example": "As consumers, we should be careful about what we spend our money on."
+  },
+  {
+    "id": 1199,
+    "text": "enthusiastic",
+    "translation": "խանդավառ, եռանդուն, ոգևորված",
+    "audio": "./audio/5000/enthusiastic.mp3",
+    "example": "She gave an enthusiastic speech that inspired everyone."
+  },
+  {
+    "id": 1200,
+    "text": "shock",
+    "translation": "ցնցում",
+    "audio": "./audio/5000/shock.mp3",
+    "example": "She was in shock after hearing the bad news."
+  },
+  {
+    "id": 1201,
+    "text": "portray",
+    "translation": "պատկերել, ընդօրինակել",
+    "audio": "./audio/5000/portray.mp3",
+    "example": "The painting portrays the duke’s third wife."
+  },
+  {
+    "id": 1202,
+    "text": "rid",
+    "translation": "ազատվել",
+    "audio": "./audio/5000/rid.mp3",
+    "example": "She finally got rid of her bad habits."
+  },
+  {
+    "id": 1203,
+    "text": "prosperity",
+    "translation": "բարգավաճում",
+    "audio": "./audio/5000/prosperity.mp3",
+    "example": "Our future prosperity depends on economic growth."
+  },
+  {
+    "id": 1204,
+    "text": "coup",
+    "translation": "հեղաշրջում",
+    "audio": "./audio/5000/coup.mp3",
+    "example": "The military staged a coup and took control of the government."
+  },
+  {
+    "id": 1205,
+    "text": "saving",
+    "translation": "խնայողություն",
+    "audio": "./audio/5000/saving.mp3",
+    "example": "The company reported cost savings of about $ 29 million during the second quarter. "
+  },
+  {
+    "id": 1206,
+    "text": "once",
+    "translation": "հենց որ, մեկ անգամ",
+    "audio": "./audio/5000/once.mp3",
+    "example": "I've only been there once."
+  },
+  {
+    "id": 1207,
+    "text": "height",
+    "translation": "բարձրություն",
+    "audio": "./audio/5000/height.mp3",
+    "example": "She is afraid of heights and doesn’t like climbing ladders."
+  },
+  {
+    "id": 1208,
+    "text": "rarely",
+    "translation": "հազվադեպ",
+    "audio": "./audio/5000/rarely.mp3",
+    "example": "She is rarely seen in public nowadays."
   }
 ]
