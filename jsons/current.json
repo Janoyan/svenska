@@ -13553,7 +13553,7 @@
   {
     "id": 1934,
     "text": "psychiatric",
-    "translation": "error try again",
+    "translation": "",
     "audio": "./audio/5000/psychiatric.mp3",
     "example": "psychiatric disorders"
   },
@@ -13721,7 +13721,7 @@
   {
     "id": 1958,
     "text": "painter",
-    "translation": "error try again, նկարիչ, ներկարար, կենդանագիր",
+    "translation": ", նկարիչ, ներկարար, կենդանագիր",
     "audio": "./audio/5000/painter.mp3",
     "example": "He works as a painter and decorator."
   },
@@ -13910,7 +13910,7 @@
   {
     "id": 1985,
     "text": "virus",
-    "translation": "error try again, վիրուս, համակարգչային վիրուս, հարուցիչ",
+    "translation": ", վիրուս, համակարգչային վիրուս, հարուցիչ",
     "audio": "./audio/5000/virus.mp3",
     "example": "The vaccination offers good protection against the virus."
   },
@@ -13938,7 +13938,7 @@
   {
     "id": 1989,
     "text": "civilian",
-    "translation": "error try again, խաղաղ բնակչություն",
+    "translation": ", խաղաղ բնակչություն",
     "audio": "./audio/5000/civilian.mp3",
     "example": "Two soldiers and one civilian were killed in the explosion."
   },
@@ -13952,7 +13952,7 @@
   {
     "id": 1991,
     "text": "flexible",
-    "translation": "error try again, ճկուն, զիջող",
+    "translation": ", ճկուն, զիջող",
     "audio": "./audio/5000/flexible.mp3",
     "example": "Our plans need to be flexible enough to cater for the needs of everyone."
   },
@@ -14043,7 +14043,7 @@
   {
     "id": 2004,
     "text": "situated",
-    "translation": "error try again",
+    "translation": "",
     "audio": "./audio/5000/situated.mp3",
     "example": "My bedroom was situated on the top floor of the house."
   },
@@ -14519,7 +14519,7 @@
   {
     "id": 2072,
     "text": "reasonable",
-    "translation": "error try again, խելացի, ողջամիտ, չափավոր",
+    "translation": ", խելացի, ողջամիտ, չափավոր",
     "audio": "./audio/5000/reasonable.mp3",
     "example": "As life expectancy increases, it is reasonable to expect that the retirement age will increase too."
   },
@@ -14869,7 +14869,7 @@
   {
     "id": 2122,
     "text": "estate",
-    "translation": "error try again, կալվածք, ունեցվածք, դաս",
+    "translation": ", կալվածք, ունեցվածք, դաս",
     "audio": "./audio/5000/estate.mp3",
     "example": " on an estate She lives in a tower block on an estate in London."
   },
@@ -15226,7 +15226,7 @@
   {
     "id": 2173,
     "text": "watch",
-    "translation": "error try again, ժամացույց, նայել, դիտել",
+    "translation": ", ժամացույց, նայել, դիտել",
     "audio": "./audio/5000/watch.mp3",
     "example": "A large crowd watched the game on Saturday. "
   },
@@ -15289,7 +15289,7 @@
   {
     "id": 2182,
     "text": "ethnic",
-    "translation": "error try again, ազգային, էթնիկ, հեթանոսական",
+    "translation": ", ազգային, էթնիկ, հեթանոսական",
     "audio": "./audio/5000/ethnic.mp3",
     "example": "Our government should reflect the racial and ethnic diversity of our country."
   },
@@ -15919,7 +15919,7 @@
   {
     "id": 2272,
     "text": "plus",
-    "translation": "error try again, գումարած, գումարման նշան",
+    "translation": ", գումարած, գումարման նշան",
     "audio": "./audio/5000/plus.mp3",
     "example": "Two plus five is seven."
   },
@@ -15975,7 +15975,7 @@
   {
     "id": 2280,
     "text": "instrumental",
-    "translation": "error try again, գործիական, գործիական հոլով",
+    "translation": ", գործիական, գործիական հոլով",
     "audio": "./audio/5000/instrumental.mp3",
     "example": "The Conservation Trust performs an instrumental role in the protection of rural environments."
   },
@@ -16045,7 +16045,7 @@
   {
     "id": 2290,
     "text": "theatrical",
-    "translation": "error try again, թատերական, թատրոնի, թատրոնական",
+    "translation": ", թատերական, թատրոնի, թատրոնական",
     "audio": "./audio/5000/theatrical.mp3",
     "example": "a theatrical agent"
   },
@@ -16878,7 +16878,7 @@
   {
     "id": 2409,
     "text": "visible",
-    "translation": "error try again, ակնհայտ, ակներեւ",
+    "translation": ", ակնհայտ, ակներեւ",
     "audio": "./audio/5000/visible.mp3",
     "example": "The house is clearly visible from the beach."
   },
@@ -16934,7 +16934,7 @@
   {
     "id": 2417,
     "text": "stress",
-    "translation": "error try again, շեշտել, ճնշում, շեշտ",
+    "translation": ", շեշտել, ճնշում, շեշտ",
     "audio": "./audio/5000/stress.mp3",
     "example": "You stress the first syllable in ‘happiness’."
   },
@@ -17284,7 +17284,7 @@
   {
     "id": 2467,
     "text": "trail",
-    "translation": "error try again, արահետ, շավիղ, հետք",
+    "translation": ", արահետ, շավիղ, հետք",
     "audio": "./audio/5000/trail.mp3",
     "example": "I trailed my hand in the water as the boat moved along."
   },
@@ -17879,7 +17879,7 @@
   {
     "id": 2552,
     "text": "shower",
-    "translation": "error try again, ցնցուղ, դուշ",
+    "translation": ", ցնցուղ, դուշ",
     "audio": "./audio/5000/shower.mp3",
     "example": "I've just got out of the shower."
   },
@@ -18159,7 +18159,7 @@
   {
     "id": 2592,
     "text": "sweater",
-    "translation": "error try again, սվիտեր",
+    "translation": ", սվիտեր",
     "audio": "./audio/5000/sweater.mp3",
     "example": "She wore jeans and a sweater."
   },
@@ -18306,7 +18306,7 @@
   {
     "id": 2613,
     "text": "constitutional",
-    "translation": "error try again, սահմանադրական",
+    "translation": ", սահմանադրական",
     "audio": "./audio/5000/constitutional.mp3",
     "example": []
   },
@@ -18425,7 +18425,7 @@
   {
     "id": 2630,
     "text": "fishing",
-    "translation": "error try again, ձկնորսություն, ձկնորսական",
+    "translation": ", ձկնորսություն, ձկնորսական",
     "audio": "./audio/5000/fishing.mp3",
     "example": "They often go fishing."
   },
@@ -19566,7 +19566,7 @@
   {
     "id": 2793,
     "text": "legitimate",
-    "translation": "error try again, օրինական, օրինավոր, ճիշտ",
+    "translation": ", օրինական, օրինավոր, ճիշտ",
     "audio": "./audio/5000/legitimate.mp3",
     "example": "It seemed a perfectly legitimate question."
   },
@@ -20917,7 +20917,7 @@
   {
     "id": 2986,
     "text": "rose",
-    "translation": "error try again, վարդ, վարդենի, մասրենի",
+    "translation": ", վարդ, վարդենի, մասրենի",
     "audio": "./audio/5000/rose.mp3",
     "example": "a bunch of red roses"
   },
@@ -20945,7 +20945,7 @@
   {
     "id": 2990,
     "text": "geography",
-    "translation": "error try again, աշխարհագրություն",
+    "translation": ", աշխարհագրություն",
     "audio": "./audio/5000/geography.mp3",
     "example": "recent work in economic geography"
   },
@@ -21687,7 +21687,7 @@
   {
     "id": 3096,
     "text": "discrimination",
-    "translation": "error try again, խտրականություն, խորաթափանցություն",
+    "translation": ", խտրականություն, խորաթափանցություն",
     "audio": "./audio/5000/discrimination.mp3",
     "example": "age/racial/gender/sex discrimination (= because of somebody’s age, race or sex)"
   },
@@ -22709,7 +22709,7 @@
   {
     "id": 3242,
     "text": "fierce",
-    "translation": "error try again, կատաղի, վայրագ, անողոք",
+    "translation": ", կատաղի, վայրագ, անողոք",
     "audio": "./audio/5000/fierce.mp3",
     "example": "Two fierce eyes glared at them."
   },
@@ -23731,7 +23731,7 @@
   {
     "id": 3388,
     "text": "ratio",
-    "translation": "error try again, հարաբերություն",
+    "translation": ", հարաբերություն",
     "audio": "./audio/5000/ratio.mp3",
     "example": "The school has a very high teacher-student ratio."
   },
@@ -24669,7 +24669,7 @@
   {
     "id": 3522,
     "text": "reverse",
-    "translation": "error try again",
+    "translation": "",
     "audio": "./audio/5000/reverse.mp3",
     "example": "The experiment had the reverse effect to what was intended."
   },
@@ -27679,7 +27679,7 @@
   {
     "id": 3952,
     "text": "creativity",
-    "translation": "error try again, ստեղծագործություն",
+    "translation": ", ստեղծագործություն",
     "audio": "./audio/5000/creativity.mp3",
     "example": "Creativity and originality are more important than technical skill."
   },
@@ -28554,7 +28554,7 @@
   {
     "id": 4077,
     "text": "encourage",
-    "translation": "error try again, խրախուսել, քաջալերել, օգնել",
+    "translation": ", խրախուսել, քաջալերել, օգնել",
     "audio": "./audio/5000/encourage.mp3",
     "example": "She encouraged many young writers and artists."
   },
@@ -31732,7 +31732,7 @@
   {
     "id": 4531,
     "text": "researcher",
-    "translation": "error try again, հետազոտող",
+    "translation": ", հետազոտող",
     "audio": "./audio/5000/researcher.mp3",
     "example": "European researchers say olive oil could help prevent cancer."
   },
