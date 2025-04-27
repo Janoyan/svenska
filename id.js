@@ -36,4 +36,3 @@ function processJsons(filePath) {
 }
 
 processJsons('jsons/current.json')
-processJsons('jsons/shuffled.json')
