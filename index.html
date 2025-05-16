@@ -158,12 +158,18 @@
         checkAnswer('X');
     }
 
-    function generateOptions(correct, items, field) {
+    function generateOptions(correct) {
         return [correct, 'X'];
     }
 
     function nextQuestion() {
-        if (data.length === 0) return;
+        if (data.length === 0) {
+            setTimeout(() => {
+                localStorage.setItem('answers', '');
+                location.reload();
+            }, 2000)
+            return;
+        }
         document.getElementById('nextBtn').style.display = 'none';
         document.querySelector('#dontKnow').style.display = 'block';
 
@@ -177,15 +183,9 @@
         let questionText = "";
         let options = [];
 
-        if (currentType === 0) {
-            questionText = item.text;
-            currentAnswer = item.translation;
-            options = generateOptions(item.translation, data, "translation");
-        } else {
-            questionText = item.translation;
-            currentAnswer = item.text;
-            options = generateOptions(item.text, data, "text");
-        }
+        questionText = item.text;
+        currentAnswer = item.translation;
+        options = generateOptions(item.translation);
 
         currentAudio = new Audio(item.audio);
 
@@ -216,14 +216,19 @@
 
         if (currentAudio) currentAudio.play();
 
-        const item = data.find(d =>
-            (currentType === 0 && d.translation === currentAnswer) ||
-            (currentType === 1 && d.text === currentAnswer)
-        );
+        const item = data.find(d => d.translation === currentAnswer || d.description === currentAnswer);
+
+        let resultHtml = `
+        <div>${currentAnswer}</div>
+        <div style="font-size: 20px; margin-top: 8px; color: #555;">${item.description}</div>`
+
+        if (item.image) {
+            resultHtml += `<img onclick="nextQuestion()" src="${item.image}" style="width: 100%; margin-top: 10px;"/>`;
+        }
 
         if (selected === currentAnswer) {
             resultEl.style.color = "green";
-            resultEl.innerHTML = '✔';
+            resultEl.innerHTML = resultHtml;
             score += 1;
             fadeOutResult(true);
             pushAnswer(item);
@@ -231,7 +236,7 @@
             updateScore();
         } else {
             resultEl.style.color = "red";
-            resultEl.innerHTML = `<div>❌ ${currentAnswer}</div>` + `<div style="font-size: 20px; margin-top: 8px; color: #555;">${item.description}</div>`
+            resultEl.innerHTML = resultHtml;
             score -= 1;
             fadeOutResult(false);
         }
@@ -249,7 +254,7 @@
             setTimeout(() => {
                 resultEl.style.opacity = 0;
                 nextQuestion();
-            }, 1000);
+            }, 3000);
         } else {
             nextBtn.style.display = 'inline-block';
         }
