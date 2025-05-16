@@ -11,13 +11,12 @@ async function concatJsonFilesWithIds() {
 
         const allData = [];
 
-        let id = 1;
         for (const file of jsonFiles) {
             const filePath = path.join(directoryPath, file);
             try {
                 const content = await fs.readFile(filePath, 'utf-8');
                 const obj = JSON.parse(content);
-                obj.id = id++;
+                obj.id = file.replace('.json', '');
                 allData.push(obj);
             } catch (err) {
                 console.error(`❌ Error processing "${file}": ${err.message}`);

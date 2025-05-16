@@ -187,7 +187,9 @@
         currentAnswer = item.translation;
         options = generateOptions(item.translation);
 
-        currentAudio = new Audio(item.audio);
+        if (item.audio) {
+            currentAudio = new Audio(item.audio);
+        }
 
         questionEl.textContent = questionText;
         questionEl.style.opacity = 0;
