@@ -1,38 +1,34 @@
-const fs = require('fs');
+const fs = require('fs/promises');
+const path = require('path');
 
-function processJsons(filePath) {
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-            console.error('Error reading file:', err);
-            return;
-        }
+const directoryPath = './source';
+const outputFilePath = './jsons/current.json';
 
-        let items;
-        try {
-            items = JSON.parse(data);
-        } catch (parseErr) {
-            console.error('Error parsing JSON:', parseErr);
-            return;
-        }
+async function concatJsonFilesWithIds() {
+    try {
+        const files = await fs.readdir(directoryPath);
+        const jsonFiles = files.filter(file => path.extname(file) === '.json');
 
-        // Set sequential IDs
-        items = items.map((item, index) => {
-            return {
-                ...item,
-                id: index + 1,
-            };
-        });
+        const allData = [];
 
-        // Write back to the same file
-        fs.writeFile(filePath, JSON.stringify(items, null, 2), (writeErr) => {
-            if (writeErr) {
-                console.error('Error writing file:', writeErr);
-            } else {
-                console.log('IDs updated successfully!');
+        let id = 1;
+        for (const file of jsonFiles) {
+            const filePath = path.join(directoryPath, file);
+            try {
+                const content = await fs.readFile(filePath, 'utf-8');
+                const obj = JSON.parse(content);
+                obj.id = id++;
+                allData.push(obj);
+            } catch (err) {
+                console.error(`❌ Error processing "${file}": ${err.message}`);
             }
-        });
-    });
+        }
 
+        await fs.writeFile(outputFilePath, JSON.stringify(allData, null, 2));
+        console.log(`✅ Combined ${jsonFiles.length} files into "${outputFilePath}" with ${allData.length} records.`);
+    } catch (err) {
+        console.error('❌ Error reading directory:', err.message);
+    }
 }
 
-processJsons('jsons/current.json')
+concatJsonFilesWithIds();
