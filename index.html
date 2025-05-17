@@ -64,7 +64,7 @@
             text-align: center;
         }
 
-        #reset-btn {
+        .bbbb {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 1rem;
@@ -89,7 +89,8 @@
 </head>
 <body>
 <div id="card-container"></div>
-<button id="reset-btn">Reset</button>
+<button class="bbbb" id="reset-btn">Reset</button>
+<button class="bbbb" id="sync-btn" onclick="sync()">Sync</button>
 <div id="loading">Loading...</div>
 
 <script>
@@ -195,6 +196,10 @@
         };
 
         renderCards();
+    }
+
+    function sync() {
+        loadCards()
     }
 
     function playAudio(dataUrl) {
