@@ -1,322 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Word-Translation Game</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Flashcards</title>
     <style>
-        /* (your same styles here, unchanged) */
-        #nextBtn {
-            display: inline-block;
-            width: 100%;
-            height: 50%;
-            background-color: #e7e7e7;
-        }
-        .game-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            text-align: center;
-            height: 90%;
+        body {
             margin: 0;
-            padding: 5%;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-        .question {
-            font-size: 30px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            word-wrap: break-word;
+
+        #card-container {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            height: 60vh;
+            perspective: 1000px;
         }
-        .accordion-header {
-            background: #dbeafe;
-            border-radius: 12px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            user-select: none;
-            font-weight: bold;
-            padding: 25% 2px;
-        }
-        .accordion-header:hover {
-            background: #bfdbfe;
-        }
-        .accordion.open .accordion-header {
-            display: none;
-        }
-        .options {
-            display: none;
-            font-size: 30px;
-            margin-top: 20px;
-        }
-        .option {
-            padding: 25% 2px;
-            background: #e2f8db;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: background 0.3s;
-            width: 80%;
-            margin: 10px auto;
-        }
-        .option.red {
-            background: rgba(255, 0, 0, 0.25);
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 30px;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .score {
-            margin-top: 60px;
-            font-size: 15px;
-            color: #008b8f;
-            transition: font-size 0.3s ease-in-out;
-        }
-        button {
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 15px;
-            display: none;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #dontKnow {
-            display: block;
+
+        .card {
+            position: absolute;
             width: 100%;
-            color: black;
+            height: 100%;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            cursor: grab;
+        }
+
+        .card img {
+            max-height: 40%;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .word {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .translation {
+            font-size: 1.2rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #999;
+            text-align: center;
+        }
+
+        #reset-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #reset-btn:hover {
+            background: #0056b3;
+        }
+
+        #loading {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #555;
         }
     </style>
 </head>
-
-<body class="game-container">
-
-<div class="score" id="score">0</div>
-<div class="question" id="question">Loading...</div>
-<div class="result" id="result"></div>
-
-<div class="accordion">
-    <div class="accordion-header" onclick="toggleAccordion()">+</div>
-    <button id="dontKnow" class="option red" onclick="dontKnow()">-</button>
-    <div class="options" id="options"></div>
-</div>
-
-<button id="nextBtn" onclick="nextQuestion()"> </button>
+<body>
+<div id="card-container"></div>
+<button id="reset-btn">Reset</button>
+<div id="loading">Loading...</div>
 
 <script>
-    const DATA_URL = './jsons/current.json';
+    const container = document.getElementById("card-container");
+    const resetBtn = document.getElementById("reset-btn");
+    const loading = document.getElementById("loading");
+    let flashcards = [];
 
-    let data = [];
-    let currentType = 0;
-    let currentAnswer = "";
-    let currentAudio = null;
-    let score = 0;
-
-    async function fetchData() {
+    async function loadCards() {
         try {
-            const response = await fetch(DATA_URL);
-            data = await response.json();
-            filterOutAnsweredItems();
-            updateScore();
-            nextQuestion();
-        } catch (error) {
-            document.getElementById('question').textContent = "Failed to load data.";
-            console.error('Error fetching data:', error);
+            const res = await fetch('./jsons/current.json');
+            flashcards = await res.json();
+            if (!Array.isArray(flashcards)) throw new Error("JSON should be an array.");
+            flashcards = flashcards.sort(() => Math.random() - 0.5);
+            init();
+        } catch (e) {
+            loading.textContent = "Failed to load JSON.";
+            console.error(e);
         }
     }
 
-    function shuffleArray(arr) {
-        return arr.sort(() => Math.random() - 0.5);
-    }
+    function init() {
+        loading.style.display = 'none';
+        const deletedIds = JSON.parse(localStorage.getItem("deletedFlashcards") || "[]");
+        let filteredCards = flashcards.filter(card => !deletedIds.includes(card.text));
 
-    function filterOutAnsweredItems() {
-        const answersString = localStorage.getItem('answers') ?? '';
-        const answersArray = answersString.split(',');
-        data = data.filter(item => !answersArray.includes(item.id.toString()));
-    }
+        function renderCards() {
+            container.innerHTML = "";
 
-    function pushAnswer(item) {
-        const answersString = localStorage.getItem('answers') ?? '';
-        const answersArray = answersString.split(',');
-        answersArray.push(item.id);
-        localStorage.setItem('answers', answersArray.join(','));
-    }
+            filteredCards.forEach((cardData, index) => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.style.zIndex = filteredCards.length - index;
 
-    function dontKnow() {
-        toggleAccordion();
-        checkAnswer('X');
-    }
+                card.innerHTML = `
+            ${cardData.image ? `<img src="${cardData.image}" alt="Image">` : ""}
+            <div class="word" onclick="playAudio('${cardData.audio}')">${cardData.text}</div>
+            <div class="translation">${cardData.translation}</div>
+            <div class="description">${cardData.description}</div>
+        `;
 
-    function generateOptions(correct) {
-        return [correct, 'X'];
-    }
+                let offsetX = 0;
 
-    function nextQuestion() {
-        if (data.length === 0) {
-            setTimeout(() => {
-                localStorage.setItem('answers', '');
-                location.reload();
-            }, 2000)
-            return;
-        }
-        document.getElementById('nextBtn').style.display = 'none';
-        document.querySelector('#dontKnow').style.display = 'block';
+                card.addEventListener("mousedown", startDrag);
+                card.addEventListener("touchstart", startDrag, { passive: false });
 
-        const questionEl = document.getElementById('question');
-        const optionsEl = document.getElementById('options');
-        const resultEl = document.getElementById('result');
-        resultEl.textContent = "";
+                function startDrag(e) {
+                    let startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
 
-        const item = data[Math.floor(Math.random() * data.length)];
-        currentType = Math.round(Math.random());
-        let questionText = "";
-        let options = [];
+                    const move = (ev) => {
+                        const x = ev.type.includes("touch") ? ev.touches[0].clientX : ev.clientX;
+                        offsetX = x - startX;
+                        card.style.transform = `translateX(${offsetX}px) rotate(${offsetX * 0.05}deg)`;
+                    };
 
-        questionText = item.text;
-        currentAnswer = item.translation;
-        options = generateOptions(item.translation);
+                    const end = () => {
+                        document.removeEventListener("mousemove", move);
+                        document.removeEventListener("touchmove", move);
+                        document.removeEventListener("mouseup", end);
+                        document.removeEventListener("touchend", end);
 
-        if (item.audio) {
-            currentAudio = new Audio(item.audio);
-        }
+                        if (Math.abs(offsetX) > 100) {
+                            card.style.transform = `translateX(${offsetX > 0 ? 1000 : -1000}px)`;
+                            card.style.opacity = "0";
 
-        questionEl.textContent = questionText;
-        questionEl.style.opacity = 0;
+                            setTimeout(() => {
+                                deleteCard(cardData.text);
+                                filteredCards = flashcards.filter(c => !JSON.parse(localStorage.getItem("deletedFlashcards") || "[]").includes(c.text));
+                                renderCards();
+                            }, 300);
+                        } else {
+                            card.style.transform = "";
+                        }
+                    };
 
-        setTimeout(() => {
-            questionEl.style.opacity = 1;
-        }, 200);
+                    document.addEventListener("mousemove", move);
+                    document.addEventListener("touchmove", move);
+                    document.addEventListener("mouseup", end);
+                    document.addEventListener("touchend", end);
+                }
 
-        optionsEl.innerHTML = "";
-        options.forEach(option => {
-            const btn = document.createElement('div');
-            btn.className = `option ${option === 'X' ? 'red' : ''}`;
-            btn.textContent = option === 'X' ? '-' : maskWord(option);
-            btn.onclick = () => checkAnswer(option);
-            addSwipeListener(btn, () => checkAnswer(option));
-            optionsEl.appendChild(btn);
-        });
+                container.appendChild(card);
+            });
 
-        optionsEl.style.display = 'none';
-        document.querySelector('.accordion').classList.remove('open');
-    }
-
-    function checkAnswer(selected) {
-        const resultEl = document.getElementById('result');
-        const optionsEl = document.getElementById('options');
-
-        if (currentAudio) currentAudio.play();
-
-        const item = data.find(d => d.translation === currentAnswer || d.description === currentAnswer);
-
-        let resultHtml = `
-        <div>${currentAnswer}</div>
-        <div style="font-size: 20px; margin-top: 8px; color: #555;">${item.description}</div>`
-
-        if (item.image) {
-            resultHtml += `<img onclick="nextQuestion()" src="${item.image}" style="width: 100%; margin-top: 10px;"/>`;
-        }
-
-        if (selected === currentAnswer) {
-            resultEl.style.color = "green";
-            resultEl.innerHTML = resultHtml;
-            score += 1;
-            fadeOutResult(true);
-            pushAnswer(item);
-            filterOutAnsweredItems();
-            updateScore();
-        } else {
-            resultEl.style.color = "red";
-            resultEl.innerHTML = resultHtml;
-            score -= 1;
-            fadeOutResult(false);
-        }
-    }
-
-    function fadeOutResult(isCorrect) {
-        const resultEl = document.getElementById('result');
-        const optionsEl = document.getElementById('options');
-        const nextBtn = document.getElementById('nextBtn');
-
-        resultEl.style.opacity = 1;
-        optionsEl.style.display = 'none';
-
-        if (isCorrect) {
-            setTimeout(() => {
-                resultEl.style.opacity = 0;
-                nextQuestion();
-            }, 3000);
-        } else {
-            nextBtn.style.display = 'inline-block';
-        }
-    }
-
-    function updateScore() {
-        const scoreEl = document.getElementById('score');
-        scoreEl.style.fontSize = "1.5em";
-        setTimeout(() => {
-            scoreEl.style.fontSize = "1em";
-        }, 300);
-        scoreEl.textContent = `${data.length}`;
-    }
-
-    function maskWord(word) {
-        return word;
-    }
-
-    function toggleAccordion() {
-        document.querySelector('#dontKnow').style.display = 'none';
-        const optionsEl = document.getElementById('options');
-        const accordion = document.querySelector('.accordion');
-        if (optionsEl.style.display === 'none') {
-            optionsEl.style.display = 'grid';
-            accordion.classList.add('open');
-        } else {
-            optionsEl.style.display = 'none';
-            accordion.classList.remove('open');
-        }
-    }
-
-    function addSwipeListener(element, callback) {
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        element.addEventListener('touchstart', function (e) {
-            touchStartX = e.changedTouches[0].screenX;
-        }, false);
-
-        element.addEventListener('touchend', function (e) {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe(callback);
-        }, false);
-
-        function handleSwipe(callback) {
-            if (Math.abs(touchEndX - touchStartX) > 30) { // swipe threshold
-                callback();
+            // 🔊 Play audio for the top card
+            if (filteredCards.length > 0 && filteredCards[0].audio) {
+                playAudio(filteredCards[0].audio);
             }
         }
+
+
+        function deleteCard(id) {
+            const current = JSON.parse(localStorage.getItem("deletedFlashcards") || "[]");
+            const updated = [...new Set([...current, id])];
+            localStorage.setItem("deletedFlashcards", JSON.stringify(updated));
+        }
+
+        resetBtn.onclick = () => {
+            localStorage.removeItem("deletedFlashcards");
+            flashcards = flashcards.sort(() => Math.random() - 0.5);
+            filteredCards = [...flashcards];
+            renderCards();
+        };
+
+        renderCards();
     }
 
-    // Add swipe support to static elements
-    document.addEventListener('DOMContentLoaded', function () {
-        addSwipeListener(document.getElementById('nextBtn'), nextQuestion);
-        addSwipeListener(document.getElementById('dontKnow'), dontKnow);
-        addSwipeListener(document.querySelector('.accordion-header'), toggleAccordion);
-    });
+    function playAudio(dataUrl) {
+        if (!dataUrl) return;
+        const audio = new Audio(dataUrl);
+        audio.play();
+    }
 
-    fetchData();
+    loadCards();
 </script>
-
 </body>
 </html>
