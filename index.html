@@ -126,7 +126,7 @@
                 card.style.zIndex = filteredCards.length - index;
 
                 card.innerHTML = `
-            ${cardData.image ? `<img src="${cardData.image}" alt="Image">` : ""}
+            ${cardData.image ? `<img src="${cardData.image}" alt="Image" onclick="playAudio('${cardData.armAudio}')">` : ""}
             <div class="word" onclick="playAudio('${cardData.audio}')">${cardData.text}</div>
             <div class="translation">${cardData.translation}</div>
             <div class="description">${cardData.description}</div>
