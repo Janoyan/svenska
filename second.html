@@ -217,7 +217,7 @@
         .then(res => res.json())
         .then(jsonData => {
             shuffle(jsonData);
-            const selected = jsonData.slice(0, 25);
+            const selected = jsonData.slice(0, 2);
 
             const part1 = [];
             const part2 = [];
@@ -240,7 +240,7 @@
 
 
     function compare(text1, text2) {
-        return text1.toLowerCase() === text2.toLowerCase();
+        return text1.toLowerCase().trim() === text2.toLowerCase().trim();
     }
 </script>
 </body>
