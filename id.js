@@ -23,7 +23,7 @@ async function concatJsonFilesWithIds(outputFilePath, secondApp) {
                         text: obj.text,
                         translation: obj.translation,
                     });
-                } else {
+                } else if (!obj.done) {
                     allData.push(obj);
                 }
 
