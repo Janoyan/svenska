@@ -47,7 +47,7 @@
     </label>
     <label>
         Translation:
-        <input type="text" id="translationInput" required>
+        <select id="translationInput" required></select>
     </label>
     <button type="submit">Next</button>
 </form>
@@ -89,17 +89,37 @@
         textInput.value = "";
         stepInfo.textContent = `Step ${index + 1} of ${tasks.length}`;
 
-        const answeredRecord = userAnswers?.find((item) => item.task.text === task.text)
+        const answeredRecord = userAnswers?.find((item) => item.task.text === task.text);
+        const translationSelect = document.getElementById('translationInput');
+
+        // Clear previous options
+        translationSelect.innerHTML = '';
+
+        // Generate incorrect options (excluding the correct one)
+        const allTranslations = Array.from(new Set(tasks.map(t => t.translation).filter(tr => tr !== task.translation)));
+        shuffle(allTranslations);
+        const wrongOptions = allTranslations.slice(0, 2);
+
+        // Add correct and incorrect options
+        const options = [...wrongOptions, task.translation];
+
+        options.forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option;
+            opt.textContent = option;
+            translationSelect.appendChild(opt);
+        });
+
         if (answeredRecord) {
-            translationInput.value = answeredRecord.userTrans;
-            translationInput.disabled = true;
-            textInput.focus();
+            translationSelect.value = answeredRecord.userTrans;
+            translationSelect.disabled = true;
         } else {
-            translationInput.value = "";
-            translationInput.disabled = false;
-            translationInput.focus();
+            translationSelect.disabled = false;
+            translationSelect.focus();
         }
+        textInput.focus();
     }
+
 
     function showResults() {
         answerForm.classList.add('hidden');
@@ -195,7 +215,7 @@
         .then(res => res.json())
         .then(jsonData => {
             shuffle(jsonData);
-            const selected = jsonData.slice(0, 33);
+            const selected = jsonData.slice(0, 15);
 
             selected.forEach(item => {
                 for (let i = 0; i < 3; i++) {
