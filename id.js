@@ -2,9 +2,8 @@ const fs = require('fs/promises');
 const path = require('path');
 
 const directoryPath = './source';
-const outputFilePath = './jsons/current.json';
 
-async function concatJsonFilesWithIds() {
+async function concatJsonFilesWithIds(outputFilePath, secondApp) {
     try {
         const files = await fs.readdir(directoryPath);
         const jsonFiles = files.filter(file => path.extname(file) === '.json');
@@ -17,7 +16,17 @@ async function concatJsonFilesWithIds() {
                 const content = await fs.readFile(filePath, 'utf-8');
                 const obj = JSON.parse(content);
                 obj.id = file.replace('.json', '');
-                allData.push(obj);
+
+                if (secondApp && !obj.done) {
+                    allData.push({
+                        audio: obj.audio,
+                        text: obj.text,
+                        translation: obj.translation,
+                    });
+                } else {
+                    allData.push(obj);
+                }
+
             } catch (err) {
                 console.error(`❌ Error processing "${file}": ${err.message}`);
             }
@@ -30,4 +39,8 @@ async function concatJsonFilesWithIds() {
     }
 }
 
-concatJsonFilesWithIds();
+(async () => {
+    await concatJsonFilesWithIds('./jsons/current.json');
+    await concatJsonFilesWithIds('./jsons/second.json', true);
+})()
+
