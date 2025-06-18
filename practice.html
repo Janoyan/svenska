@@ -42,6 +42,9 @@
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const phrase = urlParams.get('phrase');
+    const audioDataUri = decodeURIComponent(urlParams.get('audio'));
+
+    console.log(audioDataUri);
 
     const instruction = document.getElementById('instruction');
     const inputBox = document.getElementById('inputBox');
@@ -49,6 +52,19 @@
     const progress = document.getElementById('progress');
 
     let correctCount = 0;
+
+    // Set up audio element
+    let audio;
+    if (audioDataUri) {
+        audio = new Audio(audioDataUri);
+    }
+
+    function playAudio() {
+        if (audio) {
+            audio.currentTime = 0;
+            audio.play().catch(err => console.warn("Audio play failed:", err));
+        }
+    }
 
     if (!phrase) {
         instruction.textContent = 'Error: No phrase provided. Use ?phrase=your+text+here in the URL.';
@@ -65,6 +81,10 @@
                 message.textContent = "✅ Correct!";
                 message.style.color = "green";
                 inputBox.value = "";
+
+                if (correctCount < 10) {
+                    playAudio(); // Replay audio for next prompt
+                }
             } else {
                 message.textContent = "❌ Incorrect. Try again.";
                 message.style.color = "red";
@@ -78,10 +98,11 @@
                 // Try to close the tab
                 setTimeout(() => {
                     window.close();
-                }, 1000); // delay so user sees the final message
+                }, 1000);
             }
         }
     });
 </script>
+
 </body>
 </html>

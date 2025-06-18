@@ -181,7 +181,7 @@
 
             const row = document.createElement('tr');
             row.innerHTML = `
-            <td onclick="practice('${task.text}')" class="${compare(task.text, engAttempts[0]) && compare(task.text, engAttempts[1]) && compare(task.text, engAttempts[2]) && compare(task.translation, trAttempts[0]) ? 'correct': 'incorrect'}">${task.text}/${task.translation}</td>
+            <td onclick="practice('${task.text}', '${task.audio}')" class="${compare(task.text, engAttempts[0]) && compare(task.text, engAttempts[1]) && compare(task.text, engAttempts[2]) && compare(task.translation, trAttempts[0]) ? 'correct': 'incorrect'}">${task.text}/${task.translation}</td>
             <td class="${compare(task.text, engAttempts[0]) ? 'correct': 'incorrect'}">${engAttempts[0] || ''}</td>
             <td class="${compare(task.text, engAttempts[1]) ? 'correct': 'incorrect'}">${engAttempts[1] || ''}</td>
             <td class="${compare(task.text, engAttempts[2]) ? 'correct': 'incorrect'}">${engAttempts[2] || ''}</td>
@@ -243,8 +243,8 @@
         return text1.toLowerCase().trim() === text2.toLowerCase().trim();
     }
 
-    function practice(phrase) {
-        window.open(`/practice.html?phrase=${phrase}`, '_blank');
+    function practice(phrase, audio) {
+        window.open(`./practice.html?phrase=${phrase}&audio=${encodeURIComponent(audio)}`, '_blank');
     }
 </script>
 </body>
