@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        #container {
+            background: white;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 1em;
+            font-size: 1.2em;
+            margin-top: 1em;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h1>Typing Challenge</h1>
+    <p id="instruction"></p>
+    <p id="progress">Progress: 0 / 10</p>
+    <input type="text" id="inputBox" placeholder="Type the phrase and press Enter">
+    <p id="message"></p>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const phrase = urlParams.get('phrase');
+
+    const instruction = document.getElementById('instruction');
+    const inputBox = document.getElementById('inputBox');
+    const message = document.getElementById('message');
+    const progress = document.getElementById('progress');
+
+    let correctCount = 0;
+
+    if (!phrase) {
+        instruction.textContent = 'Error: No phrase provided. Use ?phrase=your+text+here in the URL.';
+        inputBox.disabled = true;
+    } else {
+        instruction.textContent = `Type this phrase exactly: "${phrase}"`;
+    }
+
+    inputBox.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            if (inputBox.value === phrase) {
+                correctCount++;
+                progress.textContent = `Progress: ${correctCount} / 10`;
+                message.textContent = "✅ Correct!";
+                message.style.color = "green";
+                inputBox.value = "";
+            } else {
+                message.textContent = "❌ Incorrect. Try again.";
+                message.style.color = "red";
+            }
+
+            if (correctCount >= 10) {
+                instruction.textContent = "🎉 Congratulations! You've completed the challenge.";
+                inputBox.disabled = true;
+                inputBox.classList.add('hidden');
+
+                // Try to close the tab
+                setTimeout(() => {
+                    window.close();
+                }, 1000); // delay so user sees the final message
+            }
+        }
+    });
+</script>
+</body>
+</html>
