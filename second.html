@@ -11,24 +11,29 @@
         .incorrect {
             background-color: #f3a5a5;
         }
+
         body {
             font-family: sans-serif;
             margin: auto;
             padding: 20px;
         }
+
         input {
             width: 100%;
             margin: 10px 0;
             padding: 8px;
             font-size: 1em;
         }
+
         button {
             padding: 10px 20px;
             font-size: 1em;
         }
+
         .hidden {
             display: none;
         }
+
         .mistake {
             margin-bottom: 10px;
             background: #ffe0e0;
@@ -45,10 +50,6 @@
         English:
         <input type="text" id="textInput" required>
     </label>
-    <label>
-        Translation:
-        <select id="translationInput" required></select>
-    </label>
     <button type="submit">Next</button>
 </form>
 
@@ -60,10 +61,9 @@
 </div>
 
 <script>
-    const DATA_URL = `./jsons/second.json?nocache=${Date.now()}`; // Replace with actual URL
+    const DATA_URL = `./jsons/second.json?nocache=${Date.now()}`;
     const answerForm = document.getElementById('answerForm');
     const textInput = document.getElementById('textInput');
-    const translationInput = document.getElementById('translationInput');
     const audioEl = document.getElementById('audio');
     const stepInfo = document.getElementById('stepInfo');
     const resultsDiv = document.getElementById('results');
@@ -73,52 +73,30 @@
     let tasks = [];
     let currentIndex = 0;
     let userAnswers = [];
+    const playedArms = new Map();
 
-    // Utility: shuffle array
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
-
         return array;
     }
 
     function loadTask(index) {
         const task = tasks[index];
-        audioEl.src = task.audio;
+
+        // Check if armAudio exists and has not been played yet
+        if (task.armAudio && !playedArms.has(task.armAudio)) {
+            audioEl.src = task.armAudio;
+            playedArms.set(task.armAudio, true)
+        } else {
+            audioEl.src = task.audio;
+        }
+
         audioEl.play();
         textInput.value = "";
         stepInfo.textContent = `Step ${index + 1} of ${tasks.length}`;
-
-        const answeredRecord = userAnswers?.find((item) => item.task.text === task.text);
-        const translationSelect = document.getElementById('translationInput');
-
-        // Clear previous options
-        translationSelect.innerHTML = '';
-
-        // Generate incorrect options (excluding the correct one)
-        const allTranslations = Array.from(new Set(tasks.map(t => t.translation).filter(tr => tr !== task.translation)));
-        shuffle(allTranslations);
-        const wrongOptions = allTranslations.slice(0, 2);
-
-        // Add correct and incorrect options
-        const options = [...wrongOptions, task.translation];
-
-        options.forEach(option => {
-            const opt = document.createElement('option');
-            opt.value = option;
-            opt.textContent = option;
-            translationSelect.appendChild(opt);
-        });
-
-        if (answeredRecord) {
-            translationSelect.value = answeredRecord.userTrans;
-            translationSelect.disabled = true;
-        } else {
-            translationSelect.disabled = false;
-            translationSelect.focus();
-        }
         textInput.focus();
     }
 
@@ -129,18 +107,14 @@
         stepInfo.classList.add('hidden');
         resultsDiv.classList.remove('hidden');
 
-        // Count correct answers
         let correct = 0;
         const taskHistory = new Map();
-
 
         userAnswers.forEach(ans => {
             const key = ans.task.audio;
             const correctText = ans.task.text.trim();
-            const correctTrans = ans.task.translation.trim();
             const userText = ans.userText.trim();
-            const userTrans = ans.userTrans.trim();
-            const isCorrect = userText.toLowerCase() === correctText.toLowerCase() && userTrans === correctTrans;
+            const isCorrect = userText.toLowerCase() === correctText.toLowerCase();
 
             if (isCorrect) correct++;
 
@@ -152,41 +126,43 @@
             }
 
             taskHistory.get(key).attempts.push({
-                userText,
-                userTrans
+                userText
             });
         });
 
         scoreEl.textContent = `You got ${correct} out of ${tasks.length} correct.`;
 
-        // Build table
         const table = document.createElement('table');
         table.border = '1';
         table.style.width = '100%';
         table.style.borderCollapse = 'collapse';
+
         const header = `
-        <tr>
-            <th>Word</th>
-            <th>Attempt 1</th>
-            <th>Attempt 2</th>
-            <th>Attempt 3</th>
-            <th>Tr</th>
-        </tr>
-    `;
+            <tr>
+                <th>Word</th>
+                <th>Attempt 1</th>
+                <th>Attempt 2</th>
+                <th>Attempt 3</th>
+            </tr>
+        `;
         table.innerHTML = header;
 
         for (const { task, attempts } of taskHistory.values()) {
             const engAttempts = attempts.map(a => a.userText);
-            const trAttempts = attempts.map(a => a.userTrans);
 
             const row = document.createElement('tr');
             row.innerHTML = `
-            <td onclick="practice('${task.text}', '${task.audio}')" class="${compare(task.text, engAttempts[0]) && compare(task.text, engAttempts[1]) && compare(task.text, engAttempts[2]) && compare(task.translation, trAttempts[0]) ? 'correct': 'incorrect'}">${task.text}/${task.translation}</td>
-            <td class="${compare(task.text, engAttempts[0]) ? 'correct': 'incorrect'}">${engAttempts[0] || ''}</td>
-            <td class="${compare(task.text, engAttempts[1]) ? 'correct': 'incorrect'}">${engAttempts[1] || ''}</td>
-            <td class="${compare(task.text, engAttempts[2]) ? 'correct': 'incorrect'}">${engAttempts[2] || ''}</td>
-            <td class="${compare(task.translation, trAttempts[0]) ? 'correct': 'incorrect'}">${trAttempts[0] || ''}</td>
-        `;
+                <td onclick="practice('${task.text}', '${task.audio}')" class="${
+                compare(task.text, engAttempts[0]) &&
+                compare(task.text, engAttempts[1]) &&
+                compare(task.text, engAttempts[2])
+                    ? 'correct'
+                    : 'incorrect'
+            }">${task.text}/${task.translation}</td>
+                <td class="${compare(task.text, engAttempts[0]) ? 'correct' : 'incorrect'}">${engAttempts[0] || ''}</td>
+                <td class="${compare(task.text, engAttempts[1]) ? 'correct' : 'incorrect'}">${engAttempts[1] || ''}</td>
+                <td class="${compare(task.text, engAttempts[2]) ? 'correct' : 'incorrect'}">${engAttempts[2] || ''}</td>
+            `;
             table.appendChild(row);
         }
 
@@ -194,14 +170,12 @@
         mistakeList.appendChild(table);
     }
 
-
     answerForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         userAnswers.push({
             task: tasks[currentIndex],
-            userText: textInput.value,
-            userTrans: translationInput.value
+            userText: textInput.value
         });
 
         currentIndex++;
@@ -212,12 +186,11 @@
         }
     });
 
-    // Load data from URL and start
     fetch(DATA_URL)
         .then(res => res.json())
         .then(jsonData => {
             shuffle(jsonData);
-            const selected = jsonData.slice(0, 25);
+            const selected = jsonData.slice(0, 2);
 
             const part1 = [];
             const part2 = [];
@@ -238,9 +211,8 @@
             console.error(err);
         });
 
-
     function compare(text1, text2) {
-        return text1.toLowerCase().trim() === text2.toLowerCase().trim();
+        return text1?.toLowerCase().trim() === text2?.toLowerCase().trim();
     }
 
     function practice(phrase, audio) {

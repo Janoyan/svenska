@@ -34,7 +34,7 @@
 <div id="container">
     <h1>Typing Challenge</h1>
     <p id="instruction"></p>
-    <p id="progress">Progress: 0 / 10</p>
+    <p id="progress">Progress: 0 / 5</p>
     <input type="text" id="inputBox" placeholder="Type the phrase and press Enter">
     <p id="message"></p>
 </div>
@@ -77,12 +77,12 @@
         if (e.key === 'Enter') {
             if (inputBox.value === phrase) {
                 correctCount++;
-                progress.textContent = `Progress: ${correctCount} / 10`;
+                progress.textContent = `Progress: ${correctCount} / 5`;
                 message.textContent = "✅ Correct!";
                 message.style.color = "green";
                 inputBox.value = "";
 
-                if (correctCount < 10) {
+                if (correctCount < 5) {
                     playAudio(); // Replay audio for next prompt
                 }
             } else {
@@ -90,7 +90,7 @@
                 message.style.color = "red";
             }
 
-            if (correctCount >= 10) {
+            if (correctCount >= 5) {
                 instruction.textContent = "🎉 Congratulations! You've completed the challenge.";
                 inputBox.disabled = true;
                 inputBox.classList.add('hidden');

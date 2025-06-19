@@ -20,6 +20,7 @@ async function concatJsonFilesWithIds(outputFilePath, secondApp) {
                 if (secondApp && !obj.done) {
                     allData.push({
                         audio: obj.audio,
+                        armAudio: obj.armAudio,
                         text: obj.text,
                         translation: obj.translation,
                     });
