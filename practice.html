@@ -53,11 +53,13 @@
 
     // Set up audio element
     let audio;
+    let armAudio;
 
     fetch(DATA_URL)
         .then(res => res.json())
         .then(jsonData => {
             audio = new Audio(jsonData.audio);
+            armAudio = new Audio(jsonData.armAudio);
         })
         .catch(err => {
             alert('❌ Failed to load data.');
@@ -69,6 +71,11 @@
         if (audio) {
             audio.currentTime = 0;
             audio.play().catch(err => console.warn("Audio play failed:", err));
+
+            audio.onended = function() {
+                armAudio.currentTime = 0;
+                armAudio.play().catch(err => console.warn("armAudio  play failed:", err));
+            };
         }
     }
 
@@ -97,6 +104,7 @@
             }
 
             if (correctCount >= 5) {
+                playAudio();
                 instruction.textContent = "🎉 Congratulations! You've completed the challenge.";
                 inputBox.disabled = true;
                 inputBox.classList.add('hidden');
@@ -104,7 +112,7 @@
                 // Try to close the tab
                 setTimeout(() => {
                     window.close();
-                }, 1000);
+                }, 2000);
             }
         }
     });
