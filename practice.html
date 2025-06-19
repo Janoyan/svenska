@@ -41,10 +41,8 @@
 
 <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const phrase = urlParams.get('phrase');
-    const audioDataUri = decodeURIComponent(urlParams.get('audio'));
-
-    console.log(audioDataUri);
+    const phrase = decodeURIComponent(urlParams.get('phrase'));
+    const DATA_URL = `./source/${phrase.replaceAll(' ', '-')}.json?nocache=${Date.now()}`;
 
     const instruction = document.getElementById('instruction');
     const inputBox = document.getElementById('inputBox');
@@ -55,9 +53,17 @@
 
     // Set up audio element
     let audio;
-    if (audioDataUri) {
-        audio = new Audio(audioDataUri);
-    }
+
+    fetch(DATA_URL)
+        .then(res => res.json())
+        .then(jsonData => {
+            audio = new Audio(jsonData.audio);
+        })
+        .catch(err => {
+            alert('❌ Failed to load data.');
+            console.error(err);
+        });
+
 
     function playAudio() {
         if (audio) {

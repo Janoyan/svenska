@@ -152,7 +152,7 @@
 
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td onclick="practice('${task.text}', '${task.audio}')" class="${
+                <td onclick="practice('${task.text}')" class="${
                 compare(task.text, engAttempts[0]) &&
                 compare(task.text, engAttempts[1]) &&
                 compare(task.text, engAttempts[2])
@@ -190,7 +190,7 @@
         .then(res => res.json())
         .then(jsonData => {
             shuffle(jsonData);
-            const selected = jsonData.slice(0, 2);
+            const selected = jsonData.slice(0, 25);
 
             const part1 = [];
             const part2 = [];
@@ -215,8 +215,8 @@
         return text1?.toLowerCase().trim() === text2?.toLowerCase().trim();
     }
 
-    function practice(phrase, audio) {
-        window.open(`./practice.html?phrase=${phrase}&audio=${encodeURIComponent(audio)}`, '_blank');
+    function practice(phrase) {
+        window.open(`./practice.html?phrase=${encodeURIComponent(phrase)}}`, '_blank');
     }
 </script>
 </body>
