@@ -61,6 +61,7 @@
 </div>
 
 <script>
+    const AMOUNT = 25;
     const DATA_URL = `./jsons/current.json?nocache=${Date.now()}`;
     const answerForm = document.getElementById('answerForm');
     const textInput = document.getElementById('textInput');
@@ -73,7 +74,6 @@
     let tasks = [];
     let currentIndex = 0;
     let userAnswers = [];
-    const playedArms = new Map();
     const taskAttemptCount = new Map();
     const skipMap = new Set();
 
@@ -87,12 +87,12 @@
 
     function loadTask(index) {
         const task = tasks[index];
-        const key = task.audio;
+        const key = task.id;
 
         const attempts = taskAttemptCount.get(key);
         if (skipMap.has(key)) {
             // Already marked to skip; auto-fill remaining attempts with 'x'
-            while (attempts.length < 3) {
+            while (attempts.length < 4) {
                 attempts.push('x');
                 userAnswers.push({ task, userText: 'x' });
             }
@@ -100,13 +100,7 @@
             return;
         }
 
-        if (task.armAudio && !playedArms.has(task.armAudio)) {
-            audioEl.src = task.armAudio;
-            playedArms.set(task.armAudio, true);
-        } else {
-            audioEl.src = task.audio;
-        }
-
+        audioEl.src = task.audio;
         audioEl.play();
         textInput.value = "";
         stepInfo.textContent = `Step ${index + 1} of ${tasks.length}`;
@@ -131,7 +125,7 @@
         let correct = 0;
 
         for (const [key, attempts] of taskAttemptCount.entries()) {
-            const task = tasks.find(t => t.audio === key);
+            const task = tasks.find(t => t.id === key);
             const correctText = task.text.trim().toLowerCase();
 
             if (attempts.some(attempt => attempt.toLowerCase() === correctText)) {
@@ -152,27 +146,29 @@
                 <th>Attempt 1</th>
                 <th>Attempt 2</th>
                 <th>Attempt 3</th>
+                <th>Attempt 4</th>
             </tr>
         `;
         table.innerHTML = header;
 
         for (const [key, attempts] of taskAttemptCount.entries()) {
-            const task = tasks.find(t => t.audio === key);
+            const task = tasks.find(t => t.id === key);
             const correctText = task.text;
 
             const paddedAttempts = [...attempts];
-            while (paddedAttempts.length < 3) {
+            while (paddedAttempts.length < 4) {
                 paddedAttempts.push('');
             }
 
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td onclick="practice('${task.text}')" class="${
-                paddedAttempts.includes(correctText) ? 'correct' : 'incorrect'
+                paddedAttempts.every((x) => compare(correctText, x)) ? 'correct' : 'incorrect'
             }">${task.text}/${task.translation}</td>
                 <td class="${compare(correctText, paddedAttempts[0]) ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
                 <td class="${compare(correctText, paddedAttempts[1]) ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
                 <td class="${compare(correctText, paddedAttempts[2]) ? 'correct' : 'incorrect'}">${paddedAttempts[2]}</td>
+                <td class="${compare(correctText, paddedAttempts[3]) ? 'correct' : 'incorrect'}">${paddedAttempts[3]}</td>
             `;
             table.appendChild(row);
         }
@@ -185,10 +181,9 @@
         e.preventDefault();
 
         const currentTask = tasks[currentIndex];
-        const key = currentTask.audio;
+        const key = currentTask.id;
         const userText = textInput.value.trim();
-        const correctText = currentTask.text.trim();
-        const isCorrect = userText.toLowerCase() === correctText.toLowerCase();
+        const isCorrect = compare(userText, currentTask.text);
 
         if (!taskAttemptCount.has(key)) {
             taskAttemptCount.set(key, []);
@@ -197,6 +192,8 @@
         const attempts = taskAttemptCount.get(key);
         attempts.push(userText);
         userAnswers.push({ task: currentTask, userText });
+
+        console.log(userAnswers, isCorrect);
 
         if (attempts.length === 1 && !isCorrect) {
             skipMap.add(key);
@@ -209,19 +206,15 @@
         .then(res => res.json())
         .then(jsonData => {
             shuffle(jsonData);
-            const selected = jsonData.slice(0, 25);
-
-            const part1 = [];
-            const part2 = [];
+            const selected = jsonData.slice(0, AMOUNT);
 
             selected.forEach(item => {
-                part1.push(item);
                 for (let i = 0; i < 2; i++) {
-                    part2.push({ ...item });
+                    tasks.push({...item, audio: item.armAudio});
+                    tasks.push({...item});
                 }
             });
 
-            tasks = part1.concat(shuffle(part2));
             answerForm.classList.remove('hidden');
             loadTask(currentIndex);
         })
