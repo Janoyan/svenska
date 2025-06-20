@@ -43,6 +43,7 @@
 </head>
 <body>
 <h1>Audio Practice</h1>
+<p id="score"></p>
 <p id="stepInfo">Loading...</p>
 <audio id="audio" controls></audio>
 <form id="answerForm" class="hidden">
@@ -55,7 +56,6 @@
 
 <div id="results" class="hidden">
     <h2>✅ Completed!</h2>
-    <p id="score"></p>
     <h3>Mistakes:</h3>
     <div id="mistakeList"></div>
 </div>
@@ -170,7 +170,7 @@
 
         mistakeList.innerHTML = '';
         mistakeList.appendChild(table);
-        scoreEl.textContent = `You got ${correctAnswers.length} out of ${tasks.length} correct.`;
+
 
         setAnswers(getSavedAnswers().concat(correctAnswers))
 
@@ -206,6 +206,8 @@
         .then(jsonData => {
             const savedAnswers = getSavedAnswers();
             const data = jsonData.filter((item) => !savedAnswers.includes(item.id));
+
+            scoreEl.textContent = `Remaining:  ${data.length} out of ${jsonData.length}`;
 
             shuffle(data);
             const selected = data.slice(0, AMOUNT);
