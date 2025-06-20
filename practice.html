@@ -20,7 +20,7 @@
             text-align: center;
         }
         input[type="text"] {
-            width: 100%;
+            width: 90%;
             padding: 1em;
             font-size: 1.2em;
             margin-top: 1em;
@@ -32,10 +32,10 @@
 </head>
 <body>
 <div id="container">
-    <h1>Typing Challenge</h1>
-    <p id="instruction"></p>
+    <h1 id="instruction"></h1>
+    <img id="pic"/>
     <p id="progress">Progress: 0 / 5</p>
-    <input type="text" id="inputBox" placeholder="Type the phrase and press Enter">
+    <input type="text" id="inputBox" placeholder="">
     <p id="message"></p>
 </div>
 
@@ -60,6 +60,7 @@
         .then(jsonData => {
             audio = new Audio(jsonData.audio);
             armAudio = new Audio(jsonData.armAudio);
+            document.getElementById('pic').src = jsonData.image;
         })
         .catch(err => {
             alert('❌ Failed to load data.');
@@ -83,7 +84,7 @@
         instruction.textContent = 'Error: No phrase provided. Use ?phrase=your+text+here in the URL.';
         inputBox.disabled = true;
     } else {
-        instruction.textContent = `Type this phrase exactly: "${phrase}"`;
+        instruction.textContent = `${phrase}`;
     }
 
     inputBox.addEventListener('keydown', function(e) {
