@@ -122,19 +122,6 @@
         stepInfo.classList.add('hidden');
         resultsDiv.classList.remove('hidden');
 
-        let correct = 0;
-
-        for (const [key, attempts] of taskAttemptCount.entries()) {
-            const task = tasks.find(t => t.id === key);
-            const correctText = task.text.trim().toLowerCase();
-
-            if (attempts.some(attempt => attempt.toLowerCase() === correctText)) {
-                correct++;
-            }
-        }
-
-        scoreEl.textContent = `You got ${correct} out of ${taskAttemptCount.size} correct.`;
-
         const table = document.createElement('table');
         table.border = '1';
         table.style.width = '100%';
@@ -151,6 +138,7 @@
         `;
         table.innerHTML = header;
 
+        const correctAnswers = [];
         for (const [key, attempts] of taskAttemptCount.entries()) {
             const task = tasks.find(t => t.id === key);
             const correctText = task.text;
@@ -160,10 +148,17 @@
                 paddedAttempts.push('');
             }
 
+            const answeredCorrectly = paddedAttempts.every((x) => compare(correctText, x));
+
+            if (answeredCorrectly) {
+                correctAnswers.push(task.id);
+            }
+
+
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td onclick="practice('${task.text}')" class="${
-                paddedAttempts.every((x) => compare(correctText, x)) ? 'correct' : 'incorrect'
+                answeredCorrectly ? 'correct' : 'incorrect'
             }">${task.text}/${task.translation}</td>
                 <td class="${compare(correctText, paddedAttempts[0]) ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
                 <td class="${compare(correctText, paddedAttempts[1]) ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
@@ -175,6 +170,10 @@
 
         mistakeList.innerHTML = '';
         mistakeList.appendChild(table);
+        scoreEl.textContent = `You got ${correctAnswers.length} out of ${tasks.length} correct.`;
+
+        setAnswers(getSavedAnswers().concat(correctAnswers))
+
     }
 
     answerForm.addEventListener('submit', (e) => {
@@ -205,8 +204,11 @@
     fetch(DATA_URL)
         .then(res => res.json())
         .then(jsonData => {
-            shuffle(jsonData);
-            const selected = jsonData.slice(0, AMOUNT);
+            const savedAnswers = getSavedAnswers();
+            const data = jsonData.filter((item) => !savedAnswers.includes(item.id));
+
+            shuffle(data);
+            const selected = data.slice(0, AMOUNT);
 
             selected.forEach(item => {
                 for (let i = 0; i < 2; i++) {
@@ -231,6 +233,14 @@
 
     function practice(phrase) {
         window.open(`./practice.html?phrase=${encodeURIComponent(phrase)}`, '_blank');
+    }
+
+    function getSavedAnswers() {
+        return JSON.parse(localStorage.getItem('correctAnswers') ?? '[]')
+    }
+
+    function setAnswers(answers) {
+        localStorage.setItem('correctAnswers', JSON.stringify(answers));
     }
 </script>
 </body>
