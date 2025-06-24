@@ -3,6 +3,10 @@ const path = require('path');
 const axios = require('axios');
 
 const directoryPath = './source';
+(async () => {
+    await concatJsonFilesWithIds('./jsons/current.json');
+})();
+
 
 function isAudioUrl(audio) {
     return typeof audio === 'string' && /^https?:\/\//i.test(audio);
@@ -61,6 +65,3 @@ async function concatJsonFilesWithIds(outputFilePath) {
     }
 }
 
-(async () => {
-    await concatJsonFilesWithIds('./jsons/current.json');
-})();

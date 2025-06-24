@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Text Search, Translate & Pronunciation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            font-size: 1em;
+        }
+        .link-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .audio-controls {
+            margin-top: 10px;
+        }
+        #recordBtn {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        #recordBtn.recording {
+            background-color: red;
+        }
+
+        #copyJsonBtn {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 1em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #copyJsonBtn:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Text-Based Tools</h1>
+
+<form id="searchForm" onsubmit="return false;">
+    <label for="text">Text:</label>
+    <input type="text" id="text" name="text" placeholder="Enter text...">
+
+    <label for="translation">Translation:</label>
+    <input type="text" id="translation" name="translation" placeholder="Enter translation...">
+
+    <label for="image">Image:</label>
+    <input type="text" id="image" name="image" placeholder="Enter image description...">
+
+    <label for="audio">Audio:</label>
+    <input type="text" id="audio" name="audio" placeholder="Enter audio text...">
+
+    <label for="armAudio">Arm Audio (Base64 Data URI):</label>
+    <input type="text" id="armAudio" name="armAudio" placeholder="Hold to record Armenian audio..." disabled>
+
+    <div class="audio-controls">
+        <button type="button" id="recordBtn">🎙️ Hold to Record</button>
+    </div>
+</form>
+
+<div class="link-container" id="links" style="display: none;">
+    <a id="imageSearchLink" href="#" target="_blank">
+        🔍 View Image Search for "<span id="queryText1"></span>"
+    </a>
+    <a id="translateLink" href="#" target="_blank">
+        🌐 Translate "<span id="queryText2"></span>" from English to Armenian
+    </a>
+    <a id="pronounceLink" href="#" target="_blank">
+        🔊 Hear Pronunciation of "<span id="queryText3"></span>" on Cambridge Dictionary
+    </a>
+    <button id="copyJsonBtn" type="button">📋 Copy JSON to Clipboard</button>
+
+</div>
+
+<script>
+    const textInput = document.getElementById('text');
+    const armAudioInput = document.getElementById('armAudio');
+    const recordBtn = document.getElementById('recordBtn');
+
+    const imageSearchLink = document.getElementById('imageSearchLink');
+    const translateLink = document.getElementById('translateLink');
+    const pronounceLink = document.getElementById('pronounceLink');
+    const queryText1 = document.getElementById('queryText1');
+    const queryText2 = document.getElementById('queryText2');
+    const queryText3 = document.getElementById('queryText3');
+    const linksContainer = document.getElementById('links');
+
+    let mediaRecorder;
+    let audioChunks = [];
+
+    textInput.addEventListener('input', () => {
+        const query = textInput.value.trim();
+        if (query) {
+            const encodedQuery = encodeURIComponent(query);
+            imageSearchLink.href = `https://www.google.com/search?tbm=isch&q=${encodedQuery}`;
+            translateLink.href = `https://translate.google.com/?sl=en&tl=hy&text=${encodedQuery}&op=translate`;
+            pronounceLink.href = `https://dictionary.cambridge.org/pronunciation/english/${encodedQuery}`;
+
+            queryText1.textContent = query;
+            queryText2.textContent = query;
+            queryText3.textContent = query;
+
+            linksContainer.style.display = 'flex';
+        } else {
+            linksContainer.style.display = 'none';
+        }
+    });
+
+    // Handle recording
+    async function initMediaRecorder() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.ondataavailable = e => {
+                if (e.data.size > 0) {
+                    audioChunks.push(e.data);
+                }
+            };
+
+            mediaRecorder.onstop = () => {
+                const blob = new Blob(audioChunks, { type: 'audio/webm' });
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    armAudioInput.value = reader.result; // Full data URI
+                };
+                reader.readAsDataURL(blob);
+                audioChunks = [];
+                recordBtn.classList.remove('recording');
+            };
+        } catch (err) {
+            alert('Microphone access is required.');
+            console.error(err);
+        }
+    }
+
+    // Lazy init
+    recordBtn.addEventListener('mousedown', startRecording);
+    recordBtn.addEventListener('mouseup', stopRecording);
+    recordBtn.addEventListener('mouseleave', stopRecording);
+
+    // For mobile touch support
+    recordBtn.addEventListener('touchstart', startRecording);
+    recordBtn.addEventListener('touchend', stopRecording);
+
+    async function startRecording(e) {
+        e.preventDefault();
+        if (!mediaRecorder) {
+            await initMediaRecorder();
+        }
+        if (mediaRecorder.state === 'inactive') {
+            audioChunks = [];
+            mediaRecorder.start();
+            recordBtn.classList.add('recording');
+        }
+    }
+
+    function stopRecording(e) {
+        e.preventDefault();
+        if (mediaRecorder && mediaRecorder.state === 'recording') {
+            mediaRecorder.stop();
+        }
+    }
+    document.getElementById('copyJsonBtn').addEventListener('click', () => {
+        const jsonData = {
+            text: document.getElementById('text').value,
+            translation: document.getElementById('translation').value,
+            image: document.getElementById('image').value,
+            audio: document.getElementById('audio').value,
+            armAudio: document.getElementById('armAudio').value
+        };
+
+        const jsonString = JSON.stringify(jsonData, null, 2); // Prettified JSON
+
+        navigator.clipboard.writeText(jsonString)
+            .then(() => {
+                console.log('✅ JSON copied to clipboard!');
+            })
+            .catch(err => {
+                console.error('Failed to copy JSON:', err);
+                alert('❌ Failed to copy JSON. Please try again.');
+            });
+    });
+
+</script>
+</body>
+</html>
