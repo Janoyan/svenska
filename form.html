@@ -71,37 +71,62 @@
 <form id="searchForm" onsubmit="return false;">
     <label for="text">Text:</label>
     <input type="text" id="text" name="text" placeholder="Enter text...">
+    <div class="link-container" style="display: flex;">
+        <a id="translateLink" href="#" target="_blank">
+            🌐 Translate "<span id="queryText2"></span>" from English to Armenian
+        </a>
+    </div>
+
 
     <label for="translation">Translation:</label>
     <input type="text" id="translation" name="translation" placeholder="Enter translation...">
+    <div class="link-container"  style="display: flex;">
+        <a id="imageSearchLink" href="#" target="_blank">
+            🔍 View Image Search for "<span id="queryText1"></span>"
+        </a>
+    </div>
 
     <label for="image">Image:</label>
     <input type="text" id="image" name="image" placeholder="Enter image description...">
+    <!-- Preview for Image -->
+    <div id="imagePreviewContainer" style="margin-top:10px;">
+        <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; display: none;" />
+    </div>
+    <div class="link-container"  style="display: flex;">
+        <a id="pronounceLink" href="#" target="_blank">
+            🔊 Hear Pronunciation of "<span id="queryText3"></span>" on Cambridge Dictionary
+        </a>
+    </div>
+
+
 
     <label for="audio">Audio:</label>
     <input type="text" id="audio" name="audio" placeholder="Enter audio text...">
 
+    <!-- Preview for Audio -->
+    <div id="audioPreviewContainer" style="margin-top:10px;">
+        <audio id="audioPreview" controls style="display: none;"></audio>
+    </div>
+
+
     <label for="armAudio">Arm Audio (Base64 Data URI):</label>
     <input type="text" id="armAudio" name="armAudio" placeholder="Hold to record Armenian audio..." disabled>
+    <!-- Preview for Armenian Audio -->
+    <div id="armAudioPreviewContainer" style="margin-top:10px;">
+        <audio id="armAudioPreview" controls style="display: none;"></audio>
+    </div>
 
     <div class="audio-controls">
         <button type="button" id="recordBtn">🎙️ Hold to Record</button>
     </div>
+
+    <div class="link-container"  style="display: flex;">
+        <button id="copyJsonBtn" type="button">📋 Copy JSON to Clipboard</button>
+
+    </div>
+
 </form>
 
-<div class="link-container" id="links" style="display: none;">
-    <a id="imageSearchLink" href="#" target="_blank">
-        🔍 View Image Search for "<span id="queryText1"></span>"
-    </a>
-    <a id="translateLink" href="#" target="_blank">
-        🌐 Translate "<span id="queryText2"></span>" from English to Armenian
-    </a>
-    <a id="pronounceLink" href="#" target="_blank">
-        🔊 Hear Pronunciation of "<span id="queryText3"></span>" on Cambridge Dictionary
-    </a>
-    <button id="copyJsonBtn" type="button">📋 Copy JSON to Clipboard</button>
-
-</div>
 
 <script>
     const textInput = document.getElementById('text');
@@ -114,7 +139,6 @@
     const queryText1 = document.getElementById('queryText1');
     const queryText2 = document.getElementById('queryText2');
     const queryText3 = document.getElementById('queryText3');
-    const linksContainer = document.getElementById('links');
 
     let mediaRecorder;
     let audioChunks = [];
@@ -130,10 +154,7 @@
             queryText1.textContent = query;
             queryText2.textContent = query;
             queryText3.textContent = query;
-
-            linksContainer.style.display = 'flex';
         } else {
-            linksContainer.style.display = 'none';
         }
     });
 
@@ -154,6 +175,7 @@
                 const reader = new FileReader();
                 reader.onloadend = () => {
                     armAudioInput.value = reader.result; // Full data URI
+                    updateArmAudioPreview();
                 };
                 reader.readAsDataURL(blob);
                 audioChunks = [];
@@ -212,6 +234,59 @@
                 alert('❌ Failed to copy JSON. Please try again.');
             });
     });
+
+
+    // Preview handlers
+    function updateImagePreview() {
+        const val = document.getElementById('image').value;
+        const preview = document.getElementById('imagePreview');
+        if (val.startsWith('data:image/')) {
+            preview.src = val;
+            preview.style.display = 'block';
+        } else {
+            preview.style.display = 'none';
+        }
+    }
+
+    function updateAudioPreview() {
+        const val = document.getElementById('audio').value;
+        const preview = document.getElementById('audioPreview');
+        if (val.startsWith('data:audio/')) {
+            preview.src = val;
+            preview.style.display = 'block';
+        } else {
+            preview.style.display = 'none';
+        }
+    }
+
+    function updateArmAudioPreview() {
+        const val = document.getElementById('armAudio').value;
+        const preview = document.getElementById('armAudioPreview');
+        if (val.startsWith('data:audio/')) {
+            preview.src = val;
+            preview.style.display = 'block';
+        } else {
+            preview.style.display = 'none';
+        }
+    }
+
+    // Attach input listeners
+    document.getElementById('image').addEventListener('input', updateImagePreview);
+    document.getElementById('audio').addEventListener('input', updateAudioPreview);
+    document.getElementById('armAudio').addEventListener('change', updateArmAudioPreview);
+
+    // Update Armenian audio preview after recording
+    mediaRecorder.onstop = () => {
+        const blob = new Blob(audioChunks, { type: 'audio/webm' });
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            armAudioInput.value = reader.result; // Full data URI
+            updateArmAudioPreview(); // Update preview after recording
+        };
+        reader.readAsDataURL(blob);
+        audioChunks = [];
+        recordBtn.classList.remove('recording');
+    };
 
 </script>
 </body>
