@@ -1,11 +1,41 @@
 const fs = require('fs/promises');
 const path = require('path');
 const axios = require('axios');
+const tmpData = require('./tmp.json');
 
 const directoryPath = './source';
 (async () => {
+    if (tmpData.length) {
+        await createFiles();
+    }
+
     await concatJsonFilesWithIds('./jsons/current.json');
 })();
+
+async function createFiles() {
+    try {
+        const remainingData = [];
+
+        for (const item of tmpData) {
+            const fileName = `${item.text.replace(/\s+/g, '-')}.json`;
+            const filePath = path.join(directoryPath, fileName);
+
+            try {
+                await fs.writeFile(filePath, JSON.stringify(item, null, 2));
+                console.log(`✅ Created file: ${fileName}`);
+            } catch (err) {
+                console.error(`❌ Failed to write file "${fileName}": ${err.message}`);
+                remainingData.push(item); // Keep in tmp.json if write fails
+            }
+        }
+
+        // Update tmp.json to reflect removed items
+        await fs.writeFile('./tmp.json', JSON.stringify(remainingData, null, 2));
+        console.log('✅ Updated tmp.json');
+    } catch (err) {
+        console.error('❌ Error in createFiles:', err.message);
+    }
+}
 
 
 function isAudioUrl(audio) {
