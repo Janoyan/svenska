@@ -101,6 +101,8 @@
                 }
             } else {
                 message.textContent = "❌ Incorrect. Try again.";
+                inputBox.value = "";
+                correctCount = 0;
                 message.style.color = "red";
             }
 
