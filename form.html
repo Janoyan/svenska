@@ -72,6 +72,9 @@
     <label for="text">Text:</label>
     <input type="text" id="text" name="text" placeholder="Enter text...">
     <div class="link-container" style="display: flex;">
+        <a id="bararanLink" href="#" target="_blank">
+            Bararan
+        </a>
         <a id="translateLink" href="#" target="_blank">
             🌐 Translate "<span id="queryText2"></span>" from English to Armenian
         </a>
@@ -94,7 +97,7 @@
     </div>
     <div class="link-container"  style="display: flex;">
         <a id="pronounceLink" href="#" target="_blank">
-            Bararan.am
+            Cambridge
         </a>
     </div>
 
@@ -135,6 +138,7 @@
 
     const imageSearchLink = document.getElementById('imageSearchLink');
     const translateLink = document.getElementById('translateLink');
+    const bararanLink = document.getElementById('bararanLink');
     const pronounceLink = document.getElementById('pronounceLink');
     const queryText1 = document.getElementById('queryText1');
     const queryText2 = document.getElementById('queryText2');
@@ -149,7 +153,8 @@
             const encodedQuery = encodeURIComponent(query);
             imageSearchLink.href = `https://www.google.com/search?tbm=isch&q=${encodedQuery}`;
             translateLink.href = `https://translate.google.com/?sl=en&tl=hy&text=${encodedQuery}&op=translate`;
-            pronounceLink.href = `https://bararan.am/en/${encodedQuery}`;
+            pronounceLink.href = `https://dictionary.cambridge.org/pronunciation/english/${encodedQuery}`;
+            bararanLink.href = `https://bararan.am/en/${encodedQuery}`;
 
             queryText1.textContent = query;
             queryText2.textContent = query;
