@@ -62,8 +62,7 @@
 
 <script>
     const AMOUNT = 25;
-    const cacheBustingTimestamp = Math.floor(Date.now() / 60 * 60 * 1000) * 60 * 60 * 1000;
-    const DATA_URL = `./jsons/current.json?nocache=${cacheBustingTimestamp}`;
+    const DATA_URL = `./jsons/current.json`;
     const answerForm = document.getElementById('answerForm');
     const textInput = document.getElementById('textInput');
     const audioEl = document.getElementById('audio');
