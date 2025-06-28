@@ -72,6 +72,7 @@
     const scoreEl = document.getElementById('score');
     const mistakeList = document.getElementById('mistakeList');
 
+    let data = [];
     let tasks = [];
     let currentIndex = 0;
     let userAnswers = [];
@@ -149,7 +150,7 @@
                 paddedAttempts.push('');
             }
 
-            const answeredCorrectly = paddedAttempts.every((x) => compare(correctText, x));
+            const answeredCorrectly = paddedAttempts.every((x) => compare(x, task));
 
             if (answeredCorrectly) {
                 correctAnswers.push(task.id);
@@ -161,10 +162,10 @@
                 <td onclick="practice('${task.text}')" class="${
                 answeredCorrectly ? 'correct' : 'incorrect'
             }">${task.text}/${task.translation}</td>
-                <td class="${compare(correctText, paddedAttempts[0]) ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
-                <td class="${compare(correctText, paddedAttempts[1]) ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
-                <td class="${compare(correctText, paddedAttempts[2]) ? 'correct' : 'incorrect'}">${paddedAttempts[2]}</td>
-                <td class="${compare(correctText, paddedAttempts[3]) ? 'correct' : 'incorrect'}">${paddedAttempts[3]}</td>
+                <td class="${compare(paddedAttempts[0], task) ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
+                <td class="${compare(paddedAttempts[1], task) ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
+                <td class="${compare(paddedAttempts[2], task) ? 'correct' : 'incorrect'}">${paddedAttempts[2]}</td>
+                <td class="${compare(paddedAttempts[3], task) ? 'correct' : 'incorrect'}">${paddedAttempts[3]}</td>
             `;
             table.appendChild(row);
         }
@@ -183,7 +184,7 @@
         const currentTask = tasks[currentIndex];
         const key = currentTask.id;
         const userText = textInput.value.trim();
-        const isCorrect = compare(userText, currentTask.text);
+        const isCorrect = compare(userText, currentTask);
 
         if (!taskAttemptCount.has(key)) {
             taskAttemptCount.set(key, []);
@@ -206,7 +207,7 @@
         .then(res => res.json())
         .then(jsonData => {
             const savedAnswers = getSavedAnswers();
-            const data = jsonData.filter((item) => !savedAnswers.includes(item.id));
+            data = jsonData.filter((item) => !savedAnswers.includes(item.id));
 
             scoreEl.textContent = `Remaining:  ${data.length} out of ${jsonData.length}`;
 
@@ -230,8 +231,10 @@
             console.error(err);
         });
 
-    function compare(text1, text2) {
-        return text1?.toLowerCase().trim() === text2?.toLowerCase().trim();
+    function compare(userText, task) {
+        const possibleAnswers = data.filter((item) => item.translation === task.translation);
+
+        return possibleAnswers.some((item) => item.text.toLowerCase().trim() === userText.toLowerCase().trim());
     }
 
     function practice(phrase) {
