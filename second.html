@@ -21,8 +21,15 @@
         input {
             width: 100%;
             margin: 10px 0;
-            padding: 8px;
-            font-size: 1em;
+            padding: 23px;
+            font-size: 5em;
+            text-align: center;
+            border: none;
+            outline: none;
+            /* cursor: crosshair; */
+            letter-spacing: 4px;
+            color: blue;
+            font-weight: bold;
         }
 
         button {
@@ -39,19 +46,27 @@
             background: #ffe0e0;
             padding: 10px;
         }
+
+        #loadingContainer {
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
 <h1>Audio Practice</h1>
 <p id="score"></p>
+<div id="loadingContainer">
+    <p id="loadingText">Loading data...</p>
+    <progress id="loadingProgress" value="0" max="100" style="width: 100%;"></progress>
+</div>
 <p id="stepInfo">Loading...</p>
+
 <audio id="audio" controls></audio>
 <form id="answerForm" class="hidden">
     <label>
         English:
         <input type="text" id="textInput" required>
     </label>
-    <button type="submit">Next</button>
 </form>
 
 <div id="results" class="hidden">
@@ -202,9 +217,41 @@
         goToNextTask();
     });
 
+    const loadingContainer = document.getElementById('loadingContainer');
+    const loadingProgress = document.getElementById('loadingProgress');
+    const loadingText = document.getElementById('loadingText');
+
     fetch(DATA_URL)
-        .then(res => res.json())
-        .then(jsonData => {
+        .then(async response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            const contentLength = response.headers.get('Content-Length');
+            if (!contentLength) {
+                throw new Error('Content-Length header is missing. Real progress not possible.');
+            }
+
+            const total = parseInt(contentLength, 10);
+            const reader = response.body.getReader();
+            const chunks = [];
+            let receivedLength = 0;
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                chunks.push(value);
+                receivedLength += value.length;
+
+                const percent = Math.round((receivedLength / total) * 100);
+                loadingProgress.value = percent;
+                loadingText.textContent = `Loading data... ${percent}%`;
+            }
+
+            // Combine chunks and decode
+            const blob = new Blob(chunks);
+            const text = await blob.text();
+            const jsonData = JSON.parse(text);
+
+            // Proceed as usual after loading
             const savedAnswers = getSavedAnswers();
             data = jsonData.filter((item) => !savedAnswers.includes(item.id));
 
@@ -215,8 +262,8 @@
 
             selected.forEach(item => {
                 for (let i = 0; i < 2; i++) {
-                    tasks.push({...item, audio: item.armAudio});
-                    tasks.push({...item});
+                    tasks.push({ ...item, audio: item.armAudio });
+                    tasks.push({ ...item });
                 }
             });
 
@@ -224,11 +271,14 @@
 
             answerForm.classList.remove('hidden');
             loadTask(currentIndex);
+            loadingContainer.classList.add('hidden');
         })
         .catch(err => {
             stepInfo.textContent = '❌ Failed to load data.';
+            loadingText.textContent = '❌ Failed to load data.';
             console.error(err);
         });
+
 
     function compare(userText, task) {
         const possibleAnswers = data.filter((item) => item.translation === task.translation);
