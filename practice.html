@@ -97,7 +97,7 @@
 
     inputBox.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
-            if (inputBox.value === phrase) {
+            if (inputBox.value.trim().toLowerCase() === phrase.trim().toLowerCase()) {
                 correctCount++;
                 progress.textContent = `Progress: ${correctCount} / 5`;
                 message.textContent = "✅ Correct!";
