@@ -67,6 +67,8 @@
         English:
         <input type="text" id="textInput" required>
     </label>
+    <div id="charCount" style="text-align: center; font-size: 1.2em;"></div>
+
 </form>
 
 <div id="results" class="hidden">
@@ -81,6 +83,8 @@
         e.returnValue = ''; // Required for Chrome, Firefox, etc.
     });
 
+    let currentMaxLength = 0;
+    let currentTypings = 0;
     const AMOUNT = 25;
     const DATA_URL = `./jsons/current.json`;
     const answerForm = document.getElementById('answerForm');
@@ -90,6 +94,8 @@
     const resultsDiv = document.getElementById('results');
     const scoreEl = document.getElementById('score');
     const mistakeList = document.getElementById('mistakeList');
+    const charCount = document.getElementById('charCount');
+
 
     let data = [];
     let tasks = [];
@@ -97,6 +103,36 @@
     let userAnswers = [];
     const taskAttemptCount = new Map();
     const skipMap = new Set();
+
+    textInput.addEventListener('keyup', () => {
+        currentTypings++;
+        const remaining = currentMaxLength - currentTypings;
+
+        if (remaining > 0 && remaining < 3) {
+            charCount.textContent = `${remaining}`;
+        } else  {
+            charCount.textContent = ``;
+        }
+
+        if (remaining <= 0) {
+            textInput.disabled = true;
+            setTimeout(() => {
+                submitForm()
+
+            }, 1000)
+        }
+
+        const currentTask = tasks[currentIndex];
+        const userText = textInput.value.trim();
+        const isCorrect = compare(userText, currentTask);
+
+        if (isCorrect) {
+            textInput.style.color = '#82b100';
+        } else {
+            textInput.style.color = '#00458a';
+        }
+    });
+
 
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -112,7 +148,6 @@
 
         const attempts = taskAttemptCount.get(key);
         if (skipMap.has(key)) {
-            // Already marked to skip; auto-fill remaining attempts with 'x'
             while (attempts.length < 4) {
                 attempts.push('x');
                 userAnswers.push({ task, userText: 'x' });
@@ -124,9 +159,16 @@
         audioEl.src = task.audio;
         audioEl.play();
         textInput.value = "";
+        textInput.disabled = false;
         stepInfo.textContent = `Step ${index + 1} of ${tasks.length}`;
         textInput.focus();
+
+        // Set max length based on task.text.length + 30%
+        const baseLength = task.text.length;
+        currentMaxLength = Math.ceil(baseLength + baseLength * 0.3);
+        currentTypings = 0;
     }
+
 
     function goToNextTask() {
         currentIndex++;
@@ -197,9 +239,7 @@
 
     }
 
-    answerForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
+    function submitForm() {
         const currentTask = tasks[currentIndex];
         const key = currentTask.id;
         const userText = textInput.value.trim();
@@ -213,13 +253,16 @@
         attempts.push(userText);
         userAnswers.push({ task: currentTask, userText });
 
-        console.log(userAnswers, isCorrect);
-
         if (!isCorrect) {
             skipMap.add(key);
         }
 
         goToNextTask();
+    }
+
+    answerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitForm();
     });
 
     const loadingContainer = document.getElementById('loadingContainer');
