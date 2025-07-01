@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 2em;
+            padding: 0;
             background-color: #f0f0f0;
             color: #333;
         }
@@ -15,15 +15,23 @@
             padding: 2em;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            max-width: 600px;
             margin: auto;
             text-align: center;
         }
         input[type="text"] {
             width: 90%;
             padding: 1em;
-            font-size: 1.2em;
+            font-size: 60px;
             margin-top: 1em;
+            border: none;
+            text-align: center;
+            letter-spacing: 2px;
+            color: #bf00ff;
+            outline: none;
+        }
+        input::placeholder {
+            color: rgba(237, 237, 0, 0.18); /* Change to any color you want */
+            opacity: 1; /* Optional: ensures full color visibility in some browsers */
         }
         .hidden {
             display: none;
@@ -84,7 +92,7 @@
         instruction.textContent = 'Error: No phrase provided. Use ?phrase=your+text+here in the URL.';
         inputBox.disabled = true;
     } else {
-        instruction.textContent = `${phrase}`;
+        inputBox.setAttribute('placeholder', `${phrase}`);
     }
 
     inputBox.addEventListener('keydown', function(e) {
