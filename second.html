@@ -165,7 +165,7 @@
 
         // Set max length based on task.text.length + 30%
         const baseLength = task.text.length;
-        currentMaxLength = Math.ceil(baseLength + baseLength * 0.3);
+        currentMaxLength = Math.ceil(baseLength + baseLength * 0.5);
         currentTypings = 0;
     }
 
@@ -329,9 +329,22 @@
 
 
     function compare(userText, task) {
-        const possibleAnswers = data.filter((item) => item.translation === task.translation);
+        const possibleAnswers = data.filter((item) => {
+            const separateTranslations = item.translation.split(',')
+                .concat(item.translation.split('.'))
+                .concat(item.translation.split('/'))
+                .map(tt => tt.trim().toLowerCase());
 
-        return possibleAnswers.some((item) => item.text.toLowerCase().trim() === userText.toLowerCase().trim());
+            const taskTranslations = task.translation.split(',')
+            .concat(task.translation.split('.'))
+            .concat(task.translation.split('/'))
+            .map(tt => tt.trim().toLowerCase());
+            return taskTranslations.some((tt) => separateTranslations.includes(tt));
+        });
+
+        const userInputText = userText.toLowerCase().replace(/^\s*to\s+/i, '').trim();
+
+        return possibleAnswers.some((item) => item.text.toLowerCase().replace(/^\s*to\s+/i, '').trim() === userInputText);
     }
 
     function practice(phrase) {
