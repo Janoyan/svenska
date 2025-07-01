@@ -76,6 +76,11 @@
 </div>
 
 <script>
+    window.addEventListener('beforeunload', function (e) {
+        e.preventDefault();
+        e.returnValue = ''; // Required for Chrome, Firefox, etc.
+    });
+
     const AMOUNT = 25;
     const DATA_URL = `./jsons/current.json`;
     const answerForm = document.getElementById('answerForm');
