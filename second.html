@@ -12,6 +12,12 @@
             background-color: #f3a5a5;
         }
 
+        #translationDiv {
+            text-align: center;
+            font-size: 25px;
+            color: blue;
+        }
+
         body {
             font-family: sans-serif;
             margin: auto;
@@ -64,8 +70,8 @@
 <audio id="audio" controls></audio>
 <form id="answerForm" class="hidden">
     <label>
-        English:
         <input type="text" id="textInput" required>
+        <div id="translationDiv"></div>
     </label>
     <div id="charCount" style="text-align: center; font-size: 1.2em;"></div>
 
@@ -95,6 +101,7 @@
     const scoreEl = document.getElementById('score');
     const mistakeList = document.getElementById('mistakeList');
     const charCount = document.getElementById('charCount');
+    const translationDiv = document.getElementById('translationDiv');
 
 
     let data = [];
@@ -104,8 +111,10 @@
     const taskAttemptCount = new Map();
     const skipMap = new Set();
 
-    textInput.addEventListener('keyup', () => {
-        currentTypings++;
+    textInput.addEventListener('keyup', (e) => {
+        if (/^[a-zA-Z]$/.test(e.key)) {
+            currentTypings++;
+        }
         const remaining = currentMaxLength - currentTypings;
 
         if (remaining > 0 && remaining < 3) {
@@ -156,9 +165,10 @@
             return;
         }
 
-        audioEl.src = task.audio;
+        audioEl.src = task.audioToPlay;
         audioEl.play();
         textInput.value = "";
+        translationDiv.innerHTML = '';
         textInput.disabled = false;
         stepInfo.textContent = `Step ${index + 1} of ${tasks.length}`;
         textInput.focus();
@@ -255,9 +265,15 @@
 
         if (!isCorrect) {
             skipMap.add(key);
+            textInput.value = `"${currentTask.text}"`;
+            translationDiv.innerText = `${currentTask.translation}`;
+            setTimeout(() => {
+                goToNextTask();
+            }, 1000);
+        } else {
+            goToNextTask();
         }
 
-        goToNextTask();
     }
 
     answerForm.addEventListener('submit', (e) => {
@@ -310,8 +326,8 @@
 
             selected.forEach(item => {
                 for (let i = 0; i < 2; i++) {
-                    tasks.push({ ...item, audio: item.armAudio });
-                    tasks.push({ ...item });
+                    tasks.push({ ...item, audioToPlay: item.armAudio });
+                    tasks.push({ ...item, audioToPlay: item.audio });
                 }
             });
 
