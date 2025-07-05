@@ -105,6 +105,7 @@
 
 
     let data = [];
+    let jsonData = [];
     let tasks = [];
     let currentIndex = 0;
     let userAnswers = [];
@@ -313,7 +314,7 @@
             // Combine chunks and decode
             const blob = new Blob(chunks);
             const text = await blob.text();
-            const jsonData = JSON.parse(text);
+            jsonData = JSON.parse(text);
 
             // Proceed as usual after loading
             const savedAnswers = getSavedAnswers();
@@ -345,7 +346,7 @@
 
 
     function compare(userText, task) {
-        const possibleAnswers = data.filter((item) => {
+        const possibleAnswers = jsonData.filter((item) => {
             const separateTranslations = item.translation.split(',')
                 .concat(item.translation.split('.'))
                 .concat(item.translation.split('/'))
