@@ -56,6 +56,23 @@
         #loadingContainer {
             margin: 20px 0;
         }
+
+        #image {
+            max-width: 300px;
+            margin: auto;
+            display: none;
+        }
+
+        @keyframes pulseScale {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .repeat-animation {
+            animation: pulseScale 1s ease-in-out infinite;
+        }
+
     </style>
 </head>
 <body>
@@ -70,6 +87,7 @@
 <audio id="audio" controls></audio>
 <form id="answerForm" class="hidden">
     <label>
+        <img id="image">
         <input type="text" id="textInput" required>
         <div id="translationDiv"></div>
     </label>
@@ -91,7 +109,7 @@
 
     let currentMaxLength = 0;
     let currentTypings = 0;
-    const AMOUNT = 25;
+    const AMOUNT = 100;
     const DATA_URL = `./jsons/current.json`;
     const answerForm = document.getElementById('answerForm');
     const textInput = document.getElementById('textInput');
@@ -102,6 +120,7 @@
     const mistakeList = document.getElementById('mistakeList');
     const charCount = document.getElementById('charCount');
     const translationDiv = document.getElementById('translationDiv');
+    const imageContainer = document.getElementById('image');
 
 
     let data = [];
@@ -124,22 +143,26 @@
             charCount.textContent = ``;
         }
 
-        if (remaining <= 0) {
-            textInput.disabled = true;
-            setTimeout(() => {
-                submitForm()
-
-            }, 1000)
-        }
-
         const currentTask = tasks[currentIndex];
         const userText = textInput.value.trim();
         const isCorrect = compare(userText, currentTask);
 
         if (isCorrect) {
             textInput.style.color = '#82b100';
+            textInput.disabled = true;
+            setTimeout(() => {
+                submitForm()
+            }, 200)
+            return;
         } else {
             textInput.style.color = '#00458a';
+        }
+
+        if (remaining <= 0) {
+            textInput.disabled = true;
+            setTimeout(() => {
+                submitForm()
+            }, 500)
         }
     });
 
@@ -168,6 +191,8 @@
 
         audioEl.src = task.audioToPlay;
         audioEl.play();
+        imageContainer.setAttribute('src', task.image);
+        imageContainer.style.display = 'none';
         textInput.value = "";
         translationDiv.innerHTML = '';
         textInput.disabled = false;
@@ -176,10 +201,9 @@
 
         // Set max length based on task.text.length + 30%
         const baseLength = task.text.length;
-        currentMaxLength = Math.ceil(baseLength + baseLength * 0.5);
+        currentMaxLength = baseLength + 3;
         currentTypings = 0;
     }
-
 
     function goToNextTask() {
         currentIndex++;
@@ -231,7 +255,7 @@
 
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td onclick="practice('${task.text}')" class="${
+                <td class="${
                 answeredCorrectly ? 'correct' : 'incorrect'
             }">${task.text}/${task.translation}</td>
                 <td class="${compare(paddedAttempts[0], task) ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
@@ -266,20 +290,48 @@
 
         if (!isCorrect) {
             skipMap.add(key);
+            imageContainer.style.display = 'block';
             textInput.value = `"${currentTask.text}"`;
             translationDiv.innerText = `${currentTask.translation}`;
-            setTimeout(() => {
-                goToNextTask();
-            }, 1000);
-        } else {
+
+            // Start animation
+            imageContainer.classList.add('repeat-animation');
+            translationDiv.classList.add('repeat-animation');
+
+            let count = 0;
+            const playSequence = () => {
+                if (count >= 3) {
+                    imageContainer.classList.remove('repeat-animation');
+                    translationDiv.classList.remove('repeat-animation');
+                    setTimeout(() => {
+                        goToNextTask();
+                    }, 500);
+                    return;
+                }
+
+                const audio = new Audio(currentTask.audio);
+                audio.playbackRate = 1.3;
+                audio.play();
+                audio.onended = () => {
+                    const audio2 = new Audio(currentTask.armAudio);
+                    audio2.playbackRate = 1.3;
+                    audio2.play();
+                    audio2.onended = () => {
+                        count++;
+                        playSequence();
+                    };
+                };
+            };
+
+            playSequence();
+        }
+        else {
             goToNextTask();
         }
-
     }
 
     answerForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        submitForm();
     });
 
     const loadingContainer = document.getElementById('loadingContainer');
@@ -362,10 +414,6 @@
         const userInputText = userText.toLowerCase().replace(/^\s*to\s+/i, '').trim();
 
         return possibleAnswers.some((item) => item.text.toLowerCase().replace(/^\s*to\s+/i, '').trim() === userInputText);
-    }
-
-    function practice(phrase) {
-        window.open(`./practice.html?phrase=${encodeURIComponent(phrase)}`, '_blank');
     }
 
     function getSavedAnswers() {
