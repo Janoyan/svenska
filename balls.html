@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploding Balls</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #000000;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script>
+    const { Engine, Render, Runner, Bodies, Composite, Body } = Matter;
+
+    const engine = Engine.create();
+    engine.gravity.y = 0;
+    const world = engine.world;
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const render = Render.create({
+        element: document.body,
+        engine: engine,
+        options: {
+            width,
+            height,
+            wireframes: false,
+            background: '#000000'
+        }
+    });
+
+    Render.run(render);
+    Runner.run(Runner.create(), engine);
+
+    // Ground and walls
+    const groundHeight = 15;
+    const wallThickness = 100;
+
+    const ground = Bodies.rectangle(width / 2, height - groundHeight / 2, width, groundHeight, {
+        isStatic: true,
+        render: { fillStyle: '#333' }
+    });
+
+    const leftWall = Bodies.rectangle(-wallThickness / 2, height / 2, wallThickness, height * 2, {
+        isStatic: true,
+        render: { visible: false }
+    });
+
+    const rightWall = Bodies.rectangle(width + wallThickness / 2, height / 2, wallThickness, height * 2, {
+        isStatic: true,
+        render: { visible: false }
+    });
+
+    Composite.add(world, [ground, leftWall, rightWall]);
+
+    const ceiling = Bodies.rectangle(width / 2, 0, width, groundHeight, {
+        isStatic: true,
+        render: { visible: false }
+    });
+    Composite.add(world, ceiling);
+
+    // Read ballsCount from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const ballsCount = parseInt(urlParams.get('ballsCount')) || 20;
+
+    const balls = [];
+
+    for (let i = 0; i < ballsCount; i++) {
+        const size = 30;
+        const x = Math.random() * (width - size) + size / 2;
+        const y = Math.random() * (height - size) + size / 2; // Anywhere vertically
+
+        const ball = Bodies.circle(x, y, size / 2, {
+            restitution: 0.9,        // Perfect bounce
+            friction: 0,
+            frictionAir: 0,        // No air resistance
+            inertia: Infinity,     // Prevent rotation
+            density: 0.001,
+            render: {
+                fillStyle: getRandomColor()
+            }
+        });
+
+        // Apply **slow** horizontal velocity
+        Body.setVelocity(ball, {
+            x: (Math.random() > 0.5 ? 1 : -1) * 0.5, // 0.5 px/frame = slow
+            y: 0
+        });
+
+        Composite.add(world, ball);
+        balls.push(ball);
+    }
+
+
+
+    // Apply explosion force
+    function explodeBalls() {
+        const centerX = Math.random() * width;
+        const centerY = Math.random() * (height - groundHeight - 200);
+
+        balls.forEach(ball => {
+            const angle = Math.atan2(ball.position.y - centerY, ball.position.x - centerX);
+            const forceMagnitude = 0.03 + Math.random() * 0.02;
+
+            Body.applyForce(ball, ball.position, {
+                x: Math.cos(angle) * forceMagnitude,
+                y: Math.sin(angle) * forceMagnitude - 0.02  // small upward kick
+            });
+        });
+    }
+
+    explodeBalls();
+
+    function getRandomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgba(${r}, ${g}, ${b}, 1)`; // 30% opacity
+    }
+
+
+    // Optional: Reload on resize
+    window.addEventListener('resize', () => location.reload());
+</script>
+</body>
+</html>

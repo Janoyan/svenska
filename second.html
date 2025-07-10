@@ -16,6 +16,7 @@
             text-align: center;
             font-size: 25px;
             color: blue;
+            background-color: white;
         }
 
         body {
@@ -25,8 +26,8 @@
         }
 
         input {
-            width: 100%;
-            margin: 10px 0;
+            width: 80%;
+            margin: 10px auto;
             padding: 23px;
             font-size: 5em;
             text-align: center;
@@ -36,6 +37,9 @@
             letter-spacing: 4px;
             color: blue;
             font-weight: bold;
+            display: block;
+            background: rgba(255, 255, 255, 0.87);
+            border-radius: 10px;
         }
 
         button {
@@ -73,32 +77,54 @@
             animation: pulseScale 1s ease-in-out infinite;
         }
 
+        #animationIframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border: none;
+        }
+
+        audio {
+            margin: auto;
+            display: block;
+            opacity: .5;
+        }
+
+        #score {
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+        }
+
     </style>
+
 </head>
 <body>
-<h1>Audio Practice</h1>
-<p id="score"></p>
-<div id="loadingContainer">
-    <p id="loadingText">Loading data...</p>
-    <progress id="loadingProgress" value="0" max="100" style="width: 100%;"></progress>
-</div>
-<p id="stepInfo">Loading...</p>
+<iframe id="animationIframe"></iframe>
+<div id="appContainer">
+    <p id="score"></p>
+    <div id="loadingContainer">
+        <p id="loadingText">Loading data...</p>
+        <progress id="loadingProgress" value="0" max="100" style="width: 100%;"></progress>
+    </div>
 
-<audio id="audio" controls></audio>
-<form id="answerForm" class="hidden">
-    <label>
-        <img id="image">
-        <input type="text" id="textInput" required>
-        <div id="translationDiv"></div>
-    </label>
-    <div id="charCount" style="text-align: center; font-size: 1.2em;"></div>
+    <audio id="audio" controls></audio>
+    <form id="answerForm" class="hidden">
+        <label>
+            <img id="image">
+            <input type="text" id="textInput" required>
+            <div id="translationDiv"></div>
+        </label>
+        <div id="charCount" style="text-align: center; font-size: 1.2em;"></div>
 
-</form>
+    </form>
 
-<div id="results" class="hidden">
-    <h2>✅ Completed!</h2>
-    <h3>Mistakes:</h3>
-    <div id="mistakeList"></div>
+    <div id="results" class="hidden">
+        <h2>✅ Completed!</h2>
+        <h3>Mistakes:</h3>
+        <div id="mistakeList"></div>
+    </div>
 </div>
 
 <script>
@@ -114,7 +140,8 @@
     const answerForm = document.getElementById('answerForm');
     const textInput = document.getElementById('textInput');
     const audioEl = document.getElementById('audio');
-    const stepInfo = document.getElementById('stepInfo');
+    const animationIframe = document.getElementById('animationIframe');
+
     const resultsDiv = document.getElementById('results');
     const scoreEl = document.getElementById('score');
     const mistakeList = document.getElementById('mistakeList');
@@ -192,11 +219,11 @@
         audioEl.src = task.audioToPlay;
         audioEl.play();
         imageContainer.setAttribute('src', task.image);
+        animationIframe.setAttribute('src', `/balls.html?v=${Date.now()}&ballsCount=${tasks.length - currentIndex}`);
         imageContainer.style.display = 'none';
         textInput.value = "";
         translationDiv.innerHTML = '';
         textInput.disabled = false;
-        stepInfo.textContent = `Step ${index + 1} of ${tasks.length}`;
         textInput.focus();
 
         // Set max length based on task.text.length + 30%
@@ -217,7 +244,6 @@
     function showResults() {
         answerForm.classList.add('hidden');
         audioEl.classList.add('hidden');
-        stepInfo.classList.add('hidden');
         resultsDiv.classList.remove('hidden');
 
         const table = document.createElement('table');
@@ -372,7 +398,7 @@
             const savedAnswers = getSavedAnswers();
             data = jsonData.filter((item) => !savedAnswers.includes(item.id));
 
-            scoreEl.textContent = `Remaining:  ${data.length} out of ${jsonData.length}`;
+            scoreEl.textContent = `${data.length} /${jsonData.length}`;
 
             shuffle(data);
             const selected = data.slice(0, AMOUNT);
@@ -391,7 +417,6 @@
             loadingContainer.classList.add('hidden');
         })
         .catch(err => {
-            stepInfo.textContent = '❌ Failed to load data.';
             loadingText.textContent = '❌ Failed to load data.';
             console.error(err);
         });
