@@ -92,7 +92,7 @@
 
         // Apply **slow** horizontal velocity
         Body.setVelocity(ball, {
-            x: (Math.random() > 0.5 ? 1 : -1) * 0.5, // 0.5 px/frame = slow
+            x: 0.1,
             y: 0
         });
 
@@ -109,14 +109,17 @@
 
         balls.forEach(ball => {
             const angle = Math.atan2(ball.position.y - centerY, ball.position.x - centerX);
-            const forceMagnitude = 0.03 + Math.random() * 0.02;
+
+            // Reduce overall force magnitude for subtle effect
+            const forceMagnitude = 0.005 + Math.random() * 0.003;
 
             Body.applyForce(ball, ball.position, {
                 x: Math.cos(angle) * forceMagnitude,
-                y: Math.sin(angle) * forceMagnitude - 0.02  // small upward kick
+                y: Math.sin(angle) * forceMagnitude - 0.005  // gentler upward kick
             });
         });
     }
+
 
     explodeBalls();
 
