@@ -314,8 +314,11 @@
         attempts.push(userText);
         userAnswers.push({ task: currentTask, userText });
 
+        const COUNT = isCorrect ? 1 : 3;
         if (!isCorrect) {
             skipMap.add(key);
+        }
+
             imageContainer.style.display = 'block';
             textInput.value = `"${currentTask.text}"`;
             translationDiv.innerText = `${currentTask.translation}`;
@@ -326,7 +329,7 @@
 
             let count = 0;
             const playSequence = () => {
-                if (count >= 3) {
+                if (count >= COUNT) {
                     imageContainer.classList.remove('repeat-animation');
                     translationDiv.classList.remove('repeat-animation');
                     setTimeout(() => {
@@ -350,10 +353,6 @@
             };
 
             playSequence();
-        }
-        else {
-            goToNextTask();
-        }
     }
 
     answerForm.addEventListener('submit', (e) => {
