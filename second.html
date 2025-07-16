@@ -318,7 +318,7 @@
             row.innerHTML = `
                 <td class="${
                 answeredCorrectly ? 'correct' : 'incorrect'
-            }">${task.text}/${task.translation}</td>
+            }"  onclick="practice('${task.text}')">${task.text}/${task.translation}</td>
                 <td class="${compare(paddedAttempts[0], task) ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
                 <td class="${compare(paddedAttempts[1], task) ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
                 <td class="${compare(paddedAttempts[2], task) ? 'correct' : 'incorrect'}">${paddedAttempts[2]}</td>
@@ -479,6 +479,10 @@
 
     function setAnswers(answers) {
         localStorage.setItem('correctAnswers', JSON.stringify(answers));
+    }
+
+    function practice(phrase) {
+        window.open(`./practice.html?phrase=${encodeURIComponent(phrase)}`, '_blank');
     }
 </script>
 </body>
