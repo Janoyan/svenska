@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Audio Practice App</title>
     <style>
+        html {
+            background: #000;
+        }
         .correct {
             background-color: #d4ff5e;
         }
@@ -16,13 +19,13 @@
             text-align: center;
             font-size: 25px;
             color: blue;
-            background-color: white;
+            background-color: #000000;
         }
 
         body {
             font-family: sans-serif;
             margin: auto;
-            padding: 20px;
+            padding: 1px;
         }
 
         input {
@@ -252,6 +255,8 @@
             goToNextTask();
             return;
         }
+
+        localStorage.setItem('balls', JSON.stringify(tasks.map(x => x.image)));
 
         audioEl.src = task.audioToPlay;
         audioEl.play();
