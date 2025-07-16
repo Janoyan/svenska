@@ -97,11 +97,16 @@
             text-align: center;
         }
 
+        #appContainer {
+            margin-top: 200px;
+        }
+
     </style>
 
 </head>
 <body>
 <iframe id="animationIframe"></iframe>
+<button onclick="toggleFullScreen()" style="position: fixed; top: 10px; right: 10px; z-index: 9999;">🔳 Fullscreen</button>
 <div id="appContainer">
     <p id="score"></p>
     <div id="loadingContainer">
@@ -158,6 +163,32 @@
     const taskAttemptCount = new Map();
     const skipMap = new Set();
 
+    function toggleFullScreen() {
+        const doc = window.document;
+        const docEl = doc.documentElement;
+
+        const requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+        const cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+        if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+            requestFullScreen.call(docEl);
+        } else {
+            cancelFullScreen.call(doc);
+        }
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+        const isFullscreen = document.fullscreenElement != null;
+        const btn = document.querySelector('button[onclick="toggleFullScreen()"]');
+        if (isFullscreen) {
+            btn.textContent = '❌ Exit Fullscreen';
+        } else {
+            btn.textContent = '🔳 Fullscreen';
+        }
+    });
+
+
+
     textInput.addEventListener('keyup', (e) => {
         if (/^[a-zA-Z]$/.test(e.key)) {
             currentTypings++;
@@ -190,6 +221,12 @@
             setTimeout(() => {
                 submitForm()
             }, 500)
+            return;
+        }
+
+        if (textInput.value === 'x') {
+            textInput.disabled = true;
+            submitForm()
         }
     });
 
@@ -208,7 +245,7 @@
 
         const attempts = taskAttemptCount.get(key);
         if (skipMap.has(key)) {
-            while (attempts.length < 4) {
+            while (attempts.length < 2) {
                 attempts.push('x');
                 userAnswers.push({ task, userText: 'x' });
             }
@@ -256,8 +293,6 @@
                 <th>Word</th>
                 <th>Attempt 1</th>
                 <th>Attempt 2</th>
-                <th>Attempt 3</th>
-                <th>Attempt 4</th>
             </tr>
         `;
         table.innerHTML = header;
@@ -268,7 +303,7 @@
             const correctText = task.text;
 
             const paddedAttempts = [...attempts];
-            while (paddedAttempts.length < 4) {
+            while (paddedAttempts.length < 2) {
                 paddedAttempts.push('');
             }
 
@@ -403,10 +438,8 @@
             const selected = data.slice(0, AMOUNT);
 
             selected.forEach(item => {
-                for (let i = 0; i < 2; i++) {
-                    tasks.push({ ...item, audioToPlay: item.armAudio });
-                    tasks.push({ ...item, audioToPlay: item.audio });
-                }
+                tasks.push({ ...item, audioToPlay: item.armAudio });
+                tasks.push({ ...item, audioToPlay: item.audio });
             });
 
             shuffle(tasks);
