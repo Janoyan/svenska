@@ -122,7 +122,13 @@ async function concatJsonFilesWithIds(outputFilePath) {
                 obj.id = file.replace('.json', '');
 
                 if (!obj.done) {
-                    allData.push(obj);
+                    allData.push({
+                        id: obj.id,
+                        text: obj.text,
+                        audio: obj.audio,
+                        translation: obj.translation,
+                        armAudio: obj.armAudio
+                    });
                 }
 
             } catch (err) {
