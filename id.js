@@ -80,12 +80,6 @@ async function getBase64Audio(text, voice) {
     return getBase64FromMp3Url(result.data.file);
 }
 
-function isAudioUrl(audio) {
-    return typeof audio === 'string' && /^https?:\/\//i.test(audio);
-}
-
-
-
 async function concatJsonFilesWithIds(outputFilePath) {
     try {
         const files = await fs.readdir(directoryPath);
@@ -109,8 +103,14 @@ async function concatJsonFilesWithIds(outputFilePath) {
                     }
                 }
 
+                if (obj.translation.includes('և')) {
+                    obj.translation = obj.translation.replaceAll('և', 'եվ');
+                    await fs.writeFile(filePath, JSON.stringify(obj, null, 2));
+                    console.log(`🔄 replaced և in ${file}`);
+                }
+
                 if (!obj.armAudio) {
-                    const base64Audio = await getBase64Audio(obj.translation, 'Anahit');
+                    const base64Audio = await getBase64Audio(obj.translation, 'Vivienne HY');
                     if (base64Audio) {
                         obj.armAudio = base64Audio;
                         // Save modified object back to file
