@@ -1,6 +1,7 @@
 const fs = require('fs/promises');
 const path = require('path');
 const axios = require('axios');
+const qs = require('qs');
 const tmpData = require('./tmp.json');
 
 const directoryPath = './source';
@@ -37,22 +38,53 @@ async function createFiles() {
     }
 }
 
+async function getBase64FromMp3Url(url) {
+    try {
+        const response = await axios.get(url, {
+            responseType: 'arraybuffer'  // important to get raw binary data
+        });
+        const base64 = Buffer.from(response.data, 'binary').toString('base64');
+        return `data:audio/mpeg;base64,${base64}`;
+    } catch (error) {
+        console.error('Error fetching or converting mp3:', error);
+        throw error;
+    }
+}
+
+
+async function getBase64Audio(text, voice) {
+    let data = qs.stringify({
+        'token': 'ae5fb62c-d508-4210-9657-d3bb5d387ac7',
+        'email': 'meruzh2008@gmail.com',
+        voice,
+        text,
+        'format': 'mp3',
+        'speed': '1.1',
+        'pitch': '0',
+        'emotion': 'good'
+    });
+
+    let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'https://speechgen.io/index.php?r=api/text',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Cookie': 'PHPSESSID=da245571ba6c0eda1975294dd25242d5'
+        },
+        data : data
+    };
+
+    const result = await axios.request(config);
+
+    return getBase64FromMp3Url(result.data.file);
+}
 
 function isAudioUrl(audio) {
     return typeof audio === 'string' && /^https?:\/\//i.test(audio);
 }
 
-async function downloadAndConvertToBase64(url) {
-    try {
-        const response = await axios.get(url, { responseType: 'arraybuffer' });
-        const contentType = response.headers['content-type'] || 'audio/mpeg';
-        const base64 = Buffer.from(response.data).toString('base64');
-        return `data:${contentType};base64,${base64}`;
-    } catch (err) {
-        console.error(`❌ Failed to download audio from URL "${url}": ${err.message}`);
-        return null;
-    }
-}
+
 
 async function concatJsonFilesWithIds(outputFilePath) {
     try {
@@ -67,13 +99,23 @@ async function concatJsonFilesWithIds(outputFilePath) {
                 const content = await fs.readFile(filePath, 'utf-8');
                 const obj = JSON.parse(content);
 
-                if (obj.audio && isAudioUrl(obj.audio)) {
-                    const base64Audio = await downloadAndConvertToBase64(obj.audio);
+                if (!obj.audio) {
+                    const base64Audio = await getBase64Audio(obj.text, 'John');
                     if (base64Audio) {
                         obj.audio = base64Audio;
                         // Save modified object back to file
                         await fs.writeFile(filePath, JSON.stringify(obj, null, 2));
-                        console.log(`🔄 Replaced audio URL in ${file}`);
+                        console.log(`🔄 Added audio in ${file}`);
+                    }
+                }
+
+                if (!obj.armAudio) {
+                    const base64Audio = await getBase64Audio(obj.translation, 'Anahit');
+                    if (base64Audio) {
+                        obj.armAudio = base64Audio;
+                        // Save modified object back to file
+                        await fs.writeFile(filePath, JSON.stringify(obj, null, 2));
+                        console.log(`🔄 Added armAudio in ${file}`);
                     }
                 }
 

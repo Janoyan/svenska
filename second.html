@@ -17,8 +17,8 @@
 
         #translationDiv {
             text-align: center;
-            font-size: 25px;
-            color: blue;
+            font-size: 30px;
+            color: #ffffff;
             background-color: #000000;
         }
 
@@ -120,7 +120,6 @@
     <audio id="audio" controls></audio>
     <form id="answerForm" class="hidden">
         <label>
-            <img id="image">
             <input type="text" id="textInput" required>
             <div id="translationDiv"></div>
         </label>
@@ -155,7 +154,6 @@
     const mistakeList = document.getElementById('mistakeList');
     const charCount = document.getElementById('charCount');
     const translationDiv = document.getElementById('translationDiv');
-    const imageContainer = document.getElementById('image');
 
 
     let data = [];
@@ -256,13 +254,9 @@
             return;
         }
 
-        localStorage.setItem('balls', JSON.stringify(tasks.slice(index, tasks.length).map(x => x.image)));
 
         audioEl.src = task.audioToPlay;
         audioEl.play();
-        imageContainer.setAttribute('src', task.image);
-        animationIframe.setAttribute('src', `/balls.html?v=${Date.now()}&ballsCount=${tasks.length - currentIndex}`);
-        imageContainer.style.display = 'none';
         textInput.value = "";
         translationDiv.innerHTML = '';
         textInput.disabled = false;
@@ -272,6 +266,9 @@
         const baseLength = task.text.length;
         currentMaxLength = baseLength + 3;
         currentTypings = 0;
+
+        scoreEl.textContent = `Done: ${index}  (${data.length} /${jsonData.length})`;
+
     }
 
     function goToNextTask() {
@@ -359,18 +356,14 @@
             skipMap.add(key);
         }
 
-            imageContainer.style.display = 'block';
             textInput.value = `"${currentTask.text}"`;
             translationDiv.innerText = `${currentTask.translation}`;
 
-            // Start animation
-            imageContainer.classList.add('repeat-animation');
             translationDiv.classList.add('repeat-animation');
 
             let count = 0;
             const playSequence = () => {
                 if (count >= COUNT) {
-                    imageContainer.classList.remove('repeat-animation');
                     translationDiv.classList.remove('repeat-animation');
                     setTimeout(() => {
                         goToNextTask();
@@ -437,7 +430,7 @@
             const savedAnswers = getSavedAnswers();
             data = jsonData.filter((item) => !savedAnswers.includes(item.id));
 
-            scoreEl.textContent = `${data.length} /${jsonData.length}`;
+            scoreEl.textContent = `Done: ${currentIndex}  (${data.length} /${jsonData.length})`;
 
             shuffle(data);
             const selected = data.slice(0, AMOUNT);
