@@ -211,7 +211,7 @@
 
         const currentTask = tasks[currentIndex];
         const userText = textInput.value.trim();
-        const isCorrect = compare(userText, currentTask);
+        const {correct: isCorrect, incorrect} = compare(userText, currentTask);
 
         if (isCorrect) {
             textInput.style.color = 'rgb(92 249 102)';
@@ -226,14 +226,16 @@
 
         if (remaining <= 0) {
             textInput.disabled = true;
+            textInput.style.color = 'rgb(255,100,136)';
             setTimeout(() => {
                 submitForm()
             }, 500)
             return;
         }
 
-        if (textInput.value === 'x') {
+        if (textInput.value === 'x' || incorrect) {
             textInput.disabled = true;
+            textInput.style.color = 'rgb(255,100,136)';
             submitForm()
         }
     });
@@ -316,7 +318,7 @@
                 paddedAttempts.push('');
             }
 
-            const answeredCorrectly = paddedAttempts.every((x) => compare(x, task));
+            const answeredCorrectly = paddedAttempts.every((x) => compare(x, task).correct);
 
             if (answeredCorrectly) {
                 correctAnswers.push(task.id);
@@ -328,10 +330,10 @@
                 <td class="${
                 answeredCorrectly ? 'correct' : 'incorrect'
             }"  onclick="practice('${task.text}')">${task.text}/${task.translation}</td>
-                <td class="${compare(paddedAttempts[0], task) ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
-                <td class="${compare(paddedAttempts[1], task) ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
-                <td class="${compare(paddedAttempts[2], task) ? 'correct' : 'incorrect'}">${paddedAttempts[2]}</td>
-                <td class="${compare(paddedAttempts[3], task) ? 'correct' : 'incorrect'}">${paddedAttempts[3]}</td>
+                <td class="${compare(paddedAttempts[0], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
+                <td class="${compare(paddedAttempts[1], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
+                <td class="${compare(paddedAttempts[2], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[2]}</td>
+                <td class="${compare(paddedAttempts[3], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[3]}</td>
             `;
             table.appendChild(row);
         }
@@ -348,7 +350,7 @@
         const currentTask = tasks[currentIndex];
         const key = currentTask.id;
         const userText = textInput.value.trim();
-        const isCorrect = compare(userText, currentTask);
+        const isCorrect = compare(userText, currentTask).correct;
 
         if (!taskAttemptCount.has(key)) {
             taskAttemptCount.set(key, []);
@@ -358,7 +360,7 @@
         attempts.push(userText);
         userAnswers.push({ task: currentTask, userText });
 
-        const COUNT = isCorrect ? 2 : 4;
+        const COUNT = 1;
         if (!isCorrect) {
             skipMap.add(key);
         }
@@ -380,7 +382,6 @@
                 audio.playbackRate = 1.3;
                 audio.play();
                 audio.onended = () => {
-                    textInput.value = `${currentTask.translation}`;
                     const audio2 = new Audio(currentTask.armAudio);
                     audio2.playbackRate = 1.3;
                     audio2.play();
@@ -477,7 +478,10 @@
 
         const userInputText = userText.toLowerCase().replace(/^\s*to\s+/i, '').trim();
 
-        return possibleAnswers.some((item) => item.text.toLowerCase().replace(/^\s*to\s+/i, '').trim() === userInputText);
+        return {
+            correct: possibleAnswers.some((item) => item.text.toLowerCase().replace(/^\s*to\s+/i, '').trim() === userInputText),
+            incorrect: possibleAnswers.every((item) => !item.text.toLowerCase().replace(/^\s*to\s+/i, '').trim().includes(userInputText)),
+        };
     }
 
     function getSavedAnswers() {
