@@ -169,7 +169,6 @@
     let currentIndex = 0;
     let userAnswers = [];
     const taskAttemptCount = new Map();
-    const skipMap = new Set();
 
     function toggleFullScreen() {
         const doc = window.document;
@@ -226,7 +225,7 @@
 
         if (remaining <= 0) {
             textInput.disabled = true;
-            textInput.style.color = 'rgb(255,100,136)';
+            textInput.style.color = 'rgb(221,11,11)';
             setTimeout(() => {
                 submitForm()
             }, 500)
@@ -235,7 +234,7 @@
 
         if (textInput.value === 'x' || incorrect) {
             textInput.disabled = true;
-            textInput.style.color = 'rgb(255,100,136)';
+            textInput.style.color = 'rgb(221,11,11)';
             submitForm()
         }
     });
@@ -251,18 +250,6 @@
 
     function loadTask(index) {
         const task = tasks[index];
-        const key = task.id;
-
-        const attempts = taskAttemptCount.get(key);
-        if (skipMap.has(key)) {
-            while (attempts.length < 2) {
-                attempts.push('x');
-                userAnswers.push({ task, userText: 'x' });
-            }
-            goToNextTask();
-            return;
-        }
-
 
         audioEl.src = task.audioToPlay;
         audioEl.play();
@@ -309,17 +296,11 @@
         table.innerHTML = header;
 
         const correctAnswers = [];
-        for (const [key, attempts] of taskAttemptCount.entries()) {
+        for (const [key, answer] of taskAttemptCount.entries()) {
             const task = tasks.find(t => t.id === key);
             const correctText = task.text;
 
-            const paddedAttempts = [...attempts];
-            while (paddedAttempts.length < 2) {
-                paddedAttempts.push('');
-            }
-
-            const answeredCorrectly = paddedAttempts.every((x) => compare(x, task).correct);
-
+            const answeredCorrectly = compare(answer, task).correct;
             if (answeredCorrectly) {
                 correctAnswers.push(task.id);
             }
@@ -330,10 +311,7 @@
                 <td class="${
                 answeredCorrectly ? 'correct' : 'incorrect'
             }"  onclick="practice('${task.text}')">${task.text}/${task.translation}</td>
-                <td class="${compare(paddedAttempts[0], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[0]}</td>
-                <td class="${compare(paddedAttempts[1], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[1]}</td>
-                <td class="${compare(paddedAttempts[2], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[2]}</td>
-                <td class="${compare(paddedAttempts[3], task).correct ? 'correct' : 'incorrect'}">${paddedAttempts[3]}</td>
+                <td class="${answeredCorrectly ? 'correct' : 'incorrect'}">${answer}</td>
             `;
             table.appendChild(row);
         }
@@ -350,49 +328,39 @@
         const currentTask = tasks[currentIndex];
         const key = currentTask.id;
         const userText = textInput.value.trim();
-        const isCorrect = compare(userText, currentTask).correct;
 
-        if (!taskAttemptCount.has(key)) {
-            taskAttemptCount.set(key, []);
-        }
-
-        const attempts = taskAttemptCount.get(key);
-        attempts.push(userText);
+        taskAttemptCount.set(key, userText);
         userAnswers.push({ task: currentTask, userText });
 
         const COUNT = 1;
-        if (!isCorrect) {
-            skipMap.add(key);
-        }
 
+        let count = 0;
+        const playSequence = () => {
+            if (count >= COUNT) {
+                textInput.classList.remove('repeat-animation');
+                setTimeout(() => {
+                    goToNextTask();
+                }, 500);
+                return;
+            }
 
-            let count = 0;
-            const playSequence = () => {
-                if (count >= COUNT) {
-                    textInput.classList.remove('repeat-animation');
-                    setTimeout(() => {
-                        goToNextTask();
-                    }, 500);
-                    return;
-                }
-
-                textInput.value = `${currentTask.text}`;
-                textInput.classList.add('repeat-animation');
-                const audio = new Audio(currentTask.audio);
-                audio.playbackRate = 1.3;
-                audio.play();
-                audio.onended = () => {
-                    const audio2 = new Audio(currentTask.armAudio);
-                    audio2.playbackRate = 1.3;
-                    audio2.play();
-                    audio2.onended = () => {
-                        count++;
-                        playSequence();
-                    };
+            textInput.value = `${currentTask.text}`;
+            textInput.classList.add('repeat-animation');
+            const audio = new Audio(currentTask.audio);
+            audio.playbackRate = 1.3;
+            audio.play();
+            audio.onended = () => {
+                const audio2 = new Audio(currentTask.armAudio);
+                audio2.playbackRate = 1.3;
+                audio2.play();
+                audio2.onended = () => {
+                    count++;
+                    playSequence();
                 };
             };
+        };
 
-            playSequence();
+        playSequence();
     }
 
     answerForm.addEventListener('submit', (e) => {
@@ -443,8 +411,11 @@
             const selected = data.slice(0, AMOUNT);
 
             selected.forEach(item => {
-                tasks.push({ ...item, audioToPlay: item.armAudio });
-                tasks.push({ ...item, audioToPlay: item.audio });
+                if (Math.random() > 0.5) {
+                    tasks.push({ ...item, audioToPlay: item.armAudio });
+                } else {
+                    tasks.push({ ...item, audioToPlay: item.audio });
+                }
             });
 
             shuffle(tasks);
@@ -480,7 +451,7 @@
 
         return {
             correct: possibleAnswers.some((item) => item.text.toLowerCase().replace(/^\s*to\s+/i, '').trim() === userInputText),
-            incorrect: possibleAnswers.every((item) => !item.text.toLowerCase().replace(/^\s*to\s+/i, '').trim().includes(userInputText)),
+            incorrect: possibleAnswers.every((item) => !item.text.toLowerCase().trim().includes(userInputText)),
         };
     }
 
