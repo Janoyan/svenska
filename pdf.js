@@ -3,6 +3,13 @@ const fs = require('fs');
 // Load JSON data
 const data = JSON.parse(fs.readFileSync('jsons/current.json', 'utf8'));
 
+// Get total word count
+const totalWords = data.length;
+
+// Get current date in day.month.year format
+const today = new Date();
+const formattedDate = `${String(today.getDate()).padStart(2, '0')}.${String(today.getMonth() + 1).padStart(2, '0')}.${today.getFullYear()}`;
+
 // HTML header with Armenian font and script
 const htmlHeader = `
 <!DOCTYPE html>
@@ -19,10 +26,12 @@ const htmlHeader = `
   }
   .entry {
     margin: auto;
-    margin-bottom: 600px;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
+  }
+  
+  .entry div {
+    display: inline-block;
   }
   .entry img {
     max-width: 100%;
@@ -36,20 +45,27 @@ const htmlHeader = `
     cursor: pointer;
   }
   .original {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 6px;
   }
   .translation {
-    font-size: 25px;
+    font-size: 16px;
     font-family: "Noto Sans Armenian", Arial, sans-serif;
     color: #333;
+     margin-left: 49px;
+  }
+  .summary {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian&display=swap" rel="stylesheet" />
 </head>
 <body>
 <div id="container">
+<div class="summary">Total words: ${totalWords} | Date: ${formattedDate}</div>
 `;
 
 const htmlFooter = `
