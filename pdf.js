@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // Load JSON data
-const data = JSON.parse(fs.readFileSync('jsons/current.json', 'utf8'));
+const data = shuffle(JSON.parse(fs.readFileSync('jsons/current.json', 'utf8')));
 
 // Get total word count
 const totalWords = data.length;
@@ -9,6 +9,14 @@ const totalWords = data.length;
 // Get current date in day.month.year format
 const today = new Date();
 const formattedDate = `${String(today.getDate()).padStart(2, '0')}.${String(today.getMonth() + 1).padStart(2, '0')}.${today.getFullYear()}`;
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 // HTML header with Armenian font and script
 const htmlHeader = `
