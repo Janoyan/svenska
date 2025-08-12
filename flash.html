@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Flashcards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background: black;
+            color: white;
+            font-size: 7vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        #display, #startButton {
+            position: absolute;
+            width: 90%;
+            max-width: 90%;
+        }
+
+        #startButton {
+            background: white;
+            color: black;
+            font-size: 1em;
+            padding: 0.5em 1.5em;
+            border: none;
+            border-radius: 0.3em;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #startButton:hover {
+            background: #ddd;
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words and Translations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0 10px;
+            line-height: 1.5;
+        }
+        .entry {
+            margin: auto;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .entry div {
+            display: inline-block;
+        }
+        .entry img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            width: 80%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        .original {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .translation {
+            font-size: 16px;
+            font-family: "Noto Sans Armenian", Arial, sans-serif;
+            color: #333;
+            margin-left: 49px;
+        }
+        .summary {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian&display=swap" rel="stylesheet" />
+</head>
+<body>
+<div id="display">Loading...</div>
+<button id="startButton">Start</button>
+
+<script>
+    let wakeLock = null;
+
+    async function requestWakeLock() {
+        try {
+            if ('wakeLock' in navigator) {
+                wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Wake Lock is active');
+
+                wakeLock.addEventListener('release', () => {
+                    console.log('Wake Lock was released');
+                });
+            } else {
+                console.warn('Wake Lock API not supported');
+            }
+        } catch (err) {
+            console.error(`Wake Lock error: ${err.name}, ${err.message}`);
+        }
+    }
+
+
+    const REPEAT_COUNT = 3;
+    const JSON_URL = './jsons/current.json';
+
+    const displayDiv = document.getElementById('display');
+    const startButton = document.getElementById('startButton');
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    async function playAudio(src) {
+        return new Promise(resolve => {
+            const audio = new Audio(src);
+            audio.onended = resolve;
+            audio.onerror = resolve;
+            audio.play();
+        });
+    }
+
+    function getViewedIds() {
+        const stored = localStorage.getItem('viewedIds');
+        return stored ? JSON.parse(stored) : [];
+    }
+
+    function addViewedId(id) {
+        const viewed = getViewedIds();
+        viewed.push(id);
+        localStorage.setItem('viewedIds', JSON.stringify(viewed));
+    }
+
+    function clearViewedIds() {
+        localStorage.removeItem('viewedIds');
+    }
+
+    async function showItem(item) {
+        for (let i = 0; i < REPEAT_COUNT; i++) {
+            displayDiv.textContent = item.text;
+            await playAudio(item.audio);
+
+            displayDiv.textContent = item.translation;
+            await playAudio(item.armAudio);
+            displayDiv.textContent = item.text;
+            await sleep(2000)
+        }
+    }
+
+    async function runApp(data) {
+        let items = [...data];
+        const viewedIds = getViewedIds();
+        items = items.filter(item => !viewedIds.includes(item.id));
+
+        if (items.length === 0) {
+            clearViewedIds();
+            items = [...data];
+        }
+
+        shuffle(items);
+
+        for (const item of items) {
+            await showItem(item);
+            addViewedId(item.id);
+        }
+    }
+
+    async function fetchWithProgress(url, onProgress) {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Failed to fetch JSON");
+
+        const reader = response.body.getReader();
+        const contentLength = +response.headers.get('Content-Length') || 0;
+
+        let receivedLength = 0;
+        let chunks = [];
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            receivedLength += value.length;
+            if (contentLength > 0) {
+                const percent = Math.floor((receivedLength / contentLength) * 100);
+                onProgress(percent);
+            }
+        }
+
+        const chunksAll = new Uint8Array(receivedLength);
+        let position = 0;
+        for (let chunk of chunks) {
+            chunksAll.set(chunk, position);
+            position += chunk.length;
+        }
+
+        const result = new TextDecoder("utf-8").decode(chunksAll);
+        return JSON.parse(result);
+    }
+
+    startButton.addEventListener('click', async () => {
+        startButton.style.display = 'none';
+        await requestWakeLock();
+        displayDiv.textContent = 'Loading... 0%';
+
+        try {
+            const data = await fetchWithProgress(JSON_URL, (percent) => {
+                displayDiv.textContent = `Loading... ${percent}%`;
+            });
+            await runApp(data);
+            displayDiv.textContent = 'Done!';
+        } catch (e) {
+            console.error(e);
+            displayDiv.textContent = 'Failed to load data.';
+        }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('img[data-audio]').forEach(img => {
+            img.addEventListener('click', () => {
+                const audioBase64 = img.getAttribute('data-audio');
+                const audio = new Audio(audioBase64);
+                audio.play();
+            });
+        });
+    });
+</script>
+</body>
+</html>
+
