@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,57 +40,19 @@
         #startButton:hover {
             background: #ddd;
         }
-    </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Words and Translations</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 0 10px;
-            line-height: 1.5;
-        }
-        .entry {
-            margin: auto;
-            text-align: left;
-            border-bottom: 1px solid #ccc;
-        }
 
-        .entry div {
-            display: inline-block;
-        }
-        .entry img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            width: 80%;
-            object-fit: contain;
-            cursor: pointer;
-        }
-        .original {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-        .translation {
-            font-size: 16px;
-            font-family: "Noto Sans Armenian", Arial, sans-serif;
-            color: #333;
-            margin-left: 49px;
-        }
-        .summary {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        #counter {
+            position: absolute;
+            bottom: 10px;
+            font-size: 3vw;
+            color: white;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian&display=swap" rel="stylesheet" />
 </head>
 <body>
 <div id="display">Loading...</div>
+<div id="counter"></div>
 <button id="startButton">Start</button>
 
 <script>
@@ -114,15 +75,17 @@
         }
     }
 
-
     const REPEAT_COUNT = 3;
     const JSON_URL = './jsons/current.json';
 
     const displayDiv = document.getElementById('display');
+    const counterDiv = document.getElementById('counter');
     const startButton = document.getElementById('startButton');
+
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
+
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -155,16 +118,22 @@
         localStorage.removeItem('viewedIds');
     }
 
-    async function showItem(item) {
+    function updateCounter(total, remaining) {
+        counterDiv.textContent = `Remaining: ${remaining} / ${total}`;
+    }
+
+    async function showItem(item, total, remaining) {
         for (let i = 0; i < REPEAT_COUNT; i++) {
             displayDiv.textContent = item.text;
             await playAudio(item.audio);
 
             displayDiv.textContent = item.translation;
             await playAudio(item.armAudio);
+
             displayDiv.textContent = item.text;
-            await sleep(2000)
+            await sleep(2000);
         }
+        updateCounter(total, remaining);
     }
 
     async function runApp(data) {
@@ -179,9 +148,16 @@
 
         shuffle(items);
 
+        const totalWords = data.length;
+        let remainingWords = items.length;
+
+        updateCounter(totalWords, remainingWords);
+
         for (const item of items) {
-            await showItem(item);
+            await showItem(item, totalWords, remainingWords);
             addViewedId(item.id);
+            remainingWords--;
+            updateCounter(totalWords, remainingWords);
         }
     }
 
@@ -232,6 +208,7 @@
             displayDiv.textContent = 'Failed to load data.';
         }
     });
+
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('img[data-audio]').forEach(img => {
             img.addEventListener('click', () => {
@@ -244,4 +221,3 @@
 </script>
 </body>
 </html>
-
