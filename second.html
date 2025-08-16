@@ -250,7 +250,6 @@
         const task = tasks[index];
 
         audioEl.src = task.audioToPlay;
-        await playAsync(audioEl);
         textInput.value = "";
         translationDiv.innerHTML = '';
         textInput.disabled = false;
@@ -263,6 +262,7 @@
 
         scoreEl.textContent = `Done: ${index}  (${data.length} /${jsonData.length})`;
 
+        await playAsync(audioEl);
         startReplayTimer();
     }
 
