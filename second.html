@@ -149,6 +149,22 @@
     let userAnswers = [];
     const taskAttemptCount = new Map();
 
+    let replayTimeout;
+
+    function startReplayTimer() {
+        clearInterval(replayTimeout);
+        replayTimeout = setInterval(async () => {
+            audioEl.currentTime = 0;
+            await playAsync(audioEl);
+            startReplayTimer();
+        }, 5000);
+    }
+
+    textInput.addEventListener("input", () => {
+        clearInterval(replayTimeout);
+        startReplayTimer();
+    });
+
     function toggleFullScreen() {
         const doc = window.document;
         const docEl = doc.documentElement;
@@ -227,11 +243,14 @@
         return array;
     }
 
-    function loadTask(index) {
+    async function loadTask(index) {
+        clearInterval(replayTimeout);
+
+
         const task = tasks[index];
 
         audioEl.src = task.audioToPlay;
-        audioEl.play();
+        await playAsync(audioEl);
         textInput.value = "";
         translationDiv.innerHTML = '';
         textInput.disabled = false;
@@ -244,6 +263,7 @@
 
         scoreEl.textContent = `Done: ${index}  (${data.length} /${jsonData.length})`;
 
+        startReplayTimer();
     }
 
     function goToNextTask() {
