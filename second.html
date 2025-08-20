@@ -276,6 +276,7 @@
     }
 
     function showResults() {
+        clearInterval(replayTimeout);
         answerForm.classList.add('hidden');
         audioEl.classList.add('hidden');
         resultsDiv.classList.remove('hidden');
