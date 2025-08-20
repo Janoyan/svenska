@@ -128,7 +128,7 @@
 
     let currentMaxLength = 0;
     let currentTypings = 0;
-    const AMOUNT = 100;
+    const AMOUNT = 3;
     const DATA_URL = `./jsons/current.json`;
     const answerForm = document.getElementById('answerForm');
     const textInput = document.getElementById('textInput');
@@ -290,7 +290,6 @@
             <tr>
                 <th>Word</th>
                 <th>Attempt 1</th>
-                <th>Attempt 2</th>
             </tr>
         `;
         table.innerHTML = header;
@@ -310,7 +309,7 @@
             row.innerHTML = `
                 <td class="${
                 answeredCorrectly ? 'correct' : 'incorrect'
-            }"  onclick="practice('${task.text}')">${task.text}/${task.translation}</td>
+            }"  onclick="this.classList.remove('incorrect');this.classList.add('correct'); practice('${task.text}')">${task.text}/${task.translation}</td>
                 <td class="${answeredCorrectly ? 'correct' : 'incorrect'}">${answer}</td>
             `;
             table.appendChild(row);
