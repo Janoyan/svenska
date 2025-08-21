@@ -7,11 +7,11 @@
         body {
             font-family: Arial, sans-serif;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #000000;
             color: #333;
         }
         #container {
-            background: white;
+            background: #000000;
             padding: 2em;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -26,8 +26,9 @@
             border: none;
             text-align: center;
             letter-spacing: 2px;
-            color: #bf00ff;
+            color: #04839a;
             outline: none;
+            background: none;
         }
         input::placeholder {
             color: rgb(181, 181, 181); /* Change to any color you want */
@@ -36,12 +37,15 @@
         .hidden {
             display: none;
         }
+
+        #progress {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
 <div id="container">
     <h1 id="instruction"></h1>
-    <img id="pic"/>
     <p id="progress">Progress: 0 / 5</p>
     <input type="text" id="inputBox" placeholder="" autofocus>
     <p id="message"></p>
@@ -68,7 +72,6 @@
         .then(jsonData => {
             audio = new Audio(jsonData.audio);
             armAudio = new Audio(jsonData.armAudio);
-            document.getElementById('pic').src = jsonData.image;
         })
         .catch(err => {
             alert('❌ Failed to load data.');
