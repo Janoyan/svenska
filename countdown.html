@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Countdown to September 14</title>
+
+    <!-- Elegant, legible display font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --glass-bg: rgba(255,255,255,.10);
+            --glass-border: rgba(255,255,255,.25);
+            --text-strong:#ffffff;
+            --text-soft: rgba(255,255,255,.85);
+            --accent:#a0e9ff;
+            --accent-2:#ffb3ec;
+            --shadow: 0 10px 40px rgba(0,0,0,.35);
+        }
+
+        *{ box-sizing:border-box }
+        html, body{
+            /*height:100%;*/
+            margin:0;
+            font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            color:var(--text-strong);
+            background:#0d0f17;
+            overflow:hidden; /* immersive */
+        }
+
+        /* Background image layer */
+        .bg {
+            position: fixed;
+            inset: 0;
+            background-position:center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            filter: saturate(1.15) contrast(1.05) brightness(.9);
+            transition: opacity 1.5s ease;
+        }
+        .bg.next { opacity:0 }
+
+        /* Soft animated gradient overlay */
+        .gradient {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(1200px 600px at 20% 10%, rgba(160,233,255,.25), transparent 60%),
+            radial-gradient(1200px 600px at 80% 90%, rgba(255,179,236,.18), transparent 60%),
+            linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
+            mix-blend-mode: screen;
+            pointer-events:none;
+            animation: floatGlow 18s ease-in-out infinite alternate;
+        }
+        @keyframes floatGlow {
+            from { transform: translateY(-1.5%) translateX(-1.5%) scale(1.02); }
+            to   { transform: translateY(1.5%)  translateX(1.5%)  scale(1.05); }
+        }
+
+        /* Particle canvas */
+        canvas.particles{
+            position:fixed; inset:0; pointer-events:none;
+        }
+
+        /* Content container */
+        main{
+            position:relative;
+            height:100%;
+            display:grid;
+            place-items:center;
+            padding:clamp(16px, 4vw, 48px);
+        }
+
+        .card{
+            width:min(980px, 95vw);
+            padding:clamp(20px, 4vw, 44px);
+            border-radius:28px;
+            background:var(--glass-bg);
+            border:1px solid var(--glass-border);
+            backdrop-filter: blur(14px) saturate(1.2);
+            box-shadow: var(--shadow);
+            transform: translateY(0);
+            animation: floatCard 9s ease-in-out infinite;
+        }
+        @keyframes floatCard { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-8px) } }
+
+        h1{
+            margin:0 0 .4rem 0;
+            font-size: clamp(28px, 5vw, 56px);
+            line-height:1.1;
+            letter-spacing:.5px;
+            text-shadow: 0 8px 24px rgba(0,0,0,.45);
+        }
+        .sub{
+            margin: 0 0 1.2rem 0;
+            font-weight: 300;
+            letter-spacing:.3px;
+            color: var(--text-soft);
+            font-size: clamp(14px, 2.3vw, 18px);
+        }
+
+        /* Countdown grid */
+        .grid{
+            display:grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: clamp(12px, 2.4vw, 22px);
+            align-items:stretch;
+        }
+        .unit{
+            position:relative;
+            padding: clamp(12px, 2vw, 16px);
+            border-radius:20px;
+            background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
+            border: 1px solid rgba(255,255,255,.18);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 8px 24px rgba(0,0,0,.25);
+        }
+
+        /* Flip-style digits */
+        .value{
+            font-variant-numeric: tabular-nums lining-nums;
+            font-size: clamp(36px, 8vw, 86px);
+            font-weight: 800;
+            line-height: 1;
+            text-align:center;
+            letter-spacing:1px;
+            position:relative;
+            display:block;
+            padding:.2em .1em;
+            border-radius:12px;
+            background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.05));
+            overflow:hidden;
+        }
+        /* glare sweep */
+        .value::after{
+            content:"";
+            position:absolute;
+            top:-80%; left:-40%;
+            width:60%; height:260%;
+            transform: rotate(25deg);
+            background: linear-gradient(90deg, rgba(255,255,255,.0), rgba(255,255,255,.28), rgba(255,255,255,0));
+            filter: blur(4px);
+            animation: sweep 6s ease-in-out infinite;
+            pointer-events:none;
+        }
+        @keyframes sweep {
+            0%{ transform: translateX(-120%) rotate(25deg); opacity:.0 }
+            30%{ opacity:1 }
+            60%{ opacity:1 }
+            100%{ transform: translateX(280%) rotate(25deg); opacity:.0 }
+        }
+
+        .label{
+            display:block;
+            margin-top:.5rem;
+            text-align:center;
+            text-transform:uppercase;
+            letter-spacing: .18em;
+            font-weight:600;
+            font-size: clamp(10px, 1.8vw, 12px);
+            color: var(--text-soft);
+        }
+
+        /* Progress bar showing percent of time elapsed from now to target day-of-year */
+        .progress-wrap{
+            margin-top: clamp(16px, 3vw, 26px);
+            height: 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,.12);
+            overflow:hidden;
+            position:relative;
+            display:none;
+        }
+        .progress{
+            height:100%;
+            width:0%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            transition: width .75s cubic-bezier(.22,.61,.36,1);
+        }
+
+        /* Footer */
+        .footer{
+            margin-top: clamp(16px, 3vw, 28px);
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap: 12px;
+            flex-wrap:wrap;
+            color: var(--text-soft);
+            font-size: clamp(12px, 2vw, 14px);
+        }
+        .pill{
+            padding:8px 12px;
+            border-radius:999px;
+            border:1px solid rgba(255,255,255,.22);
+            background: rgba(255,255,255,.06);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce){
+            .gradient, .card{ animation:none }
+            .value::after{ display:none }
+        }
+
+        /* Small screens: stack pairs */
+        @media (max-width: 520px){
+            .grid{ grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<!-- Background layers -->
+<div  class="bg current" id="bgCurrent" aria-hidden="true"></div>
+<div class="bg next" id="bgNext" aria-hidden="true"></div>
+<div class="gradient" aria-hidden="true"></div>
+<canvas class="particles" id="particles" aria-hidden="true"></canvas>
+
+<main>
+    <section class="card" role="group" aria-label="">
+        <h1></h1>
+        <p class="sub" id="subtitle"></p>
+
+        <div class="grid" aria-live="polite">
+            <div class="unit" aria-label="Days remaining">
+                <span class="value" id="days">--</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="unit" aria-label="Hours remaining">
+                <span class="value" id="hours">--</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="unit" aria-label="Minutes remaining">
+                <span class="value" id="minutes">--</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="unit" aria-label="Seconds remaining">
+                <span class="value" id="seconds">--</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+
+        <div class="progress-wrap" aria-hidden="true">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="footer" style="display: none;" >
+            <div class="pill" id="targetLabel">Target: Sept 14</div>
+            <div class="pill">Local time: <span id="tzName"></span></div>
+        </div>
+    </section>
+</main>
+
+<script>
+    // ---------- Background rotation (public Unsplash images) ----------
+    const photos = [
+        'https://images.unsplash.com/photo-1486673748761-a8d18475c757?q=80&w=1920&auto=format&fit=crop',
+
+        'https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1920&auto=format&fit=crop',
+        'https://images.unsplash.com/premium_photo-1699626665792-77b2eef3a0af?q=80&w=1920&auto=format&fit=crop',
+    ];
+    let bgIndex = 0;
+    const bgA = document.getElementById('bgCurrent');
+    const bgB = document.getElementById('bgNext');
+    function setBg(el, idx){ el.style.backgroundImage = `url("${photos[idx % photos.length]}")`; }
+    setBg(bgA, bgIndex);
+    setBg(bgB, bgIndex+1);
+    function rotateBg(){
+        bgIndex = (bgIndex + 1) % photos.length;
+        setBg(bgB, bgIndex);
+        bgB.style.opacity = 1;
+        bgA.style.opacity = 0;
+        // swap roles after transition
+        setTimeout(() => {
+            const tmp = bgA.style.backgroundImage;
+            bgA.style.backgroundImage = bgB.style.backgroundImage;
+            bgA.style.opacity = 1; bgB.style.opacity = 0;
+        }, 1500);
+    }
+    setInterval(rotateBg, 20000);
+
+    // ---------- Particle sparkle layer ----------
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles;
+    function resize(){
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+        particles = [...new Array(Math.max(80, Math.min(220, Math.floor(W*H/15000))))].map(()=>({
+            x: Math.random()*W,
+            y: Math.random()*H,
+            r: Math.random()*1.6 + .6,
+            a: Math.random()*Math.PI*2,
+            s: Math.random()*0.6 + 0.2,
+            o: Math.random()*0.6 + 0.2
+        }));
+    }
+    window.addEventListener('resize', resize);
+    resize();
+    (function animate(){
+        ctx.clearRect(0,0,W,H);
+        for (const p of particles){
+            p.a += 0.004 + p.s*0.002;
+            p.x += Math.cos(p.a)*p.s;
+            p.y += Math.sin(p.a)*p.s*0.5;
+            if (p.x< -10) p.x = W+10;
+            if (p.x> W+10) p.x = -10;
+            if (p.y< -10) p.y = H+10;
+            if (p.y> H+10) p.y = -10;
+            ctx.globalAlpha = p.o;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+            ctx.fillStyle = '#ffffff';
+            ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(animate);
+    })();
+
+    // ---------- Countdown logic ----------
+    const el = {
+        d: document.getElementById('days'),
+        h: document.getElementById('hours'),
+        m: document.getElementById('minutes'),
+        s: document.getElementById('seconds'),
+        prog: document.getElementById('progress'),
+        tz: document.getElementById('tzName'),
+        target: document.getElementById('targetLabel'),
+        subtitle: document.getElementById('subtitle')
+    };
+
+    function nextSept14(now){
+        const year = now.getFullYear();
+        let target = new Date(year, 8, 14, 0, 0, 0, 0); // months are 0-indexed; 8 = September
+        if (now > target) target = new Date(year+1, 8, 14, 0, 0, 0, 0);
+        return target;
+    }
+
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local Time';
+    el.tz.textContent = tz;
+
+    let target = nextSept14(new Date());
+    el.target.textContent = `Target: Sept 14, ${target.getFullYear()}`;
+
+    function pad(n){ return String(n).padStart(2,'0'); }
+
+    function update(){
+        const now = new Date();
+        // if a year rolls over, recompute target
+        if (now > target) target = nextSept14(now);
+
+        const diffMs = Math.max(0, target - now);
+        const totalSec = Math.floor(diffMs/1000);
+        const days = Math.floor(totalSec / 86400);
+        const hours = Math.floor((totalSec % 86400) / 3600);
+        const mins = Math.floor((totalSec % 3600) / 60);
+        const secs = totalSec % 60;
+
+        el.d.textContent = days;
+        el.h.textContent = pad(hours);
+        el.m.textContent = pad(mins);
+        el.s.textContent = pad(secs);
+
+        // progress within this year's window from "now" to target (nice visual)
+        const yearStart = new Date(target.getFullYear(), 0, 1);
+        const targetDOY = (target - yearStart);
+        const nowDOY = (now - yearStart);
+        const pct = Math.min(100, Math.max(0, (nowDOY / targetDOY) * 100));
+        el.prog.style.width = pct.toFixed(2) + '%';
+
+        if (diffMs === 0){
+            celebrate();
+            el.subtitle.textContent = 'It’s here — Happy September 14! 🎉';
+        }
+    }
+    update();
+    setInterval(update, 1000);
+
+    // ---------- Confetti celebration without external libs ----------
+    function celebrate(duration=6000){
+        const confettiCanvas = document.createElement('canvas');
+        confettiCanvas.style.position = 'fixed';
+        confettiCanvas.style.inset = '0';
+        confettiCanvas.style.pointerEvents = 'none';
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+        document.body.appendChild(confettiCanvas);
+        const cctx = confettiCanvas.getContext('2d');
+
+        const colors = ['#a0e9ff','#ffb3ec','#ffd479','#b5ff9e','#d4b3ff','#fff'];
+        const pieces = Array.from({length: 280}, () => ({
+            x: Math.random()*confettiCanvas.width,
+            y: -20 - Math.random()*confettiCanvas.height,
+            w: 6 + Math.random()*8,
+            h: 8 + Math.random()*14,
+            r: Math.random()*Math.PI,
+            s: 2 + Math.random()*4,
+            g: 0.05 + Math.random()*0.1,
+            c: colors[Math.floor(Math.random()*colors.length)]
+        }));
+
+        let start = null;
+        function anim(ts){
+            if(!start) start = ts;
+            const t = ts - start;
+            cctx.clearRect(0,0,confettiCanvas.width, confettiCanvas.height);
+            for (const p of pieces){
+                p.y += p.s;
+                p.x += Math.sin(p.y*0.02)*0.8;
+                p.r += 0.08;
+                p.s += p.g;
+                cctx.save();
+                cctx.translate(p.x, p.y);
+                cctx.rotate(p.r);
+                cctx.fillStyle = p.c;
+                cctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+                cctx.restore();
+            }
+            if (t < duration) {
+                requestAnimationFrame(anim);
+            } else {
+                confettiCanvas.remove();
+            }
+        }
+        requestAnimationFrame(anim);
+    }
+
+    // Accessibility: focus styles for keyboard users
+    document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Tab'){ document.body.classList.add('show-focus'); }
+    });
+</script>
+</body>
+</html>

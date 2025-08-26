@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Gap Game</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-size: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #sentence {
+            margin-bottom: 20px;
+            max-width: 80%;
+            line-height: 1.5em;
+        }
+
+        input.inline {
+            font-size: 1em;
+            padding: 5px;
+            text-align: center;
+            min-width: 120px;
+            border: none;
+            border-bottom: 2px solid white;
+            background: transparent;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        input.inline:focus {
+            outline: none;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #fullscreenBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.7em;
+            padding: 5px 10px;
+        }
+
+        #progress {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 0.8em;
+            color: white;
+        }
+
+        /* Tooltip bubble */
+        .tooltip-bubble {
+            position: absolute;
+            bottom: 100%; /* above input */
+            left: 50%;
+            color: #ffff3e;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            white-space: nowrap;
+            transform: translateX(-50%) translateY(-10px);
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.2s, transform 0.2s;
+            z-index: 100;
+        }
+
+        #countdownIframe {
+            width: 100%;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            outline: none;
+            border: none;
+            z-index: -1;
+            opacity: 33%;
+        }
+
+        span.input-wrapper:hover .tooltip-bubble,
+        span.input-wrapper input:focus + .tooltip-bubble {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+<iframe id="countdownIframe" src="./countdown.html"></iframe>
+
+<div id="progress"></div>
+<button id="fullscreenBtn">⛶ Fullscreen</button>
+<div id="sentence"></div>
+<div id="feedback"></div>
+
+<script>
+    let sentences = [];
+    let current = null;
+
+    async function loadSentences() {
+        try {
+            const response = await fetch(`./jsons/sentences.json?t=${Date.now()}`);
+            sentences = await response.json();
+            updateProgress();
+            nextSentence();
+        } catch (err) {
+            document.getElementById("sentence").innerText = "⚠️ Could not load sentences.json";
+        }
+    }
+
+    async function playAudio(audio) {
+        return new Promise(resolve => {
+            audio.play();
+            audio.onended = resolve;
+        });
+    }
+
+    function updateProgress() {
+        const solved = JSON.parse(localStorage.getItem("solved") || "[]");
+        const available = sentences.filter(s => !solved.includes(s.id));
+        document.getElementById("progress").innerText = `${available.length}/${sentences.length}`;
+    }
+
+    function nextSentence() {
+        const solved = JSON.parse(localStorage.getItem("solved") || "[]");
+        const available = sentences.filter(s => !solved.includes(s.id));
+
+        updateProgress();
+
+        if (available.length === 0) {
+            document.getElementById("sentence").innerText = "🎉 You finished all sentences!";
+            document.getElementById("feedback").innerText = "";
+            return;
+        }
+
+        current = available[Math.floor(Math.random() * available.length)];
+
+        const regex = new RegExp("\\b" + current.answer + "\\b", "i");
+        const gapSentence = current.english.replace(regex, (match) => {
+            return `<span class="input-wrapper" style="position: relative; display: inline-block;">
+                        <input id="answerInput" class="inline" type="text" autocomplete="off" placeholder="${current.answer}">
+                        <div id="tlt" class="tooltip-bubble"></div>
+                    </span>`;
+        });
+
+        document.getElementById("sentence").innerHTML = gapSentence;
+        document.getElementById("feedback").innerText = "";
+
+        const input = document.getElementById("answerInput");
+        if (input) {
+            input.focus();
+            input.addEventListener("keyup", (e) => {
+                if (e.key === "Enter") checkAnswer();
+            });
+        }
+
+        setTimeout(() => {
+            document.getElementById("tlt").innerText = `${current.explanation ?? 'unknown'}`;
+        }, 5000);
+    }
+
+    async function checkAnswer() {
+        const input = document.getElementById("answerInput");
+        if (!input || !current) return;
+
+        if (input.value.trim().toLowerCase() === current.answer.toLowerCase()) {
+            input.style.color = "lime";
+            let solved = JSON.parse(localStorage.getItem("solved") || "[]");
+            if (!solved.includes(current.id)) {
+                solved.push(current.id);
+                localStorage.setItem("solved", JSON.stringify(solved));
+            }
+        } else {
+            input.style.color = "red";
+            input.value = current.answer;
+        }
+
+        await playAudio(new Audio(current.englishAudio));
+        setTimeout(() => {
+            nextSentence();
+        }, 500);
+    }
+
+    document.getElementById("fullscreenBtn").addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable fullscreen: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
+
+    loadSentences();
+</script>
+</body>
+</html>

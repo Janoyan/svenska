@@ -1,8 +1,10 @@
 const fs = require('fs/promises');
 const path = require('path');
 const axios = require('axios');
+const uuid = require('uuid');
 const qs = require('qs');
 const tmpData = require('./tmp.json');
+const sentencesJson = require('./jsons/sentences.json');
 
 const directoryPath = './source';
 (async () => {
@@ -11,6 +13,7 @@ const directoryPath = './source';
     }
 
     await concatJsonFilesWithIds('./jsons/current.json');
+    await handleSentences('./jsons/sentences.json');
 })();
 
 async function createFiles() {
@@ -138,6 +141,54 @@ async function concatJsonFilesWithIds(outputFilePath) {
 
         await fs.writeFile(outputFilePath, JSON.stringify(allData, null, 2));
         console.log(`✅ Combined ${jsonFiles.length} files into "${outputFilePath}" with ${allData.length} records.`);
+    } catch (err) {
+        console.error('❌ Error reading directory:', err.message);
+    }
+}
+
+async function handleSentences(outputFilePath) {
+    try {
+        const allData = sentencesJson;
+
+        for (const record of sentencesJson) {
+            try {
+                if (!record.englishAudio) {
+                    const base64Audio = await getBase64Audio(record.english, 'John');
+                    if (base64Audio) {
+                        record.englishAudio = base64Audio;
+                        console.log(`🔄 Added audio for ${record.english}`);
+                    }
+                }
+
+                // if (record.armenian.includes('և')) {
+                //     record.armenian = record.translation.replaceAll('և', 'եվ');
+                //     console.log(`🔄 replaced և in ${record.armenian}`);
+                // }
+                //
+                //
+                // if (!record.armenianAudio) {
+                //     const base64Audio = await getBase64Audio(record.armenian, 'Vivienne HY');
+                //     if (base64Audio) {
+                //         record.armenianAudio = base64Audio;
+                //         console.log(`🔄 Added audio for ${record.armenian}`);
+                //     }
+                // }
+
+                if (!record.id) {
+                    record.id = uuid.v4();
+                }
+
+                const index = allData.indexOf(record);
+
+                allData[index] = record;
+                await fs.writeFile(outputFilePath, JSON.stringify(allData, null, 2));
+                console.log(`✅ "${outputFilePath}" with ${allData.length} records.`);
+
+            } catch (err) {
+                console.error(`❌ Error processing "${file}": ${err.message}`);
+            }
+        }
+
     } catch (err) {
         console.error('❌ Error reading directory:', err.message);
     }
