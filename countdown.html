@@ -253,10 +253,7 @@
 <script>
     // ---------- Background rotation (public Unsplash images) ----------
     const photos = [
-        'https://images.unsplash.com/photo-1486673748761-a8d18475c757?q=80&w=1920&auto=format&fit=crop',
-
-        'https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1920&auto=format&fit=crop',
-        'https://images.unsplash.com/premium_photo-1699626665792-77b2eef3a0af?q=80&w=1920&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1683532336884-cac3876fe5d5?q=80&w=1920&auto=format&fit=crop',
     ];
     let bgIndex = 0;
     const bgA = document.getElementById('bgCurrent');
@@ -264,19 +261,19 @@
     function setBg(el, idx){ el.style.backgroundImage = `url("${photos[idx % photos.length]}")`; }
     setBg(bgA, bgIndex);
     setBg(bgB, bgIndex+1);
-    function rotateBg(){
-        bgIndex = (bgIndex + 1) % photos.length;
-        setBg(bgB, bgIndex);
-        bgB.style.opacity = 1;
-        bgA.style.opacity = 0;
-        // swap roles after transition
-        setTimeout(() => {
-            const tmp = bgA.style.backgroundImage;
-            bgA.style.backgroundImage = bgB.style.backgroundImage;
-            bgA.style.opacity = 1; bgB.style.opacity = 0;
-        }, 1500);
-    }
-    setInterval(rotateBg, 20000);
+    // function rotateBg(){
+    //     bgIndex = (bgIndex + 1) % photos.length;
+    //     setBg(bgB, bgIndex);
+    //     bgB.style.opacity = 1;
+    //     bgA.style.opacity = 0;
+    //     // swap roles after transition
+    //     setTimeout(() => {
+    //         const tmp = bgA.style.backgroundImage;
+    //         bgA.style.backgroundImage = bgB.style.backgroundImage;
+    //         bgA.style.opacity = 1; bgB.style.opacity = 0;
+    //     }, 1500);
+    // }
+    // setInterval(rotateBg, 20000);
 
     // ---------- Particle sparkle layer ----------
     const canvas = document.getElementById('particles');
@@ -330,7 +327,7 @@
 
     function nextSept14(now){
         const year = now.getFullYear();
-        let target = new Date(year, 8, 14, 0, 0, 0, 0); // months are 0-indexed; 8 = September
+        let target = new Date(year, 8, 14, 13, 30, 0, 0); // months are 0-indexed; 8 = September
         if (now > target) target = new Date(year+1, 8, 14, 0, 0, 0, 0);
         return target;
     }
