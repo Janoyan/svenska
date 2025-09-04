@@ -46,7 +46,7 @@
 <body>
 <div id="container">
     <h1 id="instruction"></h1>
-    <p id="progress">Progress: 0 / 5</p>
+    <p id="progress">Progress: 0 </p>
     <input type="text" id="inputBox" placeholder="" autofocus>
     <p id="message"></p>
 </div>
@@ -102,12 +102,12 @@
         if (e.key === 'Enter') {
             if (inputBox.value.trim().toLowerCase() === phrase.trim().toLowerCase()) {
                 correctCount++;
-                progress.textContent = `Progress: ${correctCount} / 5`;
+                progress.textContent = `Progress: ${correctCount} `;
                 message.textContent = "✅ Correct!";
                 message.style.color = "green";
                 inputBox.value = "";
 
-                if (correctCount < 5) {
+                if (correctCount < 3) {
                     playAudio(); // Replay audio for next prompt
                 }
             } else {
@@ -117,7 +117,7 @@
                 message.style.color = "red";
             }
 
-            if (correctCount >= 5) {
+            if (correctCount >= 3) {
                 playAudio();
                 instruction.textContent = "🎉 Congratulations! You've completed the challenge.";
                 inputBox.disabled = true;

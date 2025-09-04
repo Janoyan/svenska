@@ -13,7 +13,7 @@ const directoryPath = './source';
     }
 
     await concatJsonFilesWithIds('./jsons/current.json');
-    await handleSentences('./jsons/sentences.json');
+    // await handleSentences('./jsons/sentences.json');
 })();
 
 async function createFiles() {
@@ -56,6 +56,7 @@ async function getBase64FromMp3Url(url) {
 
 
 async function getBase64Audio(text, voice) {
+    console.log(text, voice);
     let data = qs.stringify({
         'token': 'ae5fb62c-d508-4210-9657-d3bb5d387ac7',
         'email': 'meruzh2008@gmail.com',
