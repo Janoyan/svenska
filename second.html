@@ -162,6 +162,7 @@
 </div>
 
 <script>
+    let skipTimeout;
     let recognition;
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -224,7 +225,7 @@
 
     let currentMaxLength = 0;
     let currentTypings = 0;
-    const AMOUNT = 100;
+    const AMOUNT = 10000;
     const DATA_URL = `./jsons/current.json`;
     const answerForm = document.getElementById('answerForm');
     const textInput = document.getElementById('textInput');
@@ -247,9 +248,11 @@
     const taskAttemptCount = new Map();
 
     recognition.onresult = (event) => {
+        recognition.stop()
         textInput.value = event.results[0][0].transcript;
         submitForm()
     };
+
 
 
     function toggleFullScreen() {
@@ -286,7 +289,6 @@
     }
 
     async function loadTask(index) {
-
         possibles.innerText = '';
         textInput.style.color = 'rgb(100 177 255)';
 
@@ -304,10 +306,13 @@
         currentMaxLength = baseLength + 3;
         currentTypings = 0;
 
-        scoreEl.textContent = `Done: ${index}  (${data.length} /${jsonData.length})`;
-
         await playAsync(audioEl);
         recognition.start();
+
+        skipTimeout = setTimeout(() => {
+            textInput.value = "x";
+            submitForm()
+        }, 6000)
     }
 
     function goToNextTask() {
@@ -361,10 +366,6 @@
 
         mistakeList.innerHTML = '';
         mistakeList.appendChild(table);
-
-
-        setAnswers(getSavedAnswers().concat(correctAnswers))
-
     }
 
     function playAsync(audio) {
@@ -375,6 +376,8 @@
     }
 
     async function submitForm() {
+        clearTimeout(skipTimeout);
+        recognition.stop();
         const currentTask = tasks[currentIndex];
         const key = currentTask.id;
         const userText = textInput.value.trim();
@@ -444,10 +447,9 @@
             jsonData = JSON.parse(text);
 
             // Proceed as usual after loading
-            const savedAnswers = getSavedAnswers();
-            data = jsonData.filter((item) => !savedAnswers.includes(item.id));
+            data = jsonData;
 
-            scoreEl.textContent = `Done: ${currentIndex}  (${data.length} /${jsonData.length})`;
+            scoreEl.textContent = `(${data.length})`;
 
             shuffle(data);
             const selected = data.slice(0, AMOUNT);
@@ -526,14 +528,6 @@
             correct,
             incorrect: !correct,
         };
-    }
-
-    function getSavedAnswers() {
-        return JSON.parse(localStorage.getItem('correctAnswers') ?? '[]')
-    }
-
-    function setAnswers(answers) {
-        localStorage.setItem('correctAnswers', JSON.stringify(answers));
     }
 
     function practice(phrase) {

@@ -127,7 +127,7 @@
         document.getElementById("progress").innerText = `${available.length}/${sentences.length}`;
     }
 
-    function nextSentence() {
+    async function nextSentence() {
         const solved = JSON.parse(localStorage.getItem("solved") || "[]");
         const available = sentences.filter(s => !solved.includes(s.id));
 
@@ -149,8 +149,10 @@
                     </span>`;
         });
 
-        document.getElementById("sentence").innerHTML = gapSentence;
+        document.getElementById("sentence").innerHTML = "";
         document.getElementById("feedback").innerText = "";
+        await playAudio(new Audio(current.englishAudio));
+        document.getElementById("sentence").innerHTML = gapSentence;
 
         const input = document.getElementById("answerInput");
         if (input) {
@@ -163,9 +165,6 @@
         setTimeout(() => {
             document.getElementById("tlt").innerText = `${current.explanation ?? 'unknown'}`;
         }, 5000);
-        setTimeout(() => {
-            playAudio(new Audio(current.englishAudio));
-        }, 1000);
     }
 
     async function checkAnswer() {
