@@ -13,7 +13,6 @@ const directoryPath = './source';
     }
 
     await concatJsonFilesWithIds('./jsons/current.json');
-    // await handleSentences('./jsons/sentences.json');
 })();
 
 async function createFiles() {
@@ -54,11 +53,10 @@ async function getBase64FromMp3Url(url) {
     }
 }
 
-
 async function getBase64Audio(text, voice) {
     console.log(text, voice);
     let data = qs.stringify({
-        'token': 'ae5fb62c-d508-4210-9657-d3bb5d387ac7',
+        'token': '5a885797454eeb2a9afa74c65fc03b13',
         'email': 'meruzh2008@gmail.com',
         voice,
         text,
@@ -114,7 +112,7 @@ async function concatJsonFilesWithIds(outputFilePath) {
                 }
 
                 if (!obj.armAudio) {
-                    const base64Audio = await getBase64Audio(obj.translation, 'Vivienne HY');
+                    const base64Audio = await getBase64Audio(obj.translation, 'Vivienne AM');
                     if (base64Audio) {
                         obj.armAudio = base64Audio;
                         // Save modified object back to file
@@ -125,15 +123,13 @@ async function concatJsonFilesWithIds(outputFilePath) {
 
                 obj.id = file.replace('.json', '');
 
-                if (!obj.done) {
-                    allData.push({
-                        id: obj.id,
-                        text: obj.text,
-                        audio: obj.audio,
-                        translation: obj.translation,
-                        armAudio: obj.armAudio
-                    });
-                }
+                allData.push({
+                    id: obj.id,
+                    text: obj.text,
+                    audio: obj.audio,
+                    translation: obj.translation,
+                    armAudio: obj.armAudio
+                });
 
             } catch (err) {
                 console.error(`❌ Error processing "${file}": ${err.message}`);
@@ -147,51 +143,4 @@ async function concatJsonFilesWithIds(outputFilePath) {
     }
 }
 
-async function handleSentences(outputFilePath) {
-    try {
-        const allData = sentencesJson;
-
-        for (const record of sentencesJson) {
-            try {
-                if (!record.englishAudio) {
-                    const base64Audio = await getBase64Audio(record.english, 'John');
-                    if (base64Audio) {
-                        record.englishAudio = base64Audio;
-                        console.log(`🔄 Added audio for ${record.english}`);
-                    }
-                }
-
-                // if (record.armenian.includes('և')) {
-                //     record.armenian = record.translation.replaceAll('և', 'եվ');
-                //     console.log(`🔄 replaced և in ${record.armenian}`);
-                // }
-                //
-                //
-                // if (!record.armenianAudio) {
-                //     const base64Audio = await getBase64Audio(record.armenian, 'Vivienne HY');
-                //     if (base64Audio) {
-                //         record.armenianAudio = base64Audio;
-                //         console.log(`🔄 Added audio for ${record.armenian}`);
-                //     }
-                // }
-
-                if (!record.id) {
-                    record.id = uuid.v4();
-                }
-
-                const index = allData.indexOf(record);
-
-                allData[index] = record;
-                await fs.writeFile(outputFilePath, JSON.stringify(allData, null, 2));
-                console.log(`✅ "${outputFilePath}" with ${allData.length} records.`);
-
-            } catch (err) {
-                console.error(`❌ Error processing "${file}": ${err.message}`);
-            }
-        }
-
-    } catch (err) {
-        console.error('❌ Error reading directory:', err.message);
-    }
-}
 

@@ -93,6 +93,9 @@
             outline: none;
             border: none;
             z-index: -1;
+            background: url("https://images.unsplash.com/photo-1683532336884-cac3876fe5d5?q=80&w=1920&auto=format&fit=crop");
+            background-size: cover;
+
         }
 
         #score {
@@ -129,7 +132,7 @@
 <button onclick="toggleFullScreen()" style="position: fixed; top: 10px; right: 10px; z-index: 9999;">🔳 Fullscreen</button>
 
 <div id="appContainer">
-    <iframe id="countdownIframe" src="./countdown.html"></iframe>
+    <div id="countdownIframe"></div>
     <p id="score"></p>
     <div class="controls">
         <select id="microphone-selector"></select>
@@ -395,7 +398,6 @@
             playAsync(correctSound);
         } else {
             textInput.style.color = 'rgb(221,11,11)';
-            await playAsync(wrongSound);
         }
 
         textInput.value = `${currentTask.text}`;

@@ -108,7 +108,10 @@
             const response = await fetch(`./jsons/sentences.json?t=${Date.now()}`);
             sentences = await response.json();
             updateProgress();
-            nextSentence();
+
+            setTimeout(() => {
+                nextSentence();
+            }, 3000)
         } catch (err) {
             document.getElementById("sentence").innerText = "⚠️ Could not load sentences.json";
         }
