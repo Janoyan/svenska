@@ -108,14 +108,6 @@
             align-items: center;
             margin-bottom: 10px;
         }
-        #microphone-selector {
-            font-size: 1rem;
-            padding: 5px;
-            border-radius: 5px;
-            position: fixed;
-            right: 0;
-            bottom: 0;
-        }
 
         #possibles {
             color: #000000;
@@ -134,9 +126,6 @@
 <div id="appContainer">
     <div id="countdownIframe"></div>
     <p id="score"></p>
-    <div class="controls">
-        <select id="microphone-selector"></select>
-    </div>
     <div id="loadingContainer">
         <p id="loadingText">Loading data...</p>
         <progress id="loadingProgress" value="0" max="100" style="width: 100%;"></progress>
@@ -176,49 +165,6 @@
     } else {
         alert("Sorry, your browser does not support speech recognition.");
     }
-
-    // --- New code for microphone selection ---
-    const microphoneSelector = document.getElementById('microphone-selector');
-
-    // Populate the microphone dropdown
-    async function getMicrophones() {
-        if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-            console.log("enumerateDevices() not supported.");
-            return;
-        }
-
-        try {
-            const devices = await navigator.mediaDevices.enumerateDevices();
-            devices.forEach(device => {
-                if (device.kind === 'audioinput') {
-                    const option = document.createElement('option');
-                    option.value = device.deviceId;
-                    option.text = device.label || `Microphone ${microphoneSelector.length + 1}`;
-                    microphoneSelector.appendChild(option);
-                }
-            });
-        } catch (err) {
-            console.error('Error getting devices: ' + err);
-        }
-    }
-
-    // Set the selected microphone for recognition
-    microphoneSelector.addEventListener('change', (event) => {
-        const selectedDeviceId = event.target.value;
-        if (recognition) {
-            recognition.stop();
-            recognition.lang = recognition.lang; // Re-setting the lang seems to be a common workaround to apply device changes
-            // Some browsers require a new instance, others can be configured directly
-            // For this simple example, we'll rely on the browser's handling of deviceId.
-        }
-    });
-
-    getMicrophones();
-    // Request permission to access microphones
-    navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
-        getMicrophones();
-    });
-    // --- End of new code ---
 
 
     window.addEventListener('beforeunload', function (e) {

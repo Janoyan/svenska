@@ -96,7 +96,7 @@ async function concatJsonFilesWithIds(outputFilePath) {
                 const obj = JSON.parse(content);
 
                 if (!obj.audio) {
-                    const base64Audio = await getBase64Audio(obj.text, 'John');
+                    const base64Audio = await getBase64Audio(obj.text, 'Algenib SE');
                     if (base64Audio) {
                         obj.audio = base64Audio;
                         // Save modified object back to file
@@ -112,7 +112,7 @@ async function concatJsonFilesWithIds(outputFilePath) {
                 }
 
                 if (!obj.armAudio) {
-                    const base64Audio = await getBase64Audio(obj.translation, 'Vivienne AM');
+                    const base64Audio = await getBase64Audio(obj.translation, 'Lucien AM');
                     if (base64Audio) {
                         obj.armAudio = base64Audio;
                         // Save modified object back to file
